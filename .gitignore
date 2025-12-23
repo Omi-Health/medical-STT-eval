@@ -1,0 +1,95 @@
+# ============================================
+# Medical STT Benchmark - .gitignore
+# ============================================
+
+# ==================== SENSITIVE FILES ====================
+# NEVER commit these - they contain API keys and secrets
+.env
+.env.local
+.env.*.local
+*.env
+secrets.json
+credentials.json
+*_credentials.json
+api_keys.txt
+
+# ==================== PYTHON ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.conda/
+
+# ==================== DATA FILES ====================
+# WAV files tracked via Git LFS (see .gitattributes)
+# Other audio formats excluded
+data/raw_audio/*.mp3
+data/raw_audio/*.flac
+data/raw_audio/*.txt
+data/raw_transcripts/
+
+# ==================== RESULTS ====================
+# Generated transcripts (large, reproducible)
+results/transcripts/
+transcribe/results/
+
+# Keep metrics and comparisons for leaderboard
+!results/metrics/
+!results/comparisons/
+
+# ==================== IDE & EDITORS ====================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ==================== JUPYTER ====================
+.ipynb_checkpoints/
+*.ipynb
+
+# ==================== TESTING ====================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ==================== BUILD ====================
+*.log
+*.tmp
+*.temp
+
+# ==================== EXTERNAL EXAMPLES ====================
+# These are external repos included for reference
+BringingAdvancedSpeechToTextCapabilitiesToYourApp/
+apple-speechanalyzer-cli-example/
+
+# ==================== MISC ====================
+*.bak
+*.orig
+.claude/
