@@ -82,21 +82,44 @@ class BaseTranscriber(ABC):
         print(f"📁 Processing {total_files} files")
         print(f"💾 Results will be saved to: {self.transcripts_dir}")
         
+        # Problematic files that cause issues for most models
+        EXCLUDED_FILES = ['day1_consultation07', 'day3_consultation03']
+
+        skipped = 0
         for i, audio_file in enumerate(audio_files, 1):
+            audio_name = Path(audio_file).stem
+
+            # Skip problematic files
+            if any(exc in audio_name for exc in EXCLUDED_FILES):
+                print(f"[{i}/{total_files}] ⏭️  Skipping (excluded): {Path(audio_file).name}")
+                skipped += 1
+                continue
+
+            transcript_file = self.transcripts_dir / f"{audio_name}_transcript.txt"
+
+            # Skip if transcript already exists
+            if transcript_file.exists():
+                print(f"[{i}/{total_files}] ⏭️  Skipping (exists): {Path(audio_file).name}")
+                skipped += 1
+                continue
+
             print(f"\n[{i}/{total_files}] Processing: {Path(audio_file).name}")
-            
+
             try:
                 result = self.transcribe_file(audio_file)
                 results.append(result)
-                
+
                 # Save individual transcript
                 self._save_transcript(result)
-                
+
                 print(f"✅ Success - Duration: {result.duration:.2f}s")
-                
+
             except Exception as e:
                 print(f"❌ Error: {e}")
                 continue
+
+        if skipped > 0:
+            print(f"\n⏭️  Skipped {skipped} files (transcripts already exist)")
         
         # Save batch metrics
         self._save_metrics(results)

@@ -32,66 +32,74 @@ class ParakeetTranscriber(BaseTranscriber):
     
     def transcribe_file(self, audio_file: str) -> TranscriptionResult:
         """
-        Transcribe a single audio file using Parakeet.
-        
+        Transcribe a single audio file using parakeet-mlx CLI.
+
         Args:
             audio_file: Path to audio file
-            
+
         Returns:
             TranscriptionResult object
         """
         if not Path(audio_file).exists():
             raise FileNotFoundError(f"Audio file not found: {audio_file}")
-        
+
         start_time = time.time()
-        
+        audio_stem = Path(audio_file).stem
+
         try:
-            # Create temporary output directory - mlx-audio will create filename.txt inside this dir
-            import tempfile
-            temp_dir = tempfile.mkdtemp()
-            audio_basename = Path(audio_file).stem
-            
-            # Use mlx-audio command format: python -m mlx_audio.stt.generate --model MODEL --audio AUDIO --output OUTPUT_DIR
+            # Use parakeet-mlx CLI (creates .srt file in current directory)
             cmd = [
-                'python', '-m', 'mlx_audio.stt.generate', 
-                '--model', self.model_name_internal,
-                '--audio', audio_file,
-                '--output', temp_dir + '/' + audio_basename
+                'parakeet-mlx',
+                audio_file,
+                '--model', self.model_name_internal
             ]
-            
+
             result = subprocess.run(
                 cmd,
                 capture_output=True,
                 text=True,
-                timeout=300  # 5 minute timeout
+                timeout=600  # 10 minute timeout for long files
             )
-            
+
             if result.returncode != 0:
-                raise Exception(f"Parakeet command failed: {result.stderr}")
-            
+                raise Exception(f"parakeet-mlx failed: {result.stderr}")
+
             duration = time.time() - start_time
-            
-            # The transcript should be written to temp_dir/audio_basename.txt
-            output_file = Path(temp_dir) / f"{audio_basename}.txt"
-            if output_file.exists():
-                with open(output_file, 'r') as f:
-                    text = f.read().strip()
-                # Clean up temp files
-                output_file.unlink()
-                Path(temp_dir).rmdir()
-            else:
-                raise ValueError(f"Output file not created: {output_file}")
-            
+
+            # parakeet-mlx creates .srt file - extract text from it
+            srt_file = Path(f"{audio_stem}.srt")
+            if not srt_file.exists():
+                raise ValueError(f"SRT file not created: {srt_file}")
+
+            # Parse SRT and extract text (skip timestamps and sequence numbers)
+            text_lines = []
+            with open(srt_file, 'r') as f:
+                for line in f:
+                    line = line.strip()
+                    # Skip empty lines, sequence numbers, and timestamp lines
+                    if not line:
+                        continue
+                    if line.isdigit():
+                        continue
+                    if '-->' in line:
+                        continue
+                    text_lines.append(line)
+
+            text = ' '.join(text_lines)
+
+            # Clean up .srt file
+            srt_file.unlink()
+
             if not text:
-                raise ValueError("Empty transcription result from output file")
-            
+                raise ValueError("Empty transcription result")
+
             return TranscriptionResult(
                 text=text,
                 duration=duration,
                 model_name=self.model_name,
                 audio_file=audio_file
             )
-            
+
         except subprocess.TimeoutExpired:
             raise Exception("Parakeet transcription timed out")
         except Exception as e:

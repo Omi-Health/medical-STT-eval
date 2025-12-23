@@ -1,0 +1,11 @@
+{
+  "model_name": "nvidia/canary-1b-flash",
+  "total_files": 57,
+  "successful": 57,
+  "failed": 0,
+  "total_time": 1332.7514896392822,
+  "average_time_per_file": 23.381605081390916,
+  "output_dir": "results/transcripts/canary_1b_flash_lcs",
+  "chunk_duration": 35.0,
+  "overlap": 10.0
+}

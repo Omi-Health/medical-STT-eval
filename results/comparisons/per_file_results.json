@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-03 19:43:05",
+  "timestamp": "2025-12-24 01:23:11",
   "models": [
     "kyutai-stt-pytorch-stt-2.6b-en",
     "whisperkit-large-v3-v20240930/turbo",
@@ -17,8 +17,11 @@
     "openai-gpt-4o-mini-transcribe",
     "groq-whisper-large-v3-turbo",
     "elevenlabs-scribe/v1",
+    "google-gemini-3-flash-preview",
     "kyutai-stt-pytorch-stt-1b-en/fr",
+    "google-medasr",
     "apple-speechanalyzer",
+    "parakeet-parakeet-tdt-0.6b-v3",
     "parakeet-parakeet-tdt-0.6b-v2"
   ],
   "files": [
@@ -121,17 +124,35 @@
           "hypothesis_words": 1370,
           "transcription_duration": 44.86445069313049
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.15654718361375275,
+          "reference_words": 1367,
+          "hypothesis_words": 1309,
+          "transcription_duration": null
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.17190929041697148,
           "reference_words": 1367,
           "hypothesis_words": 1293,
           "transcription_duration": 71.4675760269165
         },
+        "google-medasr": {
+          "wer": 0.8061448427212875,
+          "reference_words": 1367,
+          "hypothesis_words": 346,
+          "transcription_duration": 1.0662479400634766
+        },
         "apple-speechanalyzer": {
           "wer": 0.1850768105340161,
           "reference_words": 1367,
           "hypothesis_words": 1270,
           "transcription_duration": 5.431469917297363
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1389904901243599,
+          "reference_words": 1367,
+          "hypothesis_words": 1338,
+          "transcription_duration": 5.301589727401733
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.14923189465983908,
@@ -240,17 +261,35 @@
           "hypothesis_words": 1700,
           "transcription_duration": 32.4805428981781
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.1590909090909091,
+          "reference_words": 1672,
+          "hypothesis_words": 1597,
+          "transcription_duration": 51.654480934143066
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.15789473684210525,
           "reference_words": 1672,
           "hypothesis_words": 1595,
           "transcription_duration": 81.86571836471558
         },
+        "google-medasr": {
+          "wer": 0.5305023923444976,
+          "reference_words": 1672,
+          "hypothesis_words": 994,
+          "transcription_duration": 1.269914150238037
+        },
         "apple-speechanalyzer": {
           "wer": 0.16028708133971292,
           "reference_words": 1672,
           "hypothesis_words": 1595,
           "transcription_duration": 6.949203968048096
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.13875598086124402,
+          "reference_words": 1672,
+          "hypothesis_words": 1659,
+          "transcription_duration": 6.107799768447876
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.15490430622009568,
@@ -359,17 +398,35 @@
           "hypothesis_words": 1647,
           "transcription_duration": 35.114768981933594
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.15438821268417682,
+          "reference_words": 1561,
+          "hypothesis_words": 1592,
+          "transcription_duration": 46.84795379638672
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.20755925688661114,
           "reference_words": 1561,
           "hypothesis_words": 1443,
           "transcription_duration": 82.16339182853699
         },
+        "google-medasr": {
+          "wer": 0.7885970531710442,
+          "reference_words": 1561,
+          "hypothesis_words": 464,
+          "transcription_duration": 1.3304638862609863
+        },
         "apple-speechanalyzer": {
           "wer": 0.1755285073670724,
           "reference_words": 1561,
           "hypothesis_words": 1506,
           "transcription_duration": 6.157071828842163
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.14157591287636132,
+          "reference_words": 1561,
+          "hypothesis_words": 1564,
+          "transcription_duration": 5.989275217056274
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.15887251761691223,
@@ -478,17 +535,35 @@
           "hypothesis_words": 1720,
           "transcription_duration": 34.76386785507202
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.14839491217443973,
+          "reference_words": 1651,
+          "hypothesis_words": 1669,
+          "transcription_duration": 77.4653811454773
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.612961841308298,
           "reference_words": 1651,
           "hypothesis_words": 746,
           "transcription_duration": 91.4050817489624
         },
+        "google-medasr": {
+          "wer": 0.5632949727437916,
+          "reference_words": 1651,
+          "hypothesis_words": 951,
+          "transcription_duration": 1.3902308940887451
+        },
         "apple-speechanalyzer": {
           "wer": 0.19200484554815264,
           "reference_words": 1651,
           "hypothesis_words": 1554,
           "transcription_duration": 6.51978611946106
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1374924288310115,
+          "reference_words": 1651,
+          "hypothesis_words": 1657,
+          "transcription_duration": 6.4172680377960205
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.20169594185342216,
@@ -597,17 +672,35 @@
           "hypothesis_words": 1671,
           "transcription_duration": 41.01920485496521
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.15257352941176472,
+          "reference_words": 1632,
+          "hypothesis_words": 1534,
+          "transcription_duration": 61.144891023635864
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.15441176470588236,
           "reference_words": 1632,
           "hypothesis_words": 1593,
           "transcription_duration": 84.08468294143677
         },
+        "google-medasr": {
+          "wer": 0.6856617647058824,
+          "reference_words": 1632,
+          "hypothesis_words": 692,
+          "transcription_duration": 1.195868968963623
+        },
         "apple-speechanalyzer": {
           "wer": 0.15870098039215685,
           "reference_words": 1632,
           "hypothesis_words": 1554,
           "transcription_duration": 6.585477113723755
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.11764705882352941,
+          "reference_words": 1632,
+          "hypothesis_words": 1624,
+          "transcription_duration": 6.147688865661621
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.13357843137254902,
@@ -716,17 +809,35 @@
           "hypothesis_words": 1857,
           "transcription_duration": 34.75397229194641
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.2534134352812671,
+          "reference_words": 1831,
+          "hypothesis_words": 1653,
+          "transcription_duration": 50.21297574043274
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.21081376297105406,
           "reference_words": 1831,
           "hypothesis_words": 1664,
           "transcription_duration": 94.87596559524536
         },
+        "google-medasr": {
+          "wer": 0.7946477334789732,
+          "reference_words": 1831,
+          "hypothesis_words": 491,
+          "transcription_duration": 1.4173011779785156
+        },
         "apple-speechanalyzer": {
           "wer": 0.1829601310759148,
           "reference_words": 1831,
           "hypothesis_words": 1719,
           "transcription_duration": 7.112204074859619
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1441835062807209,
+          "reference_words": 1831,
+          "hypothesis_words": 1778,
+          "transcription_duration": 7.107216119766235
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.184598580010923,
@@ -835,17 +946,35 @@
           "hypothesis_words": 1183,
           "transcription_duration": 42.96695876121521
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.14445399828030955,
+          "reference_words": 1163,
+          "hypothesis_words": 1109,
+          "transcription_duration": 28.021580696105957
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.17282889079965605,
           "reference_words": 1163,
           "hypothesis_words": 1116,
           "transcription_duration": 67.5004153251648
         },
+        "google-medasr": {
+          "wer": 0.8065348237317282,
+          "reference_words": 1163,
+          "hypothesis_words": 302,
+          "transcription_duration": 0.9820370674133301
+        },
         "apple-speechanalyzer": {
           "wer": 0.19088564058469476,
           "reference_words": 1163,
           "hypothesis_words": 1088,
           "transcription_duration": 4.696396112442017
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1349957007738607,
+          "reference_words": 1163,
+          "hypothesis_words": 1144,
+          "transcription_duration": 5.286602973937988
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.1461736887360275,
@@ -954,17 +1083,35 @@
           "hypothesis_words": 1565,
           "transcription_duration": 37.39965486526489
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.12017994858611825,
+          "reference_words": 1556,
+          "hypothesis_words": 1499,
+          "transcription_duration": 42.59054493904114
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.550771208226221,
           "reference_words": 1556,
           "hypothesis_words": 782,
           "transcription_duration": 79.5563313961029
         },
+        "google-medasr": {
+          "wer": 0.711439588688946,
+          "reference_words": 1556,
+          "hypothesis_words": 598,
+          "transcription_duration": 1.157982349395752
+        },
         "apple-speechanalyzer": {
           "wer": 0.18573264781491003,
           "reference_words": 1556,
           "hypothesis_words": 1413,
           "transcription_duration": 6.0630388259887695
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.13431876606683804,
+          "reference_words": 1556,
+          "hypothesis_words": 1489,
+          "transcription_duration": 5.9957802295684814
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.16516709511568123,
@@ -1073,17 +1220,35 @@
           "hypothesis_words": 1919,
           "transcription_duration": 42.007582902908325
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.19405405405405404,
+          "reference_words": 1850,
+          "hypothesis_words": 1798,
+          "transcription_duration": 51.40210199356079
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.4454054054054054,
           "reference_words": 1850,
           "hypothesis_words": 1215,
           "transcription_duration": 90.48408269882202
         },
+        "google-medasr": {
+          "wer": 0.7924324324324324,
+          "reference_words": 1850,
+          "hypothesis_words": 506,
+          "transcription_duration": 1.3415122032165527
+        },
         "apple-speechanalyzer": {
           "wer": 0.2091891891891892,
           "reference_words": 1850,
           "hypothesis_words": 1689,
           "transcription_duration": 6.804786920547485
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.16702702702702701,
+          "reference_words": 1850,
+          "hypothesis_words": 1800,
+          "transcription_duration": 6.7315990924835205
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.18162162162162163,
@@ -1192,17 +1357,35 @@
           "hypothesis_words": 2412,
           "transcription_duration": 42.86321997642517
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.14316423043852106,
+          "reference_words": 2326,
+          "hypothesis_words": 2263,
+          "transcription_duration": 81.83275175094604
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.501719690455718,
           "reference_words": 2326,
           "hypothesis_words": 1300,
           "transcription_duration": 117.78243827819824
         },
+        "google-medasr": {
+          "wer": 0.6001719690455718,
+          "reference_words": 2326,
+          "hypothesis_words": 1138,
+          "transcription_duration": 1.6418728828430176
+        },
         "apple-speechanalyzer": {
           "wer": 0.16337059329320722,
           "reference_words": 2326,
           "hypothesis_words": 2195,
           "transcription_duration": 9.526277303695679
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.12381771281169389,
+          "reference_words": 2326,
+          "hypothesis_words": 2307,
+          "transcription_duration": 8.184101104736328
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.15391229578675839,
@@ -1311,17 +1494,35 @@
           "hypothesis_words": 1180,
           "transcription_duration": 39.92431902885437
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.14136125654450263,
+          "reference_words": 1146,
+          "hypothesis_words": 1159,
+          "transcription_duration": 34.26419711112976
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.17277486910994763,
           "reference_words": 1146,
           "hypothesis_words": 1074,
           "transcription_duration": 67.91059303283691
         },
+        "google-medasr": {
+          "wer": 0.6579406631762653,
+          "reference_words": 1146,
+          "hypothesis_words": 486,
+          "transcription_duration": 1.044189214706421
+        },
         "apple-speechanalyzer": {
           "wer": 0.15095986038394416,
           "reference_words": 1146,
           "hypothesis_words": 1111,
           "transcription_duration": 4.858211040496826
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.12041884816753927,
+          "reference_words": 1146,
+          "hypothesis_words": 1141,
+          "transcription_duration": 5.051882028579712
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.15095986038394416,
@@ -1430,17 +1631,35 @@
           "hypothesis_words": 1704,
           "transcription_duration": 36.703227281570435
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.14582098399525786,
+          "reference_words": 1687,
+          "hypothesis_words": 1630,
+          "transcription_duration": 67.71951985359192
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.13337285121517486,
           "reference_words": 1687,
           "hypothesis_words": 1597,
           "transcription_duration": 91.51799893379211
         },
+        "google-medasr": {
+          "wer": 0.4724362774155305,
+          "reference_words": 1687,
+          "hypothesis_words": 1049,
+          "transcription_duration": 1.2963590621948242
+        },
         "apple-speechanalyzer": {
           "wer": 0.11440426793123888,
           "reference_words": 1687,
           "hypothesis_words": 1609,
           "transcription_duration": 6.711613893508911
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.09306461173681091,
+          "reference_words": 1687,
+          "hypothesis_words": 1643,
+          "transcription_duration": 6.388864040374756
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.09602845287492591,
@@ -1549,17 +1768,35 @@
           "hypothesis_words": 1994,
           "transcription_duration": 40.522464990615845
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.144987146529563,
+          "reference_words": 1945,
+          "hypothesis_words": 1877,
+          "transcription_duration": 66.06920218467712
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 2.2313624678663238,
           "reference_words": 1945,
           "hypothesis_words": 4797,
           "transcription_duration": 90.38425207138062
         },
+        "google-medasr": {
+          "wer": 0.777892030848329,
+          "reference_words": 1945,
+          "hypothesis_words": 517,
+          "transcription_duration": 1.2781379222869873
+        },
         "apple-speechanalyzer": {
           "wer": 0.16298200514138816,
           "reference_words": 1945,
           "hypothesis_words": 1836,
           "transcription_duration": 7.10782790184021
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1249357326478149,
+          "reference_words": 1945,
+          "hypothesis_words": 1912,
+          "transcription_duration": 6.819988965988159
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.15218508997429306,
@@ -1668,17 +1905,35 @@
           "hypothesis_words": 1339,
           "transcription_duration": 33.549556016922
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.17115689381933438,
+          "reference_words": 1262,
+          "hypothesis_words": 1265,
+          "transcription_duration": 39.558911085128784
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.18225039619651348,
           "reference_words": 1262,
           "hypothesis_words": 1218,
           "transcription_duration": 73.4321060180664
         },
+        "google-medasr": {
+          "wer": 0.7741679873217115,
+          "reference_words": 1262,
+          "hypothesis_words": 363,
+          "transcription_duration": 1.1003220081329346
+        },
         "apple-speechanalyzer": {
           "wer": 0.18541996830427893,
           "reference_words": 1262,
           "hypothesis_words": 1211,
           "transcription_duration": 5.294691801071167
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1473851030110935,
+          "reference_words": 1262,
+          "hypothesis_words": 1275,
+          "transcription_duration": 5.429945945739746
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.16402535657686212,
@@ -1787,17 +2042,35 @@
           "hypothesis_words": 1235,
           "transcription_duration": 33.48400378227234
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.18900343642611683,
+          "reference_words": 1164,
+          "hypothesis_words": 1183,
+          "transcription_duration": 33.17418813705444
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.3745704467353952,
           "reference_words": 1164,
           "hypothesis_words": 823,
           "transcription_duration": 49.4538049697876
         },
+        "google-medasr": {
+          "wer": 0.5867697594501718,
+          "reference_words": 1164,
+          "hypothesis_words": 643,
+          "transcription_duration": 0.8774399757385254
+        },
         "apple-speechanalyzer": {
           "wer": 0.14948453608247422,
           "reference_words": 1164,
           "hypothesis_words": 1138,
           "transcription_duration": 4.525593996047974
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.13402061855670103,
+          "reference_words": 1164,
+          "hypothesis_words": 1199,
+          "transcription_duration": 4.4721598625183105
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.14604810996563575,
@@ -1906,17 +2179,35 @@
           "hypothesis_words": 1710,
           "transcription_duration": 34.05285692214966
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.12344213649851632,
+          "reference_words": 1685,
+          "hypothesis_words": 1639,
+          "transcription_duration": 53.65075731277466
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.2813056379821958,
           "reference_words": 1685,
           "hypothesis_words": 1345,
           "transcription_duration": 80.75707983970642
         },
+        "google-medasr": {
+          "wer": 0.7347181008902077,
+          "reference_words": 1685,
+          "hypothesis_words": 588,
+          "transcription_duration": 1.1466989517211914
+        },
         "apple-speechanalyzer": {
           "wer": 0.1685459940652819,
           "reference_words": 1685,
           "hypothesis_words": 1580,
           "transcription_duration": 6.498040199279785
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.12640949554896141,
+          "reference_words": 1685,
+          "hypothesis_words": 1646,
+          "transcription_duration": 6.10462498664856
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.15311572700296736,
@@ -2025,17 +2316,35 @@
           "hypothesis_words": 1460,
           "transcription_duration": 49.15684199333191
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.16042402826855123,
+          "reference_words": 1415,
+          "hypothesis_words": 1434,
+          "transcription_duration": 40.19760799407959
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.4791519434628975,
           "reference_words": 1415,
           "hypothesis_words": 894,
           "transcription_duration": 65.9483277797699
         },
+        "google-medasr": {
+          "wer": 0.9166077738515901,
+          "reference_words": 1415,
+          "hypothesis_words": 176,
+          "transcription_duration": 0.9761078357696533
+        },
         "apple-speechanalyzer": {
           "wer": 0.2028268551236749,
           "reference_words": 1415,
           "hypothesis_words": 1348,
           "transcription_duration": 5.481911897659302
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1575971731448763,
+          "reference_words": 1415,
+          "hypothesis_words": 1412,
+          "transcription_duration": 5.408061742782593
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.1745583038869258,
@@ -2144,17 +2453,35 @@
           "hypothesis_words": 1879,
           "transcription_duration": 37.542463064193726
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.12493150684931507,
+          "reference_words": 1825,
+          "hypothesis_words": 1756,
+          "transcription_duration": 69.7185571193695
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.3802739726027397,
           "reference_words": 1825,
           "hypothesis_words": 1274,
           "transcription_duration": 84.87515068054199
         },
+        "google-medasr": {
+          "wer": 0.7813698630136986,
+          "reference_words": 1825,
+          "hypothesis_words": 497,
+          "transcription_duration": 1.2261271476745605
+        },
         "apple-speechanalyzer": {
           "wer": 0.1473972602739726,
           "reference_words": 1825,
           "hypothesis_words": 1736,
           "transcription_duration": 6.7920451164245605
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.10904109589041096,
+          "reference_words": 1825,
+          "hypothesis_words": 1787,
+          "transcription_duration": 6.379657030105591
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.1326027397260274,
@@ -2263,17 +2590,35 @@
           "hypothesis_words": 1945,
           "transcription_duration": 36.90403509140015
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.08189880020865936,
+          "reference_words": 1917,
+          "hypothesis_words": 1890,
+          "transcription_duration": 88.81177997589111
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.3468961919666145,
           "reference_words": 1917,
           "hypothesis_words": 1398,
           "transcription_duration": 92.92405891418457
         },
+        "google-medasr": {
+          "wer": 0.48200312989045385,
+          "reference_words": 1917,
+          "hypothesis_words": 1218,
+          "transcription_duration": 1.332934856414795
+        },
         "apple-speechanalyzer": {
           "wer": 0.12519561815336464,
           "reference_words": 1917,
           "hypothesis_words": 1831,
           "transcription_duration": 6.873808145523071
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.08450704225352113,
+          "reference_words": 1917,
+          "hypothesis_words": 1899,
+          "transcription_duration": 6.6589319705963135
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.10172143974960876,
@@ -2382,17 +2727,35 @@
           "hypothesis_words": 1955,
           "transcription_duration": 41.595690965652466
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.15737874097007223,
+          "reference_words": 1938,
+          "hypothesis_words": 1885,
+          "transcription_duration": 82.4687328338623
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.19349845201238391,
           "reference_words": 1938,
           "hypothesis_words": 1709,
           "transcription_duration": 87.56932640075684
         },
+        "google-medasr": {
+          "wer": 0.5521155830753354,
+          "reference_words": 1938,
+          "hypothesis_words": 1096,
+          "transcription_duration": 1.3042829036712646
+        },
         "apple-speechanalyzer": {
           "wer": 0.13725490196078433,
           "reference_words": 1938,
           "hypothesis_words": 1822,
           "transcription_duration": 7.8627259731292725
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.10474716202270382,
+          "reference_words": 1938,
+          "hypothesis_words": 1903,
+          "transcription_duration": 6.612510919570923
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.13364293085655315,
@@ -2501,17 +2864,35 @@
           "hypothesis_words": 1341,
           "transcription_duration": 48.024900674819946
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.1712538226299694,
+          "reference_words": 1308,
+          "hypothesis_words": 1258,
+          "transcription_duration": 87.16580080986023
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.3394495412844037,
           "reference_words": 1308,
           "hypothesis_words": 973,
           "transcription_duration": 67.62470269203186
         },
+        "google-medasr": {
+          "wer": 0.577217125382263,
+          "reference_words": 1308,
+          "hypothesis_words": 745,
+          "transcription_duration": 1.0482470989227295
+        },
         "apple-speechanalyzer": {
           "wer": 0.16131498470948014,
           "reference_words": 1308,
           "hypothesis_words": 1212,
           "transcription_duration": 5.053523063659668
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1345565749235474,
+          "reference_words": 1308,
+          "hypothesis_words": 1283,
+          "transcription_duration": 5.239963054656982
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.16743119266055045,
@@ -2620,17 +3001,35 @@
           "hypothesis_words": 1858,
           "transcription_duration": 34.60852122306824
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.14894795127353266,
+          "reference_words": 1806,
+          "hypothesis_words": 1756,
+          "transcription_duration": 72.27902913093567
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.28903654485049834,
           "reference_words": 1806,
           "hypothesis_words": 1439,
           "transcription_duration": 92.29404783248901
         },
+        "google-medasr": {
+          "wer": 0.7508305647840532,
+          "reference_words": 1806,
+          "hypothesis_words": 597,
+          "transcription_duration": 1.3562109470367432
+        },
         "apple-speechanalyzer": {
           "wer": 0.13565891472868216,
           "reference_words": 1806,
           "hypothesis_words": 1762,
           "transcription_duration": 7.0503129959106445
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.11572535991140642,
+          "reference_words": 1806,
+          "hypothesis_words": 1807,
+          "transcription_duration": 6.588835954666138
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.11794019933554817,
@@ -2739,17 +3138,35 @@
           "hypothesis_words": 1024,
           "transcription_duration": 37.619126081466675
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.11527093596059114,
+          "reference_words": 1015,
+          "hypothesis_words": 985,
+          "transcription_duration": 28.629902839660645
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.15862068965517243,
           "reference_words": 1015,
           "hypothesis_words": 947,
           "transcription_duration": 63.47238302230835
         },
+        "google-medasr": {
+          "wer": 0.677832512315271,
+          "reference_words": 1015,
+          "hypothesis_words": 446,
+          "transcription_duration": 0.9600732326507568
+        },
         "apple-speechanalyzer": {
           "wer": 0.14876847290640394,
           "reference_words": 1015,
           "hypothesis_words": 961,
           "transcription_duration": 4.089614152908325
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.13497536945812807,
+          "reference_words": 1015,
+          "hypothesis_words": 989,
+          "transcription_duration": 4.745564937591553
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.13497536945812807,
@@ -2858,17 +3275,35 @@
           "hypothesis_words": 1782,
           "transcription_duration": 45.59896183013916
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.09324399776661083,
+          "reference_words": 1791,
+          "hypothesis_words": 1749,
+          "transcription_duration": 111.89859199523926
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.16080402010050251,
           "reference_words": 1791,
           "hypothesis_words": 1631,
           "transcription_duration": 85.11601209640503
         },
+        "google-medasr": {
+          "wer": 0.6817420435510888,
+          "reference_words": 1791,
+          "hypothesis_words": 729,
+          "transcription_duration": 1.337867021560669
+        },
         "apple-speechanalyzer": {
           "wer": 0.11557788944723618,
           "reference_words": 1791,
           "hypothesis_words": 1704,
           "transcription_duration": 6.808217763900757
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.09547738693467336,
+          "reference_words": 1791,
+          "hypothesis_words": 1740,
+          "transcription_duration": 6.265383005142212
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.09659408151870463,
@@ -2977,17 +3412,35 @@
           "hypothesis_words": 1282,
           "transcription_duration": 27.058414936065674
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.16470588235294117,
+          "reference_words": 1275,
+          "hypothesis_words": 1192,
+          "transcription_duration": 49.019294023513794
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.18352941176470589,
           "reference_words": 1275,
           "hypothesis_words": 1149,
           "transcription_duration": 74.75519156455994
         },
+        "google-medasr": {
+          "wer": 0.7270588235294118,
+          "reference_words": 1275,
+          "hypothesis_words": 434,
+          "transcription_duration": 1.090587854385376
+        },
         "apple-speechanalyzer": {
           "wer": 0.17647058823529413,
           "reference_words": 1275,
           "hypothesis_words": 1205,
           "transcription_duration": 5.0344929695129395
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.13647058823529412,
+          "reference_words": 1275,
+          "hypothesis_words": 1241,
+          "transcription_duration": 5.228355169296265
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.13411764705882354,
@@ -3096,17 +3549,35 @@
           "hypothesis_words": 1183,
           "transcription_duration": 39.95983600616455
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.158311345646438,
+          "reference_words": 1137,
+          "hypothesis_words": 1082,
+          "transcription_duration": 37.727622985839844
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.1600703605980651,
           "reference_words": 1137,
           "hypothesis_words": 1100,
           "transcription_duration": 64.77864933013916
         },
+        "google-medasr": {
+          "wer": 0.5611257695690414,
+          "reference_words": 1137,
+          "hypothesis_words": 667,
+          "transcription_duration": 0.997830867767334
+        },
         "apple-speechanalyzer": {
           "wer": 0.1424802110817942,
           "reference_words": 1137,
           "hypothesis_words": 1121,
           "transcription_duration": 4.9460742473602295
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.13016710642040458,
+          "reference_words": 1137,
+          "hypothesis_words": 1150,
+          "transcription_duration": 4.950667142868042
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.1310466138962181,
@@ -3215,17 +3686,35 @@
           "hypothesis_words": 1122,
           "transcription_duration": 42.86683964729309
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.1332133213321332,
+          "reference_words": 1111,
+          "hypothesis_words": 1108,
+          "transcription_duration": 37.45489835739136
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.30423042304230424,
           "reference_words": 1111,
           "hypothesis_words": 903,
           "transcription_duration": 63.17980694770813
         },
+        "google-medasr": {
+          "wer": 0.5544554455445545,
+          "reference_words": 1111,
+          "hypothesis_words": 657,
+          "transcription_duration": 0.9460852146148682
+        },
         "apple-speechanalyzer": {
           "wer": 0.1935193519351935,
           "reference_words": 1111,
           "hypothesis_words": 1107,
           "transcription_duration": 5.071205139160156
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.15301530153015303,
+          "reference_words": 1111,
+          "hypothesis_words": 1104,
+          "transcription_duration": 5.000528812408447
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.15751575157515751,
@@ -3334,17 +3823,35 @@
           "hypothesis_words": 1164,
           "transcription_duration": 38.43790102005005
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.12667261373773417,
+          "reference_words": 1121,
+          "hypothesis_words": 1118,
+          "transcription_duration": 39.052555084228516
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.1391614629794826,
           "reference_words": 1121,
           "hypothesis_words": 1100,
           "transcription_duration": 59.573662519454956
         },
+        "google-medasr": {
+          "wer": 0.6119536128456735,
+          "reference_words": 1121,
+          "hypothesis_words": 551,
+          "transcription_duration": 0.9648780822753906
+        },
         "apple-speechanalyzer": {
           "wer": 0.12845673505798394,
           "reference_words": 1121,
           "hypothesis_words": 1097,
           "transcription_duration": 4.7140278816223145
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1159678858162355,
+          "reference_words": 1121,
+          "hypothesis_words": 1109,
+          "transcription_duration": 4.690062046051025
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.13559322033898305,
@@ -3453,17 +3960,35 @@
           "hypothesis_words": 634,
           "transcription_duration": 25.248224020004272
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.12837837837837837,
+          "reference_words": 592,
+          "hypothesis_words": 607,
+          "transcription_duration": 27.097153902053833
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.14695945945945946,
           "reference_words": 592,
           "hypothesis_words": 582,
           "transcription_duration": 33.25629949569702
         },
+        "google-medasr": {
+          "wer": 0.7246621621621622,
+          "reference_words": 592,
+          "hypothesis_words": 212,
+          "transcription_duration": 0.5795724391937256
+        },
         "apple-speechanalyzer": {
           "wer": 0.1266891891891892,
           "reference_words": 592,
           "hypothesis_words": 599,
           "transcription_duration": 2.623375177383423
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.12837837837837837,
+          "reference_words": 592,
+          "hypothesis_words": 611,
+          "transcription_duration": 3.289154052734375
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.13682432432432431,
@@ -3572,17 +4097,35 @@
           "hypothesis_words": 1226,
           "transcription_duration": 45.98200488090515
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.22005097706032287,
+          "reference_words": 1177,
+          "hypothesis_words": 1178,
+          "transcription_duration": 66.47750902175903
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.16397621070518267,
           "reference_words": 1177,
           "hypothesis_words": 1137,
           "transcription_duration": 66.21765947341919
         },
+        "google-medasr": {
+          "wer": 0.5632965165675446,
+          "reference_words": 1177,
+          "hypothesis_words": 636,
+          "transcription_duration": 1.0293328762054443
+        },
         "apple-speechanalyzer": {
           "wer": 0.1784197111299915,
           "reference_words": 1177,
           "hypothesis_words": 1137,
           "transcription_duration": 5.002212762832642
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1503823279524214,
+          "reference_words": 1177,
+          "hypothesis_words": 1183,
+          "transcription_duration": 5.259135961532593
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.1580288870008496,
@@ -3691,17 +4234,35 @@
           "hypothesis_words": 950,
           "transcription_duration": 37.81582522392273
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.2167755991285403,
+          "reference_words": 918,
+          "hypothesis_words": 799,
+          "transcription_duration": 40.143805265426636
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.16666666666666666,
           "reference_words": 918,
           "hypothesis_words": 878,
           "transcription_duration": 50.05369448661804
         },
+        "google-medasr": {
+          "wer": 0.9891067538126361,
+          "reference_words": 918,
+          "hypothesis_words": 12,
+          "transcription_duration": 0.8369579315185547
+        },
         "apple-speechanalyzer": {
           "wer": 0.1644880174291939,
           "reference_words": 918,
           "hypothesis_words": 874,
           "transcription_duration": 3.972961187362671
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.14705882352941177,
+          "reference_words": 918,
+          "hypothesis_words": 926,
+          "transcription_duration": 4.490787029266357
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.15468409586056645,
@@ -3810,17 +4371,35 @@
           "hypothesis_words": 2179,
           "transcription_duration": 42.92662692070007
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.10098637858149366,
+          "reference_words": 2129,
+          "hypothesis_words": 2075,
+          "transcription_duration": 61.03195595741272
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.1573508689525599,
           "reference_words": 2129,
           "hypothesis_words": 1936,
           "transcription_duration": 102.89078378677368
         },
+        "google-medasr": {
+          "wer": 0.3104744011272898,
+          "reference_words": 2129,
+          "hypothesis_words": 1740,
+          "transcription_duration": 1.4873242378234863
+        },
         "apple-speechanalyzer": {
           "wer": 0.09253170502583373,
           "reference_words": 2129,
           "hypothesis_words": 2075,
           "transcription_duration": 9.070808172225952
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.09300140911225928,
+          "reference_words": 2129,
+          "hypothesis_words": 2109,
+          "transcription_duration": 7.715190887451172
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.08924377642085486,
@@ -3929,17 +4508,35 @@
           "hypothesis_words": 1385,
           "transcription_duration": 33.4869270324707
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.09977827050997783,
+          "reference_words": 1353,
+          "hypothesis_words": 1345,
+          "transcription_duration": 39.278279066085815
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.15668883961566887,
           "reference_words": 1353,
           "hypothesis_words": 1246,
           "transcription_duration": 80.99864959716797
         },
+        "google-medasr": {
+          "wer": 0.6289726533628973,
+          "reference_words": 1353,
+          "hypothesis_words": 620,
+          "transcription_duration": 1.2098450660705566
+        },
         "apple-speechanalyzer": {
           "wer": 0.11382113821138211,
           "reference_words": 1353,
           "hypothesis_words": 1324,
           "transcription_duration": 5.7551538944244385
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.10199556541019955,
+          "reference_words": 1353,
+          "hypothesis_words": 1342,
+          "transcription_duration": 6.386216163635254
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.09164818920916482,
@@ -4048,17 +4645,35 @@
           "hypothesis_words": 1305,
           "transcription_duration": 30.585700035095215
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.11773940345368916,
+          "reference_words": 1274,
+          "hypothesis_words": 1271,
+          "transcription_duration": 56.85695791244507
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.26609105180533754,
           "reference_words": 1274,
           "hypothesis_words": 1066,
           "transcription_duration": 74.14817953109741
         },
+        "google-medasr": {
+          "wer": 0.6036106750392465,
+          "reference_words": 1274,
+          "hypothesis_words": 604,
+          "transcription_duration": 1.2598140239715576
+        },
         "apple-speechanalyzer": {
           "wer": 0.15070643642072212,
           "reference_words": 1274,
           "hypothesis_words": 1225,
           "transcription_duration": 4.968366861343384
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.12087912087912088,
+          "reference_words": 1274,
+          "hypothesis_words": 1250,
+          "transcription_duration": 6.1182310581207275
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.1075353218210361,
@@ -4167,17 +4782,35 @@
           "hypothesis_words": 1282,
           "transcription_duration": 33.11957406997681
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.1031426269137792,
+          "reference_words": 1241,
+          "hypothesis_words": 1224,
+          "transcription_duration": 34.63384389877319
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.16277195809830783,
           "reference_words": 1241,
           "hypothesis_words": 1157,
           "transcription_duration": 72.51520204544067
         },
+        "google-medasr": {
+          "wer": 0.5713134568896051,
+          "reference_words": 1241,
+          "hypothesis_words": 676,
+          "transcription_duration": 1.1422898769378662
+        },
         "apple-speechanalyzer": {
           "wer": 0.11200644641418211,
           "reference_words": 1241,
           "hypothesis_words": 1209,
           "transcription_duration": 4.676069021224976
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.0854149879129734,
+          "reference_words": 1241,
+          "hypothesis_words": 1241,
+          "transcription_duration": 6.185558080673218
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.09750201450443191,
@@ -4286,17 +4919,35 @@
           "hypothesis_words": 1033,
           "transcription_duration": 42.26502799987793
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.08602150537634409,
+          "reference_words": 1023,
+          "hypothesis_words": 1010,
+          "transcription_duration": 27.253308057785034
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.13880742913000976,
           "reference_words": 1023,
           "hypothesis_words": 932,
           "transcription_duration": 55.0499267578125
         },
+        "google-medasr": {
+          "wer": 0.7536656891495601,
+          "reference_words": 1023,
+          "hypothesis_words": 300,
+          "transcription_duration": 0.8695359230041504
+        },
         "apple-speechanalyzer": {
           "wer": 0.08699902248289346,
           "reference_words": 1023,
           "hypothesis_words": 988,
           "transcription_duration": 4.101035118103027
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.06744868035190615,
+          "reference_words": 1023,
+          "hypothesis_words": 1009,
+          "transcription_duration": 5.083884000778198
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.08504398826979472,
@@ -4405,17 +5056,35 @@
           "hypothesis_words": 1012,
           "transcription_duration": 33.403361797332764
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.09827760891590678,
+          "reference_words": 987,
+          "hypothesis_words": 997,
+          "transcription_duration": 37.03554010391235
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.09523809523809523,
           "reference_words": 987,
           "hypothesis_words": 979,
           "transcription_duration": 56.356398820877075
         },
+        "google-medasr": {
+          "wer": 0.6930091185410334,
+          "reference_words": 987,
+          "hypothesis_words": 395,
+          "transcription_duration": 0.9440562725067139
+        },
         "apple-speechanalyzer": {
           "wer": 0.09422492401215805,
           "reference_words": 987,
           "hypothesis_words": 961,
           "transcription_duration": 4.111001014709473
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.08308004052684904,
+          "reference_words": 987,
+          "hypothesis_words": 991,
+          "transcription_duration": 5.600929021835327
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.09017223910840932,
@@ -4524,17 +5193,35 @@
           "hypothesis_words": 1570,
           "transcription_duration": 38.839760065078735
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.21099744245524296,
+          "reference_words": 1564,
+          "hypothesis_words": 1379,
+          "transcription_duration": 56.77919125556946
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.18925831202046037,
           "reference_words": 1564,
           "hypothesis_words": 1411,
           "transcription_duration": 83.92237615585327
         },
+        "google-medasr": {
+          "wer": 0.5396419437340153,
+          "reference_words": 1564,
+          "hypothesis_words": 868,
+          "transcription_duration": 1.2535367012023926
+        },
         "apple-speechanalyzer": {
           "wer": 0.1745524296675192,
           "reference_words": 1564,
           "hypothesis_words": 1452,
           "transcription_duration": 6.016700029373169
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.1272378516624041,
+          "reference_words": 1564,
+          "hypothesis_words": 1533,
+          "transcription_duration": 7.951352119445801
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.16815856777493607,
@@ -4643,17 +5330,35 @@
           "hypothesis_words": 1676,
           "transcription_duration": 30.22236204147339
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.11151515151515151,
+          "reference_words": 1650,
+          "hypothesis_words": 1603,
+          "transcription_duration": 51.011388063430786
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.22,
           "reference_words": 1650,
           "hypothesis_words": 1393,
           "transcription_duration": 87.5275149345398
         },
+        "google-medasr": {
+          "wer": 0.34424242424242424,
+          "reference_words": 1650,
+          "hypothesis_words": 1296,
+          "transcription_duration": 1.318230152130127
+        },
         "apple-speechanalyzer": {
           "wer": 0.11818181818181818,
           "reference_words": 1650,
           "hypothesis_words": 1588,
           "transcription_duration": 6.925955772399902
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.10121212121212121,
+          "reference_words": 1650,
+          "hypothesis_words": 1633,
+          "transcription_duration": 8.604424953460693
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.10909090909090909,
@@ -4762,17 +5467,35 @@
           "hypothesis_words": 1779,
           "transcription_duration": 39.57128405570984
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.13753581661891118,
+          "reference_words": 1745,
+          "hypothesis_words": 1663,
+          "transcription_duration": 62.94652795791626
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.2934097421203438,
           "reference_words": 1745,
           "hypothesis_words": 1415,
           "transcription_duration": 90.49690699577332
         },
+        "google-medasr": {
+          "wer": 0.5988538681948424,
+          "reference_words": 1745,
+          "hypothesis_words": 883,
+          "transcription_duration": 1.355463981628418
+        },
         "apple-speechanalyzer": {
           "wer": 0.15415472779369627,
           "reference_words": 1745,
           "hypothesis_words": 1667,
           "transcription_duration": 7.178880929946899
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.11232091690544413,
+          "reference_words": 1745,
+          "hypothesis_words": 1722,
+          "transcription_duration": 8.774537086486816
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.12435530085959885,
@@ -4881,17 +5604,35 @@
           "hypothesis_words": 1210,
           "transcription_duration": 29.828851222991943
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.12300413956238912,
+          "reference_words": 1691,
+          "hypothesis_words": 1650,
+          "transcription_duration": 62.72550010681152
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.3287995269071555,
           "reference_words": 1691,
           "hypothesis_words": 1252,
           "transcription_duration": 103.87192559242249
         },
+        "google-medasr": {
+          "wer": 0.6043761088113542,
+          "reference_words": 1691,
+          "hypothesis_words": 876,
+          "transcription_duration": 1.5180258750915527
+        },
         "apple-speechanalyzer": {
           "wer": 0.13897102306327616,
           "reference_words": 1691,
           "hypothesis_words": 1591,
           "transcription_duration": 6.668596982955933
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.10585452395032525,
+          "reference_words": 1691,
+          "hypothesis_words": 1658,
+          "transcription_duration": 9.438230752944946
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.12123004139562389,
@@ -5000,17 +5741,35 @@
           "hypothesis_words": 1721,
           "transcription_duration": 31.293760061264038
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.12433706540954625,
+          "reference_words": 1697,
+          "hypothesis_words": 1628,
+          "transcription_duration": 52.02390503883362
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.15380082498526812,
           "reference_words": 1697,
           "hypothesis_words": 1602,
           "transcription_duration": 90.49205923080444
         },
+        "google-medasr": {
+          "wer": 0.6328815556865056,
+          "reference_words": 1697,
+          "hypothesis_words": 782,
+          "transcription_duration": 1.3634769916534424
+        },
         "apple-speechanalyzer": {
           "wer": 0.14967589864466707,
           "reference_words": 1697,
           "hypothesis_words": 1588,
           "transcription_duration": 6.812187194824219
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.11903358868591632,
+          "reference_words": 1697,
+          "hypothesis_words": 1664,
+          "transcription_duration": 8.244355916976929
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.13376546847377727,
@@ -5119,17 +5878,35 @@
           "hypothesis_words": 1698,
           "transcription_duration": 31.843671083450317
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.10437912417516497,
+          "reference_words": 1667,
+          "hypothesis_words": 1637,
+          "transcription_duration": 44.06579613685608
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.23095380923815237,
           "reference_words": 1667,
           "hypothesis_words": 1397,
           "transcription_duration": 107.44221520423889
         },
+        "google-medasr": {
+          "wer": 0.7060587882423516,
+          "reference_words": 1667,
+          "hypothesis_words": 635,
+          "transcription_duration": 1.7176299095153809
+        },
         "apple-speechanalyzer": {
           "wer": 0.1271745650869826,
           "reference_words": 1667,
           "hypothesis_words": 1606,
           "transcription_duration": 7.264836072921753
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.10977804439112178,
+          "reference_words": 1667,
+          "hypothesis_words": 1632,
+          "transcription_duration": 9.119275093078613
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.11337732453509299,
@@ -5238,17 +6015,35 @@
           "hypothesis_words": 1240,
           "transcription_duration": 38.69755697250366
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.1537842190016103,
+          "reference_words": 1242,
+          "hypothesis_words": 1240,
+          "transcription_duration": 44.176440715789795
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.30193236714975846,
           "reference_words": 1242,
           "hypothesis_words": 1023,
           "transcription_duration": 65.51661396026611
         },
+        "google-medasr": {
+          "wer": 0.6666666666666666,
+          "reference_words": 1242,
+          "hypothesis_words": 551,
+          "transcription_duration": 1.0209882259368896
+        },
         "apple-speechanalyzer": {
           "wer": 0.13526570048309178,
           "reference_words": 1242,
           "hypothesis_words": 1211,
           "transcription_duration": 5.187225103378296
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.107085346215781,
+          "reference_words": 1242,
+          "hypothesis_words": 1218,
+          "transcription_duration": 6.207810163497925
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.11594202898550725,
@@ -5357,17 +6152,35 @@
           "hypothesis_words": 378,
           "transcription_duration": 13.574671983718872
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.08410351201478743,
+          "reference_words": 1082,
+          "hypothesis_words": 1067,
+          "transcription_duration": 44.855058908462524
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.2874306839186691,
           "reference_words": 1082,
           "hypothesis_words": 835,
           "transcription_duration": 64.69187355041504
         },
+        "google-medasr": {
+          "wer": 0.6173752310536045,
+          "reference_words": 1082,
+          "hypothesis_words": 564,
+          "transcription_duration": 1.001128911972046
+        },
         "apple-speechanalyzer": {
           "wer": 0.10166358595194085,
           "reference_words": 1082,
           "hypothesis_words": 1061,
           "transcription_duration": 4.410328149795532
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.10073937153419593,
+          "reference_words": 1082,
+          "hypothesis_words": 1052,
+          "transcription_duration": 5.825898885726929
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.09057301293900184,
@@ -5476,17 +6289,35 @@
           "hypothesis_words": 2470,
           "transcription_duration": 39.978129148483276
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.08520900321543408,
+          "reference_words": 2488,
+          "hypothesis_words": 2439,
+          "transcription_duration": 64.6374180316925
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.22307073954983922,
           "reference_words": 2488,
           "hypothesis_words": 2080,
           "transcription_duration": 111.53079462051392
         },
+        "google-medasr": {
+          "wer": 0.6885048231511254,
+          "reference_words": 2488,
+          "hypothesis_words": 1012,
+          "transcription_duration": 1.6957569122314453
+        },
         "apple-speechanalyzer": {
           "wer": 0.10651125401929261,
           "reference_words": 2488,
           "hypothesis_words": 2416,
           "transcription_duration": 9.934263944625854
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.079983922829582,
+          "reference_words": 2488,
+          "hypothesis_words": 2449,
+          "transcription_duration": 9.63256287574768
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.09445337620578778,
@@ -5595,17 +6426,35 @@
           "hypothesis_words": 1319,
           "transcription_duration": 29.728217840194702
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.18991331757289204,
+          "reference_words": 1269,
+          "hypothesis_words": 1298,
+          "transcription_duration": 40.057034969329834
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.32702915681639083,
           "reference_words": 1269,
           "hypothesis_words": 1052,
           "transcription_duration": 78.52373337745667
         },
+        "google-medasr": {
+          "wer": 0.6635145784081954,
+          "reference_words": 1269,
+          "hypothesis_words": 561,
+          "transcription_duration": 1.2187070846557617
+        },
         "apple-speechanalyzer": {
           "wer": 0.21355397951142632,
           "reference_words": 1269,
           "hypothesis_words": 1224,
           "transcription_duration": 5.042999029159546
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.18360914105594955,
+          "reference_words": 1269,
+          "hypothesis_words": 1279,
+          "transcription_duration": 6.8794050216674805
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.1946414499605989,
@@ -5714,17 +6563,35 @@
           "hypothesis_words": 925,
           "transcription_duration": 31.567318201065063
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.17869034406215317,
+          "reference_words": 901,
+          "hypothesis_words": 914,
+          "transcription_duration": 25.70833992958069
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.1897891231964484,
           "reference_words": 901,
           "hypothesis_words": 838,
           "transcription_duration": 59.19372487068176
         },
+        "google-medasr": {
+          "wer": 0.5538290788013318,
+          "reference_words": 901,
+          "hypothesis_words": 508,
+          "transcription_duration": 1.055114984512329
+        },
         "apple-speechanalyzer": {
           "wer": 0.1609322974472808,
           "reference_words": 901,
           "hypothesis_words": 893,
           "transcription_duration": 3.9362831115722656
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.13762486126526083,
+          "reference_words": 901,
+          "hypothesis_words": 915,
+          "transcription_duration": 5.147279739379883
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.14095449500554938,
@@ -5833,17 +6700,35 @@
           "hypothesis_words": 1582,
           "transcription_duration": 35.76924419403076
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.1365120836054866,
+          "reference_words": 1531,
+          "hypothesis_words": 1527,
+          "transcription_duration": 52.07472586631775
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.3037230568256042,
           "reference_words": 1531,
           "hypothesis_words": 1197,
           "transcription_duration": 88.78389525413513
         },
+        "google-medasr": {
+          "wer": 0.6231221423905944,
+          "reference_words": 1531,
+          "hypothesis_words": 768,
+          "transcription_duration": 1.3528637886047363
+        },
         "apple-speechanalyzer": {
           "wer": 0.14761593729588504,
           "reference_words": 1531,
           "hypothesis_words": 1472,
           "transcription_duration": 6.294776916503906
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.11887655127367734,
+          "reference_words": 1531,
+          "hypothesis_words": 1515,
+          "transcription_duration": 7.340538024902344
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.1417374265186153,
@@ -5952,17 +6837,35 @@
           "hypothesis_words": 1246,
           "transcription_duration": 30.78301215171814
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.09076175040518639,
+          "reference_words": 1234,
+          "hypothesis_words": 1225,
+          "transcription_duration": 32.207717180252075
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.26661264181523503,
           "reference_words": 1234,
           "hypothesis_words": 1038,
           "transcription_duration": 70.95466494560242
         },
+        "google-medasr": {
+          "wer": 0.6053484602917342,
+          "reference_words": 1234,
+          "hypothesis_words": 644,
+          "transcription_duration": 1.1209790706634521
+        },
         "apple-speechanalyzer": {
           "wer": 0.11345218800648298,
           "reference_words": 1234,
           "hypothesis_words": 1210,
           "transcription_duration": 5.525341749191284
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.10372771474878444,
+          "reference_words": 1234,
+          "hypothesis_words": 1225,
+          "transcription_duration": 6.12512731552124
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.10048622366288493,
@@ -6071,17 +6974,35 @@
           "hypothesis_words": 1304,
           "transcription_duration": 30.65352487564087
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.08575924468922108,
+          "reference_words": 1271,
+          "hypothesis_words": 1273,
+          "transcription_duration": 49.6942777633667
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.15184893784421716,
           "reference_words": 1271,
           "hypothesis_words": 1183,
           "transcription_duration": 81.63264560699463
         },
+        "google-medasr": {
+          "wer": 0.47206923682140045,
+          "reference_words": 1271,
+          "hypothesis_words": 863,
+          "transcription_duration": 1.2413020133972168
+        },
         "apple-speechanalyzer": {
           "wer": 0.1077891424075531,
           "reference_words": 1271,
           "hypothesis_words": 1254,
           "transcription_duration": 5.5146801471710205
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.07474429583005507,
+          "reference_words": 1271,
+          "hypothesis_words": 1263,
+          "transcription_duration": 6.625529050827026
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.08811959087332809,
@@ -6190,17 +7111,35 @@
           "hypothesis_words": 1431,
           "transcription_duration": 33.795867919921875
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.14002932551319647,
+          "reference_words": 1364,
+          "hypothesis_words": 1353,
+          "transcription_duration": 31.51722002029419
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.38343108504398826,
           "reference_words": 1364,
           "hypothesis_words": 952,
           "transcription_duration": 83.75530123710632
         },
+        "google-medasr": {
+          "wer": 0.7705278592375366,
+          "reference_words": 1364,
+          "hypothesis_words": 422,
+          "transcription_duration": 1.3019468784332275
+        },
         "apple-speechanalyzer": {
           "wer": 0.14149560117302054,
           "reference_words": 1364,
           "hypothesis_words": 1308,
           "transcription_duration": 6.097323894500732
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.12316715542521994,
+          "reference_words": 1364,
+          "hypothesis_words": 1373,
+          "transcription_duration": 6.969154119491577
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.14149560117302054,
@@ -6309,17 +7248,35 @@
           "hypothesis_words": 1570,
           "transcription_duration": 30.400718927383423
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.1396103896103896,
+          "reference_words": 1540,
+          "hypothesis_words": 1535,
+          "transcription_duration": 50.77418494224548
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.2,
           "reference_words": 1540,
           "hypothesis_words": 1386,
           "transcription_duration": 84.91849327087402
         },
+        "google-medasr": {
+          "wer": 0.5636363636363636,
+          "reference_words": 1540,
+          "hypothesis_words": 867,
+          "transcription_duration": 1.3546421527862549
+        },
         "apple-speechanalyzer": {
           "wer": 0.14675324675324675,
           "reference_words": 1540,
           "hypothesis_words": 1493,
           "transcription_duration": 6.589463710784912
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.11623376623376623,
+          "reference_words": 1540,
+          "hypothesis_words": 1518,
+          "transcription_duration": 6.92155909538269
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.11363636363636363,
@@ -6428,17 +7385,35 @@
           "hypothesis_words": 2007,
           "transcription_duration": 35.20036602020264
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.07665330661322645,
+          "reference_words": 1996,
+          "hypothesis_words": 1969,
+          "transcription_duration": 59.486851930618286
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.7139278557114228,
           "reference_words": 1996,
           "hypothesis_words": 620,
           "transcription_duration": 96.11204814910889
         },
+        "google-medasr": {
+          "wer": 0.5606212424849699,
+          "reference_words": 1996,
+          "hypothesis_words": 1063,
+          "transcription_duration": 1.4827327728271484
+        },
         "apple-speechanalyzer": {
           "wer": 0.09318637274549098,
           "reference_words": 1996,
           "hypothesis_words": 1941,
           "transcription_duration": 8.419051885604858
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.06963927855711423,
+          "reference_words": 1996,
+          "hypothesis_words": 1983,
+          "transcription_duration": 7.86723780632019
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.09018036072144289,
@@ -6547,17 +7522,35 @@
           "hypothesis_words": 778,
           "transcription_duration": 22.213783025741577
         },
+        "google-gemini-3-flash-preview": {
+          "wer": 0.11450381679389313,
+          "reference_words": 786,
+          "hypothesis_words": 778,
+          "transcription_duration": 38.7336220741272
+        },
         "kyutai-stt-pytorch-stt-1b-en/fr": {
           "wer": 0.2595419847328244,
           "reference_words": 786,
           "hypothesis_words": 632,
           "transcription_duration": 47.11130714416504
         },
+        "google-medasr": {
+          "wer": 0.6755725190839694,
+          "reference_words": 786,
+          "hypothesis_words": 322,
+          "transcription_duration": 0.794914960861206
+        },
         "apple-speechanalyzer": {
           "wer": 0.11323155216284987,
           "reference_words": 786,
           "hypothesis_words": 753,
           "transcription_duration": 3.417119026184082
+        },
+        "parakeet-parakeet-tdt-0.6b-v3": {
+          "wer": 0.08015267175572519,
+          "reference_words": 786,
+          "hypothesis_words": 767,
+          "transcription_duration": 4.076349973678589
         },
         "parakeet-parakeet-tdt-0.6b-v2": {
           "wer": 0.09033078880407125,
