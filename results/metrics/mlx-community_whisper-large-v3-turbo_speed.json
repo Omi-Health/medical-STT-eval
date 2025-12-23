@@ -1,0 +1,298 @@
+{
+  "model_name": "mlx-community/whisper-large-v3-turbo",
+  "timestamp": "2025-07-23 18:04:43",
+  "summary": {
+    "total_files": 57,
+    "total_duration": 737.7796905040741,
+    "average_duration": 12.943503342176738,
+    "fastest_file": 4.855498790740967,
+    "slowest_file": 25.026893138885498
+  },
+  "file_details": [
+    {
+      "audio_file": "day1_consultation01_conversation.wav",
+      "duration": 8.773329734802246,
+      "text_length": 6730
+    },
+    {
+      "audio_file": "day1_consultation02_conversation.wav",
+      "duration": 9.474976778030396,
+      "text_length": 8474
+    },
+    {
+      "audio_file": "day1_consultation03_conversation.wav",
+      "duration": 10.036787033081055,
+      "text_length": 7943
+    },
+    {
+      "audio_file": "day1_consultation04_conversation.wav",
+      "duration": 9.872523069381714,
+      "text_length": 7910
+    },
+    {
+      "audio_file": "day1_consultation05_conversation.wav",
+      "duration": 10.540865182876587,
+      "text_length": 8090
+    },
+    {
+      "audio_file": "day1_consultation06_conversation.wav",
+      "duration": 18.911359310150146,
+      "text_length": 9028
+    },
+    {
+      "audio_file": "day1_consultation07_conversation.wav",
+      "duration": 16.249441146850586,
+      "text_length": 12166
+    },
+    {
+      "audio_file": "day1_consultation08_conversation.wav",
+      "duration": 8.379998922348022,
+      "text_length": 5964
+    },
+    {
+      "audio_file": "day1_consultation09_conversation.wav",
+      "duration": 8.594582557678223,
+      "text_length": 7491
+    },
+    {
+      "audio_file": "day1_consultation10_conversation.wav",
+      "duration": 9.910729885101318,
+      "text_length": 8575
+    },
+    {
+      "audio_file": "day1_consultation11_conversation.wav",
+      "duration": 13.239100217819214,
+      "text_length": 10752
+    },
+    {
+      "audio_file": "day1_consultation12_conversation.wav",
+      "duration": 10.123632192611694,
+      "text_length": 5641
+    },
+    {
+      "audio_file": "day1_consultation13_conversation.wav",
+      "duration": 14.829298973083496,
+      "text_length": 8621
+    },
+    {
+      "audio_file": "day1_consultation14_conversation.wav",
+      "duration": 11.422951936721802,
+      "text_length": 9249
+    },
+    {
+      "audio_file": "day1_consultation15_conversation.wav",
+      "duration": 14.930400133132935,
+      "text_length": 6448
+    },
+    {
+      "audio_file": "day2_consultation01_conversation.wav",
+      "duration": 9.085509300231934,
+      "text_length": 5711
+    },
+    {
+      "audio_file": "day2_consultation02_conversation.wav",
+      "duration": 14.178226947784424,
+      "text_length": 7787
+    },
+    {
+      "audio_file": "day2_consultation03_conversation.wav",
+      "duration": 10.094647645950317,
+      "text_length": 6874
+    },
+    {
+      "audio_file": "day2_consultation04_conversation.wav",
+      "duration": 16.36638116836548,
+      "text_length": 8780
+    },
+    {
+      "audio_file": "day2_consultation05_conversation.wav",
+      "duration": 25.026893138885498,
+      "text_length": 9759
+    },
+    {
+      "audio_file": "day2_consultation06_conversation.wav",
+      "duration": 13.733611106872559,
+      "text_length": 9334
+    },
+    {
+      "audio_file": "day2_consultation07_conversation.wav",
+      "duration": 18.720573902130127,
+      "text_length": 6030
+    },
+    {
+      "audio_file": "day2_consultation08_conversation.wav",
+      "duration": 13.69943881034851,
+      "text_length": 8958
+    },
+    {
+      "audio_file": "day2_consultation09_conversation.wav",
+      "duration": 15.728765964508057,
+      "text_length": 5165
+    },
+    {
+      "audio_file": "day2_consultation10_conversation.wav",
+      "duration": 11.728340864181519,
+      "text_length": 8939
+    },
+    {
+      "audio_file": "day3_consultation01_conversation.wav",
+      "duration": 16.28593397140503,
+      "text_length": 6211
+    },
+    {
+      "audio_file": "day3_consultation02_conversation.wav",
+      "duration": 8.873071193695068,
+      "text_length": 5776
+    },
+    {
+      "audio_file": "day3_consultation03_conversation.wav",
+      "duration": 15.303806781768799,
+      "text_length": 9211
+    },
+    {
+      "audio_file": "day3_consultation04_conversation.wav",
+      "duration": 15.273749113082886,
+      "text_length": 5631
+    },
+    {
+      "audio_file": "day3_consultation05_conversation.wav",
+      "duration": 11.846951961517334,
+      "text_length": 5617
+    },
+    {
+      "audio_file": "day3_consultation06_conversation.wav",
+      "duration": 4.855498790740967,
+      "text_length": 3050
+    },
+    {
+      "audio_file": "day3_consultation07_conversation.wav",
+      "duration": 10.022696018218994,
+      "text_length": 6018
+    },
+    {
+      "audio_file": "day3_consultation08_conversation.wav",
+      "duration": 7.148868083953857,
+      "text_length": 4666
+    },
+    {
+      "audio_file": "day3_consultation09_conversation.wav",
+      "duration": 17.85177707672119,
+      "text_length": 10510
+    },
+    {
+      "audio_file": "day3_consultation10_conversation.wav",
+      "duration": 10.420612812042236,
+      "text_length": 6826
+    },
+    {
+      "audio_file": "day4_consultation01_conversation.wav",
+      "duration": 15.924776077270508,
+      "text_length": 6434
+    },
+    {
+      "audio_file": "day4_consultation02_conversation.wav",
+      "duration": 8.698787927627563,
+      "text_length": 5970
+    },
+    {
+      "audio_file": "day4_consultation03_conversation.wav",
+      "duration": 8.159481763839722,
+      "text_length": 5059
+    },
+    {
+      "audio_file": "day4_consultation04_conversation.wav",
+      "duration": 13.711732149124146,
+      "text_length": 4733
+    },
+    {
+      "audio_file": "day4_consultation05_conversation.wav",
+      "duration": 11.593040943145752,
+      "text_length": 7541
+    },
+    {
+      "audio_file": "day4_consultation06_conversation.wav",
+      "duration": 11.861579895019531,
+      "text_length": 8605
+    },
+    {
+      "audio_file": "day4_consultation07_conversation.wav",
+      "duration": 12.741518020629883,
+      "text_length": 8422
+    },
+    {
+      "audio_file": "day4_consultation08_conversation.wav",
+      "duration": 16.469843864440918,
+      "text_length": 9080
+    },
+    {
+      "audio_file": "day4_consultation09_conversation.wav",
+      "duration": 18.361053943634033,
+      "text_length": 8532
+    },
+    {
+      "audio_file": "day4_consultation10_conversation.wav",
+      "duration": 14.770056962966919,
+      "text_length": 8633
+    },
+    {
+      "audio_file": "day5_consultation01_conversation.wav",
+      "duration": 9.528643131256104,
+      "text_length": 6227
+    },
+    {
+      "audio_file": "day5_consultation02_conversation.wav",
+      "duration": 8.708853960037231,
+      "text_length": 5399
+    },
+    {
+      "audio_file": "day5_consultation03_conversation.wav",
+      "duration": 15.171603202819824,
+      "text_length": 11480
+    },
+    {
+      "audio_file": "day5_consultation04_conversation.wav",
+      "duration": 18.957736015319824,
+      "text_length": 6711
+    },
+    {
+      "audio_file": "day5_consultation05_conversation.wav",
+      "duration": 8.138664960861206,
+      "text_length": 4712
+    },
+    {
+      "audio_file": "day5_consultation06_conversation.wav",
+      "duration": 18.57852077484131,
+      "text_length": 7678
+    },
+    {
+      "audio_file": "day5_consultation07_conversation.wav",
+      "duration": 17.923834085464478,
+      "text_length": 6702
+    },
+    {
+      "audio_file": "day5_consultation08_conversation.wav",
+      "duration": 19.024580240249634,
+      "text_length": 7070
+    },
+    {
+      "audio_file": "day5_consultation09_conversation.wav",
+      "duration": 12.055617809295654,
+      "text_length": 7043
+    },
+    {
+      "audio_file": "day5_consultation10_conversation.wav",
+      "duration": 15.21503496170044,
+      "text_length": 8055
+    },
+    {
+      "audio_file": "day5_consultation11_conversation.wav",
+      "duration": 13.546576976776123,
+      "text_length": 9853
+    },
+    {
+      "audio_file": "day5_consultation12_conversation.wav",
+      "duration": 7.102821111679077,
+      "text_length": 4074
+    }
+  ]
+}

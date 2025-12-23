@@ -1,0 +1,592 @@
+{
+  "model_name": "kyutai-stt-pytorch-stt-2.6b-en",
+  "timestamp": "2025-08-02 09:29:11",
+  "normalization": "Whisper EnglishTextNormalizer",
+  "wer_metrics": {
+    "average_wer": 0.139761301607469,
+    "median_wer": 0.13786764705882354,
+    "best_wer": 0.07820136852394917,
+    "worst_wer": 0.21482277121374865,
+    "wer_std": 0.03302954799338218
+  },
+  "word_statistics": {
+    "total_reference_words": 85209,
+    "total_hypothesis_words": 81270,
+    "total_correct_words": 74761,
+    "total_substitutions": 4941,
+    "total_deletions": 5507,
+    "total_insertions": 1568,
+    "word_accuracy": 0.8773838444295791
+  },
+  "file_count": 57,
+  "speed_metrics": {
+    "total_files": 57,
+    "files_used_for_metrics": 46,
+    "excluded_files_over_250s": 11,
+    "total_duration": 6825.423753976822,
+    "average_duration": 148.3787772603657,
+    "fastest_file": 61.148454427719116,
+    "slowest_file": 227.70700669288635
+  },
+  "file_details": [
+    {
+      "file": "day2_consultation05_conversation_transcript.txt",
+      "wer": 0.09702660406885759,
+      "reference_words": 1917,
+      "hypothesis_words": 1843,
+      "substitutions": 84,
+      "deletions": 88,
+      "insertions": 14
+    },
+    {
+      "file": "day3_consultation06_conversation_transcript.txt",
+      "wer": 0.13006756756756757,
+      "reference_words": 592,
+      "hypothesis_words": 595,
+      "substitutions": 36,
+      "deletions": 19,
+      "insertions": 22,
+      "transcription_duration": 61.148454427719116
+    },
+    {
+      "file": "day4_consultation09_conversation_transcript.txt",
+      "wer": 0.13494401885680612,
+      "reference_words": 1697,
+      "hypothesis_words": 1600,
+      "substitutions": 102,
+      "deletions": 112,
+      "insertions": 15,
+      "transcription_duration": 167.483065366745
+    },
+    {
+      "file": "day4_consultation03_conversation_transcript.txt",
+      "wer": 0.07820136852394917,
+      "reference_words": 1023,
+      "hypothesis_words": 994,
+      "substitutions": 37,
+      "deletions": 36,
+      "insertions": 7,
+      "transcription_duration": 101.97769260406494
+    },
+    {
+      "file": "day1_consultation11_conversation_transcript.txt",
+      "wer": 0.15692175408426484,
+      "reference_words": 2326,
+      "hypothesis_words": 2192,
+      "substitutions": 135,
+      "deletions": 182,
+      "insertions": 48
+    },
+    {
+      "file": "day5_consultation09_conversation_transcript.txt",
+      "wer": 0.13856304985337242,
+      "reference_words": 1364,
+      "hypothesis_words": 1332,
+      "substitutions": 71,
+      "deletions": 75,
+      "insertions": 43,
+      "transcription_duration": 154.57331538200378
+    },
+    {
+      "file": "day5_consultation05_conversation_transcript.txt",
+      "wer": 0.14428412874583796,
+      "reference_words": 901,
+      "hypothesis_words": 885,
+      "substitutions": 66,
+      "deletions": 40,
+      "insertions": 24,
+      "transcription_duration": 109.66592979431152
+    },
+    {
+      "file": "day3_consultation04_conversation_transcript.txt",
+      "wer": 0.1692169216921692,
+      "reference_words": 1111,
+      "hypothesis_words": 1090,
+      "substitutions": 103,
+      "deletions": 53,
+      "insertions": 32,
+      "transcription_duration": 115.65935945510864
+    },
+    {
+      "file": "day5_consultation03_conversation_transcript.txt",
+      "wer": 0.09606109324758842,
+      "reference_words": 2488,
+      "hypothesis_words": 2392,
+      "substitutions": 87,
+      "deletions": 124,
+      "insertions": 28,
+      "transcription_duration": 206.74179339408875
+    },
+    {
+      "file": "day1_consultation01_conversation_transcript.txt",
+      "wer": 0.15142648134601316,
+      "reference_words": 1367,
+      "hypothesis_words": 1306,
+      "substitutions": 78,
+      "deletions": 95,
+      "insertions": 34,
+      "transcription_duration": 125.1619291305542
+    },
+    {
+      "file": "day1_consultation07_conversation_transcript.txt",
+      "wer": 0.21482277121374865,
+      "reference_words": 2793,
+      "hypothesis_words": 2491,
+      "substitutions": 152,
+      "deletions": 375,
+      "insertions": 73,
+      "transcription_duration": 227.70700669288635
+    },
+    {
+      "file": "day3_consultation02_conversation_transcript.txt",
+      "wer": 0.12928759894459102,
+      "reference_words": 1137,
+      "hypothesis_words": 1110,
+      "substitutions": 68,
+      "deletions": 53,
+      "insertions": 26,
+      "transcription_duration": 118.200443983078
+    },
+    {
+      "file": "day3_consultation07_conversation_transcript.txt",
+      "wer": 0.16992353440951571,
+      "reference_words": 1177,
+      "hypothesis_words": 1140,
+      "substitutions": 95,
+      "deletions": 71,
+      "insertions": 34,
+      "transcription_duration": 122.24193620681763
+    },
+    {
+      "file": "day5_consultation12_conversation_transcript.txt",
+      "wer": 0.0916030534351145,
+      "reference_words": 786,
+      "hypothesis_words": 759,
+      "substitutions": 35,
+      "deletions": 32,
+      "insertions": 5,
+      "transcription_duration": 87.2510039806366
+    },
+    {
+      "file": "day2_consultation10_conversation_transcript.txt",
+      "wer": 0.09826912339475154,
+      "reference_words": 1791,
+      "hypothesis_words": 1717,
+      "substitutions": 74,
+      "deletions": 88,
+      "insertions": 14,
+      "transcription_duration": 154.39037084579468
+    },
+    {
+      "file": "day1_consultation14_conversation_transcript.txt",
+      "wer": 0.14138817480719795,
+      "reference_words": 1945,
+      "hypothesis_words": 1847,
+      "substitutions": 127,
+      "deletions": 123,
+      "insertions": 25
+    },
+    {
+      "file": "day2_consultation06_conversation_transcript.txt",
+      "wer": 0.13209494324045407,
+      "reference_words": 1938,
+      "hypothesis_words": 1808,
+      "substitutions": 96,
+      "deletions": 145,
+      "insertions": 15
+    },
+    {
+      "file": "day2_consultation07_conversation_transcript.txt",
+      "wer": 0.1636085626911315,
+      "reference_words": 1308,
+      "hypothesis_words": 1234,
+      "substitutions": 88,
+      "deletions": 100,
+      "insertions": 26
+    },
+    {
+      "file": "day1_consultation10_conversation_transcript.txt",
+      "wer": 0.20594594594594595,
+      "reference_words": 1850,
+      "hypothesis_words": 1675,
+      "substitutions": 130,
+      "deletions": 213,
+      "insertions": 38,
+      "transcription_duration": 164.54147696495056
+    },
+    {
+      "file": "day1_consultation04_conversation_transcript.txt",
+      "wer": 0.19200484554815264,
+      "reference_words": 1651,
+      "hypothesis_words": 1526,
+      "substitutions": 108,
+      "deletions": 167,
+      "insertions": 42,
+      "transcription_duration": 163.81900715827942
+    },
+    {
+      "file": "day5_consultation04_conversation_transcript.txt",
+      "wer": 0.20724980299448384,
+      "reference_words": 1269,
+      "hypothesis_words": 1256,
+      "substitutions": 128,
+      "deletions": 74,
+      "insertions": 61,
+      "transcription_duration": 144.7063000202179
+    },
+    {
+      "file": "day1_consultation09_conversation_transcript.txt",
+      "wer": 0.18894601542416453,
+      "reference_words": 1556,
+      "hypothesis_words": 1411,
+      "substitutions": 87,
+      "deletions": 176,
+      "insertions": 31,
+      "transcription_duration": 176.7426836490631
+    },
+    {
+      "file": "day5_consultation07_conversation_transcript.txt",
+      "wer": 0.11426256077795786,
+      "reference_words": 1234,
+      "hypothesis_words": 1203,
+      "substitutions": 66,
+      "deletions": 53,
+      "insertions": 22,
+      "transcription_duration": 130.84933280944824
+    },
+    {
+      "file": "day3_consultation09_conversation_transcript.txt",
+      "wer": 0.09253170502583373,
+      "reference_words": 2129,
+      "hypothesis_words": 2075,
+      "substitutions": 63,
+      "deletions": 94,
+      "insertions": 40,
+      "transcription_duration": 189.43359518051147
+    },
+    {
+      "file": "day3_consultation01_conversation_transcript.txt",
+      "wer": 0.16705882352941176,
+      "reference_words": 1275,
+      "hypothesis_words": 1179,
+      "substitutions": 79,
+      "deletions": 115,
+      "insertions": 19,
+      "transcription_duration": 135.69042372703552
+    },
+    {
+      "file": "day2_consultation04_conversation_transcript.txt",
+      "wer": 0.12821917808219177,
+      "reference_words": 1825,
+      "hypothesis_words": 1738,
+      "substitutions": 119,
+      "deletions": 101,
+      "insertions": 14
+    },
+    {
+      "file": "day4_consultation08_conversation_transcript.txt",
+      "wer": 0.1413364872856298,
+      "reference_words": 1691,
+      "hypothesis_words": 1563,
+      "substitutions": 85,
+      "deletions": 141,
+      "insertions": 13,
+      "transcription_duration": 191.3839237689972
+    },
+    {
+      "file": "day5_consultation08_conversation_transcript.txt",
+      "wer": 0.08654602675059009,
+      "reference_words": 1271,
+      "hypothesis_words": 1257,
+      "substitutions": 46,
+      "deletions": 39,
+      "insertions": 25,
+      "transcription_duration": 150.44991660118103
+    },
+    {
+      "file": "day2_consultation08_conversation_transcript.txt",
+      "wer": 0.12513842746400886,
+      "reference_words": 1806,
+      "hypothesis_words": 1749,
+      "substitutions": 101,
+      "deletions": 91,
+      "insertions": 34,
+      "transcription_duration": 215.33634305000305
+    },
+    {
+      "file": "day3_consultation10_conversation_transcript.txt",
+      "wer": 0.10199556541019955,
+      "reference_words": 1353,
+      "hypothesis_words": 1323,
+      "substitutions": 70,
+      "deletions": 49,
+      "insertions": 19,
+      "transcription_duration": 149.4209303855896
+    },
+    {
+      "file": "day2_consultation09_conversation_transcript.txt",
+      "wer": 0.13497536945812807,
+      "reference_words": 1015,
+      "hypothesis_words": 956,
+      "substitutions": 66,
+      "deletions": 65,
+      "insertions": 6,
+      "transcription_duration": 115.43595123291016
+    },
+    {
+      "file": "day4_consultation06_conversation_transcript.txt",
+      "wer": 0.12545454545454546,
+      "reference_words": 1650,
+      "hypothesis_words": 1570,
+      "substitutions": 79,
+      "deletions": 104,
+      "insertions": 24,
+      "transcription_duration": 161.419282913208
+    },
+    {
+      "file": "day4_consultation07_conversation_transcript.txt",
+      "wer": 0.14613180515759314,
+      "reference_words": 1745,
+      "hypothesis_words": 1675,
+      "substitutions": 95,
+      "deletions": 115,
+      "insertions": 45,
+      "transcription_duration": 166.84325528144836
+    },
+    {
+      "file": "day2_consultation01_conversation_transcript.txt",
+      "wer": 0.14347079037800686,
+      "reference_words": 1164,
+      "hypothesis_words": 1150,
+      "substitutions": 83,
+      "deletions": 49,
+      "insertions": 35,
+      "transcription_duration": 180.2210032939911
+    },
+    {
+      "file": "day2_consultation03_conversation_transcript.txt",
+      "wer": 0.1773851590106007,
+      "reference_words": 1415,
+      "hypothesis_words": 1337,
+      "substitutions": 113,
+      "deletions": 108,
+      "insertions": 30
+    },
+    {
+      "file": "day1_consultation15_conversation_transcript.txt",
+      "wer": 0.1576862123613312,
+      "reference_words": 1262,
+      "hypothesis_words": 1221,
+      "substitutions": 82,
+      "deletions": 79,
+      "insertions": 38
+    },
+    {
+      "file": "day1_consultation02_conversation_transcript.txt",
+      "wer": 0.15011961722488038,
+      "reference_words": 1672,
+      "hypothesis_words": 1609,
+      "substitutions": 96,
+      "deletions": 109,
+      "insertions": 46,
+      "transcription_duration": 148.26472115516663
+    },
+    {
+      "file": "day5_consultation10_conversation_transcript.txt",
+      "wer": 0.12597402597402596,
+      "reference_words": 1540,
+      "hypothesis_words": 1493,
+      "substitutions": 91,
+      "deletions": 75,
+      "insertions": 28,
+      "transcription_duration": 156.353191614151
+    },
+    {
+      "file": "day3_consultation05_conversation_transcript.txt",
+      "wer": 0.13380909901873328,
+      "reference_words": 1121,
+      "hypothesis_words": 1083,
+      "substitutions": 76,
+      "deletions": 56,
+      "insertions": 18,
+      "transcription_duration": 109.80444002151489
+    },
+    {
+      "file": "day1_consultation13_conversation_transcript.txt",
+      "wer": 0.1055127445168939,
+      "reference_words": 1687,
+      "hypothesis_words": 1620,
+      "substitutions": 79,
+      "deletions": 83,
+      "insertions": 16
+    },
+    {
+      "file": "day5_consultation06_conversation_transcript.txt",
+      "wer": 0.13716525146962769,
+      "reference_words": 1531,
+      "hypothesis_words": 1466,
+      "substitutions": 81,
+      "deletions": 97,
+      "insertions": 32,
+      "transcription_duration": 164.0145115852356
+    },
+    {
+      "file": "day4_consultation10_conversation_transcript.txt",
+      "wer": 0.13377324535092983,
+      "reference_words": 1667,
+      "hypothesis_words": 1556,
+      "substitutions": 70,
+      "deletions": 132,
+      "insertions": 21,
+      "transcription_duration": 197.79817986488342
+    },
+    {
+      "file": "day1_consultation03_conversation_transcript.txt",
+      "wer": 0.14606021780909673,
+      "reference_words": 1561,
+      "hypothesis_words": 1531,
+      "substitutions": 124,
+      "deletions": 67,
+      "insertions": 37,
+      "transcription_duration": 144.866792678833
+    },
+    {
+      "file": "day4_consultation05_conversation_transcript.txt",
+      "wer": 0.17263427109974425,
+      "reference_words": 1564,
+      "hypothesis_words": 1448,
+      "substitutions": 98,
+      "deletions": 144,
+      "insertions": 28,
+      "transcription_duration": 155.1920166015625
+    },
+    {
+      "file": "day2_consultation02_conversation_transcript.txt",
+      "wer": 0.15311572700296736,
+      "reference_words": 1685,
+      "hypothesis_words": 1560,
+      "substitutions": 95,
+      "deletions": 144,
+      "insertions": 19
+    },
+    {
+      "file": "day4_consultation02_conversation_transcript.txt",
+      "wer": 0.0999194198227236,
+      "reference_words": 1241,
+      "hypothesis_words": 1220,
+      "substitutions": 67,
+      "deletions": 39,
+      "insertions": 18,
+      "transcription_duration": 134.41570949554443
+    },
+    {
+      "file": "day5_consultation01_conversation_transcript.txt",
+      "wer": 0.1247987117552335,
+      "reference_words": 1242,
+      "hypothesis_words": 1204,
+      "substitutions": 71,
+      "deletions": 61,
+      "insertions": 23,
+      "transcription_duration": 121.234619140625
+    },
+    {
+      "file": "day3_consultation08_conversation_transcript.txt",
+      "wer": 0.1775599128540305,
+      "reference_words": 918,
+      "hypothesis_words": 897,
+      "substitutions": 80,
+      "deletions": 52,
+      "insertions": 31,
+      "transcription_duration": 92.57058525085449
+    },
+    {
+      "file": "day5_consultation02_conversation_transcript.txt",
+      "wer": 0.10166358595194085,
+      "reference_words": 1082,
+      "hypothesis_words": 1067,
+      "substitutions": 55,
+      "deletions": 35,
+      "insertions": 20,
+      "transcription_duration": 119.33858227729797
+    },
+    {
+      "file": "day3_consultation03_conversation_transcript.txt",
+      "wer": 0.165674066053059,
+      "reference_words": 1847,
+      "hypothesis_words": 1730,
+      "substitutions": 115,
+      "deletions": 154,
+      "insertions": 37,
+      "transcription_duration": 185.26800417900085
+    },
+    {
+      "file": "day1_consultation06_conversation_transcript.txt",
+      "wer": 0.19825232113599126,
+      "reference_words": 1831,
+      "hypothesis_words": 1677,
+      "substitutions": 145,
+      "deletions": 186,
+      "insertions": 32,
+      "transcription_duration": 175.19560623168945
+    },
+    {
+      "file": "day4_consultation04_conversation_transcript.txt",
+      "wer": 0.09017223910840932,
+      "reference_words": 987,
+      "hypothesis_words": 975,
+      "substitutions": 57,
+      "deletions": 22,
+      "insertions": 10,
+      "transcription_duration": 105.47108721733093
+    },
+    {
+      "file": "day1_consultation08_conversation_transcript.txt",
+      "wer": 0.15563198624247634,
+      "reference_words": 1163,
+      "hypothesis_words": 1117,
+      "substitutions": 89,
+      "deletions": 69,
+      "insertions": 23,
+      "transcription_duration": 158.74233984947205
+    },
+    {
+      "file": "day5_consultation11_conversation_transcript.txt",
+      "wer": 0.09919839679358718,
+      "reference_words": 1996,
+      "hypothesis_words": 1907,
+      "substitutions": 71,
+      "deletions": 108,
+      "insertions": 19,
+      "transcription_duration": 177.4681339263916
+    },
+    {
+      "file": "day1_consultation12_conversation_transcript.txt",
+      "wer": 0.15706806282722513,
+      "reference_words": 1146,
+      "hypothesis_words": 1106,
+      "substitutions": 72,
+      "deletions": 74,
+      "insertions": 34
+    },
+    {
+      "file": "day1_consultation05_conversation_transcript.txt",
+      "wer": 0.13786764705882354,
+      "reference_words": 1632,
+      "hypothesis_words": 1552,
+      "substitutions": 99,
+      "deletions": 103,
+      "insertions": 23,
+      "transcription_duration": 153.86410975456238
+    },
+    {
+      "file": "day4_consultation01_conversation_transcript.txt",
+      "wer": 0.12637362637362637,
+      "reference_words": 1274,
+      "hypothesis_words": 1253,
+      "substitutions": 76,
+      "deletions": 53,
+      "insertions": 32,
+      "transcription_duration": 137.06539583206177
+    }
+  ]
+}

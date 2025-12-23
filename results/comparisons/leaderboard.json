@@ -1,0 +1,204 @@
+{
+  "updated": "2025-12-23",
+  "dataset": {
+    "name": "PriMock57",
+    "files": 55,
+    "total_words": 81236,
+    "excluded_files": [
+      "day1_consultation07",
+      "day3_consultation03"
+    ]
+  },
+  "models": [
+    {
+      "rank": 1,
+      "name": "google-gemini-2.5-pro",
+      "wer": 0.1079,
+      "accuracy": 0.8921,
+      "avg_speed_sec": 56.4,
+      "best_wer": 0.0611,
+      "worst_wer": 0.1702,
+      "wer_std": 0.0265
+    },
+    {
+      "rank": 2,
+      "name": "google-gemini-2.5-flash",
+      "wer": 0.1208,
+      "accuracy": 0.8792,
+      "avg_speed_sec": 20.2,
+      "best_wer": 0.0661,
+      "worst_wer": 0.3745,
+      "wer_std": 0.0453
+    },
+    {
+      "rank": 3,
+      "name": "parakeet-parakeet-tdt-0.6b-v2",
+      "wer": 0.1326,
+      "accuracy": 0.8674,
+      "avg_speed_sec": 5.4,
+      "best_wer": 0.085,
+      "worst_wer": 0.2017,
+      "wer_std": 0.0305
+    },
+    {
+      "rank": 4,
+      "name": "elevenlabs-scribe/v1",
+      "wer": 0.1354,
+      "accuracy": 0.8646,
+      "avg_speed_sec": 36.3,
+      "best_wer": 0.0704,
+      "worst_wer": 0.6793,
+      "wer_std": 0.0871
+    },
+    {
+      "rank": 5,
+      "name": "kyutai-stt-pytorch-stt-2.6b-en",
+      "wer": 0.1379,
+      "accuracy": 0.8621,
+      "avg_speed_sec": 148.4,
+      "best_wer": 0.0782,
+      "worst_wer": 0.2072,
+      "wer_std": 0.0318
+    },
+    {
+      "rank": 6,
+      "name": "mlx-community/whisper-large-v3-turbo",
+      "wer": 0.1422,
+      "accuracy": 0.8578,
+      "avg_speed_sec": 12.9,
+      "best_wer": 0.0753,
+      "worst_wer": 0.3207,
+      "wer_std": 0.0409
+    },
+    {
+      "rank": 7,
+      "name": "groq-whisper-large-v3",
+      "wer": 0.143,
+      "accuracy": 0.857,
+      "avg_speed_sec": 8.6,
+      "best_wer": 0.088,
+      "worst_wer": 0.2119,
+      "wer_std": 0.0312
+    },
+    {
+      "rank": 8,
+      "name": "mistral-voxtral-mini-latest",
+      "wer": 0.1435,
+      "accuracy": 0.8565,
+      "avg_speed_sec": 22.4,
+      "best_wer": 0.0782,
+      "worst_wer": 0.4786,
+      "wer_std": 0.0556
+    },
+    {
+      "rank": 9,
+      "name": "mistral-voxtral-mini-latest-transcription",
+      "wer": 0.1437,
+      "accuracy": 0.8563,
+      "avg_speed_sec": 23.0,
+      "best_wer": 0.0782,
+      "worst_wer": 0.4753,
+      "wer_std": 0.0553
+    },
+    {
+      "rank": 10,
+      "name": "canary/1b/flash/lcs",
+      "wer": 0.1446,
+      "accuracy": 0.8554,
+      "avg_speed_sec": 23.4,
+      "best_wer": 0.085,
+      "worst_wer": 0.2195,
+      "wer_std": 0.0332
+    },
+    {
+      "rank": 11,
+      "name": "groq-whisper-large-v3-turbo",
+      "wer": 0.145,
+      "accuracy": 0.855,
+      "avg_speed_sec": 8.0,
+      "best_wer": 0.085,
+      "worst_wer": 0.2175,
+      "wer_std": 0.0319
+    },
+    {
+      "rank": 12,
+      "name": "whisperkit-large-v3-v20240930/turbo",
+      "wer": 0.1455,
+      "accuracy": 0.8545,
+      "avg_speed_sec": 21.4,
+      "best_wer": 0.0772,
+      "worst_wer": 0.2205,
+      "wer_std": 0.0339
+    },
+    {
+      "rank": 13,
+      "name": "apple-speechanalyzer",
+      "wer": 0.1475,
+      "accuracy": 0.8525,
+      "avg_speed_sec": 6.0,
+      "best_wer": 0.087,
+      "worst_wer": 0.2136,
+      "wer_std": 0.0322
+    },
+    {
+      "rank": 14,
+      "name": "nvidia/canary-qwen-2.5b",
+      "wer": 0.1545,
+      "accuracy": 0.8455,
+      "avg_speed_sec": 105.4,
+      "best_wer": 0.0831,
+      "worst_wer": 0.6451,
+      "wer_std": 0.0742
+    },
+    {
+      "rank": 15,
+      "name": "openai-whisper-1",
+      "wer": 0.1549,
+      "accuracy": 0.8451,
+      "avg_speed_sec": 104.3,
+      "best_wer": 0.0721,
+      "worst_wer": 1.0496,
+      "wer_std": 0.127
+    },
+    {
+      "rank": 16,
+      "name": "openai-gpt-4o-mini-transcribe",
+      "wer": 0.1596,
+      "accuracy": 0.8404,
+      "avg_speed_sec": 0,
+      "best_wer": 0.081,
+      "worst_wer": 0.4303,
+      "wer_std": 0.0574
+    },
+    {
+      "rank": 17,
+      "name": "openai-gpt-4o-transcribe",
+      "wer": 0.1714,
+      "accuracy": 0.8286,
+      "avg_speed_sec": 27.9,
+      "best_wer": 0.0821,
+      "worst_wer": 0.6655,
+      "wer_std": 0.0933
+    },
+    {
+      "rank": 18,
+      "name": "kyutai-stt-pytorch-stt-1b-en/fr",
+      "wer": 0.2941,
+      "accuracy": 0.7059,
+      "avg_speed_sec": 79.5,
+      "best_wer": 0.0952,
+      "worst_wer": 2.2314,
+      "wer_std": 0.2958
+    },
+    {
+      "rank": 19,
+      "name": "azure-foundry-phi4",
+      "wer": 0.3313,
+      "accuracy": 0.6687,
+      "avg_speed_sec": 212.8,
+      "best_wer": 0.0903,
+      "worst_wer": 1.071,
+      "wer_std": 0.2756
+    }
+  ]
+}
