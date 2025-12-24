@@ -223,6 +223,14 @@ Cloud APIs generally handle long audio better than local models requiring chunki
 - **Without outliers**: 15.61% WER
 - **Takeaway**: Native long-form works well on most files, but autoregressive models can hallucinate unpredictably on certain audio segments
 
+### Google MedASR
+- **WER**: 64.88% - Worst performing model in benchmark
+- **Tested On**: MPS (MacBook CPU), NVIDIA T4 GPU (official Google notebook), Vertex AI endpoint
+- **Result**: All three platforms showed similar poor performance
+- **Reason**: MedASR is designed for medical **dictation** (single speaker, clear speech), not doctor-patient **conversations**
+- **Benchmark**: Kept MPS (MacBook) results; ignored T4 and Vertex AI as they showed no improvement
+- **Note**: Vertex AI requires chunking due to 1.5MB request limit
+
 ### IBM Granite Speech 3.3-2b (ibm-granite/granite-speech-3.3-2b)
 - **Speed**: ~3.94x realtime with chunking
 - **Architecture**: Two-pass design (speech encoder → text decoder)
