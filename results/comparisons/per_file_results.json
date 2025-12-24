@@ -1,13 +1,15 @@
 {
-  "timestamp": "2025-12-24 01:23:11",
+  "timestamp": "2025-12-24 12:48:45",
   "models": [
     "kyutai-stt-pytorch-stt-2.6b-en",
     "whisperkit-large-v3-v20240930/turbo",
     "mistral-voxtral-mini-latest",
     "mistral-voxtral-mini-latest-transcription",
+    "google-gemini-3-pro-preview",
     "azure-foundry-phi4",
     "openai-gpt-4o-transcribe",
     "google-gemini-2.5-flash",
+    "openai-gpt-4o-mini-transcribe-2025-12-15",
     "openai-whisper-1",
     "mlx-community/whisper-large-v3-turbo",
     "google-gemini-2.5-pro",
@@ -52,6 +54,12 @@
           "hypothesis_words": 1300,
           "transcription_duration": 21.64165711402893
         },
+        "google-gemini-3-pro-preview": {
+          "wer": null,
+          "reference_words": null,
+          "hypothesis_words": null,
+          "transcription_duration": null
+        },
         "azure-foundry-phi4": {
           "wer": 0.15801024140453548,
           "reference_words": 1367,
@@ -69,6 +77,12 @@
           "reference_words": 1367,
           "hypothesis_words": 1361,
           "transcription_duration": 25.417561054229736
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.15142648134601316,
+          "reference_words": 1367,
+          "hypothesis_words": 1311,
+          "transcription_duration": 36.907777070999146
         },
         "openai-whisper-1": {
           "wer": 0.1528895391367959,
@@ -189,6 +203,12 @@
           "hypothesis_words": 1579,
           "transcription_duration": 34.417442083358765
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.12739234449760767,
+          "reference_words": 1672,
+          "hypothesis_words": 1675,
+          "transcription_duration": 66.82824397087097
+        },
         "azure-foundry-phi4": {
           "wer": 1.055023923444976,
           "reference_words": 1672,
@@ -206,6 +226,12 @@
           "reference_words": 1672,
           "hypothesis_words": 1684,
           "transcription_duration": 28.996241807937622
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.14114832535885166,
+          "reference_words": 1672,
+          "hypothesis_words": 1599,
+          "transcription_duration": 50.19258189201355
         },
         "openai-whisper-1": {
           "wer": 0.15729665071770335,
@@ -326,6 +352,12 @@
           "hypothesis_words": 1498,
           "transcription_duration": 19.300342082977295
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.14221652786675207,
+          "reference_words": 1561,
+          "hypothesis_words": 1614,
+          "transcription_duration": 75.3442850112915
+        },
         "azure-foundry-phi4": {
           "wer": 0.39654067905188983,
           "reference_words": 1561,
@@ -343,6 +375,12 @@
           "reference_words": 1561,
           "hypothesis_words": 1601,
           "transcription_duration": 21.22642207145691
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.15118513773222295,
+          "reference_words": 1561,
+          "hypothesis_words": 1499,
+          "transcription_duration": 48.61944007873535
         },
         "openai-whisper-1": {
           "wer": 0.14862267777065982,
@@ -463,6 +501,12 @@
           "hypothesis_words": 1510,
           "transcription_duration": 24.50861406326294
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.1399152029073289,
+          "reference_words": 1651,
+          "hypothesis_words": 1690,
+          "transcription_duration": 69.90234065055847
+        },
         "azure-foundry-phi4": {
           "wer": 0.23561477892186553,
           "reference_words": 1651,
@@ -480,6 +524,12 @@
           "reference_words": 1651,
           "hypothesis_words": 1666,
           "transcription_duration": 45.0054988861084
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.18291944276196245,
+          "reference_words": 1651,
+          "hypothesis_words": 1547,
+          "transcription_duration": 52.866130113601685
         },
         "openai-whisper-1": {
           "wer": 0.20169594185342216,
@@ -600,6 +650,12 @@
           "hypothesis_words": 1540,
           "transcription_duration": 21.256474018096924
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.11642156862745098,
+          "reference_words": 1632,
+          "hypothesis_words": 1635,
+          "transcription_duration": 94.87523198127747
+        },
         "azure-foundry-phi4": {
           "wer": 0.18627450980392157,
           "reference_words": 1632,
@@ -617,6 +673,12 @@
           "reference_words": 1632,
           "hypothesis_words": 1628,
           "transcription_duration": 20.83380889892578
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.13602941176470587,
+          "reference_words": 1632,
+          "hypothesis_words": 1534,
+          "transcription_duration": 16.681931972503662
         },
         "openai-whisper-1": {
           "wer": 0.1636029411764706,
@@ -737,6 +799,12 @@
           "hypothesis_words": 1675,
           "transcription_duration": 27.510565996170044
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.1387220098306936,
+          "reference_words": 1831,
+          "hypothesis_words": 1824,
+          "transcription_duration": 89.65456295013428
+        },
         "azure-foundry-phi4": {
           "wer": 0.3173129437465866,
           "reference_words": 1831,
@@ -754,6 +822,12 @@
           "reference_words": 1831,
           "hypothesis_words": 1800,
           "transcription_duration": 20.890318155288696
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.16439104314582195,
+          "reference_words": 1831,
+          "hypothesis_words": 1705,
+          "transcription_duration": 51.566471099853516
         },
         "openai-whisper-1": {
           "wer": 0.18022938285090115,
@@ -874,6 +948,12 @@
           "hypothesis_words": 1103,
           "transcription_duration": 23.147086143493652
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.10748065348237318,
+          "reference_words": 1163,
+          "hypothesis_words": 1165,
+          "transcription_duration": 56.69359087944031
+        },
         "azure-foundry-phi4": {
           "wer": 0.828030954428203,
           "reference_words": 1163,
@@ -891,6 +971,12 @@
           "reference_words": 1163,
           "hypothesis_words": 1165,
           "transcription_duration": 12.810168027877808
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.11521926053310404,
+          "reference_words": 1163,
+          "hypothesis_words": 1100,
+          "transcription_duration": 41.07232189178467
         },
         "openai-whisper-1": {
           "wer": 0.14015477214101463,
@@ -1011,6 +1097,12 @@
           "hypothesis_words": 1386,
           "transcription_duration": 24.26385807991028
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.10989717223650386,
+          "reference_words": 1556,
+          "hypothesis_words": 1524,
+          "transcription_duration": 57.44592308998108
+        },
         "azure-foundry-phi4": {
           "wer": 0.17544987146529564,
           "reference_words": 1556,
@@ -1028,6 +1120,12 @@
           "reference_words": 1556,
           "hypothesis_words": 1513,
           "transcription_duration": 31.409442901611328
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.17416452442159383,
+          "reference_words": 1556,
+          "hypothesis_words": 1393,
+          "transcription_duration": 14.883296012878418
         },
         "openai-whisper-1": {
           "wer": 0.17095115681233933,
@@ -1148,6 +1246,12 @@
           "hypothesis_words": 1669,
           "transcription_duration": 26.699520111083984
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.14270270270270272,
+          "reference_words": 1850,
+          "hypothesis_words": 1824,
+          "transcription_duration": 66.94196510314941
+        },
         "azure-foundry-phi4": {
           "wer": 0.4281081081081081,
           "reference_words": 1850,
@@ -1165,6 +1269,12 @@
           "reference_words": 1850,
           "hypothesis_words": 1793,
           "transcription_duration": 36.57941722869873
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.18,
+          "reference_words": 1850,
+          "hypothesis_words": 1727,
+          "transcription_duration": 46.41201996803284
         },
         "openai-whisper-1": {
           "wer": 0.20324324324324325,
@@ -1285,6 +1395,12 @@
           "hypothesis_words": 2143,
           "transcription_duration": 37.475640058517456
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.1298366294067068,
+          "reference_words": 2326,
+          "hypothesis_words": 2326,
+          "transcription_duration": 74.98636484146118
+        },
         "azure-foundry-phi4": {
           "wer": 0.9926913155631987,
           "reference_words": 2326,
@@ -1302,6 +1418,12 @@
           "reference_words": 2326,
           "hypothesis_words": 2328,
           "transcription_duration": 26.944742918014526
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.13155631986242478,
+          "reference_words": 2326,
+          "hypothesis_words": 2202,
+          "transcription_duration": 75.4664421081543
         },
         "openai-whisper-1": {
           "wer": 0.146603611349957,
@@ -1422,6 +1544,12 @@
           "hypothesis_words": 1104,
           "transcription_duration": 16.832027912139893
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.12390924956369982,
+          "reference_words": 1146,
+          "hypothesis_words": 1152,
+          "transcription_duration": 45.761833906173706
+        },
         "azure-foundry-phi4": {
           "wer": 0.19458987783595114,
           "reference_words": 1146,
@@ -1439,6 +1567,12 @@
           "reference_words": 1146,
           "hypothesis_words": 1150,
           "transcription_duration": 13.777222156524658
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.13787085514834205,
+          "reference_words": 1146,
+          "hypothesis_words": 1110,
+          "transcription_duration": 42.252646923065186
         },
         "openai-whisper-1": {
           "wer": 0.17015706806282724,
@@ -1559,6 +1693,12 @@
           "hypothesis_words": 1612,
           "transcription_duration": 28.588161945343018
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.06757557794902193,
+          "reference_words": 1687,
+          "hypothesis_words": 1673,
+          "transcription_duration": 80.7126829624176
+        },
         "azure-foundry-phi4": {
           "wer": 0.12625963248369887,
           "reference_words": 1687,
@@ -1576,6 +1716,12 @@
           "reference_words": 1687,
           "hypothesis_words": 1671,
           "transcription_duration": 36.224040031433105
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.13633669235328985,
+          "reference_words": 1687,
+          "hypothesis_words": 1554,
+          "transcription_duration": 60.42401099205017
         },
         "openai-whisper-1": {
           "wer": 0.1049199762892709,
@@ -1696,6 +1842,12 @@
           "hypothesis_words": 1797,
           "transcription_duration": 37.218899965286255
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.12596401028277635,
+          "reference_words": 1945,
+          "hypothesis_words": 1945,
+          "transcription_duration": 88.17927026748657
+        },
         "azure-foundry-phi4": {
           "wer": 0.20308483290488433,
           "reference_words": 1945,
@@ -1713,6 +1865,12 @@
           "reference_words": 1945,
           "hypothesis_words": 1934,
           "transcription_duration": 22.041152000427246
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.13161953727506426,
+          "reference_words": 1945,
+          "hypothesis_words": 1864,
+          "transcription_duration": 46.07274007797241
         },
         "openai-whisper-1": {
           "wer": 0.16760925449871467,
@@ -1833,6 +1991,12 @@
           "hypothesis_words": 1234,
           "transcription_duration": 21.20958113670349
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.1561014263074485,
+          "reference_words": 1262,
+          "hypothesis_words": 1279,
+          "transcription_duration": 51.55728816986084
+        },
         "azure-foundry-phi4": {
           "wer": 0.27099841521394613,
           "reference_words": 1262,
@@ -1850,6 +2014,12 @@
           "reference_words": 1262,
           "hypothesis_words": 1288,
           "transcription_duration": 18.220075130462646
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.14976228209191758,
+          "reference_words": 1262,
+          "hypothesis_words": 1247,
+          "transcription_duration": 37.925806760787964
         },
         "openai-whisper-1": {
           "wer": 0.16085578446909668,
@@ -1970,6 +2140,12 @@
           "hypothesis_words": 1149,
           "transcription_duration": 12.400611162185669
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.13573883161512026,
+          "reference_words": 1164,
+          "hypothesis_words": 1198,
+          "transcription_duration": 41.74669528007507
+        },
         "azure-foundry-phi4": {
           "wer": 0.27491408934707906,
           "reference_words": 1164,
@@ -1987,6 +2163,12 @@
           "reference_words": 1164,
           "hypothesis_words": 1195,
           "transcription_duration": 12.285786867141724
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.12714776632302405,
+          "reference_words": 1164,
+          "hypothesis_words": 1165,
+          "transcription_duration": 31.723144054412842
         },
         "openai-whisper-1": {
           "wer": 0.14776632302405499,
@@ -2107,6 +2289,12 @@
           "hypothesis_words": 1551,
           "transcription_duration": 21.464448928833008
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.11750741839762611,
+          "reference_words": 1685,
+          "hypothesis_words": 1680,
+          "transcription_duration": 79.7070243358612
+        },
         "azure-foundry-phi4": {
           "wer": 0.2059347181008902,
           "reference_words": 1685,
@@ -2124,6 +2312,12 @@
           "reference_words": 1685,
           "hypothesis_words": 1667,
           "transcription_duration": 20.074740171432495
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.15074183976261127,
+          "reference_words": 1685,
+          "hypothesis_words": 1576,
+          "transcription_duration": 43.1798210144043
         },
         "openai-whisper-1": {
           "wer": 0.16439169139465876,
@@ -2244,6 +2438,12 @@
           "hypothesis_words": 1348,
           "transcription_duration": 19.56423592567444
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.14628975265017669,
+          "reference_words": 1415,
+          "hypothesis_words": 1428,
+          "transcription_duration": 73.2634928226471
+        },
         "azure-foundry-phi4": {
           "wer": 0.19929328621908127,
           "reference_words": 1415,
@@ -2261,6 +2461,12 @@
           "reference_words": 1415,
           "hypothesis_words": 1323,
           "transcription_duration": 13.88021993637085
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.1667844522968198,
+          "reference_words": 1415,
+          "hypothesis_words": 1361,
+          "transcription_duration": 40.93228316307068
         },
         "openai-whisper-1": {
           "wer": 0.16890459363957597,
@@ -2381,6 +2587,12 @@
           "hypothesis_words": 1720,
           "transcription_duration": 24.44046711921692
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.10356164383561643,
+          "reference_words": 1825,
+          "hypothesis_words": 1839,
+          "transcription_duration": 46.98492693901062
+        },
         "azure-foundry-phi4": {
           "wer": 0.6263013698630137,
           "reference_words": 1825,
@@ -2398,6 +2610,12 @@
           "reference_words": 1825,
           "hypothesis_words": 1802,
           "transcription_duration": 36.87757706642151
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.1358904109589041,
+          "reference_words": 1825,
+          "hypothesis_words": 1766,
+          "transcription_duration": 18.709707021713257
         },
         "openai-whisper-1": {
           "wer": 0.15287671232876712,
@@ -2518,6 +2736,12 @@
           "hypothesis_words": 1837,
           "transcription_duration": 35.14127516746521
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.07042253521126761,
+          "reference_words": 1917,
+          "hypothesis_words": 1906,
+          "transcription_duration": 72.29172587394714
+        },
         "azure-foundry-phi4": {
           "wer": 0.4188836724047992,
           "reference_words": 1917,
@@ -2535,6 +2759,12 @@
           "reference_words": 1917,
           "hypothesis_words": 1896,
           "transcription_duration": 22.09087586402893
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.09546165884194054,
+          "reference_words": 1917,
+          "hypothesis_words": 1841,
+          "transcription_duration": 57.75478005409241
         },
         "openai-whisper-1": {
           "wer": 0.09233176838810642,
@@ -2655,6 +2885,12 @@
           "hypothesis_words": 1807,
           "transcription_duration": 22.860050201416016
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.0784313725490196,
+          "reference_words": 1938,
+          "hypothesis_words": 1906,
+          "transcription_duration": 76.4509871006012
+        },
         "azure-foundry-phi4": {
           "wer": 0.1692466460268318,
           "reference_words": 1938,
@@ -2672,6 +2908,12 @@
           "reference_words": 1938,
           "hypothesis_words": 1904,
           "transcription_duration": 20.766056776046753
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.10577915376676987,
+          "reference_words": 1938,
+          "hypothesis_words": 1830,
+          "transcription_duration": 15.808177947998047
         },
         "openai-whisper-1": {
           "wer": 0.12022703818369453,
@@ -2792,6 +3034,12 @@
           "hypothesis_words": 1222,
           "transcription_duration": 16.302567958831787
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.14296636085626913,
+          "reference_words": 1308,
+          "hypothesis_words": 1310,
+          "transcription_duration": 52.82282209396362
+        },
         "azure-foundry-phi4": {
           "wer": 0.1743119266055046,
           "reference_words": 1308,
@@ -2809,6 +3057,12 @@
           "reference_words": 1308,
           "hypothesis_words": 1294,
           "transcription_duration": 14.4792320728302
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.1452599388379205,
+          "reference_words": 1308,
+          "hypothesis_words": 1247,
+          "transcription_duration": 13.05538272857666
         },
         "openai-whisper-1": {
           "wer": 0.17507645259938837,
@@ -2929,6 +3183,12 @@
           "hypothesis_words": 1750,
           "transcription_duration": 29.389651775360107
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.09966777408637874,
+          "reference_words": 1806,
+          "hypothesis_words": 1816,
+          "transcription_duration": 55.2769501209259
+        },
         "azure-foundry-phi4": {
           "wer": 0.11904761904761904,
           "reference_words": 1806,
@@ -2946,6 +3206,12 @@
           "reference_words": 1806,
           "hypothesis_words": 1813,
           "transcription_duration": 21.591716051101685
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.11074197120708748,
+          "reference_words": 1806,
+          "hypothesis_words": 1754,
+          "transcription_duration": 58.34389615058899
         },
         "openai-whisper-1": {
           "wer": 0.12679955703211518,
@@ -3066,6 +3332,12 @@
           "hypothesis_words": 965,
           "transcription_duration": 15.868847846984863
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.10344827586206896,
+          "reference_words": 1015,
+          "hypothesis_words": 984,
+          "transcription_duration": 53.63484001159668
+        },
         "azure-foundry-phi4": {
           "wer": 0.13201970443349753,
           "reference_words": 1015,
@@ -3083,6 +3355,12 @@
           "reference_words": 1015,
           "hypothesis_words": 1011,
           "transcription_duration": 11.870455026626587
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.1310344827586207,
+          "reference_words": 1015,
+          "hypothesis_words": 957,
+          "transcription_duration": 16.770397901535034
         },
         "openai-whisper-1": {
           "wer": 0.13891625615763548,
@@ -3203,6 +3481,12 @@
           "hypothesis_words": 1696,
           "transcription_duration": 29.604443788528442
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.08431044109436069,
+          "reference_words": 1791,
+          "hypothesis_words": 1767,
+          "transcription_duration": 83.99556589126587
+        },
         "azure-foundry-phi4": {
           "wer": 0.11446119486320491,
           "reference_words": 1791,
@@ -3220,6 +3504,12 @@
           "reference_words": 1791,
           "hypothesis_words": 1757,
           "transcription_duration": 22.22384285926819
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.11166945840312674,
+          "reference_words": 1791,
+          "hypothesis_words": 1684,
+          "transcription_duration": 54.172948122024536
         },
         "openai-whisper-1": {
           "wer": 0.14461194863204913,
@@ -3340,6 +3630,12 @@
           "hypothesis_words": 1193,
           "transcription_duration": 20.198033094406128
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.11372549019607843,
+          "reference_words": 1275,
+          "hypothesis_words": 1245,
+          "transcription_duration": 47.578876972198486
+        },
         "azure-foundry-phi4": {
           "wer": 0.7427450980392157,
           "reference_words": 1275,
@@ -3357,6 +3653,12 @@
           "reference_words": 1275,
           "hypothesis_words": 1237,
           "transcription_duration": 17.70216989517212
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.15215686274509804,
+          "reference_words": 1275,
+          "hypothesis_words": 1179,
+          "transcription_duration": 47.39223909378052
         },
         "openai-whisper-1": {
           "wer": 0.15764705882352942,
@@ -3477,6 +3779,12 @@
           "hypothesis_words": 1092,
           "transcription_duration": 19.332195281982422
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.1266490765171504,
+          "reference_words": 1137,
+          "hypothesis_words": 1155,
+          "transcription_duration": 60.36289715766907
+        },
         "azure-foundry-phi4": {
           "wer": 0.594547053649956,
           "reference_words": 1137,
@@ -3494,6 +3802,12 @@
           "reference_words": 1137,
           "hypothesis_words": 1159,
           "transcription_duration": 13.117580890655518
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.13368513632365875,
+          "reference_words": 1137,
+          "hypothesis_words": 1099,
+          "transcription_duration": 11.796735048294067
         },
         "openai-whisper-1": {
           "wer": 0.1310466138962181,
@@ -3614,6 +3928,12 @@
           "hypothesis_words": 1084,
           "transcription_duration": 14.678153038024902
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.13051305130513052,
+          "reference_words": 1111,
+          "hypothesis_words": 1120,
+          "transcription_duration": 48.03416895866394
+        },
         "azure-foundry-phi4": {
           "wer": 0.1719171917191719,
           "reference_words": 1111,
@@ -3631,6 +3951,12 @@
           "reference_words": 1111,
           "hypothesis_words": 1116,
           "transcription_duration": 12.697021961212158
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.15931593159315932,
+          "reference_words": 1111,
+          "hypothesis_words": 1073,
+          "transcription_duration": 14.370662927627563
         },
         "openai-whisper-1": {
           "wer": 0.13681368136813682,
@@ -3751,6 +4077,12 @@
           "hypothesis_words": 1085,
           "transcription_duration": 12.903759956359863
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.11418376449598573,
+          "reference_words": 1121,
+          "hypothesis_words": 1118,
+          "transcription_duration": 44.712891817092896
+        },
         "azure-foundry-phi4": {
           "wer": 0.15075825156110614,
           "reference_words": 1121,
@@ -3768,6 +4100,12 @@
           "reference_words": 1121,
           "hypothesis_words": 1118,
           "transcription_duration": 12.122391700744629
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.10526315789473684,
+          "reference_words": 1121,
+          "hypothesis_words": 1096,
+          "transcription_duration": 32.37942290306091
         },
         "openai-whisper-1": {
           "wer": 0.13380909901873328,
@@ -3888,6 +4226,12 @@
           "hypothesis_words": 586,
           "transcription_duration": 8.174384117126465
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.14189189189189189,
+          "reference_words": 592,
+          "hypothesis_words": 622,
+          "transcription_duration": 49.60066318511963
+        },
         "azure-foundry-phi4": {
           "wer": 0.14527027027027026,
           "reference_words": 592,
@@ -3905,6 +4249,12 @@
           "reference_words": 592,
           "hypothesis_words": 616,
           "transcription_duration": 7.165394067764282
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.09797297297297297,
+          "reference_words": 592,
+          "hypothesis_words": 593,
+          "transcription_duration": 8.764655113220215
         },
         "openai-whisper-1": {
           "wer": 0.14695945945945946,
@@ -4025,6 +4375,12 @@
           "hypothesis_words": 1135,
           "transcription_duration": 16.953030824661255
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.15208156329651656,
+          "reference_words": 1177,
+          "hypothesis_words": 1222,
+          "transcription_duration": 64.00151181221008
+        },
         "azure-foundry-phi4": {
           "wer": 0.2982158028887001,
           "reference_words": 1177,
@@ -4042,6 +4398,12 @@
           "reference_words": 1177,
           "hypothesis_words": 1202,
           "transcription_duration": 13.586234092712402
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.15972812234494477,
+          "reference_words": 1177,
+          "hypothesis_words": 1127,
+          "transcription_duration": 35.03654599189758
         },
         "openai-whisper-1": {
           "wer": 0.15632965165675447,
@@ -4162,6 +4524,12 @@
           "hypothesis_words": 857,
           "transcription_duration": 12.212110757827759
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.1503267973856209,
+          "reference_words": 918,
+          "hypothesis_words": 942,
+          "transcription_duration": 39.51178503036499
+        },
         "azure-foundry-phi4": {
           "wer": 0.16230936819172112,
           "reference_words": 918,
@@ -4179,6 +4547,12 @@
           "reference_words": 918,
           "hypothesis_words": 917,
           "transcription_duration": 16.234606981277466
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.12636165577342048,
+          "reference_words": 918,
+          "hypothesis_words": 906,
+          "transcription_duration": 32.74905705451965
         },
         "openai-whisper-1": {
           "wer": 0.13071895424836602,
@@ -4299,6 +4673,12 @@
           "hypothesis_words": 2065,
           "transcription_duration": 28.56583881378174
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.08313762329732269,
+          "reference_words": 2129,
+          "hypothesis_words": 2123,
+          "transcription_duration": 92.01848077774048
+        },
         "azure-foundry-phi4": {
           "wer": 0.11366838891498356,
           "reference_words": 2129,
@@ -4316,6 +4696,12 @@
           "reference_words": 2129,
           "hypothesis_words": 2136,
           "transcription_duration": 23.39987587928772
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.09581963363081258,
+          "reference_words": 2129,
+          "hypothesis_words": 2077,
+          "transcription_duration": 64.04368686676025
         },
         "openai-whisper-1": {
           "wer": 0.09065288868013152,
@@ -4436,6 +4822,12 @@
           "hypothesis_words": 1344,
           "transcription_duration": 26.66730499267578
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.08056171470805618,
+          "reference_words": 1353,
+          "hypothesis_words": 1370,
+          "transcription_duration": 49.977303981781006
+        },
         "azure-foundry-phi4": {
           "wer": 0.827790096082779,
           "reference_words": 1353,
@@ -4453,6 +4845,12 @@
           "reference_words": 1353,
           "hypothesis_words": 1355,
           "transcription_duration": 30.37848973274231
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.09312638580931264,
+          "reference_words": 1353,
+          "hypothesis_words": 1332,
+          "transcription_duration": 42.947582960128784
         },
         "openai-whisper-1": {
           "wer": 0.082039911308204,
@@ -4573,6 +4971,12 @@
           "hypothesis_words": 1242,
           "transcription_duration": 17.487090826034546
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.10989010989010989,
+          "reference_words": 1274,
+          "hypothesis_words": 1267,
+          "transcription_duration": 47.51765727996826
+        },
         "azure-foundry-phi4": {
           "wer": 0.17032967032967034,
           "reference_words": 1274,
@@ -4590,6 +4994,12 @@
           "reference_words": 1274,
           "hypothesis_words": 1278,
           "transcription_duration": 16.43834376335144
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.10832025117739404,
+          "reference_words": 1274,
+          "hypothesis_words": 1228,
+          "transcription_duration": 43.06098794937134
         },
         "openai-whisper-1": {
           "wer": 0.10675039246467818,
@@ -4710,6 +5120,12 @@
           "hypothesis_words": 1222,
           "transcription_duration": 19.61912703514099
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.09105560032232071,
+          "reference_words": 1241,
+          "hypothesis_words": 1254,
+          "transcription_duration": 73.48033690452576
+        },
         "azure-foundry-phi4": {
           "wer": 0.1168412570507655,
           "reference_words": 1241,
@@ -4727,6 +5143,12 @@
           "reference_words": 1241,
           "hypothesis_words": 1251,
           "transcription_duration": 19.317559003829956
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.10153102336825141,
+          "reference_words": 1241,
+          "hypothesis_words": 1196,
+          "transcription_duration": 39.045511960983276
         },
         "openai-whisper-1": {
           "wer": 0.12489927477840451,
@@ -4847,6 +5269,12 @@
           "hypothesis_words": 997,
           "transcription_duration": 12.477102994918823
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.06842619745845552,
+          "reference_words": 1023,
+          "hypothesis_words": 1025,
+          "transcription_duration": 55.45323204994202
+        },
         "azure-foundry-phi4": {
           "wer": 0.3479960899315738,
           "reference_words": 1023,
@@ -4864,6 +5292,12 @@
           "reference_words": 1023,
           "hypothesis_words": 1017,
           "transcription_duration": 10.98924994468689
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.07526881720430108,
+          "reference_words": 1023,
+          "hypothesis_words": 990,
+          "transcription_duration": 30.111990213394165
         },
         "openai-whisper-1": {
           "wer": 0.08895405669599218,
@@ -4984,6 +5418,12 @@
           "hypothesis_words": 964,
           "transcription_duration": 14.839032888412476
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.08611955420466058,
+          "reference_words": 987,
+          "hypothesis_words": 994,
+          "transcription_duration": 59.38533926010132
+        },
         "azure-foundry-phi4": {
           "wer": 0.574468085106383,
           "reference_words": 987,
@@ -5001,6 +5441,12 @@
           "reference_words": 987,
           "hypothesis_words": 992,
           "transcription_duration": 11.124722957611084
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.08713272543059777,
+          "reference_words": 987,
+          "hypothesis_words": 969,
+          "transcription_duration": 34.40718936920166
         },
         "openai-whisper-1": {
           "wer": 0.10536980749746708,
@@ -5121,6 +5567,12 @@
           "hypothesis_words": 1426,
           "transcription_duration": 20.815927743911743
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.14194373401534527,
+          "reference_words": 1564,
+          "hypothesis_words": 1591,
+          "transcription_duration": 85.09679222106934
+        },
         "azure-foundry-phi4": {
           "wer": 0.3088235294117647,
           "reference_words": 1564,
@@ -5138,6 +5590,12 @@
           "reference_words": 1564,
           "hypothesis_words": 1559,
           "transcription_duration": 19.984108924865723
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.17391304347826086,
+          "reference_words": 1564,
+          "hypothesis_words": 1423,
+          "transcription_duration": 49.148760080337524
         },
         "openai-whisper-1": {
           "wer": 0.19117647058823528,
@@ -5258,6 +5716,12 @@
           "hypothesis_words": 1560,
           "transcription_duration": 26.314388036727905
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.09333333333333334,
+          "reference_words": 1650,
+          "hypothesis_words": 1660,
+          "transcription_duration": 60.02481007575989
+        },
         "azure-foundry-phi4": {
           "wer": 0.13272727272727272,
           "reference_words": 1650,
@@ -5275,6 +5739,12 @@
           "reference_words": 1650,
           "hypothesis_words": 1124,
           "transcription_duration": 17.04082202911377
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.10363636363636364,
+          "reference_words": 1650,
+          "hypothesis_words": 1563,
+          "transcription_duration": 45.42880606651306
         },
         "openai-whisper-1": {
           "wer": 0.1393939393939394,
@@ -5395,6 +5865,12 @@
           "hypothesis_words": 1652,
           "transcription_duration": 28.26340913772583
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.10200573065902578,
+          "reference_words": 1745,
+          "hypothesis_words": 1727,
+          "transcription_duration": 59.96740412712097
+        },
         "azure-foundry-phi4": {
           "wer": 0.18108882521489972,
           "reference_words": 1745,
@@ -5412,6 +5888,12 @@
           "reference_words": 1745,
           "hypothesis_words": 1751,
           "transcription_duration": 21.57795023918152
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.1329512893982808,
+          "reference_words": 1745,
+          "hypothesis_words": 1678,
+          "transcription_duration": 46.80756998062134
         },
         "openai-whisper-1": {
           "wer": 0.14040114613180515,
@@ -5532,6 +6014,12 @@
           "hypothesis_words": 1586,
           "transcription_duration": 30.931309938430786
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.10526315789473684,
+          "reference_words": 1691,
+          "hypothesis_words": 1681,
+          "transcription_duration": 80.7745110988617
+        },
         "azure-foundry-phi4": {
           "wer": 0.6978119455943229,
           "reference_words": 1691,
@@ -5549,6 +6037,12 @@
           "reference_words": 1691,
           "hypothesis_words": 1678,
           "transcription_duration": 24.265949964523315
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.12063867534003549,
+          "reference_words": 1691,
+          "hypothesis_words": 1600,
+          "transcription_duration": 51.48610186576843
         },
         "openai-whisper-1": {
           "wer": 0.14251921939680662,
@@ -5669,6 +6163,12 @@
           "hypothesis_words": 1584,
           "transcription_duration": null
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.09369475545079552,
+          "reference_words": 1697,
+          "hypothesis_words": 1683,
+          "transcription_duration": 63.274325132369995
+        },
         "azure-foundry-phi4": {
           "wer": 0.13553329404832057,
           "reference_words": 1697,
@@ -5686,6 +6186,12 @@
           "reference_words": 1697,
           "hypothesis_words": 1664,
           "transcription_duration": 21.305642127990723
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.12551561579257514,
+          "reference_words": 1697,
+          "hypothesis_words": 1598,
+          "transcription_duration": 46.10675621032715
         },
         "openai-whisper-1": {
           "wer": 0.11314083677077195,
@@ -5806,6 +6312,12 @@
           "hypothesis_words": 1556,
           "transcription_duration": 31.482898950576782
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.10137972405518897,
+          "reference_words": 1667,
+          "hypothesis_words": 1672,
+          "transcription_duration": 66.54627799987793
+        },
         "azure-foundry-phi4": {
           "wer": 0.14577084583083383,
           "reference_words": 1667,
@@ -5823,6 +6335,12 @@
           "reference_words": 1667,
           "hypothesis_words": 1666,
           "transcription_duration": 21.949170112609863
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.10317936412717456,
+          "reference_words": 1667,
+          "hypothesis_words": 1606,
+          "transcription_duration": 63.06179118156433
         },
         "openai-whisper-1": {
           "wer": 0.1277744451109778,
@@ -5943,6 +6461,12 @@
           "hypothesis_words": 1212,
           "transcription_duration": 20.285902976989746
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.07809983896940419,
+          "reference_words": 1242,
+          "hypothesis_words": 1248,
+          "transcription_duration": 64.45557498931885
+        },
         "azure-foundry-phi4": {
           "wer": 0.12640901771336555,
           "reference_words": 1242,
@@ -5960,6 +6484,12 @@
           "reference_words": 1242,
           "hypothesis_words": 1243,
           "transcription_duration": 15.751469850540161
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.1111111111111111,
+          "reference_words": 1242,
+          "hypothesis_words": 1217,
+          "transcription_duration": 12.518659830093384
         },
         "openai-whisper-1": {
           "wer": 0.14090177133655393,
@@ -6080,6 +6610,12 @@
           "hypothesis_words": 1061,
           "transcription_duration": 16.78178906440735
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.07393715341959335,
+          "reference_words": 1082,
+          "hypothesis_words": 1074,
+          "transcription_duration": 63.692975997924805
+        },
         "azure-foundry-phi4": {
           "wer": 0.0988909426987061,
           "reference_words": 1082,
@@ -6097,6 +6633,12 @@
           "reference_words": 1082,
           "hypothesis_words": 1074,
           "transcription_duration": 12.115329027175903
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.08040665434380777,
+          "reference_words": 1082,
+          "hypothesis_words": 1051,
+          "transcription_duration": 32.53965210914612
         },
         "openai-whisper-1": {
           "wer": 0.07208872458410351,
@@ -6217,6 +6759,12 @@
           "hypothesis_words": 2341,
           "transcription_duration": 40.278637170791626
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.06832797427652733,
+          "reference_words": 2488,
+          "hypothesis_words": 2440,
+          "transcription_duration": 69.48188900947571
+        },
         "azure-foundry-phi4": {
           "wer": 0.6157556270096463,
           "reference_words": 2488,
@@ -6234,6 +6782,12 @@
           "reference_words": 2488,
           "hypothesis_words": 2467,
           "transcription_duration": 30.400748014450073
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.07234726688102894,
+          "reference_words": 2488,
+          "hypothesis_words": 2402,
+          "transcription_duration": 67.1549129486084
         },
         "openai-whisper-1": {
           "wer": 0.10048231511254019,
@@ -6354,6 +6908,12 @@
           "hypothesis_words": 1231,
           "transcription_duration": 28.451455116271973
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.19148936170212766,
+          "reference_words": 1269,
+          "hypothesis_words": 1344,
+          "transcription_duration": 76.94209384918213
+        },
         "azure-foundry-phi4": {
           "wer": 0.959022852639874,
           "reference_words": 1269,
@@ -6371,6 +6931,12 @@
           "reference_words": 1269,
           "hypothesis_words": 1298,
           "transcription_duration": 16.902385234832764
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.24507486209613868,
+          "reference_words": 1269,
+          "hypothesis_words": 1123,
+          "transcription_duration": 47.9693922996521
         },
         "openai-whisper-1": {
           "wer": 0.2040977147360126,
@@ -6491,6 +7057,12 @@
           "hypothesis_words": 879,
           "transcription_duration": 18.808379888534546
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.14095449500554938,
+          "reference_words": 901,
+          "hypothesis_words": 917,
+          "transcription_duration": 66.99745273590088
+        },
         "azure-foundry-phi4": {
           "wer": 1.0710321864594894,
           "reference_words": 901,
@@ -6508,6 +7080,12 @@
           "reference_words": 901,
           "hypothesis_words": 907,
           "transcription_duration": 10.892031908035278
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.13318534961154274,
+          "reference_words": 901,
+          "hypothesis_words": 870,
+          "transcription_duration": 34.4576621055603
         },
         "openai-whisper-1": {
           "wer": 0.13873473917869034,
@@ -6628,6 +7206,12 @@
           "hypothesis_words": 1449,
           "transcription_duration": 22.228856086730957
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.10058785107772697,
+          "reference_words": 1531,
+          "hypothesis_words": 1564,
+          "transcription_duration": 73.04314637184143
+        },
         "azure-foundry-phi4": {
           "wer": 0.16133246244284782,
           "reference_words": 1531,
@@ -6645,6 +7229,12 @@
           "reference_words": 1531,
           "hypothesis_words": 1535,
           "transcription_duration": 19.31413984298706
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.1992161985630307,
+          "reference_words": 1531,
+          "hypothesis_words": 1355,
+          "transcription_duration": 54.99632120132446
         },
         "openai-whisper-1": {
           "wer": 0.16459830176355322,
@@ -6765,6 +7355,12 @@
           "hypothesis_words": 1202,
           "transcription_duration": 16.24463701248169
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.08914100486223663,
+          "reference_words": 1234,
+          "hypothesis_words": 1240,
+          "transcription_duration": 67.42055797576904
+        },
         "azure-foundry-phi4": {
           "wer": 0.3427876823338736,
           "reference_words": 1234,
@@ -6782,6 +7378,12 @@
           "reference_words": 1234,
           "hypothesis_words": 1227,
           "transcription_duration": 15.147200107574463
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.09886547811993517,
+          "reference_words": 1234,
+          "hypothesis_words": 1195,
+          "transcription_duration": 38.12568497657776
         },
         "openai-whisper-1": {
           "wer": 0.12074554294975688,
@@ -6902,6 +7504,12 @@
           "hypothesis_words": 1243,
           "transcription_duration": 22.00524401664734
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.06215578284815106,
+          "reference_words": 1271,
+          "hypothesis_words": 1281,
+          "transcription_duration": 48.87387204170227
+        },
         "azure-foundry-phi4": {
           "wer": 0.38001573564122737,
           "reference_words": 1271,
@@ -6919,6 +7527,12 @@
           "reference_words": 1271,
           "hypothesis_words": 1260,
           "transcription_duration": 18.695391178131104
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.10857592446892211,
+          "reference_words": 1271,
+          "hypothesis_words": 1184,
+          "transcription_duration": 50.94228410720825
         },
         "openai-whisper-1": {
           "wer": 0.08733280881195908,
@@ -7039,6 +7653,12 @@
           "hypothesis_words": 1320,
           "transcription_duration": 20.5684711933136
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.1312316715542522,
+          "reference_words": 1364,
+          "hypothesis_words": 1396,
+          "transcription_duration": 69.71919512748718
+        },
         "azure-foundry-phi4": {
           "wer": 0.13929618768328444,
           "reference_words": 1364,
@@ -7056,6 +7676,12 @@
           "reference_words": 1364,
           "hypothesis_words": 1377,
           "transcription_duration": 19.13727617263794
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.11950146627565983,
+          "reference_words": 1364,
+          "hypothesis_words": 1326,
+          "transcription_duration": 49.878384828567505
         },
         "openai-whisper-1": {
           "wer": 0.11217008797653959,
@@ -7176,6 +7802,12 @@
           "hypothesis_words": 977,
           "transcription_duration": 17.56902003288269
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.08896103896103896,
+          "reference_words": 1540,
+          "hypothesis_words": 1545,
+          "transcription_duration": 81.85754084587097
+        },
         "azure-foundry-phi4": {
           "wer": 0.11818181818181818,
           "reference_words": 1540,
@@ -7193,6 +7825,12 @@
           "reference_words": 1540,
           "hypothesis_words": 1531,
           "transcription_duration": 17.847836017608643
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.1025974025974026,
+          "reference_words": 1540,
+          "hypothesis_words": 1494,
+          "transcription_duration": 44.98013114929199
         },
         "openai-whisper-1": {
           "wer": 0.1,
@@ -7313,6 +7951,12 @@
           "hypothesis_words": 1913,
           "transcription_duration": 28.9365451335907
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.06062124248496994,
+          "reference_words": 1996,
+          "hypothesis_words": 1971,
+          "transcription_duration": 58.101946115493774
+        },
         "azure-foundry-phi4": {
           "wer": 0.09519038076152304,
           "reference_words": 1996,
@@ -7330,6 +7974,12 @@
           "reference_words": 1996,
           "hypothesis_words": 1970,
           "transcription_duration": 22.311455011367798
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.0811623246492986,
+          "reference_words": 1996,
+          "hypothesis_words": 1939,
+          "transcription_duration": 57.30987596511841
         },
         "openai-whisper-1": {
           "wer": 0.08166332665330661,
@@ -7450,6 +8100,12 @@
           "hypothesis_words": 760,
           "transcription_duration": 11.329815149307251
         },
+        "google-gemini-3-pro-preview": {
+          "wer": 0.07251908396946564,
+          "reference_words": 786,
+          "hypothesis_words": 775,
+          "transcription_duration": 38.95781707763672
+        },
         "azure-foundry-phi4": {
           "wer": 0.09033078880407125,
           "reference_words": 786,
@@ -7467,6 +8123,12 @@
           "reference_words": 786,
           "hypothesis_words": 774,
           "transcription_duration": 10.102657079696655
+        },
+        "openai-gpt-4o-mini-transcribe-2025-12-15": {
+          "wer": 0.07760814249363868,
+          "reference_words": 786,
+          "hypothesis_words": 768,
+          "transcription_duration": 23.891277074813843
         },
         "openai-whisper-1": {
           "wer": 1.049618320610687,

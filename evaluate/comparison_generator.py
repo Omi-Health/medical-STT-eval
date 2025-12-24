@@ -299,7 +299,8 @@ class ModelComparison:
         }
 
         for i, model in enumerate(summary_comparison['summary'], 1):
-            leaderboard['models'].append({
+            files_processed = model.get('files_processed', 55)
+            model_entry = {
                 'rank': i,
                 'name': model['model_name'],
                 'wer': round(model.get('average_wer', 0), 4),
@@ -307,8 +308,13 @@ class ModelComparison:
                 'avg_speed_sec': round(model.get('average_duration', 0), 1),
                 'best_wer': round(model.get('best_wer', 0), 4),
                 'worst_wer': round(model.get('worst_wer', 0), 4),
-                'wer_std': round(model.get('wer_std', 0), 4)
-            })
+                'wer_std': round(model.get('wer_std', 0), 4),
+                'files_evaluated': files_processed
+            }
+            # Add note for incomplete evaluations
+            if files_processed < 55:
+                model_entry['note'] = f"*{files_processed}/55 files evaluated"
+            leaderboard['models'].append(model_entry)
 
         leaderboard_file = self.comparisons_dir / "leaderboard.json"
         with open(leaderboard_file, 'w', encoding='utf-8') as f:
