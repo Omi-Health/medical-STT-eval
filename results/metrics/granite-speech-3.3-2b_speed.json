@@ -1,0 +1,43 @@
+{
+  "model_name": "granite-speech-3.3-2b",
+  "timestamp": "2025-12-24 09:48:16",
+  "summary": {
+    "total_files": 6,
+    "total_duration": 626.5450761318207,
+    "average_duration": 104.42417935530345,
+    "fastest_file": 63.53706455230713,
+    "slowest_file": 156.9761929512024
+  },
+  "file_details": [
+    {
+      "audio_file": "day5_consultation07_conversation.wav",
+      "duration": 101.48522019386292,
+      "text_length": 6088
+    },
+    {
+      "audio_file": "day5_consultation08_conversation.wav",
+      "duration": 100.59047865867615,
+      "text_length": 5894
+    },
+    {
+      "audio_file": "day5_consultation09_conversation.wav",
+      "duration": 90.35292983055115,
+      "text_length": 5818
+    },
+    {
+      "audio_file": "day5_consultation10_conversation.wav",
+      "duration": 113.60318994522095,
+      "text_length": 7067
+    },
+    {
+      "audio_file": "day5_consultation11_conversation.wav",
+      "duration": 156.9761929512024,
+      "text_length": 9440
+    },
+    {
+      "audio_file": "day5_consultation12_conversation.wav",
+      "duration": 63.53706455230713,
+      "text_length": 3740
+    }
+  ]
+}
