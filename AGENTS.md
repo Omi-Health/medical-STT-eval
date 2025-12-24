@@ -232,11 +232,12 @@ Cloud APIs generally handle long audio better than local models requiring chunki
 - **Note**: Vertex AI requires chunking due to 1.5MB request limit
 
 ### IBM Granite Speech 3.3-2b (ibm-granite/granite-speech-3.3-2b)
-- **Speed**: ~3.94x realtime with chunking
+- **WER**: 18.92% average | **Speed**: 109.7s avg per file
 - **Architecture**: Two-pass design (speech encoder → text decoder)
 - **Chunking Required**: Without chunking, model enters repetition loops even with low max_new_tokens
 - **Solution**: 35s chunks with 10s overlap + LCS merging
 - **Setup**: Requires transformers>=4.52.4 for `granite_speech` architecture support
+- **Note**: Speed metrics based on 46/55 files (9 files missing timing data)
 
 ### CrisperWhisper (nyrahealth/CrisperWhisper)
 - **Speed**: ~227s per 7.5 min file (~0.5x realtime) - very slow

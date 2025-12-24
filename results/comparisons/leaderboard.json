@@ -255,6 +255,17 @@
     },
     {
       "rank": 23,
+      "name": "granite-speech-3.3-2b",
+      "wer": 0.1892,
+      "accuracy": 0.8108,
+      "avg_speed_sec": 109.7,
+      "best_wer": 0.0762,
+      "worst_wer": 0.3543,
+      "wer_std": 0.0506,
+      "files_evaluated": 55
+    },
+    {
+      "rank": 24,
       "name": "kyutai-stt-pytorch-stt-1b-en/fr",
       "wer": 0.2941,
       "accuracy": 0.7059,
@@ -265,7 +276,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 24,
+      "rank": 25,
       "name": "azure-foundry-phi4",
       "wer": 0.3313,
       "accuracy": 0.6687,
@@ -276,7 +287,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 25,
+      "rank": 26,
       "name": "google-medasr",
       "wer": 0.6488,
       "accuracy": 0.3512,

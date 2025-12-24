@@ -4,7 +4,7 @@ Evaluation framework for speech-to-text models on medical conversation data.
 
 ## Leaderboard
 
-**Dataset**: PriMock57 (55 files, 81,236 words) | **Models**: 25 | **Updated**: 2025-12-24
+**Dataset**: PriMock57 (55 files, 81,236 words) | **Models**: 26 | **Updated**: 2025-12-24
 
 | Rank | Model | WER | Accuracy | Avg Speed | Type |
 |------|-------|-----|----------|-----------|------|
@@ -30,12 +30,14 @@ Evaluation framework for speech-to-text models on medical conversation data.
 | 20 | OpenAI GPT-4o Mini Transcribe | 15.96% | 84.04% | N/A | API |
 | 21 | NVIDIA Canary 1B v2** | 16.80% | 83.20% | 9.2s | GPU |
 | 22 | OpenAI GPT-4o Transcribe | 17.14% | 82.86% | 27.9s | API |
-| 23 | Kyutai STT 1B (Multilingual) | 29.41% | 70.59% | 79.5s | GPU |
-| 24 | Azure Foundry Phi-4 | 33.13% | 66.87% | 212.8s | API |
-| 25 | Google MedASR | 64.88% | 35.12% | 1.2s | Local |
+| 23 | IBM Granite Speech 3.3-2b*** | 18.92% | 81.08% | 109.7s | GPU |
+| 24 | Kyutai STT 1B (Multilingual) | 29.41% | 70.59% | 79.5s | GPU |
+| 25 | Azure Foundry Phi-4 | 33.13% | 66.87% | 212.8s | API |
+| 26 | Google MedASR | 64.88% | 35.12% | 1.2s | Local |
 
 *54/55 files evaluated (1 blocked by safety filter)
 **3 files with hallucination loops (see AGENTS.md for details)
+***Requires chunking to avoid repetition loops
 
 ## Quick Start
 
