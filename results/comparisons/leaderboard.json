@@ -18,217 +18,262 @@
       "avg_speed_sec": 56.4,
       "best_wer": 0.0611,
       "worst_wer": 0.1702,
-      "wer_std": 0.0265
+      "wer_std": 0.0265,
+      "files_evaluated": 55
     },
     {
       "rank": 2,
+      "name": "google-gemini-3-pro-preview",
+      "wer": 0.1103,
+      "accuracy": 0.8897,
+      "avg_speed_sec": 64.5,
+      "best_wer": 0.0606,
+      "worst_wer": 0.1915,
+      "wer_std": 0.0294,
+      "files_evaluated": 54,
+      "note": "*54/55 files evaluated"
+    },
+    {
+      "rank": 3,
       "name": "parakeet-parakeet-tdt-0.6b-v3",
       "wer": 0.119,
       "accuracy": 0.881,
       "avg_speed_sec": 6.3,
       "best_wer": 0.0674,
       "worst_wer": 0.1836,
-      "wer_std": 0.025
+      "wer_std": 0.025,
+      "files_evaluated": 55
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "google-gemini-2.5-flash",
       "wer": 0.1208,
       "accuracy": 0.8792,
       "avg_speed_sec": 20.2,
       "best_wer": 0.0661,
       "worst_wer": 0.3745,
-      "wer_std": 0.0453
+      "wer_std": 0.0453,
+      "files_evaluated": 55
     },
     {
-      "rank": 4,
+      "rank": 5,
+      "name": "openai-gpt-4o-mini-transcribe-2025-12-15",
+      "wer": 0.1282,
+      "accuracy": 0.8718,
+      "avg_speed_sec": 40.4,
+      "best_wer": 0.0723,
+      "worst_wer": 0.2451,
+      "wer_std": 0.0339,
+      "files_evaluated": 55
+    },
+    {
+      "rank": 6,
       "name": "parakeet-parakeet-tdt-0.6b-v2",
       "wer": 0.1326,
       "accuracy": 0.8674,
       "avg_speed_sec": 5.4,
       "best_wer": 0.085,
       "worst_wer": 0.2017,
-      "wer_std": 0.0305
+      "wer_std": 0.0305,
+      "files_evaluated": 55
     },
     {
-      "rank": 5,
+      "rank": 7,
       "name": "elevenlabs-scribe/v1",
       "wer": 0.1354,
       "accuracy": 0.8646,
       "avg_speed_sec": 36.3,
       "best_wer": 0.0704,
       "worst_wer": 0.6793,
-      "wer_std": 0.0871
+      "wer_std": 0.0871,
+      "files_evaluated": 55
     },
     {
-      "rank": 6,
+      "rank": 8,
       "name": "kyutai-stt-pytorch-stt-2.6b-en",
       "wer": 0.1379,
       "accuracy": 0.8621,
       "avg_speed_sec": 148.4,
       "best_wer": 0.0782,
       "worst_wer": 0.2072,
-      "wer_std": 0.0318
+      "wer_std": 0.0318,
+      "files_evaluated": 55
     },
     {
-      "rank": 7,
+      "rank": 9,
       "name": "google-gemini-3-flash-preview",
       "wer": 0.1388,
       "accuracy": 0.8612,
       "avg_speed_sec": 51.5,
       "best_wer": 0.0767,
       "worst_wer": 0.2534,
-      "wer_std": 0.0386
+      "wer_std": 0.0386,
+      "files_evaluated": 55
     },
     {
-      "rank": 8,
+      "rank": 10,
       "name": "mlx-community/whisper-large-v3-turbo",
       "wer": 0.1422,
       "accuracy": 0.8578,
       "avg_speed_sec": 12.9,
       "best_wer": 0.0753,
       "worst_wer": 0.3207,
-      "wer_std": 0.0409
+      "wer_std": 0.0409,
+      "files_evaluated": 55
     },
     {
-      "rank": 9,
+      "rank": 11,
       "name": "groq-whisper-large-v3",
       "wer": 0.143,
       "accuracy": 0.857,
       "avg_speed_sec": 8.6,
       "best_wer": 0.088,
       "worst_wer": 0.2119,
-      "wer_std": 0.0312
+      "wer_std": 0.0312,
+      "files_evaluated": 55
     },
     {
-      "rank": 10,
+      "rank": 12,
       "name": "mistral-voxtral-mini-latest",
       "wer": 0.1435,
       "accuracy": 0.8565,
       "avg_speed_sec": 22.4,
       "best_wer": 0.0782,
       "worst_wer": 0.4786,
-      "wer_std": 0.0556
+      "wer_std": 0.0556,
+      "files_evaluated": 55
     },
     {
-      "rank": 11,
+      "rank": 13,
       "name": "mistral-voxtral-mini-latest-transcription",
       "wer": 0.1437,
       "accuracy": 0.8563,
       "avg_speed_sec": 23.0,
       "best_wer": 0.0782,
       "worst_wer": 0.4753,
-      "wer_std": 0.0553
+      "wer_std": 0.0553,
+      "files_evaluated": 55
     },
     {
-      "rank": 12,
+      "rank": 14,
       "name": "canary/1b/flash/lcs",
       "wer": 0.1446,
       "accuracy": 0.8554,
       "avg_speed_sec": 23.4,
       "best_wer": 0.085,
       "worst_wer": 0.2195,
-      "wer_std": 0.0332
+      "wer_std": 0.0332,
+      "files_evaluated": 55
     },
     {
-      "rank": 13,
+      "rank": 15,
       "name": "groq-whisper-large-v3-turbo",
       "wer": 0.145,
       "accuracy": 0.855,
       "avg_speed_sec": 8.0,
       "best_wer": 0.085,
       "worst_wer": 0.2175,
-      "wer_std": 0.0319
+      "wer_std": 0.0319,
+      "files_evaluated": 55
     },
     {
-      "rank": 14,
+      "rank": 16,
       "name": "whisperkit-large-v3-v20240930/turbo",
       "wer": 0.1455,
       "accuracy": 0.8545,
       "avg_speed_sec": 21.4,
       "best_wer": 0.0772,
       "worst_wer": 0.2205,
-      "wer_std": 0.0339
+      "wer_std": 0.0339,
+      "files_evaluated": 55
     },
     {
-      "rank": 15,
+      "rank": 17,
       "name": "apple-speechanalyzer",
       "wer": 0.1475,
       "accuracy": 0.8525,
       "avg_speed_sec": 6.0,
       "best_wer": 0.087,
       "worst_wer": 0.2136,
-      "wer_std": 0.0322
+      "wer_std": 0.0322,
+      "files_evaluated": 55
     },
     {
-      "rank": 16,
+      "rank": 18,
       "name": "nvidia/canary-qwen-2.5b",
       "wer": 0.1545,
       "accuracy": 0.8455,
       "avg_speed_sec": 105.4,
       "best_wer": 0.0831,
       "worst_wer": 0.6451,
-      "wer_std": 0.0742
+      "wer_std": 0.0742,
+      "files_evaluated": 55
     },
     {
-      "rank": 17,
+      "rank": 19,
       "name": "openai-whisper-1",
       "wer": 0.1549,
       "accuracy": 0.8451,
       "avg_speed_sec": 104.3,
       "best_wer": 0.0721,
       "worst_wer": 1.0496,
-      "wer_std": 0.127
+      "wer_std": 0.127,
+      "files_evaluated": 55
     },
     {
-      "rank": 18,
+      "rank": 20,
       "name": "openai-gpt-4o-mini-transcribe",
       "wer": 0.1596,
       "accuracy": 0.8404,
       "avg_speed_sec": 0,
       "best_wer": 0.081,
       "worst_wer": 0.4303,
-      "wer_std": 0.0574
+      "wer_std": 0.0574,
+      "files_evaluated": 55
     },
     {
-      "rank": 19,
+      "rank": 21,
       "name": "openai-gpt-4o-transcribe",
       "wer": 0.1714,
       "accuracy": 0.8286,
       "avg_speed_sec": 27.9,
       "best_wer": 0.0821,
       "worst_wer": 0.6655,
-      "wer_std": 0.0933
+      "wer_std": 0.0933,
+      "files_evaluated": 55
     },
     {
-      "rank": 20,
+      "rank": 22,
       "name": "kyutai-stt-pytorch-stt-1b-en/fr",
       "wer": 0.2941,
       "accuracy": 0.7059,
       "avg_speed_sec": 79.5,
       "best_wer": 0.0952,
       "worst_wer": 2.2314,
-      "wer_std": 0.2958
+      "wer_std": 0.2958,
+      "files_evaluated": 55
     },
     {
-      "rank": 21,
+      "rank": 23,
       "name": "azure-foundry-phi4",
       "wer": 0.3313,
       "accuracy": 0.6687,
       "avg_speed_sec": 212.8,
       "best_wer": 0.0903,
       "worst_wer": 1.071,
-      "wer_std": 0.2756
+      "wer_std": 0.2756,
+      "files_evaluated": 55
     },
     {
-      "rank": 22,
+      "rank": 24,
       "name": "google-medasr",
       "wer": 0.6488,
       "accuracy": 0.3512,
       "avg_speed_sec": 1.2,
       "best_wer": 0.3105,
       "worst_wer": 0.9891,
-      "wer_std": 0.1245
+      "wer_std": 0.1245,
+      "files_evaluated": 55
     }
   ]
 }

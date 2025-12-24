@@ -89,12 +89,36 @@ class GeminiTranscriber(BaseTranscriber):
                 )
             
             duration = time.time() - start_time
-            
-            # Extract text from response
-            text = response.text.strip() if hasattr(response, 'text') else str(response).strip()
-            
+
+            # Extract text from response - handle None and thinking models
+            text = None
+
+            # Try direct text first
+            try:
+                if response.text:
+                    text = response.text.strip()
+            except Exception:
+                pass
+
+            # Try candidates if no direct text
             if not text:
-                raise ValueError("Empty transcription result")
+                try:
+                    if response.candidates and len(response.candidates) > 0:
+                        candidate = response.candidates[0]
+                        if candidate.content and candidate.content.parts:
+                            text_parts = []
+                            for p in candidate.content.parts:
+                                if hasattr(p, 'text') and p.text:
+                                    text_parts.append(p.text)
+                            text = ' '.join(text_parts).strip()
+                except Exception as e:
+                    print(f"Warning: Could not extract from candidates: {e}")
+
+            if not text:
+                # Debug: print response structure
+                print(f"Debug: response type = {type(response)}")
+                print(f"Debug: response = {response}")
+                raise ValueError("Empty transcription result - model returned no text")
             
             return TranscriptionResult(
                 text=text,
