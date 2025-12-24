@@ -135,6 +135,8 @@ The improved chunking is particularly important for medical conversations where:
 | `kyutai_stt_1b_pytorch_transcribe.py` | stt-1b-en_fr |
 | `canary_qwen_improved_transcribe.py` | canary-qwen-2.5b |
 | `canary_1b_flash_improved_transcribe.py` | canary-1b-flash |
+| `canary_1b_v2_transcribe.py` | canary-1b-v2 (native long-form) |
+| `granite_speech_transcribe.py` | granite-speech-3.3-2b (chunked) |
 | Others | 1:1 mapping |
 
 ## API Quirks and Learnings
@@ -208,6 +210,42 @@ Upgraded the entire evaluation framework to use **Whisper's EnglishTextNormalize
 - **Most sophisticated chunking**: NVIDIA Canary models with 10s overlap + LCS merging
 
 Cloud APIs generally handle long audio better than local models requiring chunking, but local MLX models offer the best balance of speed and accuracy for Apple Silicon hardware.
+
+## Model-Specific Learnings
+
+### NVIDIA Canary 1B v2 (nvidia/canary-1b-v2)
+- **WER**: 16.80% average | **Speed**: 9.17s avg per file
+- **Key Feature**: Native long-form dynamic chunking (automatic for files >40s)
+- **Hallucination Issue**: 3 files had repetition loops causing high WER:
+  - `day5_consultation05`: 45.39% WER - "I'm in Italy" repeated ~38 times
+  - `day1_consultation12`: 38.74% WER - repetition loop
+  - `day1_consultation10`: 32.54% WER - repetition loop
+- **Without outliers**: 15.61% WER
+- **Takeaway**: Native long-form works well on most files, but autoregressive models can hallucinate unpredictably on certain audio segments
+
+### IBM Granite Speech 3.3-2b (ibm-granite/granite-speech-3.3-2b)
+- **Speed**: ~3.94x realtime with chunking
+- **Architecture**: Two-pass design (speech encoder → text decoder)
+- **Chunking Required**: Without chunking, model enters repetition loops even with low max_new_tokens
+- **Solution**: 35s chunks with 10s overlap + LCS merging
+- **Setup**: Requires transformers>=4.52.4 for `granite_speech` architecture support
+
+### CrisperWhisper (nyrahealth/CrisperWhisper)
+- **Speed**: ~227s per 7.5 min file (~0.5x realtime) - very slow
+- **Features**: Verbatim transcription with filler detection ([UM], [UH])
+- **Setup**: Requires custom transformers fork, gated HuggingFace repo
+- **Takeaway**: Too slow for batch processing (~3.5 hours for 57 files)
+
+## Hallucination Patterns in Autoregressive Speech Models
+
+Several models exhibited similar hallucination behavior:
+1. **Repetition loops**: Getting stuck repeating phrases ("I'm in Italy", "you're just feeling sick")
+2. **Triggered by**: Long audio sequences, silent/unclear audio segments
+3. **Mitigation strategies**:
+   - Chunking with overlap (35s chunks, 10s overlap)
+   - LCS merging to stitch chunks cleanly
+   - Note: Lower max_new_tokens doesn't prevent loops
+4. **Models affected**: Canary 1B v2, Granite Speech 3.3-2b, Kyutai STT 2.6B
 
 ## Adding New Models
 
