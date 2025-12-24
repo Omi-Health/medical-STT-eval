@@ -233,6 +233,17 @@
     },
     {
       "rank": 21,
+      "name": "canary-1b-v2",
+      "wer": 0.168,
+      "accuracy": 0.832,
+      "avg_speed_sec": 9.2,
+      "best_wer": 0.0958,
+      "worst_wer": 0.4539,
+      "wer_std": 0.0617,
+      "files_evaluated": 55
+    },
+    {
+      "rank": 22,
       "name": "openai-gpt-4o-transcribe",
       "wer": 0.1714,
       "accuracy": 0.8286,
@@ -243,7 +254,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 22,
+      "rank": 23,
       "name": "kyutai-stt-pytorch-stt-1b-en/fr",
       "wer": 0.2941,
       "accuracy": 0.7059,
@@ -254,7 +265,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 23,
+      "rank": 24,
       "name": "azure-foundry-phi4",
       "wer": 0.3313,
       "accuracy": 0.6687,
@@ -265,7 +276,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 24,
+      "rank": 25,
       "name": "google-medasr",
       "wer": 0.6488,
       "accuracy": 0.3512,
