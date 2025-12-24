@@ -51,8 +51,7 @@ data/raw_audio/*.txt
 data/raw_transcripts/
 
 # ==================== RESULTS ====================
-# Generated transcripts (large, reproducible)
-results/transcripts/
+# Generated transcripts - now tracked for reproducibility
 transcribe/results/
 
 # Keep metrics and comparisons for leaderboard
