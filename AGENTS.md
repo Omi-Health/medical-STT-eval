@@ -147,6 +147,19 @@ The improved chunking is particularly important for medical conversations where:
 - **Key Finding**: Only Mini supports `/v1/audio/transcriptions` - documentation says both models support it but reality is different
 - **Workaround**: Small model must use chat completions with audio input
 
+### ElevenLabs Scribe V1 vs V2
+- **V1 (Batch API)**: `speech_to_text.convert()` - Upload entire file, get transcript back instantly
+- **V2 (Realtime API)**: WebSocket-based streaming with chunked PCM audio
+- **V2 Requirements**:
+  - Must send audio at **real-time speed** (1 second delay per 1 second of audio)
+  - Requires PCM conversion (16kHz, 16-bit, mono)
+  - Auto-commits every ~90 seconds; recommend manual commit every 20-30s
+  - Sending faster than real-time causes audio loss
+- **Speed Comparison**:
+  - V1: ~36s for 7.6 min file (instant upload + processing)
+  - V2: ~7.6 min minimum (real-time streaming requirement)
+- **Recommendation**: Use V1 for benchmark (faster); V2 for live/streaming use cases
+
 ### Google Gemini
 - **Smart file handling**: Auto-detects file size and chooses upload vs inline processing
 - **File size threshold**: 15MB (conservative limit for 20MB total request size)
