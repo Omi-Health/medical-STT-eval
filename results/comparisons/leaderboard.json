@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-24",
+  "updated": "2026-03-21",
   "dataset": {
     "name": "PriMock57",
     "files": 55,
@@ -23,6 +23,17 @@
     },
     {
       "rank": 2,
+      "name": "vibevoice-asr-9b",
+      "wer": 0.1102,
+      "accuracy": 0.8898,
+      "avg_speed_sec": 96.7,
+      "best_wer": 0.0635,
+      "worst_wer": 0.2133,
+      "wer_std": 0.0296,
+      "files_evaluated": 55
+    },
+    {
+      "rank": 3,
       "name": "google-gemini-3-pro-preview",
       "wer": 0.1103,
       "accuracy": 0.8897,
@@ -34,7 +45,7 @@
       "note": "*54/55 files evaluated"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "parakeet-parakeet-tdt-0.6b-v3",
       "wer": 0.119,
       "accuracy": 0.881,
@@ -45,7 +56,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "google-gemini-2.5-flash",
       "wer": 0.1208,
       "accuracy": 0.8792,
@@ -56,7 +67,18 @@
       "files_evaluated": 55
     },
     {
-      "rank": 5,
+      "rank": 6,
+      "name": "elevenlabs-scribe/v2",
+      "wer": 0.1236,
+      "accuracy": 0.8764,
+      "avg_speed_sec": 43.5,
+      "best_wer": 0.0616,
+      "worst_wer": 0.6707,
+      "wer_std": 0.0808,
+      "files_evaluated": 55
+    },
+    {
+      "rank": 7,
       "name": "openai-gpt-4o-mini-transcribe-2025-12-15",
       "wer": 0.1282,
       "accuracy": 0.8718,
@@ -67,7 +89,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 6,
+      "rank": 8,
       "name": "parakeet-parakeet-tdt-0.6b-v2",
       "wer": 0.1326,
       "accuracy": 0.8674,
@@ -78,7 +100,18 @@
       "files_evaluated": 55
     },
     {
-      "rank": 7,
+      "rank": 9,
+      "name": "nemotron-speech-streaming-0.6b",
+      "wer": 0.1338,
+      "accuracy": 0.8662,
+      "avg_speed_sec": 11.7,
+      "best_wer": 0.0694,
+      "worst_wer": 0.2065,
+      "wer_std": 0.0304,
+      "files_evaluated": 55
+    },
+    {
+      "rank": 10,
       "name": "elevenlabs-scribe/v1",
       "wer": 0.1354,
       "accuracy": 0.8646,
@@ -89,7 +122,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 8,
+      "rank": 11,
       "name": "kyutai-stt-pytorch-stt-2.6b-en",
       "wer": 0.1379,
       "accuracy": 0.8621,
@@ -100,7 +133,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 9,
+      "rank": 12,
       "name": "google-gemini-3-flash-preview",
       "wer": 0.1388,
       "accuracy": 0.8612,
@@ -111,7 +144,18 @@
       "files_evaluated": 55
     },
     {
-      "rank": 10,
+      "rank": 13,
+      "name": "voxtral-mini-2602-transcription",
+      "wer": 0.1417,
+      "accuracy": 0.8583,
+      "avg_speed_sec": 18.4,
+      "best_wer": 0.0782,
+      "worst_wer": 0.2584,
+      "wer_std": 0.0353,
+      "files_evaluated": 55
+    },
+    {
+      "rank": 14,
       "name": "mlx-community/whisper-large-v3-turbo",
       "wer": 0.1422,
       "accuracy": 0.8578,
@@ -122,7 +166,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 11,
+      "rank": 15,
       "name": "groq-whisper-large-v3",
       "wer": 0.143,
       "accuracy": 0.857,
@@ -133,7 +177,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 12,
+      "rank": 16,
       "name": "mistral-voxtral-mini-latest",
       "wer": 0.1435,
       "accuracy": 0.8565,
@@ -144,7 +188,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 13,
+      "rank": 17,
       "name": "mistral-voxtral-mini-latest-transcription",
       "wer": 0.1437,
       "accuracy": 0.8563,
@@ -155,7 +199,18 @@
       "files_evaluated": 55
     },
     {
-      "rank": 14,
+      "rank": 18,
+      "name": "voxtral-mini-4b-realtime-vllm",
+      "wer": 0.1439,
+      "accuracy": 0.8561,
+      "avg_speed_sec": 133.9,
+      "best_wer": 0.0753,
+      "worst_wer": 0.2263,
+      "wer_std": 0.0349,
+      "files_evaluated": 55
+    },
+    {
+      "rank": 19,
       "name": "canary/1b/flash/lcs",
       "wer": 0.1446,
       "accuracy": 0.8554,
@@ -166,7 +221,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 15,
+      "rank": 20,
       "name": "groq-whisper-large-v3-turbo",
       "wer": 0.145,
       "accuracy": 0.855,
@@ -177,7 +232,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 16,
+      "rank": 21,
       "name": "whisperkit-large-v3-v20240930/turbo",
       "wer": 0.1455,
       "accuracy": 0.8545,
@@ -188,7 +243,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 17,
+      "rank": 22,
       "name": "apple-speechanalyzer",
       "wer": 0.1475,
       "accuracy": 0.8525,
@@ -199,7 +254,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 18,
+      "rank": 23,
       "name": "nvidia/canary-qwen-2.5b",
       "wer": 0.1545,
       "accuracy": 0.8455,
@@ -210,7 +265,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 19,
+      "rank": 24,
       "name": "openai-whisper-1",
       "wer": 0.1549,
       "accuracy": 0.8451,
@@ -221,7 +276,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 20,
+      "rank": 25,
       "name": "openai-gpt-4o-mini-transcribe",
       "wer": 0.1596,
       "accuracy": 0.8404,
@@ -232,7 +287,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 21,
+      "rank": 26,
       "name": "canary-1b-v2",
       "wer": 0.168,
       "accuracy": 0.832,
@@ -243,7 +298,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 22,
+      "rank": 27,
       "name": "openai-gpt-4o-transcribe",
       "wer": 0.1714,
       "accuracy": 0.8286,
@@ -254,7 +309,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 23,
+      "rank": 28,
       "name": "granite-speech-3.3-2b",
       "wer": 0.1892,
       "accuracy": 0.8108,
@@ -265,7 +320,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 24,
+      "rank": 29,
       "name": "kyutai-stt-pytorch-stt-1b-en/fr",
       "wer": 0.2941,
       "accuracy": 0.7059,
@@ -276,7 +331,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 25,
+      "rank": 30,
       "name": "azure-foundry-phi4",
       "wer": 0.3313,
       "accuracy": 0.6687,
@@ -287,7 +342,7 @@
       "files_evaluated": 55
     },
     {
-      "rank": 26,
+      "rank": 31,
       "name": "google-medasr",
       "wer": 0.6488,
       "accuracy": 0.3512,

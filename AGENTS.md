@@ -137,6 +137,9 @@ The improved chunking is particularly important for medical conversations where:
 | `canary_1b_flash_improved_transcribe.py` | canary-1b-flash |
 | `canary_1b_v2_transcribe.py` | canary-1b-v2 (native long-form) |
 | `granite_speech_transcribe.py` | granite-speech-3.3-2b (chunked) |
+| `elevenlabs_scribe_v2_transcribe.py` | scribe_v2 (parallel batch, retry on 429) |
+| `voxtral_mini_2602_transcription_transcribe.py` | voxtral-mini-2602 (transcription API) |
+| `voxtral_realtime_transcribe.py` | voxtral-mini-4b-realtime (transformers, local GPU) |
 | Others | 1:1 mapping |
 
 ## API Quirks and Learnings
@@ -268,6 +271,55 @@ Several models exhibited similar hallucination behavior:
    - LCS merging to stitch chunks cleanly
    - Note: Lower max_new_tokens doesn't prevent loops
 4. **Models affected**: Canary 1B v2, Granite Speech 3.3-2b, Kyutai STT 2.6B
+
+## Models Evaluated (March 2026 batch)
+
+### Microsoft VibeVoice-ASR 9B
+- **WER**: 11.02% average | **Speed**: 96.7s avg (H100 GPU)
+- **Architecture**: 9B parameter model based on Qwen2.5-7B with audio encoder
+- **Key Feature**: Handles up to 60 minutes in a single pass (64K token context), built-in speaker diarization and timestamps
+- **Setup**: Requires `vibevoice` package from GitHub (`pip install -e .` from https://github.com/microsoft/VibeVoice), flash-attn recommended
+- **GPU**: Needs ~18GB VRAM (bf16) — does not fit on T4 16GB alongside other models
+- **Note**: Speed measured on H100 96GB, not comparable with T4 benchmarks. Best-performing local GPU model in the benchmark.
+
+### ElevenLabs Scribe v2
+- **WER**: 12.36% average | **Speed**: 43.5s avg
+- **API**: Same `speech_to_text.convert()` endpoint as v1, just `model_id="scribe_v2"`
+- **Improvement over v1**: 1.18% WER reduction (v1: 13.54%)
+- **Setup**: Requires `elevenlabs>=2.39.0` SDK
+- **Parallel processing**: Supports concurrent requests (max 12 on standard plan, script retries on 429)
+
+### Voxtral Mini 2602 (Transcription API)
+- **WER**: 14.17% average | **Speed**: 18.4s avg
+- **API**: Mistral's `/v1/audio/transcriptions` endpoint with `voxtral-mini-latest` (now points to voxtral-mini-2602)
+- **Improvement over previous**: Slight improvement from 14.62% (old voxtral-mini-latest)
+
+### Voxtral Mini 4B Realtime (Local GPU via vLLM)
+- **WER**: 14.39% average | **Speed**: 133.9s avg (H100), ~693s avg (T4)
+- **Architecture**: 4B params (~3.4B language + ~970M audio encoder)
+- **Key Finding**: vLLM requires Flash Attention 2 (compute capability >= 8.0) — does not work on T4 (7.5). Transformers fallback works but is very slow without FA2.
+- **Token calculation**: 1 text token = 80ms of audio. Set `max_new_tokens = int(audio_duration / 0.08) + 4096`
+- **Note**: Speed measured on both H100 and T4. H100 speed is ~5x faster.
+
+### NVIDIA Nemotron Speech Streaming 0.6B
+- **WER**: 13.38% average | **Speed**: 11.7s avg (T4)
+- **Architecture**: Cache-Aware FastConformer-RNNT, 0.6B params, successor to Parakeet
+- **Key Issue**: OOM on T4 16GB for longer audio files (>7 min). Required chunking (split in half with 5s overlap) for 15/55 files
+- **Setup**: Requires NeMo toolkit. CUDA graph decoder has compatibility issues with newer cuda-bindings — use `loop_labels=False` in greedy decoding config
+- **Comparison to Parakeet TDT v3**: Slightly worse accuracy (13.38% vs 11.90%) but designed for streaming/realtime use cases
+
+### Models Evaluated But Not Suitable for Long-Form Medical Transcription
+
+#### LiquidAI LFM2.5-Audio-1.5B
+- **Verdict**: Not a dedicated ASR model — designed for short audio snippets (~2 seconds)
+- **Issue**: Official cookbook uses 2-second chunks with 0.5s overlap via llama.cpp (GGUF quantized). With correct 2s chunking, no hallucinations but only produces sparse keyword extraction (~74 words from a 1400-word conversation). With 30s chunks, severe hallucination loops.
+- **Conclusion**: This is a multimodal speech-to-speech model where ASR is a secondary capability via prompting ("Perform ASR."). Not suitable for medical conversation transcription.
+
+#### Facebook SeamlessM4T v2 Large
+- **Verdict**: Translation model, not a transcription model
+- **Issue**: Produces heavily summarized output (~677 words from a ~1400-word conversation) with hallucinated repetitive phrases. Designed for cross-lingual speech translation, not verbatim transcription.
+- **License**: CC-BY-NC-4.0 (non-commercial only)
+- **Conclusion**: Not suitable for ASR benchmarking. The model fundamentally summarizes/translates rather than transcribes.
 
 ## Adding New Models
 

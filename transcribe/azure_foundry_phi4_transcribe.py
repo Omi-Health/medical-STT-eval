@@ -130,8 +130,11 @@ class AzureFoundryPhi4ImprovedTranscriber(BaseTranscriber):
         self.endpoint = (
             os.getenv("AZURE_FOUNDRY_ENDPOINT")
             or os.getenv("AZURE_ENDPOINT")
-            or "https://your-foundry-endpoint.services.ai.azure.com/models"
         )
+        if not self.endpoint:
+            raise ValueError(
+                "Azure endpoint required. Set AZURE_FOUNDRY_ENDPOINT environment variable."
+            )
         self.api_key = os.getenv("AZURE_FOUNDRY_API_KEY") or os.getenv("AZURE_API_KEY")
         if not self.api_key:
             raise ValueError(

@@ -1,0 +1,83 @@
+{
+  "model_name": "elevenlabs-scribe_v2",
+  "timestamp": "2026-03-19 23:16:53",
+  "summary": {
+    "total_files": 14,
+    "total_duration": 609.2356293201447,
+    "average_duration": 43.51683066572462,
+    "fastest_file": 35.89065599441528,
+    "slowest_file": 53.48253417015076
+  },
+  "file_details": [
+    {
+      "audio_file": "day1_consultation13_conversation.wav",
+      "duration": 39.99174213409424,
+      "text_length": 8974
+    },
+    {
+      "audio_file": "day1_consultation06_conversation.wav",
+      "duration": 46.49795985221863,
+      "text_length": 9872
+    },
+    {
+      "audio_file": "day1_consultation10_conversation.wav",
+      "duration": 47.31977605819702,
+      "text_length": 10231
+    },
+    {
+      "audio_file": "day1_consultation11_conversation.wav",
+      "duration": 53.48253417015076,
+      "text_length": 12100
+    },
+    {
+      "audio_file": "day1_consultation14_conversation.wav",
+      "duration": 42.8465678691864,
+      "text_length": 10395
+    },
+    {
+      "audio_file": "day2_consultation06_conversation.wav",
+      "duration": 43.21722102165222,
+      "text_length": 10202
+    },
+    {
+      "audio_file": "day4_consultation05_conversation.wav",
+      "duration": 37.90077209472656,
+      "text_length": 7893
+    },
+    {
+      "audio_file": "day2_consultation08_conversation.wav",
+      "duration": 45.99722480773926,
+      "text_length": 9752
+    },
+    {
+      "audio_file": "day5_consultation04_conversation.wav",
+      "duration": 39.45201516151428,
+      "text_length": 6742
+    },
+    {
+      "audio_file": "day5_consultation06_conversation.wav",
+      "duration": 39.02064824104309,
+      "text_length": 8194
+    },
+    {
+      "audio_file": "day5_consultation03_conversation.wav",
+      "duration": 52.517685890197754,
+      "text_length": 12294
+    },
+    {
+      "audio_file": "day5_consultation05_conversation.wav",
+      "duration": 44.11437201499939,
+      "text_length": 4945
+    },
+    {
+      "audio_file": "day5_consultation07_conversation.wav",
+      "duration": 35.89065599441528,
+      "text_length": 6744
+    },
+    {
+      "audio_file": "day5_consultation09_conversation.wav",
+      "duration": 40.986454010009766,
+      "text_length": 7753
+    }
+  ]
+}
