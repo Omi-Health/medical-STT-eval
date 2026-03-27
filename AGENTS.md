@@ -231,19 +231,21 @@ Replaced `openai-whisper` dependency with self-contained `evaluate/text_normaliz
 
 ## Performance Patterns (current rankings, custom normalization)
 
-Top 10:
-1. **Google Gemini 2.5 Pro**: 8.28% WER
-2. **VibeVoice ASR 9B**: 8.34% WER
-3. **Google Gemini 3 Pro Preview**: 8.35% WER
-4. **Parakeet TDT 0.6b v3**: 9.35% WER
-5. **Google Gemini 2.5 Flash**: 9.58% WER
-6. **ElevenLabs Scribe v2**: 9.72% WER
-7. **ElevenLabs Scribe v1**: 10.87% WER
-8. **Parakeet TDT 0.6b v2**: 10.75% WER
-9. **Nemotron Speech 0.6B**: 11.06% WER
-10. **OpenAI GPT-4o Mini (Dec 2025)**: 11.18% WER
+Top 10 (speed = avg seconds per file):
+1. **Google Gemini 2.5 Pro**: 8.28% WER | 56.4s
+2. **VibeVoice ASR 9B**: 8.34% WER | 96.7s*
+3. **Google Gemini 3 Pro Preview**: 8.35% WER | 64.5s
+4. **Parakeet TDT 0.6b v3**: 9.35% WER | 6.3s
+5. **Google Gemini 2.5 Flash**: 9.58% WER | 20.2s
+6. **ElevenLabs Scribe v2**: 9.72% WER | 43.5s
+7. **Parakeet TDT 0.6b v2**: 10.75% WER | 5.4s
+8. **ElevenLabs Scribe v1**: 10.87% WER | 36.3s
+9. **Nemotron Speech 0.6B**: 11.06% WER | 11.7s
+10. **OpenAI GPT-4o Mini (Dec 2025)**: 11.18% WER | 40.4s
 
-- **Best speed**: Parakeet TDT 0.6B (5.4s avg)
+*\* H100 GPU — not comparable with T4/Apple Silicon benchmarks*
+
+- **Best speed**: Parakeet TDT 0.6B v2 (5.4s avg)
 - **Best speed/accuracy tradeoff**: Parakeet v3 (6.3s avg, 9.35% WER)
 - **Most sophisticated chunking**: NVIDIA Canary models with 10s overlap + LCS merging
 
