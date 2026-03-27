@@ -88,6 +88,10 @@ htmlcov/
 BringingAdvancedSpeechToTextCapabilitiesToYourApp/
 apple-speechanalyzer-cli-example/
 
+# ==================== LOCAL NOTES ====================
+# Author's working notes and exploratory analysis
+private_analysis/
+
 # ==================== MISC ====================
 *.bak
 *.orig

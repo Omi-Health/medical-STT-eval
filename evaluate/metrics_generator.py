@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Metrics generator for individual models.
-Combines transcription speed and WER metrics with Whisper-style normalization.
+Combines transcription speed and WER metrics with custom text normalization.
 """
 
 import json
@@ -9,45 +9,27 @@ import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
-# Import Whisper normalizer for improved WER calculation
-try:
-    from whisper.normalizers import EnglishTextNormalizer
-    WHISPER_NORMALIZER = EnglishTextNormalizer()
-    WHISPER_AVAILABLE = True
-except ImportError:
-    print("⚠️  Whisper normalization not available. Installing openai-whisper...")
-    import os
-    os.system("pip install openai-whisper")
-    try:
-        from whisper.normalizers import EnglishTextNormalizer
-        WHISPER_NORMALIZER = EnglishTextNormalizer()
-        WHISPER_AVAILABLE = True
-    except ImportError:
-        print("❌ Failed to install Whisper normalizer. Using basic normalization.")
-        WHISPER_AVAILABLE = False
-
+from text_normalizer import EnglishTextNormalizer
 from wer_calculator import WERCalculator, calculate_detailed_wer
 
+TEXT_NORMALIZER = EnglishTextNormalizer()
 
-def calculate_whisper_normalized_wer(reference: str, hypothesis: str) -> Dict:
+
+def calculate_normalized_wer(reference: str, hypothesis: str) -> Dict:
     """
-    Calculate WER using Whisper's EnglishTextNormalizer.
-    
+    Calculate WER using our custom EnglishTextNormalizer (based on Whisper's,
+    with "oh" bug fix and post-normalization word mappings).
+
     Args:
         reference: Reference text
         hypothesis: Hypothesis text
-        
+
     Returns:
         Dictionary with detailed WER metrics
     """
-    if WHISPER_AVAILABLE:
-        # Apply Whisper normalization to both texts
-        normalized_ref = WHISPER_NORMALIZER(reference)
-        normalized_hyp = WHISPER_NORMALIZER(hypothesis)
-        return calculate_detailed_wer(normalized_ref, normalized_hyp)
-    else:
-        # Fallback to basic normalization
-        return calculate_detailed_wer(reference, hypothesis)
+    normalized_ref = TEXT_NORMALIZER(reference)
+    normalized_hyp = TEXT_NORMALIZER(hypothesis)
+    return calculate_detailed_wer(normalized_ref, normalized_hyp)
 
 
 class ModelMetricsGenerator:
@@ -90,7 +72,7 @@ class ModelMetricsGenerator:
             return None
     
     def calculate_wer_metrics(self) -> List[Dict]:
-        """Calculate WER metrics for all transcripts using Whisper normalization."""
+        """Calculate WER metrics for all transcripts."""
         try:
             # Get transcript files directly (without console output from basic WER calculation)
             transcript_path = Path(self.transcript_dir)
@@ -129,7 +111,7 @@ class ModelMetricsGenerator:
                         hypothesis = f.read().strip()
                     
                     # Calculate Whisper-normalized WER
-                    whisper_wer = calculate_whisper_normalized_wer(reference, hypothesis)
+                    whisper_wer = calculate_normalized_wer(reference, hypothesis)
                     
                     # Create result with correct WER
                     whisper_result = {
@@ -153,7 +135,7 @@ class ModelMetricsGenerator:
                     print(f"❌ Error processing {transcript_file.name}: {file_error}")
                     continue
             
-            print(f"✅ Calculated WER for {len(whisper_results)} files using Whisper normalization")
+            print(f"✅ Calculated WER for {len(whisper_results)} files")
             return whisper_results
             
         except Exception as e:
@@ -206,7 +188,7 @@ class ModelMetricsGenerator:
         comprehensive_metrics = {
             'model_name': self.model_name,
             'timestamp': time.strftime("%Y-%m-%d %H:%M:%S"),
-            'normalization': 'Whisper EnglishTextNormalizer' if WHISPER_AVAILABLE else 'Basic normalization',
+            'normalization': 'Custom EnglishTextNormalizer (Whisper-based, oh-fix + post-word-map)',
             'wer_metrics': wer_summary,
             'word_statistics': word_stats,
             'file_count': len(wer_results)
