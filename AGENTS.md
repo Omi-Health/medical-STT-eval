@@ -231,19 +231,44 @@ Replaced `openai-whisper` dependency with self-contained `evaluate/text_normaliz
 
 ## Performance Patterns (current rankings, custom normalization)
 
-Top 10 (speed = avg seconds per file):
-1. **Google Gemini 2.5 Pro**: 8.28% WER | 56.4s
-2. **VibeVoice ASR 9B**: 8.34% WER | 96.7s*
-3. **Google Gemini 3 Pro Preview**: 8.35% WER | 64.5s
-4. **Parakeet TDT 0.6b v3**: 9.35% WER | 6.3s
-5. **Google Gemini 2.5 Flash**: 9.58% WER | 20.2s
-6. **ElevenLabs Scribe v2**: 9.72% WER | 43.5s
-7. **Parakeet TDT 0.6b v2**: 10.75% WER | 5.4s
-8. **ElevenLabs Scribe v1**: 10.87% WER | 36.3s
-9. **Nemotron Speech 0.6B**: 11.06% WER | 11.7s
-10. **OpenAI GPT-4o Mini (Dec 2025)**: 11.18% WER | 40.4s
+Full rankings (speed = avg seconds per 7.5 min file):
 
-*\* H100 GPU — not comparable with T4/Apple Silicon benchmarks*
+| Rank | Model | WER | Speed | GPU |
+|---:|---|---:|---:|---|
+| 1 | Google Gemini 2.5 Pro | 8.15% | 56.4s | API |
+| 2 | VibeVoice ASR 9B | 8.34% | 96.7s | H100* |
+| 3 | Google Gemini 3 Pro Preview | 8.35% | 64.5s | API |
+| 4 | Parakeet TDT 0.6b v3 | 9.35% | 6.3s | Apple Silicon |
+| 5 | Google Gemini 2.5 Flash | 9.45% | 20.2s | API |
+| 6 | ElevenLabs Scribe v2 | 9.72% | 43.5s | API |
+| 7 | Parakeet TDT 0.6b v2 | 10.75% | 5.4s | Apple Silicon |
+| 8 | ElevenLabs Scribe v1 | 10.87% | 36.3s | API |
+| 9 | Nemotron Speech 0.6B | 11.06% | 11.7s | T4 |
+| 10 | OpenAI GPT-4o Mini (Dec '25) | 11.18% | 40.4s | API |
+| 11 | Kyutai STT 2.6B | 11.20% | 148.4s | GPU |
+| 12 | Google Gemini 3 Flash Preview | 11.33% | 51.5s | API |
+| 13 | Voxtral Mini 2602 | 11.64% | 18.4s | API |
+| 14 | MLX Whisper Large v3 Turbo | 11.65% | 12.9s | Apple Silicon |
+| 15 | Mistral Voxtral Mini (chat) | 11.85% | 22.4s | API |
+| 16 | Mistral Voxtral Mini (transcription) | 11.87% | 23.0s | API |
+| 17 | Voxtral Mini 4B Realtime | 11.89% | 133.9s / 693s | H100* / T4 |
+| 18 | Groq Whisper Large v3 | 11.93% | 8.6s | API |
+| 19 | Canary 1B Flash LCS | 12.03% | 23.4s | T4 |
+| 20 | Groq Whisper Large v3 Turbo | 12.14% | 8.0s | API |
+| 21 | WhisperKit Large v3 Turbo | 12.28% | 21.4s | Apple Silicon |
+| 22 | Apple SpeechAnalyzer | 12.36% | 6.0s | Apple Silicon |
+| 23 | NVIDIA Canary-Qwen 2.5B | 12.94% | 105.4s | T4 |
+| 24 | OpenAI Whisper-1 | 13.20% | 104.3s | API |
+| 25 | OpenAI GPT-4o Mini | 13.60% | N/A | API |
+| 26 | Canary 1B v2 | 14.32% | 9.2s | T4 |
+| 27 | OpenAI GPT-4o Transcribe | 14.84% | 27.9s | API |
+| 28 | Granite Speech 3.3-2B | 16.55% | 109.7s | T4 |
+| 29 | Kyutai STT 1B (en/fr) | 27.28% | 79.5s | GPU |
+| 30 | Azure Foundry Phi-4 | 31.13% | 212.8s | API |
+| 31 | Google MedASR | 64.38% | 4.5s | Apple Silicon |
+
+*\* H100 — not directly comparable with T4/Apple Silicon speeds*
+*Voxtral Mini 4B Realtime: designed for streaming/realtime use, not batch processing — its slow batch speed is expected*
 
 - **Best speed**: Parakeet TDT 0.6B v2 (5.4s avg)
 - **Best speed/accuracy tradeoff**: Parakeet v3 (6.3s avg, 9.35% WER)
