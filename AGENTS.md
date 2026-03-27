@@ -17,8 +17,10 @@ medical-stt-benchmark/
 │   ├── base_transcriber.py     # Base class (loads .env automatically)
 │   └── *_transcribe.py         # One per model/API
 ├── evaluate/
-│   ├── wer_calculator.py       # WER calculation algorithm
-│   ├── metrics_generator.py    # Generates *_wer.json per model
+│   ├── text_normalizer.py     # Custom WER normalizer (replaces whisper dependency)
+│   ├── english.json           # British→American spelling mappings (1,739 entries)
+│   ├── wer_calculator.py      # WER calculation algorithm
+│   ├── metrics_generator.py   # Generates *_wer.json per model
 │   └── comparison_generator.py # Generates leaderboard.json
 └── results/
     ├── metrics/                # 38 JSON files (19 models × 2: speed + wer)
@@ -191,38 +193,58 @@ The Kyutai STT 2.6B model showed severe hallucination issues on long medical con
 - **Chunking required**: NVIDIA vLLM models, Azure Phi-4
 - **Upload vs inline**: Gemini automatically chooses based on file size
 
-## WER Evaluation: Whisper Normalization
+## WER Normalization (3 phases)
 
-### Problem Identified
-The original evaluation framework was unfairly penalizing models for correctly omitting filler words and handling text normalization differently:
-- **Filler words**: Models correctly ignored "um", "uh", "ah" but were penalized in WER calculation
-- **Number formats**: "23" vs "twenty three" variations caused false errors
-- **Contractions**: "don't" vs "do not" inconsistencies
-- **Result**: ~5-6% higher WER scores than industry standard
+### Phase 1: Whisper Normalization (initial upgrade)
+Upgraded from basic normalization (lowercase + remove punctuation) to Whisper's `EnglishTextNormalizer`:
+- Filler word removal (um, uh, hmm)
+- Number normalization ("23" ↔ "twenty three")
+- Contraction expansion ("don't" → "do not")
+- British→American spelling (1,739 mappings)
+- Result: ~5-6% WER improvement across all models
 
-### Solution Implemented
-Upgraded the entire evaluation framework to use **Whisper's EnglishTextNormalizer** as the industry standard:
-- Handles filler words ("um", "uh")
-- Normalizes numbers ("23" ↔ "twenty three")
-- Expands contractions ("don't" → "do not")
-- Symbol handling ("$100" → "one hundred dollars")
-- Abbreviation expansion ("Dr." → "doctor")
+### Phase 2: Error analysis discovered normalizer gaps
+Word-level error analysis across all 31 models revealed Whisper's normalizer had issues:
 
-### Impact
-- **Consistent 5-6% WER improvement** across all models
-- **More realistic evaluation**: Aligns with industry standards (Whisper, OpenAI)
-- **Fair comparison**: Models no longer penalized for correct behavior
+**Gap 1: Missing word equivalences**
+- `ok` vs `okay` vs `k` — 40,953 false errors across all models (16-21% of per-model errors)
+- `yeah`/`yep` vs `yes`, `mum` vs `mom`, `alright` vs `all right`, `kinda` vs `kind of`
 
-### Before vs After Examples
-- **ElevenLabs Scribe**: 19.97% → 13.54% WER (-6.43%)
-- **Google Gemini Pro**: 16.11% → 10.90% WER (-5.21%)
-- **Kyutai 2.6B**: 19.25% → 13.98% WER (-5.27%)
+**Gap 2: "oh" → "0" bug**
+- Whisper's `EnglishNumberNormalizer` has `self.zeros = {"o", "oh", "zero"}`, treating the interjection "oh" as digit zero
+- Verified: zero models output "0" in raw transcripts — all correctly output "oh". The "0" was entirely created by the normalizer
+- 1,395 false errors across all models
 
-## Performance Patterns
+### Phase 3: Custom normalizer (current)
+Replaced `openai-whisper` dependency with self-contained `evaluate/text_normalizer.py`:
+- Copied Whisper's normalizer classes
+- **Fixed "oh" bug**: removed `"oh"` from `self.zeros`
+- **Added post-normalization word mappings**: ok/okay, yeah/yes, mum/mom, alright/all right, kinda/kind of, etc.
+- No runtime dependency on `openai-whisper` package
 
-- **Best accuracy**: Google Gemini 2.5 Pro (10.79% WER)
+### Cumulative WER impact
+| Model | Basic | Whisper | Custom | Total |
+|---|---:|---:|---:|---:|
+| Gemini 2.5 Pro | ~16% | 10.90% | **8.28%** | -8% |
+| VibeVoice 9B | ~17% | 10.91% | **8.34%** | -9% |
+| Parakeet v3 | ~19% | 11.79% | **9.35%** | -10% |
+
+## Performance Patterns (current rankings, custom normalization)
+
+Top 10:
+1. **Google Gemini 2.5 Pro**: 8.28% WER
+2. **VibeVoice ASR 9B**: 8.34% WER
+3. **Google Gemini 3 Pro Preview**: 8.35% WER
+4. **Parakeet TDT 0.6b v3**: 9.35% WER
+5. **Google Gemini 2.5 Flash**: 9.58% WER
+6. **ElevenLabs Scribe v2**: 9.72% WER
+7. **ElevenLabs Scribe v1**: 10.87% WER
+8. **Parakeet TDT 0.6b v2**: 10.75% WER
+9. **Nemotron Speech 0.6B**: 11.06% WER
+10. **OpenAI GPT-4o Mini (Dec 2025)**: 11.18% WER
+
 - **Best speed**: Parakeet TDT 0.6B (5.4s avg)
-- **Best speed/accuracy tradeoff**: Groq Whisper (8.6s, 14.30% WER)
+- **Best speed/accuracy tradeoff**: Parakeet v3 (6.3s avg, 9.35% WER)
 - **Most sophisticated chunking**: NVIDIA Canary models with 10s overlap + LCS merging
 
 Cloud APIs generally handle long audio better than local models requiring chunking, but local MLX models offer the best balance of speed and accuracy for Apple Silicon hardware.
@@ -275,7 +297,7 @@ Several models exhibited similar hallucination behavior:
 ## Models Evaluated (March 2026 batch)
 
 ### Microsoft VibeVoice-ASR 9B
-- **WER**: 11.02% average | **Speed**: 96.7s avg (H100 GPU)
+- **WER**: 8.34% average (custom normalization) | **Speed**: 96.7s avg (H100 GPU)
 - **Architecture**: 9B parameter model based on Qwen2.5-7B with audio encoder
 - **Key Feature**: Handles up to 60 minutes in a single pass (64K token context), built-in speaker diarization and timestamps
 - **Setup**: Requires `vibevoice` package from GitHub (`pip install -e .` from https://github.com/microsoft/VibeVoice), flash-attn recommended
