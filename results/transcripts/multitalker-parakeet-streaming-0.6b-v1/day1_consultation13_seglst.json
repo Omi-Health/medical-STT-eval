@@ -1,0 +1,16 @@
+[
+  {
+    "speaker": "speaker_0",
+    "start_time": 0.88,
+    "end_time": 29.92,
+    "words": "There's no delay. Okay. So this is getting",
+    "session_id": "day1_consultation13_conversation"
+  },
+  {
+    "speaker": "speaker_1",
+    "start_time": 10.48,
+    "end_time": 158.0,
+    "words": "Hello there, thanks for joining us. Yes, it's yeah not really but just will now I think some headaches not myself I've never had a migraine but my not yeah so my sisters are better yeah maybe just kind of if you have any recommendations thank you too bye",
+    "session_id": "day1_consultation13_conversation"
+  }
+]

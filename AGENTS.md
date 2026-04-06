@@ -13,7 +13,7 @@ medical-stt-benchmark/
 ├── data/
 │   ├── raw_audio/              # 57 WAV files (~13.9MB each, Git LFS)
 │   └── cleaned_transcripts/    # 57 reference transcripts (*_pure_text.txt)
-├── transcribe/                 # 15 model-specific scripts + base class
+├── transcribe/                 # 24 model-specific scripts + base class
 │   ├── base_transcriber.py     # Base class (loads .env automatically)
 │   └── *_transcribe.py         # One per model/API
 ├── evaluate/
@@ -21,10 +21,14 @@ medical-stt-benchmark/
 │   ├── english.json           # British→American spelling mappings (1,739 entries)
 │   ├── wer_calculator.py      # WER calculation algorithm
 │   ├── metrics_generator.py   # Generates *_wer.json per model
-│   └── comparison_generator.py # Generates leaderboard.json
+│   ├── comparison_generator.py # Generates leaderboard.json (ranked by M-WER)
+│   ├── medical_wer.py         # Medical WER: per-category M-WER, Drug M-WER, M-CER
+│   ├── medical_terms_list.py  # 179 categorized medical terms (drugs/conditions/symptoms/anatomy/clinical)
+│   └── challenge_medical.py   # Red-team challenge set (12 supported + 5 blind spots)
 └── results/
-    ├── metrics/                # 38 JSON files (19 models × 2: speed + wer)
-    └── comparisons/            # leaderboard.json, per_file_results.json
+    ├── metrics/                # Per model: *_speed.json, *_wer.json, *_medical_wer.json
+    ├── comparisons/            # leaderboard.json (ranked by M-WER), per_file_results.json
+    └── transcripts/            # 38 model dirs with raw transcript files
 ```
 
 ## Dataset Notes
@@ -109,7 +113,7 @@ The improved chunking is particularly important for medical conversations where:
 - **OpenAI**: `openai_api_transcribe.py` (Whisper-1, GPT-4o variants)
 - **Groq**: `groq_whisper_transcribe.py` (Whisper Large V3/Turbo)
 - **ElevenLabs**: `elevenlabs_scribe_transcribe.py` (Scribe v1)
-- **Mistral**: `mistral_voxtral_mini_transcribe.py` (Voxtral models via API)
+- **Mistral**: `voxtral_mini_transcribe_v1_chat_transcribe.py` (Voxtral models via API)
 - **Google**: `gemini_transcribe.py` (Gemini 2.5 Flash/Pro)
 
 **Local/Native Models** (Optimized for long audio):
@@ -126,29 +130,41 @@ The improved chunking is particularly important for medical conversations where:
 
 ## Model-to-Script Mapping
 
-| Script | Models Served |
-|--------|---------------|
-| `openai_api_transcribe.py` | whisper-1, gpt-4o-transcribe, gpt-4o-mini-transcribe |
-| `groq_whisper_transcribe.py` | whisper-large-v3, whisper-large-v3-turbo |
-| `gemini_transcribe.py` | gemini-2.5-flash, gemini-2.5-pro |
-| `mistral_voxtral_mini_transcribe.py` | voxtral-mini (chat endpoint) |
-| `mistral_voxtral_mini_transcription_transcribe.py` | voxtral-mini (transcription endpoint) |
-| `kyutai_stt_pytorch_transcribe.py` | stt-2.6b-en |
-| `kyutai_stt_1b_pytorch_transcribe.py` | stt-1b-en_fr |
-| `canary_qwen_improved_transcribe.py` | canary-qwen-2.5b |
-| `canary_1b_flash_improved_transcribe.py` | canary-1b-flash |
-| `canary_1b_v2_transcribe.py` | canary-1b-v2 (native long-form) |
-| `granite_speech_transcribe.py` | granite-speech-3.3-2b (chunked) |
-| `elevenlabs_scribe_v2_transcribe.py` | scribe_v2 (parallel batch, retry on 429) |
-| `voxtral_mini_2602_transcription_transcribe.py` | voxtral-mini-2602 (transcription API) |
-| `voxtral_realtime_transcribe.py` | voxtral-mini-4b-realtime (transformers, local GPU) |
-| Others | 1:1 mapping |
+| Script | Models Served | GPU |
+|--------|---------------|-----|
+| `openai_api_transcribe.py` | whisper-1, gpt-4o-transcribe, gpt-4o-mini-transcribe (×2) | API |
+| `groq_whisper_transcribe.py` | whisper-large-v3, whisper-large-v3-turbo | API |
+| `gemini_transcribe.py` | gemini-2.5-flash, gemini-2.5-pro, gemini-3-flash, gemini-3-pro | API |
+| `voxtral_mini_transcribe_v1_chat_transcribe.py` | voxtral-mini-transcribe-v1-chat | API |
+| `voxtral_mini_transcribe_v1_api_transcribe.py` | voxtral-mini-transcribe-v1-api | API |
+| `voxtral_mini_transcribe_v2_transcribe.py` | voxtral-mini-transcribe-v2 | API |
+| `voxtral_mini_4b_realtime_transcribe.py` | voxtral-mini-4b-realtime | A10 vLLM |
+| `cohere_transcribe.py` | cohere-transcribe-03-2026 (vLLM /v1/audio/transcriptions) | A10 vLLM |
+| `qwen3_asr_transcribe.py` | qwen3-asr-1.7b, qwen3-asr-0.6b | A10 vLLM |
+| `gemma4_transcribe.py` | gemma-4-e4b-it, gemma-4-e2b-it (30s chunks, dtype=auto) | T4 |
+| `canary_qwen_improved_transcribe.py` | canary-qwen-2.5b (35s chunks, 10s overlap) | T4 |
+| `canary_1b_flash_improved_transcribe.py` | canary-1b-flash (35s chunks, 10s overlap) | T4 |
+| `canary_1b_v2_transcribe.py` | canary-1b-v2 (native long-form) | T4 |
+| `granite_speech_transcribe.py` | granite-speech-3.3-2b (chunked) | T4 |
+| `kyutai_stt_pytorch_transcribe.py` | stt-2.6b-en | T4 |
+| `kyutai_stt_1b_pytorch_transcribe.py` | stt-1b-en_fr | T4 |
+| `elevenlabs_scribe_transcribe.py` | scribe_v1 | API |
+| `elevenlabs_scribe_v2_transcribe.py` | scribe_v2 | API |
+| `azure_foundry_phi4_transcribe.py` | azure-foundry-phi4 | API |
+| `parakeet_transcribe.py` | parakeet-tdt-0.6b-v2, parakeet-tdt-0.6b-v3 | Apple Silicon |
+| `mlx_whisper_transcribe.py` | mlx-whisper-large-v3-turbo | Apple Silicon |
+| `whisperkit_transcribe.py` | whisperkit-large-v3-turbo | Apple Silicon |
+| `apple_speechanalyzer_transcribe.py` | apple-speechanalyzer | Apple Silicon |
+| `medasr_transcribe.py` | google-medasr | Apple Silicon |
+| NeMo direct (no script) | nemotron-speech-0.6b, parakeet-tdt-1.1b, multitalker-parakeet-0.6b, vibevoice-9b | T4/H100 |
 
 ## API Quirks and Learnings
 
 ### Mistral Voxtral
-- **API Transcription**: `mistral_voxtral_mini_transcription_transcribe.py` - Uses `/v1/audio/transcriptions` endpoint
-- **Chat-based**: `mistral_voxtral_mini_transcribe.py` - Uses chat completions with base64 encoded audio
+- **V1 Transcription API**: `voxtral_mini_transcribe_v1_api_transcribe.py` - Uses `/v1/audio/transcriptions` endpoint
+- **V1 Chat-based**: `voxtral_mini_transcribe_v1_chat_transcribe.py` - Uses chat completions with base64 encoded audio
+- **V2 Transcription API**: `voxtral_mini_transcribe_v2_transcribe.py` - Same endpoint, updated model (Feb 2026)
+- **4B Realtime**: `voxtral_mini_4b_realtime_transcribe.py` - Local GPU via transformers
 - **Key Finding**: Only Mini supports `/v1/audio/transcriptions` - documentation says both models support it but reality is different
 - **Workaround**: Small model must use chat completions with audio input
 
@@ -229,52 +245,31 @@ Replaced `openai-whisper` dependency with self-contained `evaluate/text_normaliz
 | VibeVoice 9B | ~17% | 10.91% | **8.34%** | -9% |
 | Parakeet v3 | ~19% | 11.79% | **9.35%** | -10% |
 
-## Performance Patterns (current rankings, custom normalization)
+## Performance Patterns (current rankings, ranked by M-WER)
 
-Full rankings (speed = avg seconds per 7.5 min file):
+37 single-stream models + 1 multi-speaker model. See README.md for the full leaderboard.
 
-| Rank | Model | WER | Speed | GPU |
-|---:|---|---:|---:|---|
-| 1 | Google Gemini 2.5 Pro | 8.15% | 56.4s | API |
-| 2 | VibeVoice ASR 9B | 8.34% | 96.7s | H100* |
-| 3 | Google Gemini 3 Pro Preview | 8.35% | 64.5s | API |
-| 4 | Parakeet TDT 0.6b v3 | 9.35% | 6.3s | Apple Silicon |
-| 5 | Google Gemini 2.5 Flash | 9.45% | 20.2s | API |
-| 6 | ElevenLabs Scribe v2 | 9.72% | 43.5s | API |
-| 7 | Parakeet TDT 0.6b v2 | 10.75% | 5.4s | Apple Silicon |
-| 8 | ElevenLabs Scribe v1 | 10.87% | 36.3s | API |
-| 9 | Nemotron Speech 0.6B | 11.06% | 11.7s | T4 |
-| 10 | OpenAI GPT-4o Mini (Dec '25) | 11.18% | 40.4s | API |
-| 11 | Kyutai STT 2.6B | 11.20% | 148.4s | GPU |
-| 12 | Google Gemini 3 Flash Preview | 11.33% | 51.5s | API |
-| 13 | Voxtral Mini 2602 | 11.64% | 18.4s | API |
-| 14 | MLX Whisper Large v3 Turbo | 11.65% | 12.9s | Apple Silicon |
-| 15 | Mistral Voxtral Mini (chat) | 11.85% | 22.4s | API |
-| 16 | Mistral Voxtral Mini (transcription) | 11.87% | 23.0s | API |
-| 17 | Voxtral Mini 4B Realtime | 11.89% | 133.9s / 693s | H100* / T4 |
-| 18 | Groq Whisper Large v3 | 11.93% | 8.6s | API |
-| 19 | Canary 1B Flash LCS | 12.03% | 23.4s | T4 |
-| 20 | Groq Whisper Large v3 Turbo | 12.14% | 8.0s | API |
-| 21 | WhisperKit Large v3 Turbo | 12.28% | 21.4s | Apple Silicon |
-| 22 | Apple SpeechAnalyzer | 12.36% | 6.0s | Apple Silicon |
-| 23 | NVIDIA Canary-Qwen 2.5B | 12.94% | 105.4s | T4 |
-| 24 | OpenAI Whisper-1 | 13.20% | 104.3s | API |
-| 25 | OpenAI GPT-4o Mini | 13.60% | N/A | API |
-| 26 | Canary 1B v2 | 14.32% | 9.2s | T4 |
-| 27 | OpenAI GPT-4o Transcribe | 14.84% | 27.9s | API |
-| 28 | Granite Speech 3.3-2B | 16.55% | 109.7s | T4 |
-| 29 | Kyutai STT 1B (en/fr) | 27.28% | 79.5s | GPU |
-| 30 | Azure Foundry Phi-4 | 31.13% | 212.8s | API |
-| 31 | Google MedASR | 64.38% | 4.5s | Apple Silicon |
+Top 10 by Medical WER:
 
-*\* H100 — not directly comparable with T4/Apple Silicon speeds*
-*Voxtral Mini 4B Realtime: designed for streaming/realtime use, not batch processing — its slow batch speed is expected*
+| # | Model | WER | M-WER | Drug M-WER | GPU |
+|---|-------|-----|-------|------------|-----|
+| 1 | Google Gemini 3 Pro | 8.35% | 2.65% | 3.1% | API |
+| 2 | Google Gemini 2.5 Pro | 8.15% | 2.97% | 4.1% | API |
+| 3 | VibeVoice-ASR 9B | 8.34% | 3.16% | 5.6% | H100 |
+| 4 | Google Gemini 3 Flash | 11.33% | 3.64% | 5.2% | API |
+| 5 | ElevenLabs Scribe v2 | 9.72% | 3.86% | 4.3% | API |
+| 6 | Qwen3 ASR 1.7B | 8.96% | 4.69% | 9.3% | A10 vLLM |
+| 7 | OpenAI GPT-4o Mini (Dec '25) | 11.18% | 4.85% | 10.6% | API |
+| 8 | ElevenLabs Scribe v1 | 10.87% | 4.88% | 7.5% | API |
+| 9 | Google Gemini 2.5 Flash | 9.45% | 5.01% | 10.3% | API |
+| 10 | Voxtral Mini V1 (chat) | 11.85% | 5.17% | 11.0% | API |
 
-- **Best speed**: Parakeet TDT 0.6B v2 (5.4s avg)
-- **Best speed/accuracy tradeoff**: Parakeet v3 (6.3s avg, 9.35% WER)
-- **Most sophisticated chunking**: NVIDIA Canary models with 10s overlap + LCS merging
-
-Cloud APIs generally handle long audio better than local models requiring chunking, but local MLX models offer the best balance of speed and accuracy for Apple Silicon hardware.
+Key observations:
+- **M-WER ranking differs from WER** — Parakeet v3 ranks #4 by WER but #25 by M-WER (22% Drug M-WER)
+- **LLM-based models lead on medical terms** — Gemini, VibeVoice, Qwen3 benefit from language model context
+- **Drug names are the hardest category** — Drug M-WER is consistently 2-5x higher than overall M-WER
+- **Best open-source for medical**: Qwen3-ASR 1.7B (8.96% WER, 4.69% M-WER on A10 vLLM)
+- **Best on T4**: Gemma 4 E4B-it (15.69% WER, 9.99% M-WER via transformers dtype=auto)
 
 ## Model-Specific Learnings
 
@@ -338,13 +333,13 @@ Several models exhibited similar hallucination behavior:
 - **Setup**: Requires `elevenlabs>=2.39.0` SDK
 - **Parallel processing**: Supports concurrent requests (max 12 on standard plan, script retries on 429)
 
-### Voxtral Mini 2602 (Transcription API)
-- **WER**: 14.17% average | **Speed**: 18.4s avg
+### Voxtral Mini Transcribe V2 (Transcription API)
+- **WER**: 11.64% average | **Speed**: 18.4s avg
 - **API**: Mistral's `/v1/audio/transcriptions` endpoint with `voxtral-mini-latest` (now points to voxtral-mini-2602)
-- **Improvement over previous**: Slight improvement from 14.62% (old voxtral-mini-latest)
+- **Improvement over V1**: Slight improvement from V1 transcription endpoint (11.87%)
 
-### Voxtral Mini 4B Realtime (Local GPU via vLLM)
-- **WER**: 14.39% average | **Speed**: 133.9s avg (H100), ~693s avg (T4)
+### Voxtral Mini 4B Realtime (Local GPU)
+- **WER**: 11.89% average | **Speed**: 133.9s avg (H100), ~693s avg (T4)
 - **Architecture**: 4B params (~3.4B language + ~970M audio encoder)
 - **Key Finding**: vLLM requires Flash Attention 2 (compute capability >= 8.0) — does not work on T4 (7.5). Transformers fallback works but is very slow without FA2.
 - **Token calculation**: 1 text token = 80ms of audio. Set `max_new_tokens = int(audio_duration / 0.08) + 4096`
@@ -356,6 +351,32 @@ Several models exhibited similar hallucination behavior:
 - **Key Issue**: OOM on T4 16GB for longer audio files (>7 min). Required chunking (split in half with 5s overlap) for 15/55 files
 - **Setup**: Requires NeMo toolkit. CUDA graph decoder has compatibility issues with newer cuda-bindings — use `loop_labels=False` in greedy decoding config
 - **Comparison to Parakeet TDT v3**: Slightly worse accuracy (13.38% vs 11.90%) but designed for streaming/realtime use cases
+
+### Qwen3-ASR 1.7B / 0.6B
+- **WER**: 8.96% (1.7B), 10.04% (0.6B) | **M-WER**: 4.69%, 8.04%
+- **Architecture**: Whisper-style encoder-decoder, Qwen3 LLM backbone
+- **GPU**: A10 via vLLM (BF16, Flash Attention 2). Does NOT work well on T4 — BF16 emulation degrades quality to 26-61% WER. FP16 crashes (cuDNN conv2d incompatible).
+- **Streaming**: Supported via `qwen_asr` package (chunk-and-redecode, not native). Tuned 4s chunks work for ~4/5 files.
+- **Key Finding**: Best open-source model for medical ASR. 0.04x RTF on A10 (25x real-time). Needs compute capability >= 8.0 for good results.
+
+### Cohere Transcribe (March 2026)
+- **WER**: 11.81% | **M-WER**: 5.59% | **Speed**: 3.9s avg (A10 vLLM nightly)
+- **Architecture**: 2B param conformer encoder-decoder, trained from scratch
+- **GPU**: A10 via vLLM nightly (stable vLLM 0.19 produced garbage — needed nightly build)
+- **Features**: 14 languages, automatic 35s chunking with overlap reassembly, punctuation control
+- **License**: Apache 2.0, gated model (HF token required)
+
+### Gemma 4 E4B-it / E2B-it
+- **WER**: 15.69% (E4B), 18.90% (E2B) | **Drug M-WER**: 15.5%, 19.8%
+- **Architecture**: Dense multimodal (text + image + audio), conformer audio encoder
+- **GPU**: Runs on T4 via transformers with `dtype="auto"` and `AutoModelForMultimodalLM`. Also tested on H100 BF16 (same quality, 10x faster). Does NOT work via vLLM on T4 (FA2 + BF16 required).
+- **Chunking**: 30s max audio — simple concat is best (overlap merge + context prompting made results worse)
+- **Key Finding**: Best multimodal model on T4 for medical ASR. E4B quality matches H100 BF16. Quantization kills drug names (45% Drug M-WER at 4-bit vs 15% at full precision).
+
+### Parakeet TDT 1.1B
+- **WER**: 9.03% | **M-WER**: 5.20% | **Speed**: 12.3s avg (T4)
+- **Architecture**: FastConformer Token-and-Duration Transducer, English-only
+- **GPU**: T4 via NeMo. Best English-only Parakeet model.
 
 ### Models Evaluated But Not Suitable for Long-Form Medical Transcription
 
@@ -379,7 +400,15 @@ Several models exhibited similar hallucination behavior:
 5. Test on sample files first, then full dataset
 6. Run evaluation workflow:
    ```bash
+   # 1. Transcribe (saves to results/transcripts/ + results/metrics/*_speed.json)
    python transcribe/your_model_transcribe.py --audio_dir data/raw_audio
-   python evaluate/metrics_generator.py --model_name your-model
-   python evaluate/comparison_generator.py
+
+   # 2. Standard WER (saves results/metrics/*_wer.json)
+   python evaluate/metrics_generator.py --model_name your-model --results_dir results --reference_dir data/cleaned_transcripts
+
+   # 3. Medical WER (saves results/metrics/*_medical_wer.json)
+   python evaluate/medical_wer.py --model your-model --output results/metrics/your-model_medical_wer.json
+
+   # 4. Update leaderboard (ranked by M-WER)
+   python evaluate/comparison_generator.py --results_dir results
    ```

@@ -1,0 +1,16 @@
+[
+  {
+    "speaker": "speaker_0",
+    "start_time": 4.88,
+    "end_time": 35.68,
+    "words": "Hi there. No,",
+    "session_id": "day2_consultation06_conversation"
+  },
+  {
+    "speaker": "speaker_1",
+    "start_time": 8.4,
+    "end_time": 58.32,
+    "words": "Good morning. Yeah, sure. Not at all.",
+    "session_id": "day2_consultation06_conversation"
+  }
+]

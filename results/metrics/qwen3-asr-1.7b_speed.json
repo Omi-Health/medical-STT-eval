@@ -1,0 +1,277 @@
+{
+  "model_name": "qwen3-asr-1.7b",
+  "timestamp": "2026-04-05 07:23:05",
+  "summary": {
+    "total_files": 43,
+    "average_duration": 171.3992425730062,
+    "oom_files": [
+      "day1_consultation06_conversation.wav",
+      "day1_consultation11_conversation.wav",
+      "day3_consultation09_conversation.wav",
+      "day4_consultation08_conversation.wav",
+      "day4_consultation10_conversation.wav",
+      "day5_consultation03_conversation.wav",
+      "day5_consultation11_conversation.wav"
+    ]
+  },
+  "file_details": [
+    {
+      "audio_file": "day1_consultation08_conversation.wav",
+      "duration": 127.72545838356018,
+      "audio_duration": 464.734,
+      "text_length": 5615
+    },
+    {
+      "audio_file": "day1_consultation09_conversation.wav",
+      "duration": 160.84462237358093,
+      "audio_duration": 534.233,
+      "text_length": 6087
+    },
+    {
+      "audio_file": "day1_consultation10_conversation.wav",
+      "duration": 220.71987199783325,
+      "audio_duration": 616.678,
+      "text_length": 7515
+    },
+    {
+      "audio_file": "day1_consultation12_conversation.wav",
+      "duration": 135.0649209022522,
+      "audio_duration": 470.326,
+      "text_length": 5574
+    },
+    {
+      "audio_file": "day1_consultation13_conversation.wav",
+      "duration": 217.95169639587402,
+      "audio_duration": 622.776,
+      "text_length": 7658
+    },
+    {
+      "audio_file": "day1_consultation14_conversation.wav",
+      "duration": 217.40387153625488,
+      "audio_duration": 603.206,
+      "text_length": 7770
+    },
+    {
+      "audio_file": "day1_consultation15_conversation.wav",
+      "duration": 147.89661622047424,
+      "audio_duration": 490.93,
+      "text_length": 6027
+    },
+    {
+      "audio_file": "day2_consultation01_conversation.wav",
+      "duration": 97.42782783508301,
+      "audio_duration": 327.147,
+      "text_length": 5524
+    },
+    {
+      "audio_file": "day2_consultation02_conversation.wav",
+      "duration": 191.15829634666443,
+      "audio_duration": 539.405,
+      "text_length": 7301
+    },
+    {
+      "audio_file": "day2_consultation03_conversation.wav",
+      "duration": 146.25730514526367,
+      "audio_duration": 448.817,
+      "text_length": 6283
+    },
+    {
+      "audio_file": "day2_consultation04_conversation.wav",
+      "duration": 234.83973026275635,
+      "audio_duration": 576.835,
+      "text_length": 8399
+    },
+    {
+      "audio_file": "day2_consultation05_conversation.wav",
+      "duration": 232.20234274864197,
+      "audio_duration": 634.555,
+      "text_length": 8367
+    },
+    {
+      "audio_file": "day2_consultation06_conversation.wav",
+      "duration": 242.4482228755951,
+      "audio_duration": 597.05,
+      "text_length": 8941
+    },
+    {
+      "audio_file": "day2_consultation07_conversation.wav",
+      "duration": 148.18995571136475,
+      "audio_duration": 457.44,
+      "text_length": 6371
+    },
+    {
+      "audio_file": "day2_consultation08_conversation.wav",
+      "duration": 238.20682168006897,
+      "audio_duration": 632.065,
+      "text_length": 8388
+    },
+    {
+      "audio_file": "day2_consultation09_conversation.wav",
+      "duration": 112.94744157791138,
+      "audio_duration": 431.097,
+      "text_length": 4929
+    },
+    {
+      "audio_file": "day2_consultation10_conversation.wav",
+      "duration": 229.74194240570068,
+      "audio_duration": 578.385,
+      "text_length": 8314
+    },
+    {
+      "audio_file": "day3_consultation01_conversation.wav",
+      "duration": 141.2162618637085,
+      "audio_duration": 507.705,
+      "text_length": 5630
+    },
+    {
+      "audio_file": "day3_consultation02_conversation.wav",
+      "duration": 124.42857909202576,
+      "audio_duration": 441.582,
+      "text_length": 5457
+    },
+    {
+      "audio_file": "day3_consultation04_conversation.wav",
+      "duration": 115.52393746376038,
+      "audio_duration": 431.924,
+      "text_length": 5097
+    },
+    {
+      "audio_file": "day3_consultation05_conversation.wav",
+      "duration": 111.00557851791382,
+      "audio_duration": 409.766,
+      "text_length": 5317
+    },
+    {
+      "audio_file": "day3_consultation06_conversation.wav",
+      "duration": 43.43061971664429,
+      "audio_duration": 225.73,
+      "text_length": 3007
+    },
+    {
+      "audio_file": "day3_consultation07_conversation.wav",
+      "duration": 136.0382936000824,
+      "audio_duration": 456.754,
+      "text_length": 5671
+    },
+    {
+      "audio_file": "day3_consultation08_conversation.wav",
+      "duration": 83.9098744392395,
+      "audio_duration": 344.459,
+      "text_length": 4448
+    },
+    {
+      "audio_file": "day3_consultation10_conversation.wav",
+      "duration": 174.41715717315674,
+      "audio_duration": 559.461,
+      "text_length": 6585
+    },
+    {
+      "audio_file": "day4_consultation01_conversation.wav",
+      "duration": 140.6213448047638,
+      "audio_duration": 512.765,
+      "text_length": 5877
+    },
+    {
+      "audio_file": "day4_consultation02_conversation.wav",
+      "duration": 140.58286952972412,
+      "audio_duration": 502.755,
+      "text_length": 5858
+    },
+    {
+      "audio_file": "day4_consultation03_conversation.wav",
+      "duration": 102.10264253616333,
+      "audio_duration": 380.107,
+      "text_length": 4986
+    },
+    {
+      "audio_file": "day4_consultation04_conversation.wav",
+      "duration": 102.74464106559753,
+      "audio_duration": 393.3,
+      "text_length": 4822
+    },
+    {
+      "audio_file": "day4_consultation05_conversation.wav",
+      "duration": 455.2340188026428,
+      "audio_duration": 581.41,
+      "text_length": 1506
+    },
+    {
+      "audio_file": "day4_consultation06_conversation.wav",
+      "duration": 220.60917687416077,
+      "audio_duration": 604.973,
+      "text_length": 7958
+    },
+    {
+      "audio_file": "day4_consultation07_conversation.wav",
+      "duration": 478.35687828063965,
+      "audio_duration": 625.491,
+      "text_length": 4128
+    },
+    {
+      "audio_file": "day4_consultation09_conversation.wav",
+      "duration": 236.2477264404297,
+      "audio_duration": 627.762,
+      "text_length": 7742
+    },
+    {
+      "audio_file": "day5_consultation01_conversation.wav",
+      "duration": 134.45017647743225,
+      "audio_duration": 452.862,
+      "text_length": 5961
+    },
+    {
+      "audio_file": "day5_consultation02_conversation.wav",
+      "duration": 121.4160041809082,
+      "audio_duration": 445.62,
+      "text_length": 5405
+    },
+    {
+      "audio_file": "day5_consultation04_conversation.wav",
+      "duration": 155.4281361103058,
+      "audio_duration": 541.526,
+      "text_length": 5851
+    },
+    {
+      "audio_file": "day5_consultation05_conversation.wav",
+      "duration": 98.65506768226624,
+      "audio_duration": 409.08,
+      "text_length": 4483
+    },
+    {
+      "audio_file": "day5_consultation06_conversation.wav",
+      "duration": 198.02719640731812,
+      "audio_duration": 614.639,
+      "text_length": 7038
+    },
+    {
+      "audio_file": "day5_consultation07_conversation.wav",
+      "duration": 149.10909390449524,
+      "audio_duration": 489.239,
+      "text_length": 6256
+    },
+    {
+      "audio_file": "day5_consultation08_conversation.wav",
+      "duration": 168.4178545475006,
+      "audio_duration": 563.279,
+      "text_length": 6185
+    },
+    {
+      "audio_file": "day5_consultation09_conversation.wav",
+      "duration": 173.66659569740295,
+      "audio_duration": 578.999,
+      "text_length": 6337
+    },
+    {
+      "audio_file": "day5_consultation10_conversation.wav",
+      "duration": 194.60866165161133,
+      "audio_duration": 585.712,
+      "text_length": 7213
+    },
+    {
+      "audio_file": "day5_consultation12_conversation.wav",
+      "duration": 68.89209938049316,
+      "audio_duration": 324.557,
+      "text_length": 3797
+    }
+  ]
+}

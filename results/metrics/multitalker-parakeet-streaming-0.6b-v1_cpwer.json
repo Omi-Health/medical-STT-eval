@@ -1,0 +1,1428 @@
+{
+  "model": "multitalker-parakeet-streaming-0.6b-v1",
+  "metric": "cpWER",
+  "avg_cpwer": 0.34169183585425633,
+  "files": 55,
+  "results": [
+    {
+      "cpwer": 0.21742209631728046,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.20711974110032363,
+          "ref_words": 927,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.23711340206185566,
+          "ref_words": 485,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation01",
+      "ref_doctor_words": 927,
+      "ref_patient_words": 485,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 849,
+        "speaker_1": 393
+      }
+    },
+    {
+      "cpwer": 0.19461077844311378,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.17831074035453598,
+          "ref_words": 959,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.21659634317862167,
+          "ref_words": 711,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation02",
+      "ref_doctor_words": 959,
+      "ref_patient_words": 711,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 906,
+        "speaker_1": 602
+      }
+    },
+    {
+      "cpwer": 0.46828955797565663,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.23496762257169287,
+          "ref_words": 1081,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.99375,
+          "ref_words": 480,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation03",
+      "ref_doctor_words": 1081,
+      "ref_patient_words": 480,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 945,
+        "speaker_1": 6
+      }
+    },
+    {
+      "cpwer": 0.5515187611673615,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.2552552552552553,
+          "ref_words": 999,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.986764705882353,
+          "ref_words": 680,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation04",
+      "ref_doctor_words": 999,
+      "ref_patient_words": 680,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 885,
+        "speaker_1": 12
+      }
+    },
+    {
+      "cpwer": 0.2326153846153846,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.24171539961013644,
+          "ref_words": 1026,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.21702838063439064,
+          "ref_words": 599,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation05",
+      "ref_doctor_words": 1026,
+      "ref_patient_words": 599,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 903,
+        "speaker_1": 515
+      }
+    },
+    {
+      "cpwer": 0.5100054083288263,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.2392586352148273,
+          "ref_words": 1187,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.9954682779456193,
+          "ref_words": 662,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation06",
+      "ref_doctor_words": 1187,
+      "ref_patient_words": 662,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 1074,
+        "speaker_1": 7
+      }
+    },
+    {
+      "cpwer": 0.31725888324873097,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.22657952069716775,
+          "ref_words": 918,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.6325757575757576,
+          "ref_words": 264,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day1_consultation08",
+      "ref_doctor_words": 918,
+      "ref_patient_words": 264,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 123,
+        "speaker_1": 819
+      }
+    },
+    {
+      "cpwer": 0.5132743362831859,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.2257405515832482,
+          "ref_words": 979,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.9800995024875622,
+          "ref_words": 603,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day1_consultation09",
+      "ref_doctor_words": 979,
+      "ref_patient_words": 603,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 867,
+        "speaker_0": 14
+      }
+    },
+    {
+      "cpwer": 0.5575596816976127,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.22875816993464052,
+          "ref_words": 1071,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.9901719901719902,
+          "ref_words": 814,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation10",
+      "ref_doctor_words": 1071,
+      "ref_patient_words": 814,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 982,
+        "speaker_1": 9
+      }
+    },
+    {
+      "cpwer": 0.19286941580756015,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.2238966630785791,
+          "ref_words": 929,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.17226590421729807,
+          "ref_words": 1399,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation11",
+      "ref_doctor_words": 929,
+      "ref_patient_words": 1399,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 860,
+        "speaker_1": 1234
+      }
+    },
+    {
+      "cpwer": 0.5814940577249575,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.23113207547169812,
+          "ref_words": 636,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.992619926199262,
+          "ref_words": 542,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation12",
+      "ref_doctor_words": 636,
+      "ref_patient_words": 542,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 5,
+        "speaker_0": 584
+      }
+    },
+    {
+      "cpwer": 0.9734982332155477,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.9940298507462687,
+          "ref_words": 1005,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.9437229437229437,
+          "ref_words": 693,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation13",
+      "ref_doctor_words": 1005,
+      "ref_patient_words": 693,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 8,
+        "speaker_1": 49
+      }
+    },
+    {
+      "cpwer": 0.2203125,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.2348860257680872,
+          "ref_words": 1009,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.20417124039517015,
+          "ref_words": 911,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day1_consultation14",
+      "ref_doctor_words": 1009,
+      "ref_patient_words": 911,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 910,
+        "speaker_0": 797
+      }
+    },
+    {
+      "cpwer": 0.23696682464454977,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.20190023752969122,
+          "ref_words": 842,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.30660377358490565,
+          "ref_words": 424,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day1_consultation15",
+      "ref_doctor_words": 842,
+      "ref_patient_words": 424,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 807,
+        "speaker_1": 345
+      }
+    },
+    {
+      "cpwer": 0.20103537532355478,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.16537180910099888,
+          "ref_words": 901,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.32558139534883723,
+          "ref_words": 258,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day2_consultation01",
+      "ref_doctor_words": 901,
+      "ref_patient_words": 258,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 839,
+        "speaker_1": 201
+      }
+    },
+    {
+      "cpwer": 0.3197158081705151,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.17114914425427874,
+          "ref_words": 1227,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.7142857142857143,
+          "ref_words": 462,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day2_consultation02",
+      "ref_doctor_words": 1227,
+      "ref_patient_words": 462,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 1138,
+        "speaker_1": 157
+      }
+    },
+    {
+      "cpwer": 0.21803977272727273,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.1971153846153846,
+          "ref_words": 832,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.2482638888888889,
+          "ref_words": 576,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day2_consultation03",
+      "ref_doctor_words": 832,
+      "ref_patient_words": 576,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 513,
+        "speaker_1": 784
+      }
+    },
+    {
+      "cpwer": 0.19956019791094007,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.17162162162162162,
+          "ref_words": 1480,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.3215339233038348,
+          "ref_words": 339,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day2_consultation04",
+      "ref_doctor_words": 1480,
+      "ref_patient_words": 339,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 1346,
+        "speaker_1": 263
+      }
+    },
+    {
+      "cpwer": 0.40585106382978725,
+      "assignment": "fallback",
+      "details": {},
+      "file": "day2_consultation05",
+      "ref_doctor_words": 1364,
+      "ref_patient_words": 516,
+      "hyp_speakers": [
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_0": 1250
+      }
+    },
+    {
+      "cpwer": 0.9947589098532494,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.9951590594744122,
+          "ref_words": 1446,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.9935064935064936,
+          "ref_words": 462,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day2_consultation06",
+      "ref_doctor_words": 1446,
+      "ref_patient_words": 462,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 3,
+        "speaker_1": 7
+      }
+    },
+    {
+      "cpwer": 0.28774289985052315,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.24815724815724816,
+          "ref_words": 814,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.34923664122137404,
+          "ref_words": 524,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day2_consultation07",
+      "ref_doctor_words": 814,
+      "ref_patient_words": 524,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 439,
+        "speaker_0": 700
+      }
+    },
+    {
+      "cpwer": 0.3145879732739421,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.1958762886597938,
+          "ref_words": 1067,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.4883401920438957,
+          "ref_words": 729,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day2_consultation08",
+      "ref_doctor_words": 1067,
+      "ref_patient_words": 729,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 991,
+        "speaker_1": 395
+      }
+    },
+    {
+      "cpwer": 0.23603082851637766,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.19881305637982197,
+          "ref_words": 674,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.30494505494505497,
+          "ref_words": 364,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day2_consultation09",
+      "ref_doctor_words": 674,
+      "ref_patient_words": 364,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 611,
+        "speaker_1": 288
+      }
+    },
+    {
+      "cpwer": 0.17566079295154186,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.16498316498316498,
+          "ref_words": 1188,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.19585987261146498,
+          "ref_words": 628,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day2_consultation10",
+      "ref_doctor_words": 1188,
+      "ref_patient_words": 628,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 1103,
+        "speaker_1": 553
+      }
+    },
+    {
+      "cpwer": 0.23144453312051078,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.23604465709728867,
+          "ref_words": 627,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.2268370607028754,
+          "ref_words": 626,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day3_consultation01",
+      "ref_doctor_words": 627,
+      "ref_patient_words": 626,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 547,
+        "speaker_1": 549
+      }
+    },
+    {
+      "cpwer": 0.21694036300777875,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.15645371577574968,
+          "ref_words": 767,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.33589743589743587,
+          "ref_words": 390,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day3_consultation02",
+      "ref_doctor_words": 767,
+      "ref_patient_words": 390,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 724,
+        "speaker_1": 296
+      }
+    },
+    {
+      "cpwer": 0.3957759412304867,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.19638242894056848,
+          "ref_words": 774,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.8857142857142857,
+          "ref_words": 315,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day3_consultation04",
+      "ref_doctor_words": 774,
+      "ref_patient_words": 315,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 768,
+        "speaker_1": 41
+      }
+    },
+    {
+      "cpwer": 0.3367252543940796,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.17191601049868765,
+          "ref_words": 762,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.7304075235109718,
+          "ref_words": 319,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day3_consultation05",
+      "ref_doctor_words": 762,
+      "ref_patient_words": 319,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 98,
+        "speaker_1": 735
+      }
+    },
+    {
+      "cpwer": 0.21294718909710392,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.15503875968992248,
+          "ref_words": 387,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.325,
+          "ref_words": 200,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day3_consultation06",
+      "ref_doctor_words": 387,
+      "ref_patient_words": 200,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 377,
+        "speaker_1": 168
+      }
+    },
+    {
+      "cpwer": 0.24514991181657847,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.1784431137724551,
+          "ref_words": 835,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.431438127090301,
+          "ref_words": 299,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day3_consultation07",
+      "ref_doctor_words": 835,
+      "ref_patient_words": 299,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 236,
+        "speaker_1": 813
+      }
+    },
+    {
+      "cpwer": 0.19690265486725664,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.1605960264900662,
+          "ref_words": 604,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.27,
+          "ref_words": 300,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day3_consultation08",
+      "ref_doctor_words": 604,
+      "ref_patient_words": 300,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 589,
+        "speaker_1": 269
+      }
+    },
+    {
+      "cpwer": 0.16183574879227053,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.17376294591484465,
+          "ref_words": 869,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.15320566194837634,
+          "ref_words": 1201,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day3_consultation09",
+      "ref_doctor_words": 869,
+      "ref_patient_words": 1201,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 1089,
+        "speaker_1": 797
+      }
+    },
+    {
+      "cpwer": 0.1489841986455982,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.131551901336074,
+          "ref_words": 973,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.19662921348314608,
+          "ref_words": 356,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day3_consultation10",
+      "ref_doctor_words": 973,
+      "ref_patient_words": 356,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 924,
+        "speaker_0": 326
+      }
+    },
+    {
+      "cpwer": 0.1664,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.0670807453416149,
+          "ref_words": 805,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.34606741573033706,
+          "ref_words": 445,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day4_consultation01",
+      "ref_doctor_words": 805,
+      "ref_patient_words": 445,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 796,
+        "speaker_1": 371
+      }
+    },
+    {
+      "cpwer": 0.15931372549019607,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.07881136950904392,
+          "ref_words": 774,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.29777777777777775,
+          "ref_words": 450,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day4_consultation02",
+      "ref_doctor_words": 774,
+      "ref_patient_words": 450,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 775,
+        "speaker_1": 363
+      }
+    },
+    {
+      "cpwer": 0.3464955577492596,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.09352517985611511,
+          "ref_words": 695,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.89937106918239,
+          "ref_words": 318,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day4_consultation03",
+      "ref_doctor_words": 695,
+      "ref_patient_words": 318,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 50,
+        "speaker_0": 686
+      }
+    },
+    {
+      "cpwer": 0.4824120603015075,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.099644128113879,
+          "ref_words": 562,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.9792147806004619,
+          "ref_words": 433,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day4_consultation04",
+      "ref_doctor_words": 562,
+      "ref_patient_words": 433,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 553,
+        "speaker_1": 9
+      }
+    },
+    {
+      "cpwer": 0.6764894298526586,
+      "assignment": "fallback",
+      "details": {},
+      "file": "day4_consultation05",
+      "ref_doctor_words": 591,
+      "ref_patient_words": 970,
+      "hyp_speakers": [
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_1": 580
+      }
+    },
+    {
+      "cpwer": 0.30973986690865096,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.1732124874118832,
+          "ref_words": 993,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.5151515151515151,
+          "ref_words": 660,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day4_consultation06",
+      "ref_doctor_words": 993,
+      "ref_patient_words": 660,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 334,
+        "speaker_0": 939
+      }
+    },
+    {
+      "cpwer": 0.19446014697569247,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.1856763925729443,
+          "ref_words": 1131,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.21003134796238246,
+          "ref_words": 638,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day4_consultation07",
+      "ref_doctor_words": 1131,
+      "ref_patient_words": 638,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 1036,
+        "speaker_1": 606
+      }
+    },
+    {
+      "cpwer": 0.7302405498281787,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.9944392956441149,
+          "ref_words": 1079,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.3028485757121439,
+          "ref_words": 667,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day4_consultation08",
+      "ref_doctor_words": 1079,
+      "ref_patient_words": 667,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 553,
+        "speaker_0": 10
+      }
+    },
+    {
+      "cpwer": 0.5025996533795494,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.22841726618705036,
+          "ref_words": 1112,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.9951534733441034,
+          "ref_words": 619,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day4_consultation09",
+      "ref_doctor_words": 1112,
+      "ref_patient_words": 619,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 956,
+        "speaker_0": 3
+      }
+    },
+    {
+      "cpwer": 0.22831858407079647,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.25819265143992054,
+          "ref_words": 1007,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.18459302325581395,
+          "ref_words": 688,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day4_consultation10",
+      "ref_doctor_words": 1007,
+      "ref_patient_words": 688,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 644,
+        "speaker_1": 836
+      }
+    },
+    {
+      "cpwer": 0.4739374498797113,
+      "assignment": "fallback",
+      "details": {},
+      "file": "day5_consultation01",
+      "ref_doctor_words": 774,
+      "ref_patient_words": 473,
+      "hyp_speakers": [
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_0": 747
+      }
+    },
+    {
+      "cpwer": 0.16161616161616163,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.11533888228299644,
+          "ref_words": 841,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.3185483870967742,
+          "ref_words": 248,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day5_consultation02",
+      "ref_doctor_words": 841,
+      "ref_patient_words": 248,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 805,
+        "speaker_1": 230
+      }
+    },
+    {
+      "cpwer": 0.14913392479932405,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.1447661469933185,
+          "ref_words": 898,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.15180394826412524,
+          "ref_words": 1469,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day5_consultation03",
+      "ref_doctor_words": 898,
+      "ref_patient_words": 1469,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 845,
+        "speaker_1": 1365
+      }
+    },
+    {
+      "cpwer": 0.4815112540192926,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.17509727626459143,
+          "ref_words": 771,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.9809725158562368,
+          "ref_words": 473,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day5_consultation04",
+      "ref_doctor_words": 771,
+      "ref_patient_words": 473,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 27,
+        "speaker_0": 703
+      }
+    },
+    {
+      "cpwer": 0.22835497835497837,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.1658206429780034,
+          "ref_words": 591,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.33933933933933935,
+          "ref_words": 333,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day5_consultation05",
+      "ref_doctor_words": 591,
+      "ref_patient_words": 333,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 568,
+        "speaker_1": 276
+      }
+    },
+    {
+      "cpwer": 0.5243421052631579,
+      "assignment": "fallback",
+      "details": {},
+      "file": "day5_consultation06",
+      "ref_doctor_words": 831,
+      "ref_patient_words": 689,
+      "hyp_speakers": [
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_1": 782
+      }
+    },
+    {
+      "cpwer": 0.46253021756647866,
+      "assignment": "fallback",
+      "details": {},
+      "file": "day5_consultation07",
+      "ref_doctor_words": 803,
+      "ref_patient_words": 438,
+      "hyp_speakers": [
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_0": 775
+      }
+    },
+    {
+      "cpwer": 0.18803418803418803,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.14108352144469527,
+          "ref_words": 886,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.29177057356608477,
+          "ref_words": 401,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day5_consultation08",
+      "ref_doctor_words": 886,
+      "ref_patient_words": 401,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 884,
+        "speaker_1": 353
+      }
+    },
+    {
+      "cpwer": 0.5204081632653061,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.14263565891472868,
+          "ref_words": 645,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.8555708390646493,
+          "ref_words": 727,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day5_consultation09",
+      "ref_doctor_words": 645,
+      "ref_patient_words": 727,
+      "hyp_speakers": [
+        "speaker_1",
+        "speaker_0"
+      ],
+      "hyp_words": {
+        "speaker_1": 610,
+        "speaker_0": 130
+      }
+    },
+    {
+      "cpwer": 0.18665811417575368,
+      "assignment": "doctor=speaker_0, patient=speaker_1",
+      "details": {
+        "doctor": {
+          "wer": 0.11896348645465253,
+          "ref_words": 849,
+          "hyp_key": "speaker_0"
+        },
+        "patient": {
+          "wer": 0.2676056338028169,
+          "ref_words": 710,
+          "hyp_key": "speaker_1"
+        }
+      },
+      "file": "day5_consultation10",
+      "ref_doctor_words": 849,
+      "ref_patient_words": 710,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 804,
+        "speaker_1": 613
+      }
+    },
+    {
+      "cpwer": 0.19211324570273003,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.17715019255455713,
+          "ref_words": 779,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.2018348623853211,
+          "ref_words": 1199,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day5_consultation11",
+      "ref_doctor_words": 779,
+      "ref_patient_words": 1199,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 1055,
+        "speaker_1": 701
+      }
+    },
+    {
+      "cpwer": 0.16055625790139064,
+      "assignment": "doctor=speaker_1, patient=speaker_0",
+      "details": {
+        "doctor": {
+          "wer": 0.1387900355871886,
+          "ref_words": 562,
+          "hyp_key": "speaker_1"
+        },
+        "patient": {
+          "wer": 0.21397379912663755,
+          "ref_words": 229,
+          "hyp_key": "speaker_0"
+        }
+      },
+      "file": "day5_consultation12",
+      "ref_doctor_words": 562,
+      "ref_patient_words": 229,
+      "hyp_speakers": [
+        "speaker_0",
+        "speaker_1"
+      ],
+      "hyp_words": {
+        "speaker_0": 199,
+        "speaker_1": 539
+      }
+    }
+  ]
+}

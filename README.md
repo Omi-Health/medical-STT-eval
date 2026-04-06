@@ -4,47 +4,75 @@ Evaluation framework for speech-to-text models on medical conversation data.
 
 ## Leaderboard
 
-**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 31 | **Updated**: 2026-03-27
+**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 37 | **Updated**: 2026-04-06
 
-| Rank | Model | WER | Accuracy | Avg Speed | GPU |
-|------|-------|-----|----------|-----------|-----|
-| 1 | Google Gemini 2.5 Pro | 8.15% | 91.85% | 56.4s | API |
-| 2 | Microsoft VibeVoice-ASR 9B | 8.34% | 91.66% | 96.7s | H100* |
-| 3 | Google Gemini 3 Pro Preview** | 8.35% | 91.65% | 64.5s | API |
-| 4 | Parakeet TDT 0.6B v3 | 9.35% | 90.65% | 6.3s | Apple Silicon |
-| 5 | Google Gemini 2.5 Flash | 9.45% | 90.55% | 20.2s | API |
-| 6 | ElevenLabs Scribe v2 | 9.72% | 90.28% | 43.5s | API |
-| 7 | Parakeet TDT 0.6B v2 | 10.75% | 89.25% | 5.4s | Apple Silicon |
-| 8 | ElevenLabs Scribe v1 | 10.87% | 89.13% | 36.3s | API |
-| 9 | NVIDIA Nemotron Speech Streaming 0.6B | 11.06% | 88.94% | 11.7s | T4 |
-| 10 | OpenAI GPT-4o Mini (2025-12-15) | 11.18% | 88.82% | 40.4s | API |
-| 11 | Kyutai STT 2.6B | 11.20% | 88.80% | 148.4s | GPU |
-| 12 | Google Gemini 3 Flash Preview | 11.33% | 88.67% | 51.5s | API |
-| 13 | Voxtral Mini 2602 (Transcription API) | 11.64% | 88.36% | 18.4s | API |
-| 14 | MLX Whisper Large v3 Turbo | 11.65% | 88.35% | 12.9s | Apple Silicon |
-| 15 | Mistral Voxtral Mini | 11.85% | 88.15% | 22.4s | API |
-| 16 | Mistral Voxtral Mini (Transcription) | 11.87% | 88.13% | 23.0s | API |
-| 17 | Voxtral Mini 4B Realtime (vLLM)*** | 11.89% | 88.11% | 133.9s / 693s | H100* / T4 |
-| 18 | Groq Whisper Large v3 | 11.93% | 88.07% | 8.6s | API |
-| 19 | NVIDIA Canary 1B Flash | 12.03% | 87.97% | 23.4s | T4 |
-| 20 | Groq Whisper Large v3 Turbo | 12.14% | 87.86% | 8.0s | API |
-| 21 | WhisperKit Large v3 Turbo | 12.28% | 87.72% | 21.4s | Apple Silicon |
-| 22 | Apple SpeechAnalyzer | 12.36% | 87.64% | 6.0s | Apple Silicon |
-| 23 | NVIDIA Canary-Qwen 2.5B | 12.94% | 87.06% | 105.4s | T4 |
-| 24 | OpenAI Whisper-1 | 13.20% | 86.80% | 104.3s | API |
-| 25 | OpenAI GPT-4o Mini Transcribe | 13.60% | 86.40% | N/A | API |
-| 26 | NVIDIA Canary 1B v2**** | 14.32% | 85.68% | 9.2s | T4 |
-| 27 | OpenAI GPT-4o Transcribe | 14.84% | 85.16% | 27.9s | API |
-| 28 | IBM Granite Speech 3.3-2b***** | 16.55% | 83.45% | 109.7s | T4 |
-| 29 | Kyutai STT 1B (Multilingual) | 27.28% | 72.72% | 79.5s | GPU |
-| 30 | Azure Foundry Phi-4 | 31.13% | 68.87% | 212.8s | API |
-| 31 | Google MedASR | 64.38% | 35.62% | 4.5s | Apple Silicon |
+### Ranked by Medical WER (M-WER)
 
-*\*H100 GPU — not directly comparable with T4/Apple Silicon benchmarks*
-*\*\*54/55 files evaluated (1 blocked by safety filter)*
-*\*\*\*Designed for streaming/realtime use — slow batch speed is expected*
-*\*\*\*\*3 files with hallucination loops (see AGENTS.md)*
-*\*\*\*\*\*Requires chunking to avoid repetition loops*
+| # | Model | WER | M-WER | Drug M-WER |
+|---|-------|-----|-------|------------|
+| 1 | Google Gemini 3 Pro Preview | 8.35% | 2.65% | 3.1% |
+| 2 | Google Gemini 2.5 Pro | 8.15% | 2.97% | 4.1% |
+| 3 | VibeVoice-ASR 9B | 8.34% | 3.16% | 5.6% |
+| 4 | Google Gemini 3 Flash Preview | 11.33% | 3.64% | 5.2% |
+| 5 | ElevenLabs Scribe v2 | 9.72% | 3.86% | 4.3% |
+| 6 | Qwen3 ASR 1.7B | 8.96% | 4.69% | 9.3% |
+| 7 | OpenAI GPT-4o Mini (Dec 2025) | 11.18% | 4.85% | 10.6% |
+| 8 | ElevenLabs Scribe v1 | 10.87% | 4.88% | 7.5% |
+| 9 | Google Gemini 2.5 Flash | 9.45% | 5.01% | 10.3% |
+| 10 | Voxtral Mini Transcribe V1 (chat) | 11.85% | 5.17% | 11.0% |
+| 11 | Parakeet TDT 1.1B | 9.03% | 5.20% | 15.5% |
+| 12 | Voxtral Mini Transcribe V1 (API) | 11.87% | 5.20% | 11.0% |
+| 13 | Voxtral Mini Transcribe V2 | 11.64% | 5.36% | 12.1% |
+| 14 | Voxtral Mini 4B Realtime | 11.89% | 5.39% | 11.9% |
+| 15 | Cohere Transcribe (Mar 2026) | 11.81% | 5.59% | 16.6% |
+| 16 | OpenAI Whisper-1 | 13.20% | 5.62% | 10.3% |
+| 17 | Groq Whisper Large v3 Turbo | 12.14% | 5.75% | 14.4% |
+| 18 | NVIDIA Canary 1B Flash | 12.03% | 5.97% | 15.7% |
+| 19 | Groq Whisper Large v3 | 11.93% | 5.97% | 13.6% |
+| 20 | OpenAI GPT-4o Mini Transcribe | 13.60% | 6.03% | 11.4% |
+| 21 | MLX Whisper Large v3 Turbo | 11.65% | 6.16% | 14.0% |
+| 22 | Parakeet TDT 0.6B v2 | 10.75% | 6.19% | 17.2% |
+| 23 | WhisperKit Large v3 Turbo | 12.28% | 6.35% | 14.4% |
+| 24 | Kyutai STT 2.6B | 11.20% | 6.51% | 15.7% |
+| 25 | Parakeet TDT 0.6B v3 | 9.35% | 7.25% | 22.0% |
+| 26 | Qwen3 ASR 0.6B | 10.04% | 8.04% | 17.9% |
+| 27 | Nemotron Speech Streaming 0.6B | 11.06% | 8.97% | 22.6% |
+| 28 | OpenAI GPT-4o Transcribe | 14.84% | 9.03% | 14.9% |
+| 29 | Gemma 4 E4B-it^ | 15.69% | 9.99% | 15.5% |
+| 30 | NVIDIA Canary-Qwen 2.5B | 12.94% | 9.80% | 22.8% |
+| 31 | NVIDIA Canary 1B v2 | 14.32% | 11.24% | 20.5% |
+| 32 | IBM Granite Speech 3.3-2B | 16.55% | 12.80% | 23.1% |
+| 33 | Apple SpeechAnalyzer | 12.36% | 13.02% | 27.4% |
+| 34 | Gemma 4 E2B-it^ | 18.90% | 13.92% | 19.8% |
+| 35 | Azure Foundry Phi-4 | 31.13% | 15.38% | 18.1% |
+| 36 | Kyutai STT 1B (Multilingual) | 27.28% | 21.23% | 28.9% |
+| 37 | Google MedASR | 64.38% | 49.66% | 58.0% |
+
+*Ranked by M-WER. Additional metrics (M-CER, Token Recall, Entity Recall, per-category breakdown) available in `results/metrics/{model}_medical_wer.json`.*
+*^Gemma 4 models use 30s chunking (model max audio = 30s).*
+
+### Multi-speaker models (separate — different metric)
+
+These models output per-speaker transcripts with diarization, evaluated with cpWER (concatenated permutation WER) instead of standard WER. Not directly comparable to the single-stream leaderboard above.
+
+| Model | cpWER | Doctor WER | Patient WER | Good diar (<30%) | Notes |
+|-------|-------|------------|-------------|------------------|-------|
+| Multitalker Parakeet 0.6B | 34.17% | 13-20% | 19-32% | 30/55 (55%) | Joint ASR+diar, streaming, NeMo |
+
+The model outputs SegLST segments (speaker-tagged words with timestamps) via `SpeakerTaggedASR`. On well-diarized files (30/55), per-speaker WER is competitive with single-speaker Parakeet models. On 12/55 files diarization fails — the model assigns text to the wrong speaker or merges both into one stream. This is an early streaming model (v1) optimized for real-time display.
+
+Per-speaker references: PriMock57 TextGrid files (doctor + patient separately with timestamps).
+
+### Metrics explained
+
+| Metric | What |
+|--------|------|
+| **WER** | Word Error Rate — overall transcription accuracy (lower = better) |
+| **M-WER** | Medical WER — errors on medical terms only: drugs, conditions, symptoms, anatomy, clinical (lower = better) |
+| **Drug M-WER** | M-WER for drug names specifically — highest clinical risk category (lower = better) |
+| **cpWER** | Concatenated permutation WER — for multi-speaker models with diarization |
+
+Additional metrics available per model in `results/metrics/{model}_medical_wer.json`: M-CER (character-level error on medical substitutions), Token Recall (occurrence-weighted), Entity Recall (binary), per-category M-WER breakdown (drugs, conditions, symptoms, anatomy, clinical).
 
 ## Quick Start
 
