@@ -8,50 +8,50 @@ Evaluation framework for speech-to-text models on medical conversation data.
 
 ### Ranked by Medical WER (M-WER)
 
-| # | Model | WER | M-WER | Drug M-WER |
-|---|-------|-----|-------|------------|
-| 1 | Google Gemini 3 Pro Preview | 8.35% | 2.65% | 3.1% |
-| 2 | Google Gemini 2.5 Pro | 8.15% | 2.97% | 4.1% |
-| 3 | VibeVoice-ASR 9B | 8.34% | 3.16% | 5.6% |
-| 4 | Soniox stt-async-v4 | 9.18% | 3.32% | 7.1% |
-| 5 | Google Gemini 3 Flash Preview | 11.33% | 3.64% | 5.2% |
-| 6 | ElevenLabs Scribe v2 | 9.72% | 3.86% | 4.3% |
-| 7 | AssemblyAI Universal-3 Pro (medical-v1) | 9.55% | 4.02% | 6.5% |
-| 8 | Deepgram Nova-3 Medical | 9.05% | 4.53% | 9.7% |
-| 9 | Qwen3 ASR 1.7B | 8.96% | 4.69% | 9.3% |
-| 10 | OpenAI GPT-4o Mini (Dec 2025) | 11.18% | 4.85% | 10.6% |
-| 11 | ElevenLabs Scribe v1 | 10.87% | 4.88% | 7.5% |
-| 12 | Google Gemini 2.5 Flash | 9.45% | 5.01% | 10.3% |
-| 13 | Voxtral Mini Transcribe V1 (chat) | 11.85% | 5.17% | 11.0% |
-| 14 | Voxtral Mini Transcribe V1 (API) | 11.87% | 5.20% | 11.0% |
-| 15 | Parakeet TDT 1.1B | 9.03% | 5.20% | 15.5% |
-| 16 | Voxtral Mini Transcribe V2 | 11.64% | 5.36% | 12.1% |
-| 17 | Voxtral Mini 4B Realtime | 11.89% | 5.39% | 11.9% |
-| 18 | Cohere Transcribe (Mar 2026) | 11.81% | 5.59% | 16.6% |
-| 19 | OpenAI Whisper-1 | 13.20% | 5.62% | 10.3% |
-| 20 | Groq Whisper Large v3 Turbo | 12.14% | 5.75% | 14.4% |
-| 21 | NVIDIA Canary 1B Flash | 12.03% | 5.97% | 15.7% |
-| 22 | Groq Whisper Large v3 | 11.93% | 5.97% | 13.6% |
-| 23 | OpenAI GPT-4o Mini Transcribe | 13.60% | 6.03% | 11.4% |
-| 24 | MLX Whisper Large v3 Turbo | 11.65% | 6.16% | 14.0% |
-| 25 | Parakeet TDT 0.6B v2 | 10.75% | 6.19% | 17.2% |
-| 26 | WhisperKit Large v3 Turbo | 12.28% | 6.35% | 14.4% |
-| 27 | Kyutai STT 2.6B | 11.20% | 6.51% | 15.7% |
-| 28 | Parakeet TDT 0.6B v3 | 9.35% | 7.25% | 22.0% |
-| 29 | Qwen3 ASR 0.6B | 10.04% | 8.04% | 17.9% |
-| 30 | Nemotron Speech Streaming 0.6B | 11.06% | 8.97% | 22.6% |
-| 31 | OpenAI GPT-4o Transcribe | 14.84% | 9.03% | 14.9% |
-| 32 | NVIDIA Canary-Qwen 2.5B | 12.94% | 9.80% | 22.8% |
-| 33 | Gemma 4 E4B-it^ | 15.69% | 9.99% | 15.5% |
-| 34 | NVIDIA Canary 1B v2 | 14.32% | 11.24% | 20.5% |
-| 35 | IBM Granite Speech 3.3-2B | 16.55% | 12.80% | 23.1% |
-| 36 | Apple SpeechAnalyzer | 12.36% | 13.02% | 27.4% |
-| 37 | Gemma 4 E2B-it^ | 18.90% | 13.92% | 19.8% |
-| 38 | Azure Foundry Phi-4 | 31.13% | 15.38% | 18.1% |
-| 39 | Kyutai STT 1B (Multilingual) | 27.28% | 21.23% | 28.9% |
-| 40 | Google MedASR | 64.38% | 49.66% | 58.0% |
+| # | Model | WER | M-WER | Drug M-WER | Avg Speed | Type |
+|---|-------|-----|-------|------------|-----------|------|
+| 1 | Google Gemini 3 Pro Preview | 8.35% | 2.65% | 3.1% | 64.5s | API |
+| 2 | Google Gemini 2.5 Pro | 8.15% | 2.97% | 4.1% | 56.4s | API |
+| 3 | VibeVoice-ASR 9B | 8.34% | 3.16% | 5.6% | 96.7s | H100 |
+| 4 | Soniox stt-async-v4 | 9.18% | 3.32% | 7.1% | 46.2s | API |
+| 5 | Google Gemini 3 Flash Preview | 11.33% | 3.64% | 5.2% | 51.5s | API |
+| 6 | ElevenLabs Scribe v2 | 9.72% | 3.86% | 4.3% | 43.5s | API |
+| 7 | AssemblyAI Universal-3 Pro (medical-v1) | 9.55% | 4.02% | 6.5% | 37.3s | API |
+| 8 | Deepgram Nova-3 Medical | 9.05% | 4.53% | 9.7% | 12.9s | API |
+| 9 | Qwen3 ASR 1.7B | 8.96% | 4.69% | 9.3% | N/A | A10 |
+| 10 | OpenAI GPT-4o Mini (Dec 2025) | 11.18% | 4.85% | 10.6% | 40.4s | API |
+| 11 | ElevenLabs Scribe v1 | 10.87% | 4.88% | 7.5% | 36.3s | API |
+| 12 | Google Gemini 2.5 Flash | 9.45% | 5.01% | 10.3% | 20.2s | API |
+| 13 | Voxtral Mini Transcribe V1 (chat) | 11.85% | 5.17% | 11.0% | 22.4s | API |
+| 14 | Voxtral Mini Transcribe V1 (API) | 11.87% | 5.20% | 11.0% | 23.0s | API |
+| 15 | Parakeet TDT 1.1B | 9.03% | 5.20% | 15.5% | 12.3s | T4 |
+| 16 | Voxtral Mini Transcribe V2 | 11.64% | 5.36% | 12.1% | 18.4s | API |
+| 17 | Voxtral Mini 4B Realtime | 11.89% | 5.39% | 11.9% | 133.9s | H100 |
+| 18 | Cohere Transcribe (Mar 2026) | 11.81% | 5.59% | 16.6% | 3.9s | A10 |
+| 19 | OpenAI Whisper-1 | 13.20% | 5.62% | 10.3% | 104.3s | API |
+| 20 | Groq Whisper Large v3 Turbo | 12.14% | 5.75% | 14.4% | 8.0s | API |
+| 21 | NVIDIA Canary 1B Flash | 12.03% | 5.97% | 15.7% | 23.4s | T4 |
+| 22 | Groq Whisper Large v3 | 11.93% | 5.97% | 13.6% | 8.6s | API |
+| 23 | OpenAI GPT-4o Mini Transcribe | 13.60% | 6.03% | 11.4% | N/A | API |
+| 24 | MLX Whisper Large v3 Turbo | 11.65% | 6.16% | 14.0% | 12.9s | Apple Silicon |
+| 25 | Parakeet TDT 0.6B v2 | 10.75% | 6.19% | 17.2% | 5.4s | Apple Silicon |
+| 26 | WhisperKit Large v3 Turbo | 12.28% | 6.35% | 14.4% | 21.4s | Apple Silicon |
+| 27 | Kyutai STT 2.6B | 11.20% | 6.51% | 15.7% | 148.4s | T4 |
+| 28 | Parakeet TDT 0.6B v3 | 9.35% | 7.25% | 22.0% | 6.3s | Apple Silicon |
+| 29 | Qwen3 ASR 0.6B | 10.04% | 8.04% | 17.9% | N/A | A10 |
+| 30 | Nemotron Speech Streaming 0.6B | 11.06% | 8.97% | 22.6% | 11.7s | T4 |
+| 31 | OpenAI GPT-4o Transcribe | 14.84% | 9.03% | 14.9% | 27.9s | API |
+| 32 | NVIDIA Canary-Qwen 2.5B | 12.94% | 9.80% | 22.8% | 105.4s | T4 |
+| 33 | Gemma 4 E4B-it^ | 15.69% | 9.99% | 15.5% | 185.4s | T4 |
+| 34 | NVIDIA Canary 1B v2 | 14.32% | 11.24% | 20.5% | 9.2s | T4 |
+| 35 | IBM Granite Speech 3.3-2B | 16.55% | 12.80% | 23.1% | 109.7s | T4 |
+| 36 | Apple SpeechAnalyzer | 12.36% | 13.02% | 27.4% | 6.0s | Apple Silicon |
+| 37 | Gemma 4 E2B-it^ | 18.90% | 13.92% | 19.8% | 134.6s | T4 |
+| 38 | Azure Foundry Phi-4 | 31.13% | 15.38% | 18.1% | 212.8s | API |
+| 39 | Kyutai STT 1B (Multilingual) | 27.28% | 21.23% | 28.9% | 79.5s | T4 |
+| 40 | Google MedASR | 64.38% | 49.66% | 58.0% | 1.2s | Apple Silicon |
 
-*Ranked by M-WER. Additional metrics (M-CER, Token Recall, Entity Recall, per-category breakdown) available in `results/metrics/{model}_medical_wer.json`.*
+*Ranked by M-WER. **Avg Speed** = wall-clock seconds per ~7.5 min file (lower is better; not normalized for hardware tier — H100 ≫ A10 ≫ T4). **Type**: API (cloud), T4/A10/H100 (NVIDIA GPU tier via NeMo/vLLM/transformers), Apple Silicon (MLX/Native on M-series). Additional metrics in `results/metrics/{model}_medical_wer.json`.*
 *^Gemma 4 models use 30s chunking (model max audio = 30s).*
 
 ### Multi-speaker models (separate — different metric)
