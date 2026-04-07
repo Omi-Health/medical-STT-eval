@@ -156,6 +156,9 @@ The improved chunking is particularly important for medical conversations where:
 | `whisperkit_transcribe.py` | whisperkit-large-v3-turbo | Apple Silicon |
 | `apple_speechanalyzer_transcribe.py` | apple-speechanalyzer | Apple Silicon |
 | `medasr_transcribe.py` | google-medasr | Apple Silicon |
+| `deepgram_medical_transcribe.py` | deepgram-nova-3-medical (parallel, skip-existing) | API |
+| `assemblyai_transcribe.py` | assemblyai-universal-3-pro-medical (medical-v1 domain) | API |
+| `soniox_transcribe.py` | soniox-stt-async-v4 (REST async, no context) | API |
 | NeMo direct (no script) | nemotron-speech-0.6b, parakeet-tdt-1.1b, multitalker-parakeet-0.6b, vibevoice-9b | T4/H100 |
 
 ## API Quirks and Learnings
@@ -204,6 +207,9 @@ The Kyutai STT 2.6B model showed severe hallucination issues on long medical con
 - **Consistent**: ElevenLabs, Google Gemini
 - **Local models**: MLX models most stable for batch processing
 
+### Speed metrics across re-runs
+`base_transcriber._save_metrics()` merges new per-file timings with any existing `*_speed.json` instead of overwriting. This means re-runs that skip already-completed files (e.g. resuming a partial batch) preserve prior timings — `*_speed.json` always reflects all processed files, not just the current invocation.
+
 ### File Size Handling
 - **Cloud APIs**: Generally handle 13.9MB medical files well
 - **Chunking required**: NVIDIA vLLM models, Azure Phi-4
@@ -247,7 +253,7 @@ Replaced `openai-whisper` dependency with self-contained `evaluate/text_normaliz
 
 ## Performance Patterns (current rankings, ranked by M-WER)
 
-37 single-stream models + 1 multi-speaker model. See README.md for the full leaderboard.
+40 single-stream models + 1 multi-speaker model. See README.md for the full leaderboard.
 
 Top 10 by Medical WER:
 
@@ -256,13 +262,13 @@ Top 10 by Medical WER:
 | 1 | Google Gemini 3 Pro | 8.35% | 2.65% | 3.1% | API |
 | 2 | Google Gemini 2.5 Pro | 8.15% | 2.97% | 4.1% | API |
 | 3 | VibeVoice-ASR 9B | 8.34% | 3.16% | 5.6% | H100 |
-| 4 | Google Gemini 3 Flash | 11.33% | 3.64% | 5.2% | API |
-| 5 | ElevenLabs Scribe v2 | 9.72% | 3.86% | 4.3% | API |
-| 6 | Qwen3 ASR 1.7B | 8.96% | 4.69% | 9.3% | A10 vLLM |
-| 7 | OpenAI GPT-4o Mini (Dec '25) | 11.18% | 4.85% | 10.6% | API |
-| 8 | ElevenLabs Scribe v1 | 10.87% | 4.88% | 7.5% | API |
-| 9 | Google Gemini 2.5 Flash | 9.45% | 5.01% | 10.3% | API |
-| 10 | Voxtral Mini V1 (chat) | 11.85% | 5.17% | 11.0% | API |
+| 4 | Soniox stt-async-v4 | 9.18% | 3.32% | 7.1% | API |
+| 5 | Google Gemini 3 Flash | 11.33% | 3.64% | 5.2% | API |
+| 6 | ElevenLabs Scribe v2 | 9.72% | 3.86% | 4.3% | API |
+| 7 | AssemblyAI Universal-3 Pro (medical-v1) | 9.55% | 4.02% | 6.5% | API |
+| 8 | Deepgram Nova-3 Medical | 9.05% | 4.53% | 9.7% | API |
+| 9 | Qwen3 ASR 1.7B | 8.96% | 4.69% | 9.3% | A10 vLLM |
+| 10 | OpenAI GPT-4o Mini (Dec '25) | 11.18% | 4.85% | 10.6% | API |
 
 Key observations:
 - **M-WER ranking differs from WER** — Parakeet v3 ranks #4 by WER but #25 by M-WER (22% Drug M-WER)
@@ -315,6 +321,28 @@ Several models exhibited similar hallucination behavior:
    - LCS merging to stitch chunks cleanly
    - Note: Lower max_new_tokens doesn't prevent loops
 4. **Models affected**: Canary 1B v2, Granite Speech 3.3-2b, Kyutai STT 2.6B
+
+## Models Evaluated (April 2026 batch)
+
+### Soniox stt-async-v4
+- **WER**: 9.18% | **M-WER**: 3.32% | **Drug M-WER**: 7.1% | **Speed**: 46.2s avg (workers=2)
+- **API**: REST async (`/v1/files` upload → `/v1/transcriptions` create → poll → `/transcript`)
+- **Config**: Plain call — `language_hints=["en"]` only. No context customization, no speaker diarization, no terms list (kept fair vs. other clean cloud-API entries)
+- **Key Finding**: 4th overall, best non-Google/non-VibeVoice model. Universal model — no medical-specific tuning. UK-specific brand names (e.g. Clenil) are the main error source; would benefit from `context.terms` if fairness wasn't a concern
+- **Polling**: Default 0.5s interval (3s adds ~1.5s avg latency per file unnecessarily)
+
+### AssemblyAI Universal-3 Pro (medical-v1 domain)
+- **WER**: 9.55% | **M-WER**: 4.02% | **Drug M-WER**: 6.5% | **Speed**: 37.3s avg (workers=2)
+- **API**: REST (`/v2/upload` → `/v2/transcript` with `domain: medical-v1` → poll)
+- **Config**: `speech_models=["universal-3-pro"]`, `domain="medical-v1"`, `speaker_labels=True`, `language_detection=True`, `temperature=0`
+- **Throttling**: Standard plan concurrency limit ~4 — at workers=8 we got the "queued for processing" email and per-file durations doubled (e.g. day1_consultation10: 129s → 30s when re-run with workers=1). Use `--workers 2` for fair speed measurement.
+- **Polling**: 3s default interval (~1.5s avg latency per file)
+
+### Deepgram Nova-3 Medical
+- **WER**: 9.05% | **M-WER**: 4.53% | **Drug M-WER**: 9.7% | **Speed**: 12.9s avg (workers=2) — fastest cloud API in the benchmark
+- **API**: REST (`POST /v1/listen?model=nova-3-medical&smart_format=true&language=en`) — single inline POST, transcript returned in body, no upload step, no polling
+- **Config**: `smart_format=true`, `language=en` — clean call
+- **Key Finding**: Fastest API by ~3× vs AssemblyAI/Soniox. Single-shot binary POST avoids upload + polling overhead. Strong on raw WER, slightly weaker on drugs vs the other two.
 
 ## Models Evaluated (March 2026 batch)
 

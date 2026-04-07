@@ -1,8 +1,9 @@
 {
-  "timestamp": "2026-04-07 00:49:30",
+  "timestamp": "2026-04-07 16:41:06",
   "models": [
     "elevenlabs-scribe_v2",
     "voxtral-mini-transcribe-v1-api",
+    "assemblyai-universal-3-pro-medical",
     "kyutai-stt-pytorch-stt-2.6b-en",
     "voxtral-mini-transcribe-v2",
     "whisperkit-large-v3-v20240930_turbo",
@@ -35,7 +36,9 @@
     "gemma-4-e2b-it",
     "canary-1b-v2",
     "apple-speechanalyzer",
+    "deepgram-nova-3-medical",
     "gemma-4-e4b-it",
+    "soniox-stt-async-v4",
     "parakeet-parakeet-tdt-0.6b-v3",
     "parakeet-parakeet-tdt-0.6b-v2"
   ],
@@ -52,6 +55,11 @@
           "wer": 0.14536157779401024,
           "reference_words": 1369,
           "hypothesis_words": 1301
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.13148283418553688,
+          "reference_words": 1369,
+          "hypothesis_words": 1308
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.1468224981738495,
@@ -211,10 +219,20 @@
           "reference_words": 1369,
           "hypothesis_words": 1270
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.13805697589481372,
+          "reference_words": 1369,
+          "hypothesis_words": 1337
+        },
         "gemma-4-e4b-it": {
           "wer": 0.20379839298758218,
           "reference_words": 1369,
           "hypothesis_words": 1323
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.13221329437545654,
+          "reference_words": 1369,
+          "hypothesis_words": 1376
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.1344046749452155,
@@ -240,6 +258,11 @@
           "wer": 0.13082437275985664,
           "reference_words": 1674,
           "hypothesis_words": 1579
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11589008363201912,
+          "reference_words": 1674,
+          "hypothesis_words": 1610
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.12962962962962962,
@@ -401,10 +424,20 @@
           "reference_words": 1674,
           "hypothesis_words": 1595
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.12246117084826762,
+          "reference_words": 1674,
+          "hypothesis_words": 1649
+        },
         "gemma-4-e4b-it": {
           "wer": 0.17204301075268819,
           "reference_words": 1674,
           "hypothesis_words": 1612
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.13381123058542413,
+          "reference_words": 1674,
+          "hypothesis_words": 1611
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.12007168458781362,
@@ -430,6 +463,11 @@
           "wer": 0.129073482428115,
           "reference_words": 1565,
           "hypothesis_words": 1499
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.10862619808306709,
+          "reference_words": 1565,
+          "hypothesis_words": 1540
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.11182108626198083,
@@ -591,10 +629,20 @@
           "reference_words": 1565,
           "hypothesis_words": 1506
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.10798722044728434,
+          "reference_words": 1565,
+          "hypothesis_words": 1561
+        },
         "gemma-4-e4b-it": {
           "wer": 0.21277955271565496,
           "reference_words": 1565,
           "hypothesis_words": 1484
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.10607028753993611,
+          "reference_words": 1565,
+          "hypothesis_words": 1603
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.11054313099041534,
@@ -620,6 +668,11 @@
           "wer": 0.17967332123411978,
           "reference_words": 1653,
           "hypothesis_words": 1510
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.14579552329098608,
+          "reference_words": 1653,
+          "hypothesis_words": 1558
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.16575922565033274,
@@ -781,10 +834,20 @@
           "reference_words": 1653,
           "hypothesis_words": 1554
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.11796733212341198,
+          "reference_words": 1653,
+          "hypothesis_words": 1666
+        },
         "gemma-4-e4b-it": {
           "wer": 0.22928009679370842,
           "reference_words": 1653,
           "hypothesis_words": 1590
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.1306715063520871,
+          "reference_words": 1653,
+          "hypothesis_words": 1754
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.11252268602540835,
@@ -810,6 +873,11 @@
           "wer": 0.13761467889908258,
           "reference_words": 1635,
           "hypothesis_words": 1540
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.09969418960244648,
+          "reference_words": 1635,
+          "hypothesis_words": 1563
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.11070336391437309,
@@ -971,10 +1039,20 @@
           "reference_words": 1635,
           "hypothesis_words": 1554
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.0856269113149847,
+          "reference_words": 1635,
+          "hypothesis_words": 1616
+        },
         "gemma-4-e4b-it": {
           "wer": 0.1712538226299694,
           "reference_words": 1635,
           "hypothesis_words": 1569
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.09357798165137615,
+          "reference_words": 1635,
+          "hypothesis_words": 1668
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.09235474006116208,
@@ -1000,6 +1078,11 @@
           "wer": 0.14752313554708765,
           "reference_words": 1837,
           "hypothesis_words": 1676
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11486118671747414,
+          "reference_words": 1837,
+          "hypothesis_words": 1743
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.16058791507893305,
@@ -1161,10 +1244,20 @@
           "reference_words": 1837,
           "hypothesis_words": 1719
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.1115949918345128,
+          "reference_words": 1837,
+          "hypothesis_words": 1789
+        },
         "gemma-4-e4b-it": {
           "wer": 0.19651605879150788,
           "reference_words": 1837,
           "hypothesis_words": 1755
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.1045182362547632,
+          "reference_words": 1837,
+          "hypothesis_words": 1858
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.1110506260206859,
@@ -1190,6 +1283,11 @@
           "wer": 0.1117798796216681,
           "reference_words": 1163,
           "hypothesis_words": 1105
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.09114359415305245,
+          "reference_words": 1163,
+          "hypothesis_words": 1134
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.11349957007738606,
@@ -1351,10 +1449,20 @@
           "reference_words": 1163,
           "hypothesis_words": 1088
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.09802235597592433,
+          "reference_words": 1163,
+          "hypothesis_words": 1140
+        },
         "gemma-4-e4b-it": {
           "wer": 0.21324161650902837,
           "reference_words": 1163,
           "hypothesis_words": 1087
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.1117798796216681,
+          "reference_words": 1163,
+          "hypothesis_words": 1114
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.09200343938091143,
@@ -1380,6 +1488,11 @@
           "wer": 0.17223650385604114,
           "reference_words": 1556,
           "hypothesis_words": 1388
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.12982005141388175,
+          "reference_words": 1556,
+          "hypothesis_words": 1455
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.16773778920308482,
@@ -1541,10 +1654,20 @@
           "reference_words": 1556,
           "hypothesis_words": 1413
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.09832904884318766,
+          "reference_words": 1556,
+          "hypothesis_words": 1514
+        },
         "gemma-4-e4b-it": {
           "wer": 0.18766066838046272,
           "reference_words": 1556,
           "hypothesis_words": 1445
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.11568123393316196,
+          "reference_words": 1556,
+          "hypothesis_words": 1510
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.11053984575835475,
@@ -1570,6 +1693,11 @@
           "wer": 0.17456896551724138,
           "reference_words": 1856,
           "hypothesis_words": 1672
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.14601293103448276,
+          "reference_words": 1856,
+          "hypothesis_words": 1707
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.17995689655172414,
@@ -1731,10 +1859,20 @@
           "reference_words": 1856,
           "hypothesis_words": 1689
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.140625,
+          "reference_words": 1856,
+          "hypothesis_words": 1777
+        },
         "gemma-4-e4b-it": {
           "wer": 0.22629310344827586,
           "reference_words": 1856,
           "hypothesis_words": 1735
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.125,
+          "reference_words": 1856,
+          "hypothesis_words": 1872
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.14170258620689655,
@@ -1760,6 +1898,11 @@
           "wer": 0.14940068493150685,
           "reference_words": 2336,
           "hypothesis_words": 2143
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11001712328767123,
+          "reference_words": 2336,
+          "hypothesis_words": 2221
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.13142123287671234,
@@ -1921,10 +2064,20 @@
           "reference_words": 2336,
           "hypothesis_words": 2195
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.0920376712328767,
+          "reference_words": 2336,
+          "hypothesis_words": 2313
+        },
         "gemma-4-e4b-it": {
           "wer": 0.168236301369863,
           "reference_words": 2336,
           "hypothesis_words": 2273
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.09375,
+          "reference_words": 2336,
+          "hypothesis_words": 2398
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.10059931506849315,
@@ -1950,6 +2103,11 @@
           "wer": 0.10043290043290043,
           "reference_words": 1155,
           "hypothesis_words": 1110
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.09090909090909091,
+          "reference_words": 1155,
+          "hypothesis_words": 1131
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.11082251082251082,
@@ -2111,10 +2269,20 @@
           "reference_words": 1155,
           "hypothesis_words": 1111
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.09004329004329005,
+          "reference_words": 1155,
+          "hypothesis_words": 1161
+        },
         "gemma-4-e4b-it": {
           "wer": 0.15324675324675324,
           "reference_words": 1155,
           "hypothesis_words": 1111
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.08138528138528138,
+          "reference_words": 1155,
+          "hypothesis_words": 1173
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.08744588744588745,
@@ -2140,6 +2308,11 @@
           "wer": 0.08175355450236967,
           "reference_words": 1688,
           "hypothesis_words": 1613
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.07227488151658767,
+          "reference_words": 1688,
+          "hypothesis_words": 1627
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.08234597156398105,
@@ -2301,10 +2474,20 @@
           "reference_words": 1688,
           "hypothesis_words": 1609
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.06279620853080568,
+          "reference_words": 1688,
+          "hypothesis_words": 1671
+        },
         "gemma-4-e4b-it": {
           "wer": 0.14869668246445497,
           "reference_words": 1688,
           "hypothesis_words": 1621
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.09774881516587677,
+          "reference_words": 1688,
+          "hypothesis_words": 1607
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.06575829383886256,
@@ -2330,6 +2513,11 @@
           "wer": 0.14615384615384616,
           "reference_words": 1950,
           "hypothesis_words": 1797
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.10564102564102563,
+          "reference_words": 1950,
+          "hypothesis_words": 1865
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.11333333333333333,
@@ -2491,10 +2679,20 @@
           "reference_words": 1950,
           "hypothesis_words": 1836
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.10307692307692308,
+          "reference_words": 1950,
+          "hypothesis_words": 1922
+        },
         "gemma-4-e4b-it": {
           "wer": 0.17794871794871794,
           "reference_words": 1950,
           "hypothesis_words": 1879
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.08717948717948718,
+          "reference_words": 1950,
+          "hypothesis_words": 1985
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.10153846153846154,
@@ -2520,6 +2718,11 @@
           "wer": 0.11968503937007874,
           "reference_words": 1270,
           "hypothesis_words": 1236
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11338582677165354,
+          "reference_words": 1270,
+          "hypothesis_words": 1237
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.1236220472440945,
@@ -2681,10 +2884,20 @@
           "reference_words": 1270,
           "hypothesis_words": 1211
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.09527559055118111,
+          "reference_words": 1270,
+          "hypothesis_words": 1276
+        },
         "gemma-4-e4b-it": {
           "wer": 0.17874015748031497,
           "reference_words": 1270,
           "hypothesis_words": 1230
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.131496062992126,
+          "reference_words": 1270,
+          "hypothesis_words": 1257
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.12283464566929134,
@@ -2710,6 +2923,11 @@
           "wer": 0.09914529914529914,
           "reference_words": 1170,
           "hypothesis_words": 1149
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.08461538461538462,
+          "reference_words": 1170,
+          "hypothesis_words": 1156
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.10512820512820513,
@@ -2871,10 +3089,20 @@
           "reference_words": 1170,
           "hypothesis_words": 1138
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.10341880341880341,
+          "reference_words": 1170,
+          "hypothesis_words": 1193
+        },
         "gemma-4-e4b-it": {
           "wer": 0.14957264957264957,
           "reference_words": 1170,
           "hypothesis_words": 1158
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.08803418803418804,
+          "reference_words": 1170,
+          "hypothesis_words": 1172
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.09829059829059829,
@@ -2900,6 +3128,11 @@
           "wer": 0.13092417061611375,
           "reference_words": 1688,
           "hypothesis_words": 1551
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11137440758293839,
+          "reference_words": 1688,
+          "hypothesis_words": 1589
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.12914691943127962,
@@ -3061,10 +3294,20 @@
           "reference_words": 1688,
           "hypothesis_words": 1580
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.09360189573459715,
+          "reference_words": 1688,
+          "hypothesis_words": 1663
+        },
         "gemma-4-e4b-it": {
           "wer": 0.15817535545023698,
           "reference_words": 1688,
           "hypothesis_words": 1630
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.0995260663507109,
+          "reference_words": 1688,
+          "hypothesis_words": 1724
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.10130331753554503,
@@ -3090,6 +3333,11 @@
           "wer": 0.14536516853932585,
           "reference_words": 1424,
           "hypothesis_words": 1350
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.12991573033707865,
+          "reference_words": 1424,
+          "hypothesis_words": 1351
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.1425561797752809,
@@ -3251,10 +3499,20 @@
           "reference_words": 1424,
           "hypothesis_words": 1348
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.12148876404494383,
+          "reference_words": 1424,
+          "hypothesis_words": 1420
+        },
         "gemma-4-e4b-it": {
           "wer": 0.22893258426966293,
           "reference_words": 1424,
           "hypothesis_words": 1324
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.12640449438202248,
+          "reference_words": 1424,
+          "hypothesis_words": 1480
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.12640449438202248,
@@ -3280,6 +3538,11 @@
           "wer": 0.11123287671232877,
           "reference_words": 1825,
           "hypothesis_words": 1723
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.10191780821917808,
+          "reference_words": 1825,
+          "hypothesis_words": 1735
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.0958904109589041,
@@ -3441,10 +3704,20 @@
           "reference_words": 1825,
           "hypothesis_words": 1736
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.07123287671232877,
+          "reference_words": 1825,
+          "hypothesis_words": 1801
+        },
         "gemma-4-e4b-it": {
           "wer": 0.1336986301369863,
           "reference_words": 1825,
           "hypothesis_words": 1780
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.07287671232876712,
+          "reference_words": 1825,
+          "hypothesis_words": 1853
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.07178082191780821,
@@ -3470,6 +3743,11 @@
           "wer": 0.0714658320292123,
           "reference_words": 1917,
           "hypothesis_words": 1837
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.0594679186228482,
+          "reference_words": 1917,
+          "hypothesis_words": 1865
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.07250912884715702,
@@ -3631,10 +3909,20 @@
           "reference_words": 1917,
           "hypothesis_words": 1831
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.047991653625456446,
+          "reference_words": 1917,
+          "hypothesis_words": 1904
+        },
         "gemma-4-e4b-it": {
           "wer": 0.14032342201356285,
           "reference_words": 1917,
           "hypothesis_words": 1840
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.04590505998956703,
+          "reference_words": 1917,
+          "hypothesis_words": 1924
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.05894627021387585,
@@ -3660,6 +3948,11 @@
           "wer": 0.1042311661506708,
           "reference_words": 1938,
           "hypothesis_words": 1807
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.08978328173374613,
+          "reference_words": 1938,
+          "hypothesis_words": 1834
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.11042311661506708,
@@ -3821,10 +4114,20 @@
           "reference_words": 1938,
           "hypothesis_words": 1822
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.07894736842105263,
+          "reference_words": 1938,
+          "hypothesis_words": 1879
+        },
         "gemma-4-e4b-it": {
           "wer": 0.14241486068111456,
           "reference_words": 1938,
           "hypothesis_words": 1832
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.07275541795665634,
+          "reference_words": 1938,
+          "hypothesis_words": 1924
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.0846233230134159,
@@ -3850,6 +4153,11 @@
           "wer": 0.12404870624048706,
           "reference_words": 1314,
           "hypothesis_words": 1222
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.1111111111111111,
+          "reference_words": 1314,
+          "hypothesis_words": 1239
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.1263318112633181,
@@ -4011,10 +4319,20 @@
           "reference_words": 1314,
           "hypothesis_words": 1213
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.1019786910197869,
+          "reference_words": 1314,
+          "hypothesis_words": 1275
+        },
         "gemma-4-e4b-it": {
           "wer": 0.12861491628614916,
           "reference_words": 1314,
           "hypothesis_words": 1256
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.10426179604261795,
+          "reference_words": 1314,
+          "hypothesis_words": 1333
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.09512937595129375,
@@ -4040,6 +4358,11 @@
           "wer": 0.09421487603305785,
           "reference_words": 1815,
           "hypothesis_words": 1750
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.07548209366391184,
+          "reference_words": 1815,
+          "hypothesis_words": 1762
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.09586776859504133,
@@ -4201,10 +4524,20 @@
           "reference_words": 1815,
           "hypothesis_words": 1762
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.08925619834710743,
+          "reference_words": 1815,
+          "hypothesis_words": 1808
+        },
         "gemma-4-e4b-it": {
           "wer": 0.13333333333333333,
           "reference_words": 1815,
           "hypothesis_words": 1755
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.0765840220385675,
+          "reference_words": 1815,
+          "hypothesis_words": 1848
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.0881542699724518,
@@ -4230,6 +4563,11 @@
           "wer": 0.10246305418719212,
           "reference_words": 1015,
           "hypothesis_words": 965
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.10049261083743842,
+          "reference_words": 1015,
+          "hypothesis_words": 963
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.10246305418719212,
@@ -4391,10 +4729,20 @@
           "reference_words": 1015,
           "hypothesis_words": 961
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.07783251231527094,
+          "reference_words": 1015,
+          "hypothesis_words": 1007
+        },
         "gemma-4-e4b-it": {
           "wer": 0.11724137931034483,
           "reference_words": 1015,
           "hypothesis_words": 980
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.07980295566502463,
+          "reference_words": 1015,
+          "hypothesis_words": 1033
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.09753694581280788,
@@ -4420,6 +4768,11 @@
           "wer": 0.08040201005025126,
           "reference_words": 1791,
           "hypothesis_words": 1698
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.06700167504187604,
+          "reference_words": 1791,
+          "hypothesis_words": 1725
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.07370184254606366,
@@ -4581,10 +4934,20 @@
           "reference_words": 1791,
           "hypothesis_words": 1704
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.06532663316582915,
+          "reference_words": 1791,
+          "hypothesis_words": 1753
+        },
         "gemma-4-e4b-it": {
           "wer": 0.15019542155220547,
           "reference_words": 1791,
           "hypothesis_words": 1712
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.05695142378559464,
+          "reference_words": 1791,
+          "hypothesis_words": 1773
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.06700167504187604,
@@ -4610,6 +4973,11 @@
           "wer": 0.12832550860719874,
           "reference_words": 1278,
           "hypothesis_words": 1193
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11424100156494522,
+          "reference_words": 1278,
+          "hypothesis_words": 1197
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.13928012519561817,
@@ -4771,10 +5139,20 @@
           "reference_words": 1278,
           "hypothesis_words": 1206
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.10485133020344288,
+          "reference_words": 1278,
+          "hypothesis_words": 1248
+        },
         "gemma-4-e4b-it": {
           "wer": 0.15336463223787167,
           "reference_words": 1278,
           "hypothesis_words": 1198
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.1298904538341158,
+          "reference_words": 1278,
+          "hypothesis_words": 1174
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.10328638497652583,
@@ -4800,6 +5178,11 @@
           "wer": 0.11491228070175438,
           "reference_words": 1140,
           "hypothesis_words": 1092
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.10877192982456141,
+          "reference_words": 1140,
+          "hypothesis_words": 1101
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.09912280701754386,
@@ -4961,10 +5344,20 @@
           "reference_words": 1140,
           "hypothesis_words": 1122
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.08859649122807017,
+          "reference_words": 1140,
+          "hypothesis_words": 1140
+        },
         "gemma-4-e4b-it": {
           "wer": 0.1368421052631579,
           "reference_words": 1140,
           "hypothesis_words": 1140
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.10263157894736842,
+          "reference_words": 1140,
+          "hypothesis_words": 1192
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.10263157894736842,
@@ -4990,6 +5383,11 @@
           "wer": 0.12668463611859837,
           "reference_words": 1113,
           "hypothesis_words": 1084
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11859838274932614,
+          "reference_words": 1113,
+          "hypothesis_words": 1100
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.14016172506738545,
@@ -5151,10 +5549,20 @@
           "reference_words": 1113,
           "hypothesis_words": 1107
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.11769991015274034,
+          "reference_words": 1113,
+          "hypothesis_words": 1121
+        },
         "gemma-4-e4b-it": {
           "wer": 0.16082659478885894,
           "reference_words": 1113,
           "hypothesis_words": 1103
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.13836477987421383,
+          "reference_words": 1113,
+          "hypothesis_words": 1087
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.12668463611859837,
@@ -5180,6 +5588,11 @@
           "wer": 0.0881567230632235,
           "reference_words": 1123,
           "hypothesis_words": 1085
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.07390917186108638,
+          "reference_words": 1123,
+          "hypothesis_words": 1106
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.10151380231522707,
@@ -5341,10 +5754,20 @@
           "reference_words": 1123,
           "hypothesis_words": 1097
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.07658058771148708,
+          "reference_words": 1123,
+          "hypothesis_words": 1129
+        },
         "gemma-4-e4b-it": {
           "wer": 0.11754229741763135,
           "reference_words": 1123,
           "hypothesis_words": 1105
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.07123775601068566,
+          "reference_words": 1123,
+          "hypothesis_words": 1134
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.0881567230632235,
@@ -5370,6 +5793,11 @@
           "wer": 0.09882747068676717,
           "reference_words": 597,
           "hypothesis_words": 586
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.09547738693467336,
+          "reference_words": 597,
+          "hypothesis_words": 590
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.09380234505862646,
@@ -5531,10 +5959,20 @@
           "reference_words": 597,
           "hypothesis_words": 599
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.08207705192629816,
+          "reference_words": 597,
+          "hypothesis_words": 616
+        },
         "gemma-4-e4b-it": {
           "wer": 0.1323283082077052,
           "reference_words": 597,
           "hypothesis_words": 596
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.10385259631490787,
+          "reference_words": 597,
+          "hypothesis_words": 637
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.09212730318257957,
@@ -5560,6 +5998,11 @@
           "wer": 0.13305084745762713,
           "reference_words": 1180,
           "hypothesis_words": 1136
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11016949152542373,
+          "reference_words": 1180,
+          "hypothesis_words": 1157
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.1423728813559322,
@@ -5721,10 +6164,20 @@
           "reference_words": 1180,
           "hypothesis_words": 1138
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.12033898305084746,
+          "reference_words": 1180,
+          "hypothesis_words": 1206
+        },
         "gemma-4-e4b-it": {
           "wer": 0.15932203389830507,
           "reference_words": 1180,
           "hypothesis_words": 1168
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.13220338983050847,
+          "reference_words": 1180,
+          "hypothesis_words": 1243
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.12627118644067797,
@@ -5750,6 +6203,11 @@
           "wer": 0.1251360174102285,
           "reference_words": 919,
           "hypothesis_words": 857
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11534276387377584,
+          "reference_words": 919,
+          "hypothesis_words": 884
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.14689880304678998,
@@ -5911,10 +6369,20 @@
           "reference_words": 919,
           "hypothesis_words": 874
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.12622415669205658,
+          "reference_words": 919,
+          "hypothesis_words": 931
+        },
         "gemma-4-e4b-it": {
           "wer": 0.1719260065288357,
           "reference_words": 919,
           "hypothesis_words": 892
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.1251360174102285,
+          "reference_words": 919,
+          "hypothesis_words": 938
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.11860718171926006,
@@ -5940,6 +6408,11 @@
           "wer": 0.08157524613220815,
           "reference_words": 2133,
           "hypothesis_words": 2066
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.07501172058134084,
+          "reference_words": 2133,
+          "hypothesis_words": 2077
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.0782934833567745,
@@ -6101,10 +6574,20 @@
           "reference_words": 2133,
           "hypothesis_words": 2076
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.07266760431317393,
+          "reference_words": 2133,
+          "hypothesis_words": 2128
+        },
         "gemma-4-e4b-it": {
           "wer": 0.16924519456165027,
           "reference_words": 2133,
           "hypothesis_words": 1958
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.07126113455227379,
+          "reference_words": 2133,
+          "hypothesis_words": 2168
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.07782466010314111,
@@ -6130,6 +6613,11 @@
           "wer": 0.07300884955752213,
           "reference_words": 1356,
           "hypothesis_words": 1344
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.07079646017699115,
+          "reference_words": 1356,
+          "hypothesis_words": 1335
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.07595870206489676,
@@ -6291,10 +6779,20 @@
           "reference_words": 1356,
           "hypothesis_words": 1324
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.06637168141592921,
+          "reference_words": 1356,
+          "hypothesis_words": 1358
+        },
         "gemma-4-e4b-it": {
           "wer": 0.10619469026548672,
           "reference_words": 1356,
           "hypothesis_words": 1312
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.0715339233038348,
+          "reference_words": 1356,
+          "hypothesis_words": 1382
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.07227138643067847,
@@ -6320,6 +6818,11 @@
           "wer": 0.08869701726844584,
           "reference_words": 1274,
           "hypothesis_words": 1242
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.07927786499215071,
+          "reference_words": 1274,
+          "hypothesis_words": 1253
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.10675039246467818,
@@ -6481,10 +6984,20 @@
           "reference_words": 1274,
           "hypothesis_words": 1225
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.10125588697017268,
+          "reference_words": 1274,
+          "hypothesis_words": 1255
+        },
         "gemma-4-e4b-it": {
           "wer": 0.12558869701726844,
           "reference_words": 1274,
           "hypothesis_words": 1254
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.08791208791208792,
+          "reference_words": 1274,
+          "hypothesis_words": 1292
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.10282574568288853,
@@ -6510,6 +7023,11 @@
           "wer": 0.07154340836012862,
           "reference_words": 1244,
           "hypothesis_words": 1222
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.05707395498392283,
+          "reference_words": 1244,
+          "hypothesis_words": 1234
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.07234726688102894,
@@ -6671,10 +7189,20 @@
           "reference_words": 1244,
           "hypothesis_words": 1209
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.0594855305466238,
+          "reference_words": 1244,
+          "hypothesis_words": 1242
+        },
         "gemma-4-e4b-it": {
           "wer": 0.10369774919614148,
           "reference_words": 1244,
           "hypothesis_words": 1235
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.0594855305466238,
+          "reference_words": 1244,
+          "hypothesis_words": 1270
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.05546623794212219,
@@ -6698,6 +7226,11 @@
         },
         "voxtral-mini-transcribe-v1-api": {
           "wer": 0.05278592375366569,
+          "reference_words": 1023,
+          "hypothesis_words": 997
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.05474095796676442,
           "reference_words": 1023,
           "hypothesis_words": 997
         },
@@ -6861,10 +7394,20 @@
           "reference_words": 1023,
           "hypothesis_words": 988
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.047898338220918865,
+          "reference_words": 1023,
+          "hypothesis_words": 1010
+        },
         "gemma-4-e4b-it": {
           "wer": 0.07429130009775171,
           "reference_words": 1023,
           "hypothesis_words": 1009
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.04007820136852395,
+          "reference_words": 1023,
+          "hypothesis_words": 1035
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.03812316715542522,
@@ -6890,6 +7433,11 @@
           "wer": 0.07801418439716312,
           "reference_words": 987,
           "hypothesis_words": 965
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.06281661600810537,
+          "reference_words": 987,
+          "hypothesis_words": 974
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.06281661600810537,
@@ -7051,10 +7599,20 @@
           "reference_words": 987,
           "hypothesis_words": 961
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.05977710233029382,
+          "reference_words": 987,
+          "hypothesis_words": 981
+        },
         "gemma-4-e4b-it": {
           "wer": 0.08105369807497467,
           "reference_words": 987,
           "hypothesis_words": 986
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.06484295845997974,
+          "reference_words": 987,
+          "hypothesis_words": 1007
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.05268490374873354,
@@ -7080,6 +7638,11 @@
           "wer": 0.1604859335038363,
           "reference_words": 1564,
           "hypothesis_words": 1426
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.12340153452685422,
+          "reference_words": 1564,
+          "hypothesis_words": 1468
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.15537084398976983,
@@ -7241,10 +7804,20 @@
           "reference_words": 1564,
           "hypothesis_words": 1452
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.11572890025575447,
+          "reference_words": 1564,
+          "hypothesis_words": 1533
+        },
         "gemma-4-e4b-it": {
           "wer": 0.2078005115089514,
           "reference_words": 1564,
           "hypothesis_words": 1465
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.15728900255754474,
+          "reference_words": 1564,
+          "hypothesis_words": 1467
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.10997442455242967,
@@ -7270,6 +7843,11 @@
           "wer": 0.10121212121212121,
           "reference_words": 1650,
           "hypothesis_words": 1560
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.0890909090909091,
+          "reference_words": 1650,
+          "hypothesis_words": 1585
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.10303030303030303,
@@ -7431,10 +8009,20 @@
           "reference_words": 1650,
           "hypothesis_words": 1588
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.07878787878787878,
+          "reference_words": 1650,
+          "hypothesis_words": 1613
+        },
         "gemma-4-e4b-it": {
           "wer": 0.1193939393939394,
           "reference_words": 1650,
           "hypothesis_words": 1612
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.08060606060606061,
+          "reference_words": 1650,
+          "hypothesis_words": 1694
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.07757575757575758,
@@ -7460,6 +8048,11 @@
           "wer": 0.11633237822349571,
           "reference_words": 1745,
           "hypothesis_words": 1652
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11117478510028653,
+          "reference_words": 1745,
+          "hypothesis_words": 1675
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.13008595988538682,
@@ -7621,10 +8214,20 @@
           "reference_words": 1745,
           "hypothesis_words": 1667
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.09398280802292264,
+          "reference_words": 1745,
+          "hypothesis_words": 1707
+        },
         "gemma-4-e4b-it": {
           "wer": 0.1988538681948424,
           "reference_words": 1745,
           "hypothesis_words": 1664
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.0825214899713467,
+          "reference_words": 1745,
+          "hypothesis_words": 1759
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.098567335243553,
@@ -7650,6 +8253,11 @@
           "wer": 0.11688311688311688,
           "reference_words": 1694,
           "hypothesis_words": 1586
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.09090909090909091,
+          "reference_words": 1694,
+          "hypothesis_words": 1604
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.12101534828807556,
@@ -7811,10 +8419,20 @@
           "reference_words": 1694,
           "hypothesis_words": 1591
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.09681227863046045,
+          "reference_words": 1694,
+          "hypothesis_words": 1630
+        },
         "gemma-4-e4b-it": {
           "wer": 0.14521841794569068,
           "reference_words": 1694,
           "hypothesis_words": 1632
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.08441558441558442,
+          "reference_words": 1694,
+          "hypothesis_words": 1699
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.08500590318772137,
@@ -7840,6 +8458,11 @@
           "wer": 0.11955241460541814,
           "reference_words": 1698,
           "hypothesis_words": 1584
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.08362779740871613,
+          "reference_words": 1698,
+          "hypothesis_words": 1628
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.11366313309776208,
@@ -8001,10 +8624,20 @@
           "reference_words": 1698,
           "hypothesis_words": 1589
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.10424028268551237,
+          "reference_words": 1698,
+          "hypothesis_words": 1636
+        },
         "gemma-4-e4b-it": {
           "wer": 0.1413427561837456,
           "reference_words": 1698,
           "hypothesis_words": 1644
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.07714958775029446,
+          "reference_words": 1698,
+          "hypothesis_words": 1712
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.09599528857479388,
@@ -8030,6 +8663,11 @@
           "wer": 0.11563810665068903,
           "reference_words": 1669,
           "hypothesis_words": 1556
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.09107249850209706,
+          "reference_words": 1669,
+          "hypothesis_words": 1581
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.11503894547633313,
@@ -8191,10 +8829,20 @@
           "reference_words": 1669,
           "hypothesis_words": 1606
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.09167165967645297,
+          "reference_words": 1669,
+          "hypothesis_words": 1612
+        },
         "gemma-4-e4b-it": {
           "wer": 0.12642300778909527,
           "reference_words": 1669,
           "hypothesis_words": 1620
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.07489514679448772,
+          "reference_words": 1669,
+          "hypothesis_words": 1698
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.09047333732774117,
@@ -8220,6 +8868,11 @@
           "wer": 0.09581320450885668,
           "reference_words": 1242,
           "hypothesis_words": 1212
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.07890499194847021,
+          "reference_words": 1242,
+          "hypothesis_words": 1217
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.0966183574879227,
@@ -8381,10 +9034,20 @@
           "reference_words": 1242,
           "hypothesis_words": 1211
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.07809983896940419,
+          "reference_words": 1242,
+          "hypothesis_words": 1211
+        },
         "gemma-4-e4b-it": {
           "wer": 0.17713365539452497,
           "reference_words": 1242,
           "hypothesis_words": 1181
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.06682769726247988,
+          "reference_words": 1242,
+          "hypothesis_words": 1270
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.08132045088566828,
@@ -8408,6 +9071,11 @@
         },
         "voxtral-mini-transcribe-v1-api": {
           "wer": 0.06642066420664207,
+          "reference_words": 1084,
+          "hypothesis_words": 1061
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.05996309963099631,
           "reference_words": 1084,
           "hypothesis_words": 1061
         },
@@ -8571,10 +9239,20 @@
           "reference_words": 1084,
           "hypothesis_words": 1061
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.05350553505535055,
+          "reference_words": 1084,
+          "hypothesis_words": 1075
+        },
         "gemma-4-e4b-it": {
           "wer": 0.10608856088560886,
           "reference_words": 1084,
           "hypothesis_words": 1073
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.048892988929889296,
+          "reference_words": 1084,
+          "hypothesis_words": 1090
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.07380073800738007,
@@ -8600,6 +9278,11 @@
           "wer": 0.09043408360128617,
           "reference_words": 2488,
           "hypothesis_words": 2341
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.07918006430868167,
+          "reference_words": 2488,
+          "hypothesis_words": 2387
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.08440514469453377,
@@ -8761,10 +9444,20 @@
           "reference_words": 2488,
           "hypothesis_words": 2416
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.07194533762057878,
+          "reference_words": 2488,
+          "hypothesis_words": 2427
+        },
         "gemma-4-e4b-it": {
           "wer": 0.16760450160771703,
           "reference_words": 2488,
           "hypothesis_words": 2330
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.06028938906752412,
+          "reference_words": 2488,
+          "hypothesis_words": 2480
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.06792604501607717,
@@ -8790,6 +9483,11 @@
           "wer": 0.16706067769897556,
           "reference_words": 1269,
           "hypothesis_words": 1231
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.15681639085894405,
+          "reference_words": 1269,
+          "hypothesis_words": 1251
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.18282111899133174,
@@ -8951,10 +9649,20 @@
           "reference_words": 1269,
           "hypothesis_words": 1224
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.136327817178881,
+          "reference_words": 1269,
+          "hypothesis_words": 1279
+        },
         "gemma-4-e4b-it": {
           "wer": 0.2111899133175729,
           "reference_words": 1269,
           "hypothesis_words": 1272
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.16312056737588654,
+          "reference_words": 1269,
+          "hypothesis_words": 1358
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.15681639085894405,
@@ -8980,6 +9688,11 @@
           "wer": 0.11529933481152993,
           "reference_words": 902,
           "hypothesis_words": 879
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.11086474501108648,
+          "reference_words": 902,
+          "hypothesis_words": 909
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.1164079822616408,
@@ -9141,10 +9854,20 @@
           "reference_words": 902,
           "hypothesis_words": 893
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.09090909090909091,
+          "reference_words": 902,
+          "hypothesis_words": 895
+        },
         "gemma-4-e4b-it": {
           "wer": 0.17184035476718404,
           "reference_words": 902,
           "hypothesis_words": 894
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.10864745011086474,
+          "reference_words": 902,
+          "hypothesis_words": 929
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.10864745011086474,
@@ -9170,6 +9893,11 @@
           "wer": 0.1286740692357936,
           "reference_words": 1531,
           "hypothesis_words": 1449
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.09797517962116264,
+          "reference_words": 1531,
+          "hypothesis_words": 1460
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.11430437622468975,
@@ -9331,10 +10059,20 @@
           "reference_words": 1531,
           "hypothesis_words": 1472
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.08621815806662313,
+          "reference_words": 1531,
+          "hypothesis_words": 1523
+        },
         "gemma-4-e4b-it": {
           "wer": 0.16394513389941215,
           "reference_words": 1531,
           "hypothesis_words": 1478
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.06988896146309602,
+          "reference_words": 1531,
+          "hypothesis_words": 1566
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.09601567602873938,
@@ -9360,6 +10098,11 @@
           "wer": 0.08656957928802589,
           "reference_words": 1236,
           "hypothesis_words": 1202
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.06553398058252427,
+          "reference_words": 1236,
+          "hypothesis_words": 1219
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.08495145631067962,
@@ -9521,10 +10264,20 @@
           "reference_words": 1236,
           "hypothesis_words": 1210
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.06957928802588997,
+          "reference_words": 1236,
+          "hypothesis_words": 1220
+        },
         "gemma-4-e4b-it": {
           "wer": 0.1464401294498382,
           "reference_words": 1236,
           "hypothesis_words": 1221
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.06067961165048544,
+          "reference_words": 1236,
+          "hypothesis_words": 1252
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.0744336569579288,
@@ -9550,6 +10303,11 @@
           "wer": 0.07474429583005507,
           "reference_words": 1271,
           "hypothesis_words": 1243
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.059008654602675056,
+          "reference_words": 1271,
+          "hypothesis_words": 1251
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.06687647521636507,
@@ -9711,10 +10469,20 @@
           "reference_words": 1271,
           "hypothesis_words": 1254
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.05035405192761605,
+          "reference_words": 1271,
+          "hypothesis_words": 1282
+        },
         "gemma-4-e4b-it": {
           "wer": 0.14634146341463414,
           "reference_words": 1271,
           "hypothesis_words": 1220
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.06294256490952006,
+          "reference_words": 1271,
+          "hypothesis_words": 1305
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.05428796223446106,
@@ -9740,6 +10508,11 @@
           "wer": 0.12609970674486803,
           "reference_words": 1364,
           "hypothesis_words": 1320
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.10703812316715543,
+          "reference_words": 1364,
+          "hypothesis_words": 1319
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.125366568914956,
@@ -9901,10 +10674,20 @@
           "reference_words": 1364,
           "hypothesis_words": 1308
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.12243401759530792,
+          "reference_words": 1364,
+          "hypothesis_words": 1345
+        },
         "gemma-4-e4b-it": {
           "wer": 0.19501466275659823,
           "reference_words": 1364,
           "hypothesis_words": 1366
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.1063049853372434,
+          "reference_words": 1364,
+          "hypothesis_words": 1398
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.10997067448680352,
@@ -9930,6 +10713,11 @@
           "wer": 0.4656290531776913,
           "reference_words": 1542,
           "hypothesis_words": 977
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.08625162127107652,
+          "reference_words": 1542,
+          "hypothesis_words": 1513
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.10440985732814527,
@@ -10091,10 +10879,20 @@
           "reference_words": 1542,
           "hypothesis_words": 1493
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.08560311284046693,
+          "reference_words": 1542,
+          "hypothesis_words": 1516
+        },
         "gemma-4-e4b-it": {
           "wer": 0.16472114137483787,
           "reference_words": 1542,
           "hypothesis_words": 1497
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.08106355382619974,
+          "reference_words": 1542,
+          "hypothesis_words": 1571
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.0959792477302205,
@@ -10120,6 +10918,11 @@
           "wer": 0.072,
           "reference_words": 2000,
           "hypothesis_words": 1913
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.067,
+          "reference_words": 2000,
+          "hypothesis_words": 1922
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.0845,
@@ -10281,10 +11084,20 @@
           "reference_words": 2000,
           "hypothesis_words": 1941
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.0605,
+          "reference_words": 2000,
+          "hypothesis_words": 1961
+        },
         "gemma-4-e4b-it": {
           "wer": 0.091,
           "reference_words": 2000,
           "hypothesis_words": 1966
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.05,
+          "reference_words": 2000,
+          "hypothesis_words": 1993
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.055,
@@ -10310,6 +11123,11 @@
           "wer": 0.062103929024081114,
           "reference_words": 789,
           "hypothesis_words": 760
+        },
+        "assemblyai-universal-3-pro-medical": {
+          "wer": 0.051964512040557666,
+          "reference_words": 789,
+          "hypothesis_words": 762
         },
         "kyutai-stt-pytorch-stt-2.6b-en": {
           "wer": 0.07097591888466413,
@@ -10471,10 +11289,20 @@
           "reference_words": 789,
           "hypothesis_words": 753
         },
+        "deepgram-nova-3-medical": {
+          "wer": 0.049429657794676805,
+          "reference_words": 789,
+          "hypothesis_words": 771
+        },
         "gemma-4-e4b-it": {
           "wer": 0.13434727503168567,
           "reference_words": 789,
           "hypothesis_words": 766
+        },
+        "soniox-stt-async-v4": {
+          "wer": 0.049429657794676805,
+          "reference_words": 789,
+          "hypothesis_words": 785
         },
         "parakeet-parakeet-tdt-0.6b-v3": {
           "wer": 0.059569074778200254,

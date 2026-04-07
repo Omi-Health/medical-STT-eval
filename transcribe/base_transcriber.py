@@ -136,38 +136,57 @@ class BaseTranscriber(ABC):
             f.write(result.text)
     
     def _save_metrics(self, results: List[TranscriptionResult]):
-        """Save processing metrics."""
-        if not results:
+        """Save processing metrics, merging with any existing speed.json so
+        re-runs that skip already-done files don't lose prior timings."""
+        metrics_file = self.metrics_dir / f"{self.model_name.replace('/', '_')}_speed.json"
+
+        # Start with any existing per-file details so we preserve prior timings
+        existing_details = {}
+        if metrics_file.exists():
+            try:
+                with open(metrics_file, 'r', encoding='utf-8') as f:
+                    prev = json.load(f)
+                for entry in prev.get('file_details', []):
+                    name = entry.get('audio_file')
+                    if name:
+                        existing_details[name] = entry
+            except (json.JSONDecodeError, OSError):
+                pass
+
+        # Overlay newly-processed results (newer timing wins)
+        for r in results:
+            name = Path(r.audio_file).name
+            existing_details[name] = {
+                'audio_file': name,
+                'duration': r.duration,
+                'text_length': len(r.text),
+            }
+
+        merged = list(existing_details.values())
+        if not merged:
             return
-        
-        total_duration = sum(r.duration for r in results)
-        avg_duration = total_duration / len(results)
-        total_files = len(results)
-        
+
+        durations = [e['duration'] for e in merged]
+        total_duration = sum(durations)
+        total_files = len(merged)
+
         metrics = {
             'model_name': self.model_name,
             'timestamp': time.strftime("%Y-%m-%d %H:%M:%S"),
             'summary': {
                 'total_files': total_files,
                 'total_duration': total_duration,
-                'average_duration': avg_duration,
-                'fastest_file': min(results, key=lambda r: r.duration).duration,
-                'slowest_file': max(results, key=lambda r: r.duration).duration
+                'average_duration': total_duration / total_files,
+                'fastest_file': min(durations),
+                'slowest_file': max(durations),
             },
-            'file_details': [
-                {
-                    'audio_file': Path(r.audio_file).name,
-                    'duration': r.duration,
-                    'text_length': len(r.text)
-                } for r in results
-            ]
+            'file_details': merged,
         }
-        
-        metrics_file = self.metrics_dir / f"{self.model_name.replace('/', '_')}_speed.json"
+
         with open(metrics_file, 'w', encoding='utf-8') as f:
             json.dump(metrics, f, indent=2, ensure_ascii=False)
-        
-        print(f"💾 Metrics saved to: {metrics_file}")
+
+        print(f"💾 Metrics saved to: {metrics_file} (n={total_files})")
     
     def get_audio_files(self, audio_dir: str, pattern: str = "*_conversation.wav") -> List[str]:
         """Get list of audio files to process."""
