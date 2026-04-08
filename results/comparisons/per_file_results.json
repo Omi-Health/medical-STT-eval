@@ -1,8 +1,9 @@
 {
-  "timestamp": "2026-04-07 16:41:06",
+  "timestamp": "2026-04-08 10:12:12",
   "models": [
     "elevenlabs-scribe_v2",
     "voxtral-mini-transcribe-v1-api",
+    "mms-1b-all",
     "assemblyai-universal-3-pro-medical",
     "kyutai-stt-pytorch-stt-2.6b-en",
     "voxtral-mini-transcribe-v2",
@@ -31,7 +32,9 @@
     "google-gemini-3-flash-preview",
     "parakeet-tdt-1.1b",
     "kyutai-stt-pytorch-stt-1b-en_fr",
+    "mai-transcribe-1",
     "google-medasr",
+    "glm-asr-nano-2512",
     "cohere-transcribe-03-2026",
     "gemma-4-e2b-it",
     "canary-1b-v2",
@@ -55,6 +58,11 @@
           "wer": 0.14536157779401024,
           "reference_words": 1369,
           "hypothesis_words": 1301
+        },
+        "mms-1b-all": {
+          "wer": 0.3754565376186998,
+          "reference_words": 1369,
+          "hypothesis_words": 1170
         },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.13148283418553688,
@@ -90,9 +98,9 @@
           "hypothesis_words": 1339
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.12636961285609935,
+          "wer": 0.1212563915266618,
           "reference_words": 1369,
-          "hypothesis_words": 1331
+          "hypothesis_words": 1343
         },
         "google-gemini-2.5-flash": {
           "wer": 0.13221329437545654,
@@ -165,9 +173,9 @@
           "hypothesis_words": 1365
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.13878743608473337,
+          "wer": 0.13732651570489407,
           "reference_words": 1369,
-          "hypothesis_words": 1311
+          "hypothesis_words": 1313
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.16070124178232287,
@@ -194,10 +202,20 @@
           "reference_words": 1369,
           "hypothesis_words": 1293
         },
+        "mai-transcribe-1": {
+          "wer": 0.15120525931336742,
+          "reference_words": 1369,
+          "hypothesis_words": 1284
+        },
         "google-medasr": {
           "wer": 0.8056975894813733,
           "reference_words": 1369,
           "hypothesis_words": 346
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.1468224981738495,
+          "reference_words": 1369,
+          "hypothesis_words": 1326
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.14828341855368882,
@@ -259,6 +277,11 @@
           "reference_words": 1674,
           "hypothesis_words": 1579
         },
+        "mms-1b-all": {
+          "wer": 0.4265232974910394,
+          "reference_words": 1674,
+          "hypothesis_words": 1282
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11589008363201912,
           "reference_words": 1674,
@@ -295,9 +318,9 @@
           "hypothesis_words": 1558
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.11589008363201912,
+          "wer": 0.1057347670250896,
           "reference_words": 1674,
-          "hypothesis_words": 1643
+          "hypothesis_words": 1662
         },
         "google-gemini-2.5-flash": {
           "wer": 0.1087216248506571,
@@ -370,9 +393,9 @@
           "hypothesis_words": 1655
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.12007168458781362,
+          "wer": 0.11708482676224612,
           "reference_words": 1674,
-          "hypothesis_words": 1644
+          "hypothesis_words": 1656
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.13082437275985664,
@@ -399,10 +422,20 @@
           "reference_words": 1674,
           "hypothesis_words": 1595
         },
+        "mai-transcribe-1": {
+          "wer": 0.14217443249701314,
+          "reference_words": 1674,
+          "hypothesis_words": 1574
+        },
         "google-medasr": {
           "wer": 0.5232974910394266,
           "reference_words": 1674,
           "hypothesis_words": 994
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.13201911589008364,
+          "reference_words": 1674,
+          "hypothesis_words": 1613
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.14934289127837516,
@@ -464,6 +497,11 @@
           "reference_words": 1565,
           "hypothesis_words": 1499
         },
+        "mms-1b-all": {
+          "wer": 0.40447284345047924,
+          "reference_words": 1565,
+          "hypothesis_words": 1341
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.10862619808306709,
           "reference_words": 1565,
@@ -500,9 +538,9 @@
           "hypothesis_words": 1489
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10415335463258786,
+          "wer": 0.10670926517571885,
           "reference_words": 1565,
-          "hypothesis_words": 1544
+          "hypothesis_words": 1574
         },
         "google-gemini-2.5-flash": {
           "wer": 0.12396166134185303,
@@ -575,9 +613,9 @@
           "hypothesis_words": 1416
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.1220447284345048,
+          "wer": 0.10862619808306709,
           "reference_words": 1565,
-          "hypothesis_words": 1529
+          "hypothesis_words": 1543
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.13546325878594248,
@@ -604,10 +642,20 @@
           "reference_words": 1565,
           "hypothesis_words": 1443
         },
+        "mai-transcribe-1": {
+          "wer": 0.13099041533546327,
+          "reference_words": 1565,
+          "hypothesis_words": 1477
+        },
         "google-medasr": {
           "wer": 0.787220447284345,
           "reference_words": 1565,
           "hypothesis_words": 464
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.12460063897763578,
+          "reference_words": 1565,
+          "hypothesis_words": 1535
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.12332268370607029,
@@ -669,6 +717,11 @@
           "reference_words": 1653,
           "hypothesis_words": 1510
         },
+        "mms-1b-all": {
+          "wer": 0.500302480338778,
+          "reference_words": 1653,
+          "hypothesis_words": 1215
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.14579552329098608,
           "reference_words": 1653,
@@ -705,9 +758,9 @@
           "hypothesis_words": 1337
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.11433756805807622,
+          "wer": 0.1119177253478524,
           "reference_words": 1653,
-          "hypothesis_words": 1624
+          "hypothesis_words": 1628
         },
         "google-gemini-2.5-flash": {
           "wer": 0.11554748941318814,
@@ -780,9 +833,9 @@
           "hypothesis_words": 1553
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.13793103448275862,
+          "wer": 0.12522686025408347,
           "reference_words": 1653,
-          "hypothesis_words": 1624
+          "hypothesis_words": 1629
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.1693889897156685,
@@ -809,10 +862,20 @@
           "reference_words": 1653,
           "hypothesis_words": 746
         },
+        "mai-transcribe-1": {
+          "wer": 0.16878402903811252,
+          "reference_words": 1653,
+          "hypothesis_words": 1503
+        },
         "google-medasr": {
           "wer": 0.5614035087719298,
           "reference_words": 1653,
           "hypothesis_words": 951
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.1336963097398669,
+          "reference_words": 1653,
+          "hypothesis_words": 1607
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.17422867513611615,
@@ -874,6 +937,11 @@
           "reference_words": 1635,
           "hypothesis_words": 1540
         },
+        "mms-1b-all": {
+          "wer": 0.41590214067278286,
+          "reference_words": 1635,
+          "hypothesis_words": 1339
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.09969418960244648,
           "reference_words": 1635,
@@ -910,9 +978,9 @@
           "hypothesis_words": 1507
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.09847094801223241,
+          "wer": 0.09663608562691131,
           "reference_words": 1635,
-          "hypothesis_words": 1592
+          "hypothesis_words": 1599
         },
         "google-gemini-2.5-flash": {
           "wer": 0.09541284403669725,
@@ -985,9 +1053,9 @@
           "hypothesis_words": 1568
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.11131498470948012,
+          "wer": 0.10581039755351682,
           "reference_words": 1635,
-          "hypothesis_words": 1587
+          "hypothesis_words": 1595
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.11070336391437309,
@@ -1014,10 +1082,20 @@
           "reference_words": 1635,
           "hypothesis_words": 1593
         },
+        "mai-transcribe-1": {
+          "wer": 0.1290519877675841,
+          "reference_words": 1635,
+          "hypothesis_words": 1528
+        },
         "google-medasr": {
           "wer": 0.6831804281345566,
           "reference_words": 1635,
           "hypothesis_words": 692
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11559633027522936,
+          "reference_words": 1635,
+          "hypothesis_words": 1592
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.12599388379204893,
@@ -1079,6 +1157,11 @@
           "reference_words": 1837,
           "hypothesis_words": 1676
         },
+        "mms-1b-all": {
+          "wer": 0.40772999455634185,
+          "reference_words": 1837,
+          "hypothesis_words": 1493
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11486118671747414,
           "reference_words": 1837,
@@ -1115,9 +1198,9 @@
           "hypothesis_words": 1689
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.11867174741426238,
+          "wer": 0.10288513881328253,
           "reference_words": 1837,
-          "hypothesis_words": 1759
+          "hypothesis_words": 1796
         },
         "google-gemini-2.5-flash": {
           "wer": 0.10778443113772455,
@@ -1190,9 +1273,9 @@
           "hypothesis_words": 1714
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.12792596624931954,
+          "wer": 0.1110506260206859,
           "reference_words": 1837,
-          "hypothesis_words": 1751
+          "hypothesis_words": 1768
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.1497005988023952,
@@ -1219,10 +1302,20 @@
           "reference_words": 1837,
           "hypothesis_words": 1664
         },
+        "mai-transcribe-1": {
+          "wer": 0.150789330430049,
+          "reference_words": 1837,
+          "hypothesis_words": 1687
+        },
         "google-medasr": {
           "wer": 0.793685356559608,
           "reference_words": 1837,
           "hypothesis_words": 491
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.13445835601524225,
+          "reference_words": 1837,
+          "hypothesis_words": 1730
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.1567773543821448,
@@ -1284,6 +1377,11 @@
           "reference_words": 1163,
           "hypothesis_words": 1105
         },
+        "mms-1b-all": {
+          "wer": 0.47893379191745483,
+          "reference_words": 1163,
+          "hypothesis_words": 901
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.09114359415305245,
           "reference_words": 1163,
@@ -1320,9 +1418,9 @@
           "hypothesis_words": 1083
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.0937231298366294,
+          "wer": 0.10146173688736028,
           "reference_words": 1163,
-          "hypothesis_words": 1140
+          "hypothesis_words": 1137
         },
         "google-gemini-2.5-flash": {
           "wer": 0.10146173688736028,
@@ -1395,9 +1493,9 @@
           "hypothesis_words": 1152
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.12381771281169389,
+          "wer": 0.1349957007738607,
           "reference_words": 1163,
-          "hypothesis_words": 1141
+          "hypothesis_words": 1132
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.14273430782459157,
@@ -1424,10 +1522,20 @@
           "reference_words": 1163,
           "hypothesis_words": 1116
         },
+        "mai-transcribe-1": {
+          "wer": 0.11092003439380911,
+          "reference_words": 1163,
+          "hypothesis_words": 1100
+        },
         "google-medasr": {
           "wer": 0.8056749785038693,
           "reference_words": 1163,
           "hypothesis_words": 302
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11951848667239896,
+          "reference_words": 1163,
+          "hypothesis_words": 1114
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.11092003439380911,
@@ -1489,6 +1597,11 @@
           "reference_words": 1556,
           "hypothesis_words": 1388
         },
+        "mms-1b-all": {
+          "wer": 0.4601542416452442,
+          "reference_words": 1556,
+          "hypothesis_words": 1204
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.12982005141388175,
           "reference_words": 1556,
@@ -1525,9 +1638,9 @@
           "hypothesis_words": 1366
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.11503856041131105,
+          "wer": 0.10796915167095116,
           "reference_words": 1556,
-          "hypothesis_words": 1494
+          "hypothesis_words": 1502
         },
         "google-gemini-2.5-flash": {
           "wer": 0.09897172236503857,
@@ -1600,9 +1713,9 @@
           "hypothesis_words": 1485
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.13110539845758354,
+          "wer": 0.13239074550128535,
           "reference_words": 1556,
-          "hypothesis_words": 1477
+          "hypothesis_words": 1487
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.12210796915167095,
@@ -1629,10 +1742,20 @@
           "reference_words": 1556,
           "hypothesis_words": 782
         },
+        "mai-transcribe-1": {
+          "wer": 0.14331619537275064,
+          "reference_words": 1556,
+          "hypothesis_words": 1429
+        },
         "google-medasr": {
           "wer": 0.7107969151670951,
           "reference_words": 1556,
           "hypothesis_words": 598
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.12917737789203085,
+          "reference_words": 1556,
+          "hypothesis_words": 1459
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.18637532133676094,
@@ -1694,6 +1817,11 @@
           "reference_words": 1856,
           "hypothesis_words": 1672
         },
+        "mms-1b-all": {
+          "wer": 0.49622844827586204,
+          "reference_words": 1856,
+          "hypothesis_words": 1365
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.14601293103448276,
           "reference_words": 1856,
@@ -1730,9 +1858,9 @@
           "hypothesis_words": 1653
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.13254310344827586,
+          "wer": 0.44127155172413796,
           "reference_words": 1856,
-          "hypothesis_words": 1744
+          "hypothesis_words": 1155
         },
         "google-gemini-2.5-flash": {
           "wer": 0.1384698275862069,
@@ -1805,9 +1933,9 @@
           "hypothesis_words": 1890
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.1540948275862069,
+          "wer": 0.15517241379310345,
           "reference_words": 1856,
-          "hypothesis_words": 1752
+          "hypothesis_words": 1756
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.1853448275862069,
@@ -1834,10 +1962,20 @@
           "reference_words": 1856,
           "hypothesis_words": 1215
         },
+        "mai-transcribe-1": {
+          "wer": 0.1783405172413793,
+          "reference_words": 1856,
+          "hypothesis_words": 1666
+        },
         "google-medasr": {
           "wer": 0.7931034482758621,
           "reference_words": 1856,
           "hypothesis_words": 506
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.16864224137931033,
+          "reference_words": 1856,
+          "hypothesis_words": 1725
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.16648706896551724,
@@ -1899,6 +2037,11 @@
           "reference_words": 2336,
           "hypothesis_words": 2143
         },
+        "mms-1b-all": {
+          "wer": 0.4079623287671233,
+          "reference_words": 2336,
+          "hypothesis_words": 1840
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11001712328767123,
           "reference_words": 2336,
@@ -1935,9 +2078,9 @@
           "hypothesis_words": 1694
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.0898972602739726,
+          "wer": 0.09118150684931507,
           "reference_words": 2336,
-          "hypothesis_words": 2280
+          "hypothesis_words": 2301
         },
         "google-gemini-2.5-flash": {
           "wer": 0.09075342465753425,
@@ -2010,9 +2153,9 @@
           "hypothesis_words": 2226
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.11601027397260275,
+          "wer": 0.1053082191780822,
           "reference_words": 2336,
-          "hypothesis_words": 2272
+          "hypothesis_words": 2267
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.1172945205479452,
@@ -2039,10 +2182,20 @@
           "reference_words": 2336,
           "hypothesis_words": 1300
         },
+        "mai-transcribe-1": {
+          "wer": 0.1541095890410959,
+          "reference_words": 2336,
+          "hypothesis_words": 2123
+        },
         "google-medasr": {
           "wer": 0.598458904109589,
           "reference_words": 2336,
           "hypothesis_words": 1138
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11986301369863013,
+          "reference_words": 2336,
+          "hypothesis_words": 2241
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.15710616438356165,
@@ -2104,6 +2257,11 @@
           "reference_words": 1155,
           "hypothesis_words": 1110
         },
+        "mms-1b-all": {
+          "wer": 0.37575757575757573,
+          "reference_words": 1155,
+          "hypothesis_words": 954
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.09090909090909091,
           "reference_words": 1155,
@@ -2140,9 +2298,9 @@
           "hypothesis_words": 1100
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.08484848484848485,
+          "wer": 0.08311688311688312,
           "reference_words": 1155,
-          "hypothesis_words": 1138
+          "hypothesis_words": 1148
         },
         "google-gemini-2.5-flash": {
           "wer": 0.08658008658008658,
@@ -2215,9 +2373,9 @@
           "hypothesis_words": 1104
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.09956709956709957,
+          "wer": 0.08831168831168831,
           "reference_words": 1155,
-          "hypothesis_words": 1131
+          "hypothesis_words": 1141
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.10822510822510822,
@@ -2244,10 +2402,20 @@
           "reference_words": 1155,
           "hypothesis_words": 1074
         },
+        "mai-transcribe-1": {
+          "wer": 0.11255411255411256,
+          "reference_words": 1155,
+          "hypothesis_words": 1099
+        },
         "google-medasr": {
           "wer": 0.6536796536796536,
           "reference_words": 1155,
           "hypothesis_words": 489
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.10909090909090909,
+          "reference_words": 1155,
+          "hypothesis_words": 1118
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.12034632034632034,
@@ -2309,6 +2477,11 @@
           "reference_words": 1688,
           "hypothesis_words": 1613
         },
+        "mms-1b-all": {
+          "wer": 0.3264218009478673,
+          "reference_words": 1688,
+          "hypothesis_words": 1451
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.07227488151658767,
           "reference_words": 1688,
@@ -2345,9 +2518,9 @@
           "hypothesis_words": 1547
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.0693127962085308,
+          "wer": 0.059834123222748815,
           "reference_words": 1688,
-          "hypothesis_words": 1643
+          "hypothesis_words": 1649
         },
         "google-gemini-2.5-flash": {
           "wer": 0.06457345971563981,
@@ -2420,9 +2593,9 @@
           "hypothesis_words": 1613
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.0740521327014218,
+          "wer": 0.07938388625592417,
           "reference_words": 1688,
-          "hypothesis_words": 1636
+          "hypothesis_words": 1631
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.09419431279620853,
@@ -2449,10 +2622,20 @@
           "reference_words": 1688,
           "hypothesis_words": 1597
         },
+        "mai-transcribe-1": {
+          "wer": 0.0835308056872038,
+          "reference_words": 1688,
+          "hypothesis_words": 1611
+        },
         "google-medasr": {
           "wer": 0.466824644549763,
           "reference_words": 1688,
           "hypothesis_words": 1049
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.08412322274881516,
+          "reference_words": 1688,
+          "hypothesis_words": 1652
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.09360189573459715,
@@ -2514,6 +2697,11 @@
           "reference_words": 1950,
           "hypothesis_words": 1797
         },
+        "mms-1b-all": {
+          "wer": 0.4256410256410256,
+          "reference_words": 1950,
+          "hypothesis_words": 1573
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.10564102564102563,
           "reference_words": 1950,
@@ -2550,9 +2738,9 @@
           "hypothesis_words": 1717
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10256410256410256,
+          "wer": 0.11282051282051282,
           "reference_words": 1950,
-          "hypothesis_words": 1898
+          "hypothesis_words": 1885
         },
         "google-gemini-2.5-flash": {
           "wer": 0.1076923076923077,
@@ -2625,9 +2813,9 @@
           "hypothesis_words": 1985
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.1282051282051282,
+          "wer": 0.12615384615384614,
           "reference_words": 1950,
-          "hypothesis_words": 1856
+          "hypothesis_words": 1855
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.12205128205128205,
@@ -2654,10 +2842,20 @@
           "reference_words": 1950,
           "hypothesis_words": 4797
         },
+        "mai-transcribe-1": {
+          "wer": 0.12871794871794873,
+          "reference_words": 1950,
+          "hypothesis_words": 1830
+        },
         "google-medasr": {
           "wer": 0.7764102564102564,
           "reference_words": 1950,
           "hypothesis_words": 517
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.12256410256410256,
+          "reference_words": 1950,
+          "hypothesis_words": 1871
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.15025641025641026,
@@ -2719,6 +2917,11 @@
           "reference_words": 1270,
           "hypothesis_words": 1236
         },
+        "mms-1b-all": {
+          "wer": 0.4259842519685039,
+          "reference_words": 1270,
+          "hypothesis_words": 1006
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11338582677165354,
           "reference_words": 1270,
@@ -2755,9 +2958,9 @@
           "hypothesis_words": 1226
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.1047244094488189,
+          "wer": 0.1062992125984252,
           "reference_words": 1270,
-          "hypothesis_words": 1261
+          "hypothesis_words": 1280
         },
         "google-gemini-2.5-flash": {
           "wer": 0.11811023622047244,
@@ -2830,9 +3033,9 @@
           "hypothesis_words": 1227
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.12598425196850394,
+          "wer": 0.12992125984251968,
           "reference_words": 1270,
-          "hypothesis_words": 1245
+          "hypothesis_words": 1247
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.14881889763779527,
@@ -2859,10 +3062,20 @@
           "reference_words": 1270,
           "hypothesis_words": 1218
         },
+        "mai-transcribe-1": {
+          "wer": 0.1346456692913386,
+          "reference_words": 1270,
+          "hypothesis_words": 1221
+        },
         "google-medasr": {
           "wer": 0.7748031496062993,
           "reference_words": 1270,
           "hypothesis_words": 363
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.13622047244094487,
+          "reference_words": 1270,
+          "hypothesis_words": 1259
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.14173228346456693,
@@ -2924,6 +3137,11 @@
           "reference_words": 1170,
           "hypothesis_words": 1149
         },
+        "mms-1b-all": {
+          "wer": 0.3145299145299145,
+          "reference_words": 1170,
+          "hypothesis_words": 1010
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.08461538461538462,
           "reference_words": 1170,
@@ -2960,9 +3178,9 @@
           "hypothesis_words": 1153
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10256410256410256,
+          "wer": 0.09145299145299145,
           "reference_words": 1170,
-          "hypothesis_words": 1154
+          "hypothesis_words": 1169
         },
         "google-gemini-2.5-flash": {
           "wer": 0.10341880341880341,
@@ -3035,9 +3253,9 @@
           "hypothesis_words": 1161
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.09487179487179487,
+          "wer": 0.09230769230769231,
           "reference_words": 1170,
-          "hypothesis_words": 1146
+          "hypothesis_words": 1164
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.10170940170940171,
@@ -3064,10 +3282,20 @@
           "reference_words": 1170,
           "hypothesis_words": 823
         },
+        "mai-transcribe-1": {
+          "wer": 0.1076923076923077,
+          "reference_words": 1170,
+          "hypothesis_words": 1133
+        },
         "google-medasr": {
           "wer": 0.582905982905983,
           "reference_words": 1170,
           "hypothesis_words": 643
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.10427350427350428,
+          "reference_words": 1170,
+          "hypothesis_words": 1171
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.09572649572649573,
@@ -3129,6 +3357,11 @@
           "reference_words": 1688,
           "hypothesis_words": 1551
         },
+        "mms-1b-all": {
+          "wer": 0.44609004739336494,
+          "reference_words": 1688,
+          "hypothesis_words": 1286
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11137440758293839,
           "reference_words": 1688,
@@ -3165,9 +3398,9 @@
           "hypothesis_words": 1515
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10722748815165876,
+          "wer": 0.09360189573459715,
           "reference_words": 1688,
-          "hypothesis_words": 1627
+          "hypothesis_words": 1648
         },
         "google-gemini-2.5-flash": {
           "wer": 0.10248815165876778,
@@ -3240,7 +3473,7 @@
           "hypothesis_words": 1749
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.11255924170616113,
+          "wer": 0.11078199052132702,
           "reference_words": 1688,
           "hypothesis_words": 1617
         },
@@ -3269,10 +3502,20 @@
           "reference_words": 1688,
           "hypothesis_words": 1345
         },
+        "mai-transcribe-1": {
+          "wer": 0.13033175355450238,
+          "reference_words": 1688,
+          "hypothesis_words": 1556
+        },
         "google-medasr": {
           "wer": 0.7280805687203792,
           "reference_words": 1688,
           "hypothesis_words": 589
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.1338862559241706,
+          "reference_words": 1688,
+          "hypothesis_words": 1597
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.1338862559241706,
@@ -3334,6 +3577,11 @@
           "reference_words": 1424,
           "hypothesis_words": 1350
         },
+        "mms-1b-all": {
+          "wer": 0.4375,
+          "reference_words": 1424,
+          "hypothesis_words": 1080
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.12991573033707865,
           "reference_words": 1424,
@@ -3370,9 +3618,9 @@
           "hypothesis_words": 1343
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10884831460674158,
+          "wer": 0.1074438202247191,
           "reference_words": 1424,
-          "hypothesis_words": 1385
+          "hypothesis_words": 1381
         },
         "google-gemini-2.5-flash": {
           "wer": 0.16713483146067415,
@@ -3445,9 +3693,9 @@
           "hypothesis_words": 1306
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.12780898876404495,
+          "wer": 0.12359550561797752,
           "reference_words": 1424,
-          "hypothesis_words": 1367
+          "hypothesis_words": 1377
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.13412921348314608,
@@ -3474,10 +3722,20 @@
           "reference_words": 1424,
           "hypothesis_words": 894
         },
+        "mai-transcribe-1": {
+          "wer": 0.14817415730337077,
+          "reference_words": 1424,
+          "hypothesis_words": 1316
+        },
         "google-medasr": {
           "wer": 0.9171348314606742,
           "reference_words": 1424,
           "hypothesis_words": 176
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.1446629213483146,
+          "reference_words": 1424,
+          "hypothesis_words": 1346
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.14396067415730338,
@@ -3539,6 +3797,11 @@
           "reference_words": 1825,
           "hypothesis_words": 1723
         },
+        "mms-1b-all": {
+          "wer": 0.3594520547945205,
+          "reference_words": 1825,
+          "hypothesis_words": 1452
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.10191780821917808,
           "reference_words": 1825,
@@ -3575,9 +3838,9 @@
           "hypothesis_words": 1696
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.06465753424657535,
+          "wer": 0.06301369863013699,
           "reference_words": 1825,
-          "hypothesis_words": 1772
+          "hypothesis_words": 1782
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07123287671232877,
@@ -3652,7 +3915,7 @@
         "qwen3-asr-0.6b": {
           "wer": 0.0821917808219178,
           "reference_words": 1825,
-          "hypothesis_words": 1751
+          "hypothesis_words": 1755
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.08876712328767124,
@@ -3679,10 +3942,20 @@
           "reference_words": 1825,
           "hypothesis_words": 1274
         },
+        "mai-transcribe-1": {
+          "wer": 0.11287671232876713,
+          "reference_words": 1825,
+          "hypothesis_words": 1705
+        },
         "google-medasr": {
           "wer": 0.776986301369863,
           "reference_words": 1825,
           "hypothesis_words": 497
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.10027397260273972,
+          "reference_words": 1825,
+          "hypothesis_words": 1745
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.10246575342465754,
@@ -3744,6 +4017,11 @@
           "reference_words": 1917,
           "hypothesis_words": 1837
         },
+        "mms-1b-all": {
+          "wer": 0.28482003129890454,
+          "reference_words": 1917,
+          "hypothesis_words": 1672
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.0594679186228482,
           "reference_words": 1917,
@@ -3780,9 +4058,9 @@
           "hypothesis_words": 1788
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.05738132498695879,
+          "wer": 0.053208137715179966,
           "reference_words": 1917,
-          "hypothesis_words": 1862
+          "hypothesis_words": 1872
         },
         "google-gemini-2.5-flash": {
           "wer": 0.056859676577986434,
@@ -3855,9 +4133,9 @@
           "hypothesis_words": 1832
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.0683359415753782,
+          "wer": 0.06416275430359937,
           "reference_words": 1917,
-          "hypothesis_words": 1847
+          "hypothesis_words": 1856
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.09389671361502347,
@@ -3884,10 +4162,20 @@
           "reference_words": 1917,
           "hypothesis_words": 1398
         },
+        "mai-transcribe-1": {
+          "wer": 0.0782472613458529,
+          "reference_words": 1917,
+          "hypothesis_words": 1820
+        },
         "google-medasr": {
           "wer": 0.4715701617110068,
           "reference_words": 1917,
           "hypothesis_words": 1219
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.08450704225352113,
+          "reference_words": 1917,
+          "hypothesis_words": 1844
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.07198748043818466,
@@ -3949,6 +4237,11 @@
           "reference_words": 1938,
           "hypothesis_words": 1807
         },
+        "mms-1b-all": {
+          "wer": 0.33539731682146545,
+          "reference_words": 1938,
+          "hypothesis_words": 1604
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.08978328173374613,
           "reference_words": 1938,
@@ -3985,9 +4278,9 @@
           "hypothesis_words": 1776
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.07430340557275542,
+          "wer": 0.07481940144478844,
           "reference_words": 1938,
-          "hypothesis_words": 1876
+          "hypothesis_words": 1875
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07481940144478844,
@@ -4060,9 +4353,9 @@
           "hypothesis_words": 1937
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.08823529411764706,
+          "wer": 0.09029927760577916,
           "reference_words": 1938,
-          "hypothesis_words": 1852
+          "hypothesis_words": 1855
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.09958720330237358,
@@ -4089,10 +4382,20 @@
           "reference_words": 1938,
           "hypothesis_words": 1709
         },
+        "mai-transcribe-1": {
+          "wer": 0.1130030959752322,
+          "reference_words": 1938,
+          "hypothesis_words": 1810
+        },
         "google-medasr": {
           "wer": 0.542311661506708,
           "reference_words": 1938,
           "hypothesis_words": 1097
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.10732714138286893,
+          "reference_words": 1938,
+          "hypothesis_words": 1842
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.12074303405572756,
@@ -4154,6 +4457,11 @@
           "reference_words": 1314,
           "hypothesis_words": 1222
         },
+        "mms-1b-all": {
+          "wer": 0.3926940639269406,
+          "reference_words": 1314,
+          "hypothesis_words": 998
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.1111111111111111,
           "reference_words": 1314,
@@ -4190,9 +4498,9 @@
           "hypothesis_words": 799
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.1004566210045662,
+          "wer": 0.1035007610350076,
           "reference_words": 1314,
-          "hypothesis_words": 1277
+          "hypothesis_words": 1288
         },
         "google-gemini-2.5-flash": {
           "wer": 0.0958904109589041,
@@ -4265,9 +4573,9 @@
           "hypothesis_words": 1273
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.1080669710806697,
+          "wer": 0.1035007610350076,
           "reference_words": 1314,
-          "hypothesis_words": 1261
+          "hypothesis_words": 1270
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.11339421613394216,
@@ -4294,10 +4602,20 @@
           "reference_words": 1314,
           "hypothesis_words": 973
         },
+        "mai-transcribe-1": {
+          "wer": 0.1354642313546423,
+          "reference_words": 1314,
+          "hypothesis_words": 1215
+        },
         "google-medasr": {
           "wer": 0.5669710806697108,
           "reference_words": 1314,
           "hypothesis_words": 746
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11643835616438356,
+          "reference_words": 1314,
+          "hypothesis_words": 1239
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.12404870624048706,
@@ -4359,6 +4677,11 @@
           "reference_words": 1815,
           "hypothesis_words": 1750
         },
+        "mms-1b-all": {
+          "wer": 0.3696969696969697,
+          "reference_words": 1815,
+          "hypothesis_words": 1488
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.07548209366391184,
           "reference_words": 1815,
@@ -4395,9 +4718,9 @@
           "hypothesis_words": 1638
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.0815426997245179,
+          "wer": 0.07878787878787878,
           "reference_words": 1815,
-          "hypothesis_words": 1772
+          "hypothesis_words": 1794
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07382920110192838,
@@ -4470,9 +4793,9 @@
           "hypothesis_words": 1775
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.08870523415977961,
+          "wer": 0.08760330578512397,
           "reference_words": 1815,
-          "hypothesis_words": 1770
+          "hypothesis_words": 1791
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.12617079889807162,
@@ -4499,10 +4822,20 @@
           "reference_words": 1815,
           "hypothesis_words": 1439
         },
+        "mai-transcribe-1": {
+          "wer": 0.0881542699724518,
+          "reference_words": 1815,
+          "hypothesis_words": 1738
+        },
         "google-medasr": {
           "wer": 0.7487603305785124,
           "reference_words": 1815,
           "hypothesis_words": 597
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.09035812672176309,
+          "reference_words": 1815,
+          "hypothesis_words": 1750
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.2550964187327824,
@@ -4564,6 +4897,11 @@
           "reference_words": 1015,
           "hypothesis_words": 965
         },
+        "mms-1b-all": {
+          "wer": 0.44729064039408867,
+          "reference_words": 1015,
+          "hypothesis_words": 801
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.10049261083743842,
           "reference_words": 1015,
@@ -4600,9 +4938,9 @@
           "hypothesis_words": 953
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.09261083743842365,
+          "wer": 0.0729064039408867,
           "reference_words": 1015,
-          "hypothesis_words": 975
+          "hypothesis_words": 995
         },
         "google-gemini-2.5-flash": {
           "wer": 0.08472906403940887,
@@ -4675,9 +5013,9 @@
           "hypothesis_words": 948
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.09458128078817735,
+          "wer": 0.08669950738916256,
           "reference_words": 1015,
-          "hypothesis_words": 988
+          "hypothesis_words": 983
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.09950738916256158,
@@ -4704,10 +5042,20 @@
           "reference_words": 1015,
           "hypothesis_words": 947
         },
+        "mai-transcribe-1": {
+          "wer": 0.10344827586206896,
+          "reference_words": 1015,
+          "hypothesis_words": 948
+        },
         "google-medasr": {
           "wer": 0.6660098522167488,
           "reference_words": 1015,
           "hypothesis_words": 447
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.10837438423645321,
+          "reference_words": 1015,
+          "hypothesis_words": 962
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.11133004926108374,
@@ -4769,6 +5117,11 @@
           "reference_words": 1791,
           "hypothesis_words": 1698
         },
+        "mms-1b-all": {
+          "wer": 0.3221663874930207,
+          "reference_words": 1791,
+          "hypothesis_words": 1542
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.06700167504187604,
           "reference_words": 1791,
@@ -4805,9 +5158,9 @@
           "hypothesis_words": 1321
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.06476828587381352,
+          "wer": 0.06365159128978225,
           "reference_words": 1791,
-          "hypothesis_words": 1732
+          "hypothesis_words": 1718
         },
         "google-gemini-2.5-flash": {
           "wer": 0.06420993858179788,
@@ -4880,9 +5233,9 @@
           "hypothesis_words": 1737
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.07146845337800112,
+          "wer": 0.07035175879396985,
           "reference_words": 1791,
-          "hypothesis_words": 1727
+          "hypothesis_words": 1728
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.08542713567839195,
@@ -4909,10 +5262,20 @@
           "reference_words": 1791,
           "hypothesis_words": 1631
         },
+        "mai-transcribe-1": {
+          "wer": 0.08207705192629816,
+          "reference_words": 1791,
+          "hypothesis_words": 1689
+        },
         "google-medasr": {
           "wer": 0.6789503070910106,
           "reference_words": 1791,
           "hypothesis_words": 729
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.07928531546621999,
+          "reference_words": 1791,
+          "hypothesis_words": 1713
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.0876605248464545,
@@ -4974,6 +5337,11 @@
           "reference_words": 1278,
           "hypothesis_words": 1193
         },
+        "mms-1b-all": {
+          "wer": 0.38184663536776214,
+          "reference_words": 1278,
+          "hypothesis_words": 988
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11424100156494522,
           "reference_words": 1278,
@@ -5010,9 +5378,9 @@
           "hypothesis_words": 1158
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.09702660406885759,
+          "wer": 0.09233176838810642,
           "reference_words": 1278,
-          "hypothesis_words": 1225
+          "hypothesis_words": 1235
         },
         "google-gemini-2.5-flash": {
           "wer": 0.10250391236306729,
@@ -5085,9 +5453,9 @@
           "hypothesis_words": 1173
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.09937402190923318,
+          "wer": 0.107981220657277,
           "reference_words": 1278,
-          "hypothesis_words": 1224
+          "hypothesis_words": 1212
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.14397496087636932,
@@ -5114,10 +5482,20 @@
           "reference_words": 1278,
           "hypothesis_words": 1149
         },
+        "mai-transcribe-1": {
+          "wer": 0.13771517996870108,
+          "reference_words": 1278,
+          "hypothesis_words": 1161
+        },
         "google-medasr": {
           "wer": 0.7190923317683882,
           "reference_words": 1278,
           "hypothesis_words": 436
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11737089201877934,
+          "reference_words": 1278,
+          "hypothesis_words": 1207
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.12910798122065728,
@@ -5179,6 +5557,11 @@
           "reference_words": 1140,
           "hypothesis_words": 1092
         },
+        "mms-1b-all": {
+          "wer": 0.3780701754385965,
+          "reference_words": 1140,
+          "hypothesis_words": 912
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.10877192982456141,
           "reference_words": 1140,
@@ -5215,9 +5598,9 @@
           "hypothesis_words": 1087
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10087719298245613,
+          "wer": 0.09736842105263158,
           "reference_words": 1140,
-          "hypothesis_words": 1123
+          "hypothesis_words": 1138
         },
         "google-gemini-2.5-flash": {
           "wer": 0.0912280701754386,
@@ -5290,9 +5673,9 @@
           "hypothesis_words": 1148
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.10350877192982456,
+          "wer": 0.09824561403508772,
           "reference_words": 1140,
-          "hypothesis_words": 1124
+          "hypothesis_words": 1134
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.12456140350877193,
@@ -5319,10 +5702,20 @@
           "reference_words": 1140,
           "hypothesis_words": 1100
         },
+        "mai-transcribe-1": {
+          "wer": 0.12017543859649123,
+          "reference_words": 1140,
+          "hypothesis_words": 1076
+        },
         "google-medasr": {
           "wer": 0.55,
           "reference_words": 1140,
           "hypothesis_words": 667
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11052631578947368,
+          "reference_words": 1140,
+          "hypothesis_words": 1129
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.11228070175438597,
@@ -5384,6 +5777,11 @@
           "reference_words": 1113,
           "hypothesis_words": 1084
         },
+        "mms-1b-all": {
+          "wer": 0.42857142857142855,
+          "reference_words": 1113,
+          "hypothesis_words": 934
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11859838274932614,
           "reference_words": 1113,
@@ -5420,9 +5818,9 @@
           "hypothesis_words": 1060
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.11410601976639713,
+          "wer": 0.10242587601078167,
           "reference_words": 1113,
-          "hypothesis_words": 1105
+          "hypothesis_words": 1110
         },
         "google-gemini-2.5-flash": {
           "wer": 0.1069182389937107,
@@ -5497,7 +5895,7 @@
         "qwen3-asr-0.6b": {
           "wer": 0.12219227313566937,
           "reference_words": 1113,
-          "hypothesis_words": 1110
+          "hypothesis_words": 1106
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.14016172506738545,
@@ -5524,10 +5922,20 @@
           "reference_words": 1113,
           "hypothesis_words": 903
         },
+        "mai-transcribe-1": {
+          "wer": 0.1275831087151842,
+          "reference_words": 1113,
+          "hypothesis_words": 1077
+        },
         "google-medasr": {
           "wer": 0.5453728661275831,
           "reference_words": 1113,
           "hypothesis_words": 658
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.13387241689128482,
+          "reference_words": 1113,
+          "hypothesis_words": 1100
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.13926325247079965,
@@ -5589,6 +5997,11 @@
           "reference_words": 1123,
           "hypothesis_words": 1085
         },
+        "mms-1b-all": {
+          "wer": 0.333926981300089,
+          "reference_words": 1123,
+          "hypothesis_words": 925
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.07390917186108638,
           "reference_words": 1123,
@@ -5625,9 +6038,9 @@
           "hypothesis_words": 1073
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.06678539626001781,
+          "wer": 0.06589492430988424,
           "reference_words": 1123,
-          "hypothesis_words": 1114
+          "hypothesis_words": 1117
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07034728406055209,
@@ -5700,9 +6113,9 @@
           "hypothesis_words": 1126
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.07479964381121995,
+          "wer": 0.20391807658058772,
           "reference_words": 1123,
-          "hypothesis_words": 1114
+          "hypothesis_words": 943
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.09617097061442564,
@@ -5729,10 +6142,20 @@
           "reference_words": 1123,
           "hypothesis_words": 1100
         },
+        "mai-transcribe-1": {
+          "wer": 0.0917186108637578,
+          "reference_words": 1123,
+          "hypothesis_words": 1091
+        },
         "google-medasr": {
           "wer": 0.6046304541406946,
           "reference_words": 1123,
           "hypothesis_words": 551
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.0854853072128228,
+          "reference_words": 1123,
+          "hypothesis_words": 1110
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.09260908281389137,
@@ -5794,6 +6217,11 @@
           "reference_words": 597,
           "hypothesis_words": 586
         },
+        "mms-1b-all": {
+          "wer": 0.4539363484087102,
+          "reference_words": 597,
+          "hypothesis_words": 492
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.09547738693467336,
           "reference_words": 597,
@@ -5830,9 +6258,9 @@
           "hypothesis_words": 567
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.08877721943048576,
+          "wer": 0.07035175879396985,
           "reference_words": 597,
-          "hypothesis_words": 598
+          "hypothesis_words": 606
         },
         "google-gemini-2.5-flash": {
           "wer": 0.10050251256281408,
@@ -5905,9 +6333,9 @@
           "hypothesis_words": 631
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.08375209380234507,
+          "wer": 0.07370184254606366,
           "reference_words": 597,
-          "hypothesis_words": 604
+          "hypothesis_words": 605
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.09715242881072027,
@@ -5934,10 +6362,20 @@
           "reference_words": 597,
           "hypothesis_words": 583
         },
+        "mai-transcribe-1": {
+          "wer": 0.11390284757118928,
+          "reference_words": 597,
+          "hypothesis_words": 582
+        },
         "google-medasr": {
           "wer": 0.7219430485762144,
           "reference_words": 597,
           "hypothesis_words": 212
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.09380234505862646,
+          "reference_words": 597,
+          "hypothesis_words": 595
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.09380234505862646,
@@ -5999,6 +6437,11 @@
           "reference_words": 1180,
           "hypothesis_words": 1136
         },
+        "mms-1b-all": {
+          "wer": 0.4398305084745763,
+          "reference_words": 1180,
+          "hypothesis_words": 945
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11016949152542373,
           "reference_words": 1180,
@@ -6035,9 +6478,9 @@
           "hypothesis_words": 1117
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.11694915254237288,
+          "wer": 0.1059322033898305,
           "reference_words": 1180,
-          "hypothesis_words": 1156
+          "hypothesis_words": 1189
         },
         "google-gemini-2.5-flash": {
           "wer": 0.11610169491525424,
@@ -6110,9 +6553,9 @@
           "hypothesis_words": 1111
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.12203389830508475,
+          "wer": 0.11016949152542373,
           "reference_words": 1180,
-          "hypothesis_words": 1166
+          "hypothesis_words": 1168
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.16016949152542373,
@@ -6139,10 +6582,20 @@
           "reference_words": 1180,
           "hypothesis_words": 1137
         },
+        "mai-transcribe-1": {
+          "wer": 0.14491525423728813,
+          "reference_words": 1180,
+          "hypothesis_words": 1120
+        },
         "google-medasr": {
           "wer": 0.559322033898305,
           "reference_words": 1180,
           "hypothesis_words": 636
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.12966101694915255,
+          "reference_words": 1180,
+          "hypothesis_words": 1148
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.14067796610169492,
@@ -6204,6 +6657,11 @@
           "reference_words": 919,
           "hypothesis_words": 857
         },
+        "mms-1b-all": {
+          "wer": 0.470076169749728,
+          "reference_words": 919,
+          "hypothesis_words": 712
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11534276387377584,
           "reference_words": 919,
@@ -6240,9 +6698,9 @@
           "hypothesis_words": 854
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10663764961915125,
+          "wer": 0.10772578890097932,
           "reference_words": 919,
-          "hypothesis_words": 905
+          "hypothesis_words": 909
         },
         "google-gemini-2.5-flash": {
           "wer": 0.11643090315560392,
@@ -6315,9 +6773,9 @@
           "hypothesis_words": 820
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.11643090315560392,
+          "wer": 0.10119695321001088,
           "reference_words": 919,
-          "hypothesis_words": 900
+          "hypothesis_words": 914
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.11099020674646355,
@@ -6344,10 +6802,20 @@
           "reference_words": 919,
           "hypothesis_words": 878
         },
+        "mai-transcribe-1": {
+          "wer": 0.12731229597388466,
+          "reference_words": 919,
+          "hypothesis_words": 868
+        },
         "google-medasr": {
           "wer": 0.9891186071817193,
           "reference_words": 919,
           "hypothesis_words": 12
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11425462459194777,
+          "reference_words": 919,
+          "hypothesis_words": 906
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.12731229597388466,
@@ -6409,6 +6877,11 @@
           "reference_words": 2133,
           "hypothesis_words": 2066
         },
+        "mms-1b-all": {
+          "wer": 0.28363806844819506,
+          "reference_words": 2133,
+          "hypothesis_words": 1822
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.07501172058134084,
           "reference_words": 2133,
@@ -6445,9 +6918,9 @@
           "hypothesis_words": 1779
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.06938584153774027,
+          "wer": 0.06563525550867323,
           "reference_words": 2133,
-          "hypothesis_words": 2113
+          "hypothesis_words": 2125
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07172995780590717,
@@ -6520,9 +6993,9 @@
           "hypothesis_words": 2046
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.07501172058134084,
+          "wer": 0.0736052508204407,
           "reference_words": 2133,
-          "hypothesis_words": 2099
+          "hypothesis_words": 2107
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.0736052508204407,
@@ -6549,10 +7022,20 @@
           "reference_words": 2133,
           "hypothesis_words": 1936
         },
+        "mai-transcribe-1": {
+          "wer": 0.10736052508204406,
+          "reference_words": 2133,
+          "hypothesis_words": 2018
+        },
         "google-medasr": {
           "wer": 0.30520393811533053,
           "reference_words": 2133,
           "hypothesis_words": 1740
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.08016877637130802,
+          "reference_words": 2133,
+          "hypothesis_words": 2081
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.08954524144397562,
@@ -6614,6 +7097,11 @@
           "reference_words": 1356,
           "hypothesis_words": 1344
         },
+        "mms-1b-all": {
+          "wer": 0.31194690265486724,
+          "reference_words": 1356,
+          "hypothesis_words": 1127
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.07079646017699115,
           "reference_words": 1356,
@@ -6650,9 +7138,9 @@
           "hypothesis_words": 1326
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.0612094395280236,
+          "wer": 0.05604719764011799,
           "reference_words": 1356,
-          "hypothesis_words": 1340
+          "hypothesis_words": 1353
         },
         "google-gemini-2.5-flash": {
           "wer": 0.05752212389380531,
@@ -6725,9 +7213,9 @@
           "hypothesis_words": 1317
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.06858407079646017,
+          "wer": 0.0612094395280236,
           "reference_words": 1356,
-          "hypothesis_words": 1331
+          "hypothesis_words": 1334
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.0700589970501475,
@@ -6754,10 +7242,20 @@
           "reference_words": 1356,
           "hypothesis_words": 1246
         },
+        "mai-transcribe-1": {
+          "wer": 0.08259587020648967,
+          "reference_words": 1356,
+          "hypothesis_words": 1323
+        },
         "google-medasr": {
           "wer": 0.6216814159292036,
           "reference_words": 1356,
           "hypothesis_words": 620
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.07227138643067847,
+          "reference_words": 1356,
+          "hypothesis_words": 1323
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.07595870206489676,
@@ -6819,6 +7317,11 @@
           "reference_words": 1274,
           "hypothesis_words": 1242
         },
+        "mms-1b-all": {
+          "wer": 0.3076923076923077,
+          "reference_words": 1274,
+          "hypothesis_words": 1100
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.07927786499215071,
           "reference_words": 1274,
@@ -6855,9 +7358,9 @@
           "hypothesis_words": 1215
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.08948194662480377,
+          "wer": 0.07142857142857142,
           "reference_words": 1274,
-          "hypothesis_words": 1261
+          "hypothesis_words": 1257
         },
         "google-gemini-2.5-flash": {
           "wer": 0.08948194662480377,
@@ -6930,9 +7433,9 @@
           "hypothesis_words": 1261
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.09497645211930926,
+          "wer": 0.08869701726844584,
           "reference_words": 1274,
-          "hypothesis_words": 1242
+          "hypothesis_words": 1246
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.12087912087912088,
@@ -6959,10 +7462,20 @@
           "reference_words": 1274,
           "hypothesis_words": 1066
         },
+        "mai-transcribe-1": {
+          "wer": 0.09183673469387756,
+          "reference_words": 1274,
+          "hypothesis_words": 1215
+        },
         "google-medasr": {
           "wer": 0.6020408163265306,
           "reference_words": 1274,
           "hypothesis_words": 604
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.10989010989010989,
+          "reference_words": 1274,
+          "hypothesis_words": 1242
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.09811616954474098,
@@ -7024,6 +7537,11 @@
           "reference_words": 1244,
           "hypothesis_words": 1222
         },
+        "mms-1b-all": {
+          "wer": 0.32234726688102894,
+          "reference_words": 1244,
+          "hypothesis_words": 1043
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.05707395498392283,
           "reference_words": 1244,
@@ -7060,9 +7578,9 @@
           "hypothesis_words": 1213
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.06109324758842444,
+          "wer": 0.05466237942122187,
           "reference_words": 1244,
-          "hypothesis_words": 1227
+          "hypothesis_words": 1246
         },
         "google-gemini-2.5-flash": {
           "wer": 0.058681672025723476,
@@ -7135,9 +7653,9 @@
           "hypothesis_words": 1215
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.06270096463022508,
+          "wer": 0.06109324758842444,
           "reference_words": 1244,
-          "hypothesis_words": 1236
+          "hypothesis_words": 1226
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.07234726688102894,
@@ -7164,10 +7682,20 @@
           "reference_words": 1244,
           "hypothesis_words": 1157
         },
+        "mai-transcribe-1": {
+          "wer": 0.06993569131832797,
+          "reference_words": 1244,
+          "hypothesis_words": 1211
+        },
         "google-medasr": {
           "wer": 0.5602893890675241,
           "reference_words": 1244,
           "hypothesis_words": 676
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.0707395498392283,
+          "reference_words": 1244,
+          "hypothesis_words": 1226
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.0707395498392283,
@@ -7229,6 +7757,11 @@
           "reference_words": 1023,
           "hypothesis_words": 997
         },
+        "mms-1b-all": {
+          "wer": 0.23851417399804498,
+          "reference_words": 1023,
+          "hypothesis_words": 925
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.05474095796676442,
           "reference_words": 1023,
@@ -7265,9 +7798,9 @@
           "hypothesis_words": 995
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.039100684261974585,
+          "wer": 0.03812316715542522,
           "reference_words": 1023,
-          "hypothesis_words": 1009
+          "hypothesis_words": 1022
         },
         "google-gemini-2.5-flash": {
           "wer": 0.04007820136852395,
@@ -7340,9 +7873,9 @@
           "hypothesis_words": 1001
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.04985337243401759,
+          "wer": 0.039100684261974585,
           "reference_words": 1023,
-          "hypothesis_words": 1005
+          "hypothesis_words": 1012
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.043010752688172046,
@@ -7369,10 +7902,20 @@
           "reference_words": 1023,
           "hypothesis_words": 932
         },
+        "mai-transcribe-1": {
+          "wer": 0.0635386119257087,
+          "reference_words": 1023,
+          "hypothesis_words": 977
+        },
         "google-medasr": {
           "wer": 0.7526881720430108,
           "reference_words": 1023,
           "hypothesis_words": 300
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.059628543499511244,
+          "reference_words": 1023,
+          "hypothesis_words": 991
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.05865102639296188,
@@ -7434,6 +7977,11 @@
           "reference_words": 987,
           "hypothesis_words": 965
         },
+        "mms-1b-all": {
+          "wer": 0.2978723404255319,
+          "reference_words": 987,
+          "hypothesis_words": 852
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.06281661600810537,
           "reference_words": 987,
@@ -7470,9 +8018,9 @@
           "hypothesis_words": 968
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.05876393110435663,
+          "wer": 0.05673758865248227,
           "reference_words": 987,
-          "hypothesis_words": 983
+          "hypothesis_words": 975
         },
         "google-gemini-2.5-flash": {
           "wer": 0.05977710233029382,
@@ -7545,9 +8093,9 @@
           "hypothesis_words": 1002
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.07193515704154002,
+          "wer": 0.0547112462006079,
           "reference_words": 987,
-          "hypothesis_words": 966
+          "hypothesis_words": 982
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.07497467071935157,
@@ -7574,10 +8122,20 @@
           "reference_words": 987,
           "hypothesis_words": 979
         },
+        "mai-transcribe-1": {
+          "wer": 0.09625126646403243,
+          "reference_words": 987,
+          "hypothesis_words": 930
+        },
         "google-medasr": {
           "wer": 0.6899696048632219,
           "reference_words": 987,
           "hypothesis_words": 396
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.06788247213779129,
+          "reference_words": 987,
+          "hypothesis_words": 973
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.08105369807497467,
@@ -7639,6 +8197,11 @@
           "reference_words": 1564,
           "hypothesis_words": 1426
         },
+        "mms-1b-all": {
+          "wer": 0.5230179028132992,
+          "reference_words": 1564,
+          "hypothesis_words": 1053
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.12340153452685422,
           "reference_words": 1564,
@@ -7675,9 +8238,9 @@
           "hypothesis_words": 1416
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.11508951406649616,
+          "wer": 0.10997442455242967,
           "reference_words": 1564,
-          "hypothesis_words": 1519
+          "hypothesis_words": 1539
         },
         "google-gemini-2.5-flash": {
           "wer": 0.11253196930946291,
@@ -7750,9 +8313,9 @@
           "hypothesis_words": 1468
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.13491048593350383,
+          "wer": 0.11253196930946291,
           "reference_words": 1564,
-          "hypothesis_words": 1510
+          "hypothesis_words": 1530
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.11381074168797954,
@@ -7779,10 +8342,20 @@
           "reference_words": 1564,
           "hypothesis_words": 1411
         },
+        "mai-transcribe-1": {
+          "wer": 0.16432225063938619,
+          "reference_words": 1564,
+          "hypothesis_words": 1426
+        },
         "google-medasr": {
           "wer": 0.5351662404092071,
           "reference_words": 1564,
           "hypothesis_words": 868
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.13554987212276215,
+          "reference_words": 1564,
+          "hypothesis_words": 1487
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.15664961636828645,
@@ -7844,6 +8417,11 @@
           "reference_words": 1650,
           "hypothesis_words": 1560
         },
+        "mms-1b-all": {
+          "wer": 0.3927272727272727,
+          "reference_words": 1650,
+          "hypothesis_words": 1341
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.0890909090909091,
           "reference_words": 1650,
@@ -7880,9 +8458,9 @@
           "hypothesis_words": 1669
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.07818181818181819,
+          "wer": 0.07151515151515152,
           "reference_words": 1650,
-          "hypothesis_words": 1618
+          "hypothesis_words": 1628
         },
         "google-gemini-2.5-flash": {
           "wer": 0.3563636363636364,
@@ -7955,9 +8533,9 @@
           "hypothesis_words": 1631
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.08545454545454545,
+          "wer": 0.07636363636363637,
           "reference_words": 1650,
-          "hypothesis_words": 1616
+          "hypothesis_words": 1611
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.07939393939393939,
@@ -7984,10 +8562,20 @@
           "reference_words": 1650,
           "hypothesis_words": 1393
         },
+        "mai-transcribe-1": {
+          "wer": 0.10909090909090909,
+          "reference_words": 1650,
+          "hypothesis_words": 1549
+        },
         "google-medasr": {
           "wer": 0.336969696969697,
           "reference_words": 1650,
           "hypothesis_words": 1296
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.08848484848484849,
+          "reference_words": 1650,
+          "hypothesis_words": 1601
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.09272727272727273,
@@ -8049,6 +8637,11 @@
           "reference_words": 1745,
           "hypothesis_words": 1652
         },
+        "mms-1b-all": {
+          "wer": 0.41031518624641833,
+          "reference_words": 1745,
+          "hypothesis_words": 1446
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11117478510028653,
           "reference_words": 1745,
@@ -8085,9 +8678,9 @@
           "hypothesis_words": 1622
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10372492836676218,
+          "wer": 0.08825214899713467,
           "reference_words": 1745,
-          "hypothesis_words": 1699
+          "hypothesis_words": 1729
         },
         "google-gemini-2.5-flash": {
           "wer": 0.09455587392550144,
@@ -8160,9 +8753,9 @@
           "hypothesis_words": 1550
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.11060171919770774,
+          "wer": 0.101432664756447,
           "reference_words": 1745,
-          "hypothesis_words": 1707
+          "hypothesis_words": 1695
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.09226361031518625,
@@ -8189,10 +8782,20 @@
           "reference_words": 1745,
           "hypothesis_words": 1415
         },
+        "mai-transcribe-1": {
+          "wer": 0.13008595988538682,
+          "reference_words": 1745,
+          "hypothesis_words": 1633
+        },
         "google-medasr": {
           "wer": 0.5954154727793697,
           "reference_words": 1745,
           "hypothesis_words": 883
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.12492836676217765,
+          "reference_words": 1745,
+          "hypothesis_words": 1653
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.11060171919770774,
@@ -8254,6 +8857,11 @@
           "reference_words": 1694,
           "hypothesis_words": 1586
         },
+        "mms-1b-all": {
+          "wer": 0.3754427390791027,
+          "reference_words": 1694,
+          "hypothesis_words": 1340
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.09090909090909091,
           "reference_words": 1694,
@@ -8290,9 +8898,9 @@
           "hypothesis_words": 1576
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.09622195985832349,
+          "wer": 0.08677685950413223,
           "reference_words": 1694,
-          "hypothesis_words": 1618
+          "hypothesis_words": 1658
         },
         "google-gemini-2.5-flash": {
           "wer": 0.0885478158205431,
@@ -8365,9 +8973,9 @@
           "hypothesis_words": 1533
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.10448642266824085,
+          "wer": 0.09208972845336481,
           "reference_words": 1694,
-          "hypothesis_words": 1621
+          "hypothesis_words": 1619
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.11570247933884298,
@@ -8394,10 +9002,20 @@
           "reference_words": 1694,
           "hypothesis_words": 1252
         },
+        "mai-transcribe-1": {
+          "wer": 0.1192443919716647,
+          "reference_words": 1694,
+          "hypothesis_words": 1576
+        },
         "google-medasr": {
           "wer": 0.5968122786304605,
           "reference_words": 1694,
           "hypothesis_words": 877
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11570247933884298,
+          "reference_words": 1694,
+          "hypothesis_words": 1626
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.1115702479338843,
@@ -8459,6 +9077,11 @@
           "reference_words": 1698,
           "hypothesis_words": 1584
         },
+        "mms-1b-all": {
+          "wer": 0.38810365135453473,
+          "reference_words": 1698,
+          "hypothesis_words": 1398
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.08362779740871613,
           "reference_words": 1698,
@@ -8495,9 +9118,9 @@
           "hypothesis_words": 1590
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.08657243816254417,
+          "wer": 0.07891637220259129,
           "reference_words": 1698,
-          "hypothesis_words": 1629
+          "hypothesis_words": 1658
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07773851590106007,
@@ -8570,9 +9193,9 @@
           "hypothesis_words": 1621
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.10070671378091872,
+          "wer": 0.09599528857479388,
           "reference_words": 1698,
-          "hypothesis_words": 1638
+          "hypothesis_words": 1650
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.11366313309776208,
@@ -8599,10 +9222,20 @@
           "reference_words": 1698,
           "hypothesis_words": 1602
         },
+        "mai-transcribe-1": {
+          "wer": 0.11425206124852769,
+          "reference_words": 1698,
+          "hypothesis_words": 1576
+        },
         "google-medasr": {
           "wer": 0.627208480565371,
           "reference_words": 1698,
           "hypothesis_words": 782
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.10306242638398115,
+          "reference_words": 1698,
+          "hypothesis_words": 1614
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.11778563015312132,
@@ -8664,6 +9297,11 @@
           "reference_words": 1669,
           "hypothesis_words": 1556
         },
+        "mms-1b-all": {
+          "wer": 0.4313960455362493,
+          "reference_words": 1669,
+          "hypothesis_words": 1281
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.09107249850209706,
           "reference_words": 1669,
@@ -8700,9 +9338,9 @@
           "hypothesis_words": 1549
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.07549430796884361,
+          "wer": 0.07189934092270821,
           "reference_words": 1669,
-          "hypothesis_words": 1622
+          "hypothesis_words": 1624
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07908927501497903,
@@ -8775,9 +9413,9 @@
           "hypothesis_words": 1461
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.08807669263031756,
+          "wer": 0.08328340323547034,
           "reference_words": 1669,
-          "hypothesis_words": 1623
+          "hypothesis_words": 1627
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.09406830437387657,
@@ -8804,10 +9442,20 @@
           "reference_words": 1669,
           "hypothesis_words": 1397
         },
+        "mai-transcribe-1": {
+          "wer": 0.10904733373277412,
+          "reference_words": 1669,
+          "hypothesis_words": 1569
+        },
         "google-medasr": {
           "wer": 0.701018573996405,
           "reference_words": 1669,
           "hypothesis_words": 636
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.1042540443379269,
+          "reference_words": 1669,
+          "hypothesis_words": 1611
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.11204313960455363,
@@ -8869,6 +9517,11 @@
           "reference_words": 1242,
           "hypothesis_words": 1212
         },
+        "mms-1b-all": {
+          "wer": 0.40660225442834136,
+          "reference_words": 1242,
+          "hypothesis_words": 1058
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.07890499194847021,
           "reference_words": 1242,
@@ -8905,9 +9558,9 @@
           "hypothesis_words": 1209
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.0748792270531401,
+          "wer": 0.061191626409017714,
           "reference_words": 1242,
-          "hypothesis_words": 1224
+          "hypothesis_words": 1221
         },
         "google-gemini-2.5-flash": {
           "wer": 0.06602254428341385,
@@ -8980,9 +9633,9 @@
           "hypothesis_words": 909
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.08373590982286634,
+          "wer": 0.09178743961352658,
           "reference_words": 1242,
-          "hypothesis_words": 1207
+          "hypothesis_words": 1212
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.0998389694041868,
@@ -9009,10 +9662,20 @@
           "reference_words": 1242,
           "hypothesis_words": 1023
         },
+        "mai-transcribe-1": {
+          "wer": 0.09742351046698873,
+          "reference_words": 1242,
+          "hypothesis_words": 1203
+        },
         "google-medasr": {
           "wer": 0.6586151368760065,
           "reference_words": 1242,
           "hypothesis_words": 551
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.09259259259259259,
+          "reference_words": 1242,
+          "hypothesis_words": 1221
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.0966183574879227,
@@ -9074,6 +9737,11 @@
           "reference_words": 1084,
           "hypothesis_words": 1061
         },
+        "mms-1b-all": {
+          "wer": 0.32564575645756455,
+          "reference_words": 1084,
+          "hypothesis_words": 905
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.05996309963099631,
           "reference_words": 1084,
@@ -9110,9 +9778,9 @@
           "hypothesis_words": 1048
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.06088560885608856,
+          "wer": 0.052583025830258305,
           "reference_words": 1084,
-          "hypothesis_words": 1068
+          "hypothesis_words": 1073
         },
         "google-gemini-2.5-flash": {
           "wer": 0.04797047970479705,
@@ -9187,7 +9855,7 @@
         "qwen3-asr-0.6b": {
           "wer": 0.05719557195571956,
           "reference_words": 1084,
-          "hypothesis_words": 1061
+          "hypothesis_words": 1062
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.06365313653136531,
@@ -9214,10 +9882,20 @@
           "reference_words": 1084,
           "hypothesis_words": 835
         },
+        "mai-transcribe-1": {
+          "wer": 0.07195571955719557,
+          "reference_words": 1084,
+          "hypothesis_words": 1054
+        },
         "google-medasr": {
           "wer": 0.6023985239852399,
           "reference_words": 1084,
           "hypothesis_words": 564
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.06918819188191883,
+          "reference_words": 1084,
+          "hypothesis_words": 1071
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.07195571955719557,
@@ -9279,6 +9957,11 @@
           "reference_words": 2488,
           "hypothesis_words": 2341
         },
+        "mms-1b-all": {
+          "wer": 0.307475884244373,
+          "reference_words": 2488,
+          "hypothesis_words": 2167
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.07918006430868167,
           "reference_words": 2488,
@@ -9315,9 +9998,9 @@
           "hypothesis_words": 1900
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.07114147909967845,
+          "wer": 0.07033762057877814,
           "reference_words": 2488,
-          "hypothesis_words": 2434
+          "hypothesis_words": 2430
         },
         "google-gemini-2.5-flash": {
           "wer": 0.06471061093247589,
@@ -9390,9 +10073,9 @@
           "hypothesis_words": 2199
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.08319935691318328,
+          "wer": 0.08480707395498392,
           "reference_words": 2488,
-          "hypothesis_words": 2411
+          "hypothesis_words": 2419
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.08078778135048231,
@@ -9419,10 +10102,20 @@
           "reference_words": 2488,
           "hypothesis_words": 2080
         },
+        "mai-transcribe-1": {
+          "wer": 0.09525723472668811,
+          "reference_words": 2488,
+          "hypothesis_words": 2357
+        },
         "google-medasr": {
           "wer": 0.6868971061093248,
           "reference_words": 2488,
           "hypothesis_words": 1012
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.09284565916398714,
+          "reference_words": 2488,
+          "hypothesis_words": 2401
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.10088424437299036,
@@ -9484,6 +10177,11 @@
           "reference_words": 1269,
           "hypothesis_words": 1231
         },
+        "mms-1b-all": {
+          "wer": 0.4499605988967691,
+          "reference_words": 1269,
+          "hypothesis_words": 961
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.15681639085894405,
           "reference_words": 1269,
@@ -9520,9 +10218,9 @@
           "hypothesis_words": 1227
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.15051221434200157,
+          "wer": 0.14814814814814814,
           "reference_words": 1269,
-          "hypothesis_words": 1274
+          "hypothesis_words": 1292
         },
         "google-gemini-2.5-flash": {
           "wer": 0.15524034672970843,
@@ -9595,9 +10293,9 @@
           "hypothesis_words": 1203
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.1607565011820331,
+          "wer": 0.16469661150512213,
           "reference_words": 1269,
-          "hypothesis_words": 1266
+          "hypothesis_words": 1284
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.17415287628053586,
@@ -9624,10 +10322,20 @@
           "reference_words": 1269,
           "hypothesis_words": 1052
         },
+        "mai-transcribe-1": {
+          "wer": 0.17100078802206461,
+          "reference_words": 1269,
+          "hypothesis_words": 1227
+        },
         "google-medasr": {
           "wer": 0.6564223798266351,
           "reference_words": 1269,
           "hypothesis_words": 561
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.1780929866036249,
+          "reference_words": 1269,
+          "hypothesis_words": 1267
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.18124507486209615,
@@ -9689,6 +10397,11 @@
           "reference_words": 902,
           "hypothesis_words": 879
         },
+        "mms-1b-all": {
+          "wer": 0.43458980044345896,
+          "reference_words": 902,
+          "hypothesis_words": 703
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.11086474501108648,
           "reference_words": 902,
@@ -9725,9 +10438,9 @@
           "hypothesis_words": 869
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10643015521064302,
+          "wer": 0.10199556541019955,
           "reference_words": 902,
-          "hypothesis_words": 901
+          "hypothesis_words": 912
         },
         "google-gemini-2.5-flash": {
           "wer": 0.09977827050997783,
@@ -9800,9 +10513,9 @@
           "hypothesis_words": 888
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.12084257206208426,
+          "wer": 0.11086474501108648,
           "reference_words": 902,
-          "hypothesis_words": 908
+          "hypothesis_words": 910
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.10864745011086474,
@@ -9829,10 +10542,20 @@
           "reference_words": 902,
           "hypothesis_words": 838
         },
+        "mai-transcribe-1": {
+          "wer": 0.11751662971175167,
+          "reference_words": 902,
+          "hypothesis_words": 875
+        },
         "google-medasr": {
           "wer": 0.5465631929046563,
           "reference_words": 902,
           "hypothesis_words": 508
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11419068736141907,
+          "reference_words": 902,
+          "hypothesis_words": 907
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.11529933481152993,
@@ -9894,6 +10617,11 @@
           "reference_words": 1531,
           "hypothesis_words": 1449
         },
+        "mms-1b-all": {
+          "wer": 0.45329849771391245,
+          "reference_words": 1531,
+          "hypothesis_words": 1199
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.09797517962116264,
           "reference_words": 1531,
@@ -9930,9 +10658,9 @@
           "hypothesis_words": 1425
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.07838014369693011,
+          "wer": 0.06858262573481384,
           "reference_words": 1531,
-          "hypothesis_words": 1527
+          "hypothesis_words": 1536
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07250163291966036,
@@ -10005,9 +10733,9 @@
           "hypothesis_words": 1325
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.09601567602873938,
+          "wer": 0.09340300457217506,
           "reference_words": 1531,
-          "hypothesis_words": 1513
+          "hypothesis_words": 1514
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.12148922273024167,
@@ -10034,10 +10762,20 @@
           "reference_words": 1531,
           "hypothesis_words": 1197
         },
+        "mai-transcribe-1": {
+          "wer": 0.116263879817113,
+          "reference_words": 1531,
+          "hypothesis_words": 1436
+        },
         "google-medasr": {
           "wer": 0.6159372958850424,
           "reference_words": 1531,
           "hypothesis_words": 768
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11430437622468975,
+          "reference_words": 1531,
+          "hypothesis_words": 1485
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.1365120836054866,
@@ -10099,6 +10837,11 @@
           "reference_words": 1236,
           "hypothesis_words": 1202
         },
+        "mms-1b-all": {
+          "wer": 0.37702265372168287,
+          "reference_words": 1236,
+          "hypothesis_words": 1028
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.06553398058252427,
           "reference_words": 1236,
@@ -10135,9 +10878,9 @@
           "hypothesis_words": 1186
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.07766990291262135,
+          "wer": 0.063915857605178,
           "reference_words": 1236,
-          "hypothesis_words": 1221
+          "hypothesis_words": 1230
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07119741100323625,
@@ -10210,9 +10953,9 @@
           "hypothesis_words": 1194
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.08414239482200647,
+          "wer": 0.06877022653721683,
           "reference_words": 1236,
-          "hypothesis_words": 1213
+          "hypothesis_words": 1216
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.0889967637540453,
@@ -10239,10 +10982,20 @@
           "reference_words": 1236,
           "hypothesis_words": 1038
         },
+        "mai-transcribe-1": {
+          "wer": 0.07928802588996764,
+          "reference_words": 1236,
+          "hypothesis_words": 1189
+        },
         "google-medasr": {
           "wer": 0.598705501618123,
           "reference_words": 1236,
           "hypothesis_words": 644
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.08090614886731391,
+          "reference_words": 1236,
+          "hypothesis_words": 1227
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.08171521035598706,
@@ -10304,6 +11057,11 @@
           "reference_words": 1271,
           "hypothesis_words": 1243
         },
+        "mms-1b-all": {
+          "wer": 0.3076317859952793,
+          "reference_words": 1271,
+          "hypothesis_words": 1124
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.059008654602675056,
           "reference_words": 1271,
@@ -10340,9 +11098,9 @@
           "hypothesis_words": 1241
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.04956726986624705,
+          "wer": 0.04799370574350905,
           "reference_words": 1271,
-          "hypothesis_words": 1269
+          "hypothesis_words": 1288
         },
         "google-gemini-2.5-flash": {
           "wer": 0.05507474429583006,
@@ -10415,9 +11173,9 @@
           "hypothesis_words": 1212
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.058221872541306056,
+          "wer": 0.05114083398898505,
           "reference_words": 1271,
-          "hypothesis_words": 1273
+          "hypothesis_words": 1276
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.06372934697088907,
@@ -10444,10 +11202,20 @@
           "reference_words": 1271,
           "hypothesis_words": 1183
         },
+        "mai-transcribe-1": {
+          "wer": 0.06845003933910307,
+          "reference_words": 1271,
+          "hypothesis_words": 1243
+        },
         "google-medasr": {
           "wer": 0.4618410700236035,
           "reference_words": 1271,
           "hypothesis_words": 863
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.07789142407553108,
+          "reference_words": 1271,
+          "hypothesis_words": 1268
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.07317073170731707,
@@ -10509,6 +11277,11 @@
           "reference_words": 1364,
           "hypothesis_words": 1320
         },
+        "mms-1b-all": {
+          "wer": 0.39589442815249265,
+          "reference_words": 1364,
+          "hypothesis_words": 1126
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.10703812316715543,
           "reference_words": 1364,
@@ -10545,9 +11318,9 @@
           "hypothesis_words": 1295
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.10190615835777127,
+          "wer": 0.09824046920821114,
           "reference_words": 1364,
-          "hypothesis_words": 1343
+          "hypothesis_words": 1344
         },
         "google-gemini-2.5-flash": {
           "wer": 0.10190615835777127,
@@ -10622,7 +11395,7 @@
         "qwen3-asr-0.6b": {
           "wer": 0.11803519061583578,
           "reference_words": 1364,
-          "hypothesis_words": 1360
+          "hypothesis_words": 1357
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.1217008797653959,
@@ -10649,10 +11422,20 @@
           "reference_words": 1364,
           "hypothesis_words": 952
         },
+        "mai-transcribe-1": {
+          "wer": 0.11143695014662756,
+          "reference_words": 1364,
+          "hypothesis_words": 1293
+        },
         "google-medasr": {
           "wer": 0.7668621700879765,
           "reference_words": 1364,
           "hypothesis_words": 422
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.11950146627565983,
+          "reference_words": 1364,
+          "hypothesis_words": 1342
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.12903225806451613,
@@ -10714,6 +11497,11 @@
           "reference_words": 1542,
           "hypothesis_words": 977
         },
+        "mms-1b-all": {
+          "wer": 0.3735408560311284,
+          "reference_words": 1542,
+          "hypothesis_words": 1274
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.08625162127107652,
           "reference_words": 1542,
@@ -10750,9 +11538,9 @@
           "hypothesis_words": 1483
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.08041504539559015,
+          "wer": 0.06874189364461739,
           "reference_words": 1542,
-          "hypothesis_words": 1513
+          "hypothesis_words": 1518
         },
         "google-gemini-2.5-flash": {
           "wer": 0.07911802853437094,
@@ -10825,9 +11613,9 @@
           "hypothesis_words": 1425
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.10635538261997406,
+          "wer": 0.0946822308690013,
           "reference_words": 1542,
-          "hypothesis_words": 1509
+          "hypothesis_words": 1494
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.11802853437094682,
@@ -10854,10 +11642,20 @@
           "reference_words": 1542,
           "hypothesis_words": 1386
         },
+        "mai-transcribe-1": {
+          "wer": 0.09922178988326848,
+          "reference_words": 1542,
+          "hypothesis_words": 1476
+        },
         "google-medasr": {
           "wer": 0.5577172503242542,
           "reference_words": 1542,
           "hypothesis_words": 867
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.10570687418936446,
+          "reference_words": 1542,
+          "hypothesis_words": 1517
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.0927367055771725,
@@ -10919,6 +11717,11 @@
           "reference_words": 2000,
           "hypothesis_words": 1913
         },
+        "mms-1b-all": {
+          "wer": 0.2895,
+          "reference_words": 2000,
+          "hypothesis_words": 1778
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.067,
           "reference_words": 2000,
@@ -10955,9 +11758,9 @@
           "hypothesis_words": 1738
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.0625,
+          "wer": 0.055,
           "reference_words": 2000,
-          "hypothesis_words": 1947
+          "hypothesis_words": 1959
         },
         "google-gemini-2.5-flash": {
           "wer": 0.052,
@@ -11032,7 +11835,7 @@
         "qwen3-asr-0.6b": {
           "wer": 0.064,
           "reference_words": 2000,
-          "hypothesis_words": 1943
+          "hypothesis_words": 1955
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.0755,
@@ -11059,10 +11862,20 @@
           "reference_words": 2000,
           "hypothesis_words": 620
         },
+        "mai-transcribe-1": {
+          "wer": 0.101,
+          "reference_words": 2000,
+          "hypothesis_words": 1865
+        },
         "google-medasr": {
           "wer": 0.5535,
           "reference_words": 2000,
           "hypothesis_words": 1063
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.079,
+          "reference_words": 2000,
+          "hypothesis_words": 1926
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.0855,
@@ -11124,6 +11937,11 @@
           "reference_words": 789,
           "hypothesis_words": 760
         },
+        "mms-1b-all": {
+          "wer": 0.35994930291508237,
+          "reference_words": 789,
+          "hypothesis_words": 674
+        },
         "assemblyai-universal-3-pro-medical": {
           "wer": 0.051964512040557666,
           "reference_words": 789,
@@ -11160,9 +11978,9 @@
           "hypothesis_words": 756
         },
         "qwen3-asr-1.7b": {
-          "wer": 0.060836501901140684,
+          "wer": 0.0697084917617237,
           "reference_words": 789,
-          "hypothesis_words": 763
+          "hypothesis_words": 762
         },
         "google-gemini-2.5-flash": {
           "wer": 0.059569074778200254,
@@ -11235,9 +12053,9 @@
           "hypothesis_words": 742
         },
         "qwen3-asr-0.6b": {
-          "wer": 0.07097591888466413,
+          "wer": 0.08111533586818757,
           "reference_words": 789,
-          "hypothesis_words": 755
+          "hypothesis_words": 751
         },
         "nemotron-speech-streaming-0.6b": {
           "wer": 0.07097591888466413,
@@ -11264,10 +12082,20 @@
           "reference_words": 789,
           "hypothesis_words": 632
         },
+        "mai-transcribe-1": {
+          "wer": 0.06717363751584284,
+          "reference_words": 789,
+          "hypothesis_words": 760
+        },
         "google-medasr": {
           "wer": 0.6730038022813688,
           "reference_words": 789,
           "hypothesis_words": 322
+        },
+        "glm-asr-nano-2512": {
+          "wer": 0.07477820025348543,
+          "reference_words": 789,
+          "hypothesis_words": 767
         },
         "cohere-transcribe-03-2026": {
           "wer": 0.0697084917617237,

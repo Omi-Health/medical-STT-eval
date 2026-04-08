@@ -1,6 +1,6 @@
 {
   "model_name": "openai-gpt-4o-mini-transcribe",
-  "timestamp": "2026-03-27 01:20:34",
+  "timestamp": "2026-04-07 20:00:04",
   "normalization": "Custom EnglishTextNormalizer (Whisper-based, oh-fix + post-word-map)",
   "wer_metrics": {
     "average_wer": 0.13596411813013284,
@@ -19,7 +19,13 @@
     "word_accuracy": 0.8763830551735247
   },
   "file_count": 55,
-  "speed_metrics": {},
+  "speed_metrics": {
+    "total_files": 8,
+    "total_duration": 185.2091851234436,
+    "average_duration": 23.15114814043045,
+    "fastest_file": 15.785717964172363,
+    "slowest_file": 28.172919034957886
+  },
   "file_details": [
     {
       "file": "day1_consultation14_conversation_transcript.txt",
@@ -145,7 +151,8 @@
       "hypothesis_words": 754,
       "substitutions": 11,
       "deletions": 38,
-      "insertions": 3
+      "insertions": 3,
+      "transcription_duration": 15.785717964172363
     },
     {
       "file": "day2_consultation06_conversation_transcript.txt",
@@ -226,7 +233,8 @@
       "hypothesis_words": 865,
       "substitutions": 29,
       "deletions": 55,
-      "insertions": 18
+      "insertions": 18,
+      "transcription_duration": 18.22675895690918
     },
     {
       "file": "day2_consultation07_conversation_transcript.txt",
@@ -334,7 +342,8 @@
       "hypothesis_words": 1428,
       "substitutions": 32,
       "deletions": 132,
-      "insertions": 29
+      "insertions": 29,
+      "transcription_duration": 26.837188005447388
     },
     {
       "file": "day2_consultation04_conversation_transcript.txt",
@@ -352,7 +361,8 @@
       "hypothesis_words": 1465,
       "substitutions": 49,
       "deletions": 98,
-      "insertions": 21
+      "insertions": 21,
+      "transcription_duration": 27.695441961288452
     },
     {
       "file": "day5_consultation09_conversation_transcript.txt",
@@ -361,7 +371,8 @@
       "hypothesis_words": 1245,
       "substitutions": 30,
       "deletions": 136,
-      "insertions": 17
+      "insertions": 17,
+      "transcription_duration": 23.502719163894653
     },
     {
       "file": "day1_consultation13_conversation_transcript.txt",
@@ -406,7 +417,8 @@
       "hypothesis_words": 1187,
       "substitutions": 19,
       "deletions": 67,
-      "insertions": 18
+      "insertions": 18,
+      "transcription_duration": 22.526866912841797
     },
     {
       "file": "day3_consultation01_conversation_transcript.txt",
@@ -433,7 +445,8 @@
       "hypothesis_words": 1716,
       "substitutions": 30,
       "deletions": 304,
-      "insertions": 20
+      "insertions": 20,
+      "transcription_duration": 28.172919034957886
     },
     {
       "file": "day5_consultation02_conversation_transcript.txt",
@@ -505,7 +518,8 @@
       "hypothesis_words": 1229,
       "substitutions": 18,
       "deletions": 63,
-      "insertions": 21
+      "insertions": 21,
+      "transcription_duration": 22.461573123931885
     },
     {
       "file": "day1_consultation01_conversation_transcript.txt",

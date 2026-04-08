@@ -159,6 +159,9 @@ The improved chunking is particularly important for medical conversations where:
 | `deepgram_medical_transcribe.py` | deepgram-nova-3-medical (parallel, skip-existing) | API |
 | `assemblyai_transcribe.py` | assemblyai-universal-3-pro-medical (medical-v1 domain) | API |
 | `soniox_transcribe.py` | soniox-stt-async-v4 (REST async, no context) | API |
+| `mai_transcribe_1.py` | mai-transcribe-1 (Azure Speech enhancedMode) | API |
+| `mms_1b_transcribe.py` | facebook/mms-1b-all (chunked HF pipeline, return_timestamps='char') | T4 |
+| `glm_asr_nano_transcribe.py` | zai-org/GLM-ASR-Nano-2512 (30s chunks, BF16) | T4 |
 | NeMo direct (no script) | nemotron-speech-0.6b, parakeet-tdt-1.1b, multitalker-parakeet-0.6b, vibevoice-9b | T4/H100 |
 
 ## API Quirks and Learnings
@@ -207,6 +210,48 @@ The Kyutai STT 2.6B model showed severe hallucination issues on long medical con
 - **Consistent**: ElevenLabs, Google Gemini
 - **Local models**: MLX models most stable for batch processing
 
+### Qwen3-ASR vLLM long-audio fix (the encoder-cache trap)
+
+**Problem.** Out of the box, `Qwen3ASRModel.LLM(...)` (the offline vLLM wrapper) and `qwen-asr-serve` (the HTTP server) silently hang or error on audio files longer than ~10 minutes (~657s). The hang manifests as a `model.transcribe()` call that occupies VRAM, parks GPU at 0%, and never returns. Dataset files >600s on PriMock57 fail consistently. This affected the entire top-7 longest files in the dataset.
+
+**Root cause (vLLM 0.19.0 finally surfaces it as an actual error message):**
+```
+The decoder prompt contains a(n) audio item with length 8541, which exceeds
+the pre-allocated encoder cache size 8192. Please reduce the input size or
+increase the encoder cache size by setting --limit-mm-per-prompt at startup.
+```
+- vLLM's `SchedulerConfig.encoder_cache_size` defaults to `max_num_batched_tokens` (= 8192).
+- For Qwen3-ASR, audio is tokenized at ~12.5 tokens/second by the encoder, so 600s of audio ≈ 7500 tokens, 657s ≈ 8541 tokens — over the 8192 cap. 800s ≈ 10420 tokens.
+- The error message is misleading — `--limit-mm-per-prompt` is **not** the lever; it controls items-per-prompt count, not cache size.
+- The actual lever is `max_num_batched_tokens` (which `encoder_cache_size` derives from in `vllm/config/scheduler.py:235`: `self.encoder_cache_size = self.max_num_batched_tokens`).
+
+**The one-line fix:**
+```python
+Qwen3ASRModel.LLM(
+    model="Qwen/Qwen3-ASR-1.7B",
+    gpu_memory_utilization=0.7,
+    max_inference_batch_size=128,
+    max_new_tokens=4096,
+    max_num_batched_tokens=16384,  # ← THE FIX. Default 8192 caps audio at ~10 min.
+)
+```
+
+**Stack required for it to work on A10:**
+- `qwen-asr==0.0.6` + `vllm>=0.19.0` (older 0.14.0 stable just hangs, no error)
+- `flash-attn 2.8.3` installed (`MAX_JOBS=4 pip install -U flash-attn --no-build-isolation`)
+- `wheel`, `setuptools`, `packaging` installed before flash-attn (otherwise build fails with `ModuleNotFoundError: wheel`)
+- `VLLM_WORKER_MULTIPROC_METHOD=spawn` env var (vLLM 0.19 requires spawn for CUDA child processes)
+- Matched flashinfer versions (`flashinfer-python` and `flashinfer-cubin` both 0.6.6 — fresh `pip install --pre 'vllm[audio]' qwen-asr` gets them aligned, no need for `FLASHINFER_DISABLE_VERSION_CHECK=1` bypass)
+- A10 24GB or larger GPU with FA2 support (compute capability ≥ 8.0). **T4 is not viable** — Qwen3-ASR's `mm_encoder_attention.py` hard-selects `AttentionBackendEnum.FLASH_ATTN` which requires SM ≥ 8.0, plus T4 has no native bf16 (emulation gives 26-61% WER on this model).
+
+**Result on A10:** all 55 PriMock57 files complete in a single `model.transcribe(audio=[...all 55...])` call in ~376s wall-clock for 1.7B and ~279s for 0.6B (batched throughput; per-file ≈ 6.8s and 5.1s). WER essentially identical to the H100 reference run (Δ < 0.25 pts). See `private_analysis/qwen3_speed_backups/` for the H100 baseline transcripts and metrics.
+
+**What does NOT fix it:**
+- `limit_mm_per_prompt={"audio": 1}` — controls item count, not cache size.
+- Patching `feature_extractor.chunk_length` or `max_audio_clip_s` in qwen-asr source — these affect dummy audio profiling but not the scheduler's cache budget.
+- Reducing `max_inference_batch_size` from 128 to 32 — same default 8192 cap.
+- Switching to `qwen-asr-serve` HTTP server with `/v1/audio/transcriptions` endpoint — works for one-off requests but accumulates KV cache state across sequential requests and hangs after a few files.
+
 ### Speed metrics across re-runs
 `base_transcriber._save_metrics()` merges new per-file timings with any existing `*_speed.json` instead of overwriting. This means re-runs that skip already-completed files (e.g. resuming a partial batch) preserve prior timings — `*_speed.json` always reflects all processed files, not just the current invocation.
 
@@ -253,7 +298,7 @@ Replaced `openai-whisper` dependency with self-contained `evaluate/text_normaliz
 
 ## Performance Patterns (current rankings, ranked by M-WER)
 
-40 single-stream models + 1 multi-speaker model. See README.md for the full leaderboard.
+43 single-stream models + 1 multi-speaker model. See README.md for the full leaderboard.
 
 Top 10 by Medical WER:
 
@@ -266,15 +311,15 @@ Top 10 by Medical WER:
 | 5 | Google Gemini 3 Flash | 11.33% | 3.64% | 5.2% | API |
 | 6 | ElevenLabs Scribe v2 | 9.72% | 3.86% | 4.3% | API |
 | 7 | AssemblyAI Universal-3 Pro (medical-v1) | 9.55% | 4.02% | 6.5% | API |
-| 8 | Deepgram Nova-3 Medical | 9.05% | 4.53% | 9.7% | API |
-| 9 | Qwen3 ASR 1.7B | 8.96% | 4.69% | 9.3% | A10 vLLM |
+| 8 | Qwen3 ASR 1.7B | 9.00% | 4.40% | 8.6% | A10 vLLM |
+| 9 | Deepgram Nova-3 Medical | 9.05% | 4.53% | 9.7% | API |
 | 10 | OpenAI GPT-4o Mini (Dec '25) | 11.18% | 4.85% | 10.6% | API |
 
 Key observations:
-- **M-WER ranking differs from WER** — Parakeet v3 ranks #4 by WER but #25 by M-WER (22% Drug M-WER)
+- **M-WER ranking differs from WER** — Parakeet v3 ranks #4 by WER but #31 by M-WER (22% Drug M-WER)
 - **LLM-based models lead on medical terms** — Gemini, VibeVoice, Qwen3 benefit from language model context
 - **Drug names are the hardest category** — Drug M-WER is consistently 2-5x higher than overall M-WER
-- **Best open-source for medical**: Qwen3-ASR 1.7B (8.96% WER, 4.69% M-WER on A10 vLLM)
+- **Best open-source for medical**: Qwen3-ASR 1.7B (9.00% WER, 4.40% M-WER on A10 vLLM, 6.83s/file batched throughput)
 - **Best on T4**: Gemma 4 E4B-it (15.69% WER, 9.99% M-WER via transformers dtype=auto)
 
 ## Model-Specific Learnings
@@ -323,6 +368,32 @@ Several models exhibited similar hallucination behavior:
 4. **Models affected**: Canary 1B v2, Granite Speech 3.3-2b, Kyutai STT 2.6B
 
 ## Models Evaluated (April 2026 batch)
+
+### Qwen3-ASR 1.7B / 0.6B (re-run on A10 vLLM with encoder-cache fix)
+- **WER**: 9.00% (1.7B), 9.83% (0.6B) | **M-WER**: 4.40% / 6.48% | **Drug M-WER**: 8.6% / 15.1%
+- **Speed**: 6.83s / 5.07s avg per file (batched throughput, 55 files in single `model.transcribe()` call)
+- **Hardware**: A10 24GB via vLLM 0.19.0 + flash-attn 2.8.3 (clean fresh venv on Azure NV36ads_A10_v5)
+- **The fix that unlocked >10 min audio on A10**: see [Qwen3-ASR vLLM long-audio fix](#qwen3-asr-vllm-long-audio-fix-the-encoder-cache-trap) below.
+- **Note**: Earlier H100 batch run gave essentially identical numbers (1.7B: 8.96% WER / 4.69% M-WER / 6.99s; 0.6B: 10.04% / 8.04% / 5.55s). The A10 numbers are now the canonical leaderboard entries because A10 is the more accessible hardware tier and the configuration is fully documented and reproducible. H100 transcripts/metrics archived under `private_analysis/qwen3_speed_backups/`.
+
+### Microsoft MAI-Transcribe-1 (Azure Speech Fast Transcription)
+- **WER**: 11.52% | **M-WER**: 4.85% | **Drug M-WER**: 11.2% | **Speed**: 21.8s avg (workers=4)
+- **API**: Azure Cognitive Services `/speechtotext/transcriptions:transcribe?api-version=2025-10-15` with `enhancedMode.task=transcribe`. Multipart upload + JSON `definition` part. Returns `combinedPhrases[0].text` synchronously.
+- **Auth**: `Ocp-Apim-Subscription-Key` header. **Endpoint must match the key** — the Azure Foundry key works only against the `*.cognitiveservices.azure.com` host (not `*.services.ai.azure.com`).
+- **Key Finding**: Top-15, slightly weaker than the Dec 2025 GPT-4o Mini on the same M-WER tier. Strong drug recognition for a non-medical-specific cloud API. Sub-30s per file with parallel workers, no throttling observed.
+
+### Facebook MMS-1B-all
+- **WER**: 38.70% | **M-WER**: 54.01% | **Drug M-WER**: 72.0% | **Speed**: 28.6s avg (T4)
+- **Architecture**: Wav2Vec2 CTC with 1107-language adapters; English adapter loaded via `model.load_adapter("eng")` + `processor.tokenizer.set_target_lang("eng")`.
+- **Long-audio handling**: HF `AutomaticSpeechRecognitionPipeline` with `chunk_length_s=30, stride_length_s=(5, 5)`. CTC pipeline requires `return_timestamps="char"` when chunking — without it the pipeline raises `CTC can either predict character level timestamps, or word level timestamps`.
+- **Key Finding**: **Worst medical performer in the benchmark.** Phonetic-style spelling errors dominate: "asthma"→"asma", "cough"→"cogh", "diarrhea"→"diarea", "ibuprofen"→garbled, "vomiting"→"vometing". MMS is designed for low-resource multilingual transcription with a phonetic-leaning vocab — it has no English orthography prior, so medical terms collapse to nearest-sound spelling. Useful as a floor for the leaderboard.
+
+### GLM-ASR-Nano-2512 (zai-org/GLM-ASR-Nano-2512)
+- **WER**: 10.84% | **M-WER**: 7.05% | **Drug M-WER**: 17.5% | **Speed**: 87.7s avg (T4 BF16)
+- **Architecture**: Multimodal LLM with audio encoder. Loaded via `AutoModel.from_pretrained(..., dtype=torch.bfloat16, trust_remote_code=True)` + `AutoProcessor.apply_chat_template`.
+- **Setup gotcha**: Requires **transformers from source** (>=5.6.0.dev0) to recognize the `glmasr` model architecture. The stock transformers 4.57.6 errors with `model type "glmasr" but Transformers does not recognize this architecture`.
+- **Long-audio handling**: 30-second chunks with `max_new_tokens=1024` per chunk; chunks concatenated with simple space join (no LCS merge needed for this model).
+- **Key Finding**: Decent overall WER but weak on medical terms — drug names get collapsed (`implanon`→`on`, `clenil`→`clenol`, `bisoprolol`→`zopralol`). 87s/file on T4 is slow for a "Nano" model — the chat-template wrapping + per-chunk LLM decoding overhead dominates.
 
 ### Soniox stt-async-v4
 - **WER**: 9.18% | **M-WER**: 3.32% | **Drug M-WER**: 7.1% | **Speed**: 46.2s avg (workers=2)
