@@ -113,7 +113,7 @@ The improved chunking is particularly important for medical conversations where:
 - **OpenAI**: `openai_api_transcribe.py` (Whisper-1, GPT-4o variants)
 - **Groq**: `groq_whisper_transcribe.py` (Whisper Large V3/Turbo)
 - **ElevenLabs**: `elevenlabs_scribe_transcribe.py` (Scribe v1)
-- **Mistral**: `voxtral_mini_transcribe_v1_chat_transcribe.py` (Voxtral models via API)
+- **Mistral**: `voxtral_mini_transcribe_v1_chat_transcribe.py` (Voxtral V1 via chat completions API)
 - **Google**: `gemini_transcribe.py` (Gemini 2.5 Flash/Pro)
 
 **Local/Native Models** (Optimized for long audio):
@@ -135,8 +135,7 @@ The improved chunking is particularly important for medical conversations where:
 | `openai_api_transcribe.py` | whisper-1, gpt-4o-transcribe, gpt-4o-mini-transcribe (×2) | API |
 | `groq_whisper_transcribe.py` | whisper-large-v3, whisper-large-v3-turbo | API |
 | `gemini_transcribe.py` | gemini-2.5-flash, gemini-2.5-pro, gemini-3-flash, gemini-3-pro | API |
-| `voxtral_mini_transcribe_v1_chat_transcribe.py` | voxtral-mini-transcribe-v1-chat | API |
-| `voxtral_mini_transcribe_v1_api_transcribe.py` | voxtral-mini-transcribe-v1-api | API |
+| `voxtral_mini_transcribe_v1_chat_transcribe.py` | voxtral-mini-transcribe-v1 (chat) | API |
 | `voxtral_mini_transcribe_v2_transcribe.py` | voxtral-mini-transcribe-v2 | API |
 | `voxtral_mini_4b_realtime_transcribe.py` | voxtral-mini-4b-realtime | A10 vLLM |
 | `cohere_transcribe.py` | cohere-transcribe-03-2026 (vLLM /v1/audio/transcriptions) | A10 vLLM |
@@ -167,12 +166,10 @@ The improved chunking is particularly important for medical conversations where:
 ## API Quirks and Learnings
 
 ### Mistral Voxtral
-- **V1 Transcription API**: `voxtral_mini_transcribe_v1_api_transcribe.py` - Uses `/v1/audio/transcriptions` endpoint
 - **V1 Chat-based**: `voxtral_mini_transcribe_v1_chat_transcribe.py` - Uses chat completions with base64 encoded audio
-- **V2 Transcription API**: `voxtral_mini_transcribe_v2_transcribe.py` - Same endpoint, updated model (Feb 2026)
+- **V2 Transcription API**: `voxtral_mini_transcribe_v2_transcribe.py` - Uses `/v1/audio/transcriptions` endpoint, updated model (Feb 2026)
 - **4B Realtime**: `voxtral_mini_4b_realtime_transcribe.py` - Local GPU via transformers
-- **Key Finding**: Only Mini supports `/v1/audio/transcriptions` - documentation says both models support it but reality is different
-- **Workaround**: Small model must use chat completions with audio input
+- **Note**: A V1 `/v1/audio/transcriptions` variant was evaluated but produced output essentially identical to the chat-based V1 path (WER 11.87% vs 11.85%, M-WER 5.20% vs 5.17%). Removed from the leaderboard to avoid duplication; script and metrics archived under `private_analysis/voxtral_v1_api_temp/`.
 
 ### ElevenLabs Scribe V1 vs V2
 - **V1 (Batch API)**: `speech_to_text.convert()` - Upload entire file, get transcript back instantly

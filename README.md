@@ -4,7 +4,7 @@ Evaluation framework for speech-to-text models on medical conversation data.
 
 ## Leaderboard
 
-**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 43 | **Updated**: 2026-04-08
+**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 42 | **Updated**: 2026-04-09
 
 ### Ranked by Medical WER (M-WER)
 
@@ -23,36 +23,35 @@ Evaluation framework for speech-to-text models on medical conversation data.
 | 11 | Microsoft MAI-Transcribe-1 | 11.52% | 4.85% | 11.2% | 21.8s | API |
 | 12 | ElevenLabs Scribe v1 | 10.87% | 4.88% | 7.5% | 36.3s | API |
 | 13 | Google Gemini 2.5 Flash | 9.45% | 5.01% | 10.3% | 20.2s | API |
-| 14 | Voxtral Mini Transcribe V1 (chat) | 11.85% | 5.17% | 11.0% | 22.4s | API |
-| 15 | Voxtral Mini Transcribe V1 (API) | 11.87% | 5.20% | 11.0% | 23.0s | API |
-| 16 | Parakeet TDT 1.1B | 9.03% | 5.20% | 15.5% | 12.3s | T4 |
-| 17 | Voxtral Mini Transcribe V2 | 11.64% | 5.36% | 12.1% | 18.4s | API |
-| 18 | Voxtral Mini 4B Realtime | 11.89% | 5.39% | 11.8% | 133.9s | H100 |
-| 19 | Cohere Transcribe (Mar 2026) | 11.81% | 5.59% | 16.6% | 3.9s | A10 |
-| 20 | OpenAI Whisper-1 | 13.20% | 5.62% | 10.3% | 104.3s | API |
-| 21 | Groq Whisper Large v3 Turbo | 12.14% | 5.75% | 14.4% | 8.0s | API |
-| 22 | NVIDIA Canary 1B Flash | 12.03% | 5.97% | 15.7% | 23.4s | T4 |
-| 23 | Groq Whisper Large v3 | 11.93% | 5.97% | 13.6% | 8.6s | API |
-| 24 | OpenAI GPT-4o Mini Transcribe | 13.60% | 6.03% | 11.4% | 23.2s | API |
-| 25 | MLX Whisper Large v3 Turbo | 11.65% | 6.16% | 14.0% | 12.9s | Apple Silicon |
-| 26 | Parakeet TDT 0.6B v2 | 10.75% | 6.19% | 17.2% | 5.4s | Apple Silicon |
-| 27 | WhisperKit Large v3 Turbo | 12.28% | 6.35% | 14.4% | 21.4s | Apple Silicon |
-| 28 | Qwen3 ASR 0.6B | 9.83% | 6.48% | 15.1% | 5.1s | A10 |
-| 29 | Kyutai STT 2.6B | 11.20% | 6.51% | 15.7% | 148.4s | T4 |
-| 30 | GLM-ASR-Nano-2512 | 10.84% | 7.05% | 17.5% | 87.7s | T4 |
-| 31 | Parakeet TDT 0.6B v3 | 9.35% | 7.25% | 22.0% | 6.3s | Apple Silicon |
-| 32 | Nemotron Speech Streaming 0.6B | 11.06% | 8.97% | 22.6% | 11.7s | T4 |
-| 33 | OpenAI GPT-4o Transcribe | 14.84% | 9.03% | 14.9% | 27.9s | API |
-| 34 | NVIDIA Canary-Qwen 2.5B | 12.94% | 9.80% | 22.8% | 105.4s | T4 |
-| 35 | Gemma 4 E4B-it^ | 15.69% | 9.99% | 15.5% | 185.4s | T4 |
-| 36 | NVIDIA Canary 1B v2 | 14.32% | 11.24% | 20.5% | 9.2s | T4 |
-| 37 | IBM Granite Speech 3.3-2B | 16.55% | 12.80% | 23.1% | 109.7s | T4 |
-| 38 | Apple SpeechAnalyzer | 12.36% | 13.02% | 27.4% | 6.0s | Apple Silicon |
-| 39 | Gemma 4 E2B-it^ | 18.90% | 13.92% | 19.8% | 134.6s | T4 |
-| 40 | Azure Foundry Phi-4 | 31.13% | 15.38% | 18.1% | 212.8s | API |
-| 41 | Kyutai STT 1B (Multilingual) | 27.28% | 21.23% | 28.9% | 79.5s | T4 |
-| 42 | Google MedASR | 64.38% | 49.66% | 58.0% | 1.2s | Apple Silicon |
-| 43 | Facebook MMS-1B-all | 38.70% | 54.01% | 72.0% | 28.6s | T4 |
+| 14 | Voxtral Mini Transcribe V1 | 11.85% | 5.17% | 11.0% | 22.4s | API |
+| 15 | Parakeet TDT 1.1B | 9.03% | 5.20% | 15.5% | 12.3s | T4 |
+| 16 | Voxtral Mini Transcribe V2 | 11.64% | 5.36% | 12.1% | 18.4s | API |
+| 17 | Voxtral Mini 4B Realtime | 11.89% | 5.39% | 11.8% | 133.9s | H100 |
+| 18 | Cohere Transcribe (Mar 2026) | 11.81% | 5.59% | 16.6% | 3.9s | A10 |
+| 19 | OpenAI Whisper-1 | 13.20% | 5.62% | 10.3% | 104.3s | API |
+| 20 | Groq Whisper Large v3 Turbo | 12.14% | 5.75% | 14.4% | 8.0s | API |
+| 21 | NVIDIA Canary 1B Flash | 12.03% | 5.97% | 15.7% | 23.4s | T4 |
+| 22 | Groq Whisper Large v3 | 11.93% | 5.97% | 13.6% | 8.6s | API |
+| 23 | OpenAI GPT-4o Mini Transcribe | 13.60% | 6.03% | 11.4% | 23.2s | API |
+| 24 | MLX Whisper Large v3 Turbo | 11.65% | 6.16% | 14.0% | 12.9s | Apple Silicon |
+| 25 | Parakeet TDT 0.6B v2 | 10.75% | 6.19% | 17.2% | 5.4s | Apple Silicon |
+| 26 | WhisperKit Large v3 Turbo | 12.28% | 6.35% | 14.4% | 21.4s | Apple Silicon |
+| 27 | Qwen3 ASR 0.6B | 9.83% | 6.48% | 15.1% | 5.1s | A10 |
+| 28 | Kyutai STT 2.6B | 11.20% | 6.51% | 15.7% | 148.4s | T4 |
+| 29 | GLM-ASR-Nano-2512 | 10.84% | 7.05% | 17.5% | 87.7s | T4 |
+| 30 | Parakeet TDT 0.6B v3 | 9.35% | 7.25% | 22.0% | 6.3s | Apple Silicon |
+| 31 | Nemotron Speech Streaming 0.6B | 11.06% | 8.97% | 22.6% | 11.7s | T4 |
+| 32 | OpenAI GPT-4o Transcribe | 14.84% | 9.03% | 14.9% | 27.9s | API |
+| 33 | NVIDIA Canary-Qwen 2.5B | 12.94% | 9.80% | 22.8% | 105.4s | T4 |
+| 34 | Gemma 4 E4B-it^ | 15.69% | 9.99% | 15.5% | 185.4s | T4 |
+| 35 | NVIDIA Canary 1B v2 | 14.32% | 11.24% | 20.5% | 9.2s | T4 |
+| 36 | IBM Granite Speech 3.3-2B | 16.55% | 12.80% | 23.1% | 109.7s | T4 |
+| 37 | Apple SpeechAnalyzer | 12.36% | 13.02% | 27.4% | 6.0s | Apple Silicon |
+| 38 | Gemma 4 E2B-it^ | 18.90% | 13.92% | 19.8% | 134.6s | T4 |
+| 39 | Azure Foundry Phi-4 | 31.13% | 15.38% | 18.1% | 212.8s | API |
+| 40 | Kyutai STT 1B (Multilingual) | 27.28% | 21.23% | 28.9% | 79.5s | T4 |
+| 41 | Google MedASR | 64.38% | 49.66% | 58.0% | 1.2s | Apple Silicon |
+| 42 | Facebook MMS-1B-all | 38.70% | 54.01% | 72.0% | 28.6s | T4 |
 
 *Ranked by M-WER. **Avg Speed** = wall-clock seconds per ~7.5 min file (lower is better; not normalized for hardware tier — H100 ≫ A10 ≫ T4). **Type**: API (cloud), T4/A10/H100 (NVIDIA GPU tier via NeMo/vLLM/transformers), Apple Silicon (MLX/Native on M-series). Additional metrics in `results/metrics/{model}_medical_wer.json`.*
 *^Gemma 4 models use 30s chunking (model max audio = 30s).*
