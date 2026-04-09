@@ -237,7 +237,7 @@
       "name": "voxtral-mini-4b-realtime",
       "wer": 0.1189,
       "accuracy": 0.8811,
-      "avg_speed_sec": 133.9,
+      "avg_speed_sec": 270.9,
       "best_wer": 0.0499,
       "worst_wer": 0.2104,
       "wer_std": 0.0346,

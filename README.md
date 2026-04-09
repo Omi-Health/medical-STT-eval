@@ -26,7 +26,7 @@ Evaluation framework for speech-to-text models on medical conversation data.
 | 14 | Voxtral Mini Transcribe V1 | 11.85% | 5.17% | 11.0% | 22.4s | API |
 | 15 | Parakeet TDT 1.1B | 9.03% | 5.20% | 15.5% | 12.3s | T4 |
 | 16 | Voxtral Mini Transcribe V2 | 11.64% | 5.36% | 12.1% | 18.4s | API |
-| 17 | Voxtral Mini 4B Realtime | 11.89% | 5.39% | 11.8% | 133.9s | H100 |
+| 17 | Voxtral Mini 4B Realtime | 11.89% | 5.39% | 11.8% | 270.9s | A10 |
 | 18 | Cohere Transcribe (Mar 2026) | 11.81% | 5.59% | 16.6% | 3.9s | A10 |
 | 19 | OpenAI Whisper-1 | 13.20% | 5.62% | 10.3% | 104.3s | API |
 | 20 | Groq Whisper Large v3 Turbo | 12.14% | 5.75% | 14.4% | 8.0s | API |
