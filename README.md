@@ -50,7 +50,7 @@ Evaluation framework for speech-to-text models on medical conversation data.
 | 38 | Gemma 4 E2B-it^ | 18.90% | 13.92% | 19.8% | 134.6s | T4 |
 | 39 | Azure Foundry Phi-4 | 31.13% | 15.38% | 18.1% | 212.8s | API |
 | 40 | Kyutai STT 1B (Multilingual) | 27.28% | 21.23% | 28.9% | 79.5s | T4 |
-| 41 | Google MedASR | 64.38% | 49.66% | 58.0% | 1.2s | Apple Silicon |
+| 41 | Google MedASR | 52.55% | 28.31% | 42.2% | 9.0s | DGX Spark |
 | 42 | Facebook MMS-1B-all | 38.70% | 54.01% | 72.0% | 28.6s | T4 |
 
 *Ranked by M-WER. **Avg Speed** = wall-clock seconds per ~7.5 min file (lower is better; not normalized for hardware tier — H100 ≫ A10 ≫ T4). **Type**: API (cloud), T4/A10/H100 (NVIDIA GPU tier via NeMo/vLLM/transformers), Apple Silicon (MLX/Native on M-series). Additional metrics in `results/metrics/{model}_medical_wer.json`.*
