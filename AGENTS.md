@@ -332,11 +332,12 @@ Key observations:
 - **Takeaway**: Native long-form works well on most files, but autoregressive models can hallucinate unpredictably on certain audio segments
 
 ### Google MedASR
-- **WER**: 64.88% - Worst performing model in benchmark
-- **Tested On**: MPS (MacBook CPU), NVIDIA T4 GPU (official Google notebook), Vertex AI endpoint
-- **Result**: All three platforms showed similar poor performance
+- **WER**: 52.55% | **M-WER**: 28.31% | **Drug M-WER**: 42.24% | **Speed**: 9.03s avg per file
+- **Current benchmark config**: KenLM-backed decoding with manual 8s chunks and 1s overlap
+- **Tested On**: MPS (MacBook CPU), NVIDIA T4 GPU (official Google notebook), Vertex AI endpoint, and local GPU with LM-backed decoding
+- **Result**: The improved decode path materially reduces the old deletion-heavy failure mode, but MedASR still remains near the bottom of the benchmark on doctor-patient conversations
 - **Reason**: MedASR is designed for medical **dictation** (single speaker, clear speech), not doctor-patient **conversations**
-- **Benchmark**: Kept MPS (MacBook) results; ignored T4 and Vertex AI as they showed no improvement
+- **Benchmark**: The tracked benchmark now uses the improved local decoding path because it is substantially better than the earlier baseline integration
 - **Note**: Vertex AI requires chunking due to 1.5MB request limit
 
 ### IBM Granite Speech 3.3-2b (ibm-granite/granite-speech-3.3-2b)
