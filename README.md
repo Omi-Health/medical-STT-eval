@@ -2,6 +2,9 @@
 
 Evaluation framework for speech-to-text models on medical conversation data.
 
+**Full write-up & leaderboard:** [omi.health/research/stt-benchmark](https://omi.health/research/stt-benchmark)
+Built by [Omi Health](https://omi.health) · [All research](https://omi.health/research) · [Omi Scribe](https://omi.health/scribe)
+
 ## Leaderboard
 
 **Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 42 | **Updated**: 2026-04-09
@@ -173,6 +176,28 @@ WER is calculated using a custom normalizer (`evaluate/text_normalizer.py`) base
 
 This reduced WER by ~2-3% across all models compared to stock Whisper normalization. No runtime dependency on the `openai-whisper` package.
 
+## Citation
+
+If you use this benchmark, please cite:
+
+**APA** — Omi Health. (2025). *Benchmarking Speech-to-Text Models for Long-Form Medical Dialogue*. https://omi.health/research/stt-benchmark
+
+**BibTeX**
+
+```bibtex
+@misc{omi_stt_benchmark_2025,
+  title   = {Benchmarking Speech-to-Text Models for Long-Form Medical Dialogue},
+  author  = {{Omi Health}},
+  year    = {2025},
+  url     = {https://omi.health/research/stt-benchmark},
+  note    = {Medical Word Error Rate (M-WER) leaderboard, 42 models}
+}
+```
+
 ## License
 
 MIT License. Dataset under CC BY 4.0.
+
+---
+
+Built by **[Omi Health](https://omi.health)** — the private AI stack for healthcare.
