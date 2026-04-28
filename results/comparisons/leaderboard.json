@@ -534,15 +534,15 @@
     {
       "rank": 41,
       "name": "google-medasr",
-      "wer": 0.6438,
-      "accuracy": 0.3562,
-      "avg_speed_sec": 1.2,
-      "best_wer": 0.3052,
-      "worst_wer": 0.9891,
-      "wer_std": 0.1266,
+      "wer": 0.5254,
+      "accuracy": 0.4746,
+      "avg_speed_sec": 3.9,
+      "best_wer": 0.3427,
+      "worst_wer": 0.7233,
+      "wer_std": 0.0771,
       "files_evaluated": 55,
-      "m_wer": 0.4867,
-      "drug_m_wer": 0.5601
+      "m_wer": 0.2616,
+      "drug_m_wer": 0.3562
     },
     {
       "rank": 42,

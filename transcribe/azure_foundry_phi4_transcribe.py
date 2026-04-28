@@ -32,89 +32,10 @@ import sys
 sys.path.append(str(Path(__file__).parent))
 
 from base_transcriber import BaseTranscriber, TranscriptionResult
-
-
-def find_longest_common_sequence(sequences: List[str], match_by_words: bool = True) -> str:
-    """
-    Find optimal alignment between sequences using longest common sequence matching.
-    Adapted from Canary-Qwen's sophisticated merging approach.
-    
-    Args:
-        sequences: List of text sequences to merge
-        match_by_words: Whether to match by words (True) or characters (False)
-        
-    Returns:
-        Merged sequence with optimal alignment
-    """
-    if not sequences:
-        return ""
-    
-    if len(sequences) == 1:
-        return sequences[0]
-    
-    # Convert to word/character lists based on strategy
-    if match_by_words:
-        # Split by words but preserve spacing
-        processed_sequences = []
-        for seq in sequences:
-            words = re.findall(r'\S+|\s+', seq)
-            processed_sequences.append(words)
-    else:
-        processed_sequences = [list(seq) for seq in sequences]
-    
-    left_sequence = processed_sequences[0]
-    left_length = len(left_sequence)
-    
-    for right_sequence in processed_sequences[1:]:
-        max_matching = 0.0
-        right_length = len(right_sequence)
-        max_indices = (left_length, left_length, 0, 0)
-        
-        # Try different alignments to find best overlap
-        for i in range(1, left_length + right_length + 1):
-            # Add small epsilon to favor longer matches
-            eps = float(i) / 10000.0
-            
-            left_start = max(0, left_length - i)
-            left_stop = min(left_length, left_length + right_length - i)
-            left_part = left_sequence[left_start:left_stop]
-            
-            right_start = max(0, i - left_length)
-            right_stop = min(right_length, i)
-            right_part = right_sequence[right_start:right_stop]
-            
-            if len(left_part) != len(right_part):
-                continue
-            
-            # Count exact matches
-            matches = sum(a == b for a, b in zip(left_part, right_part))
-            
-            # Normalize by overlap length and add epsilon
-            if i > 0:
-                matching = matches / float(i) + eps
-                
-                # Require at least 2 matches for valid overlap
-                if matches >= 2 and matching > max_matching:
-                    max_matching = matching
-                    max_indices = (left_start, left_stop, right_start, right_stop)
-        
-        # Apply best alignment found
-        left_start, left_stop, right_start, right_stop = max_indices
-        
-        # Take left part from left sequence, right part from right sequence
-        left_mid = (left_stop + left_start) // 2
-        right_mid = (right_stop + right_start) // 2
-        
-        # Merge: left half of overlap from left, right half from right
-        merged_sequence = left_sequence[:left_mid] + right_sequence[right_mid:]
-        left_sequence = merged_sequence
-        left_length = len(left_sequence)
-    
-    # Join back to text
-    if match_by_words:
-        return ''.join(left_sequence)
-    else:
-        return ''.join(left_sequence)
+try:
+    from chunking_utils import find_longest_common_sequence
+except ImportError:
+    from transcribe.chunking_utils import find_longest_common_sequence
 
 
 class AzureFoundryPhi4ImprovedTranscriber(BaseTranscriber):

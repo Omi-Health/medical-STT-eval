@@ -18,6 +18,7 @@ warnings.filterwarnings("ignore")
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from transcribe.base_transcriber import BaseTranscriber, TranscriptionResult
+from transcribe.chunking_utils import merge_by_suffix_prefix_lcs
 
 try:
     import torch
@@ -96,27 +97,13 @@ class GraniteSpeechTranscriber(BaseTranscriber):
 
     def _merge_transcripts_lcs(self, transcripts):
         """Merge transcripts using LCS algorithm."""
-        if not transcripts:
-            return ""
-        if len(transcripts) == 1:
-            return transcripts[0]
-
-        merged = transcripts[0]
-        for text in transcripts[1:]:
-            if not text.strip():
-                continue
-
-            overlap_start, score = self._find_lcs_overlap(merged, text)
-
-            if overlap_start > 0 and score > 0.3:
-                words = merged.split()
-                merged = ' '.join(words[:overlap_start]) + ' ' + text
-            else:
-                merged = merged + ' ' + text
-
-            merged = ' '.join(merged.split())
-
-        return merged
+        return merge_by_suffix_prefix_lcs(
+            transcripts,
+            overlap_seconds=self.OVERLAP,
+            words_per_second=3,
+            threshold=0.3,
+            min_overlap_words=2,
+        )
 
     def _transcribe_chunk(self, wav):
         """Transcribe a single audio chunk."""

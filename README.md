@@ -53,7 +53,7 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 | 38 | Gemma 4 E2B-it^ | 18.90% | 12.22% | 17.6% | 134.6s | T4 |
 | 39 | Azure Foundry Phi-4 | 31.13% | 14.19% | 16.1% | 212.8s | API |
 | 40 | Kyutai STT 1B (Multilingual) | 27.28% | 19.90% | 27.9% | 79.5s | T4 |
-| 41 | Google MedASR | 64.38% | 48.67% | 56.0% | 1.2s | Apple Silicon |
+| 41 | Google MedASR | 52.54% | 26.16% | 35.6% | 3.9s | Apple Silicon |
 | 42 | Facebook MMS-1B-all | 38.70% | 52.92% | 71.0% | 28.6s | T4 |
 
 *Ranked by Canonical M-WER v2. **Avg Speed** = wall-clock seconds per ~7.5 min file (lower is better; not normalized for hardware tier — H100 ≫ A10 ≫ T4). **Type**: API (cloud), T4/A10/H100 (NVIDIA GPU tier via NeMo/vLLM/transformers), Apple Silicon (MLX/Native on M-series). Additional metrics in `results/metrics/{model}_medical_wer.json`.*
@@ -61,6 +61,22 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 **\***Google Gemini 3 Pro Preview completed 54/55 comparable files.
 
 *^Gemma 4 models use 30s chunking (model max audio = 30s).*
+
+### Chunking Strategy
+
+Most cloud APIs and native long-form models are evaluated on full audio. Chunking is only used when a model has an audio-length, token, memory, or decoder-behavior constraint.
+
+The shared helpers live in `transcribe/chunking_utils.py`:
+- **Post-hoc overlap + LCS merge**: Canary-Qwen, Canary Flash, Granite, and Azure Phi-4 use overlapping chunks and text-level LCS merging.
+- **CTC/HF chunking**: MMS uses HF pipeline chunking with character timestamps. MedASR now supports a stronger KenLM-backed short-chunk mode (`8s` chunks, `1s` overlap) while preserving the old HF `20s/2s` baseline via `--decode_mode hf_pipeline`.
+- **Simple concat**: Gemma 4 keeps non-overlapping 30s chunks because overlap/context merging tested worse for that model.
+- **No chunking**: Qwen3-ASR, cloud batch APIs, and native long-form paths keep full-audio decoding when the model supports it.
+
+MedASR chunk/overlap experiments can be run with:
+
+```bash
+python scripts/run_medasr_chunk_ablation.py --audio_dir data/raw_audio --include_hf_baseline --evaluate
+```
 
 ### Multi-speaker models (separate — different metric)
 

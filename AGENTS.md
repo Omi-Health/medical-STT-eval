@@ -81,20 +81,22 @@ Long medical conversations (>30 seconds) caused major issues:
 - **Quality degradation**: Accuracy dropped significantly on longer files
 
 ### The Solution Developed
-**Sophisticated chunking with overlap merging** - inspired by Groq's approach:
+**Sophisticated chunking with overlap merging** - inspired by Groq's approach and centralized in `transcribe/chunking_utils.py`:
 
 1. **Intelligent chunking**: Split audio into overlapping segments (30-35 seconds)
 2. **Overlap merging**: Use longest common sequence (LCS) algorithm to merge transcriptions
 3. **Audio processing**: Apply fade-in/fade-out to reduce artifacts
 4. **Model-specific tuning**: Adjust parameters based on each model's constraints
 
-### Why Our Chunking Method Outperforms NVIDIA's Default
-We developed our own chunking implementation for NVIDIA Canary models instead of using the default NEMO chunking because:
+Current implementation note: the shared splitter is deterministic fixed-window chunking with overlap. Some scripts apply fade-in/fade-out; true silence-snapped boundary detection is not yet implemented in the shared utility.
 
-1. **Smarter Word Boundary Detection**: Our method uses silence detection and natural speech patterns to find optimal chunk boundaries, avoiding mid-word or mid-phrase cuts
-2. **Optimized Overlap Strategy**: We use 10-second overlaps with LCS merging, which preserves context better than NVIDIA's default 2-second overlaps
+### Why Our Chunking Method Can Outperform Short Default Overlaps
+We developed our own chunking implementation for constrained models instead of relying only on default framework chunking because:
+
+1. **Longer Context Around Boundaries**: We use larger overlaps for generative models, often 8-10 seconds, which preserves more local context than short default overlaps
+2. **Optimized Overlap Strategy**: LCS/fuzzy overlap merging removes duplicated text while keeping both sides of the boundary
 3. **Fade Effects**: Audio fade-in/fade-out reduces artifacts at chunk boundaries, improving transcription accuracy
-4. **Context Preservation**: Longer overlaps ensure medical terminology and patient context isn't lost between chunks
+4. **Model-Specific Strategy**: CTC models, generative models, and native full-audio models need different chunk sizes and merge logic
 
 The improved chunking is particularly important for medical conversations where:
 - Technical terms span chunk boundaries
@@ -116,6 +118,23 @@ The improved chunking is particularly important for medical conversations where:
 **Azure Foundry Phi-4 (API)**
 - `azure_foundry_phi4_transcribe.py` - 30s chunks, 8s overlap
 - **Constraint**: API stability + token limits for multimodal processing
+
+**Google MedASR**
+- `medasr_transcribe.py` - default KenLM-backed CTC decoding with manual 8s chunks, 1s overlap, exact word-overlap merge
+- Old HF pipeline baseline remains available with `--decode_mode hf_pipeline` (`chunk_length_s=20`, `stride_length_s=2`)
+- Ablation harness: `scripts/run_medasr_chunk_ablation.py --audio_dir data/raw_audio --include_hf_baseline --evaluate`
+
+**MMS-1B-all**
+- `mms_1b_transcribe.py` - HF CTC pipeline with 30s chunks, 5s stride, `return_timestamps="char"` for built-in stitching
+
+### Models Using Simple Chunk Concatenation
+
+**Gemma 4 E2B/E4B**
+- `gemma4_transcribe.py` - 30s chunks, no overlap
+- **Reason**: overlap merge and context prompting were tested and made results worse
+
+**GLM-ASR-Nano**
+- `glm_asr_nano_transcribe.py` - 30s chunks, simple concatenation
 
 ### Models Handling Full Audio Natively
 
@@ -164,7 +183,7 @@ The improved chunking is particularly important for medical conversations where:
 | `mlx_whisper_transcribe.py` | mlx-whisper-large-v3-turbo | Apple Silicon |
 | `whisperkit_transcribe.py` | whisperkit-large-v3-turbo | Apple Silicon |
 | `apple_speechanalyzer_transcribe.py` | apple-speechanalyzer | Apple Silicon |
-| `medasr_transcribe.py` | google-medasr | Apple Silicon |
+| `medasr_transcribe.py` | google-medasr (LM short chunks default; HF baseline available) | Apple Silicon |
 | `deepgram_medical_transcribe.py` | deepgram-nova-3-medical (parallel, skip-existing) | API |
 | `assemblyai_transcribe.py` | assemblyai-universal-3-pro-medical (medical-v1 domain) | API |
 | `soniox_transcribe.py` | soniox-stt-async-v4 (REST async, no context) | API |
@@ -353,11 +372,12 @@ Key observations:
 - **Takeaway**: Native long-form works well on most files, but autoregressive models can hallucinate unpredictably on certain audio segments
 
 ### Google MedASR
-- **WER**: 64.38% | **M-WER**: 48.67% | **Drug M-WER**: 56.0% - worst overall WER in the benchmark
-- **Tested On**: MPS (MacBook CPU), NVIDIA T4 GPU (official Google notebook), Vertex AI endpoint
-- **Result**: All three platforms showed similar poor performance
+- **WER**: 52.54% | **M-WER**: 26.16% | **Drug M-WER**: 35.62% | **Speed**: 3.90s avg per file
+- **Current benchmark config**: KenLM-backed decoding with manual 8s chunks, 1s overlap, and exact word-overlap merge
+- **Why this matters**: the old HF pipeline path was deletion-heavy on dialogue audio (64.38% WER / 48.67% M-WER / 56.0% Drug M-WER). The LM-backed short-chunk path substantially reduces deletions, but MedASR still remains weak for doctor-patient conversations.
+- **Tested On**: MPS (MacBook CPU), NVIDIA T4 GPU (official Google notebook), Vertex AI endpoint, and local decode experiments
 - **Reason**: MedASR is designed for medical **dictation** (single speaker, clear speech), not doctor-patient **conversations**
-- **Benchmark**: Kept MPS (MacBook) results; ignored T4 and Vertex AI as they showed no improvement
+- **Benchmark note**: tracked transcripts now use the LM-backed path; the HF pipeline baseline remains reproducible via `--decode_mode hf_pipeline`
 - **Note**: Vertex AI requires chunking due to 1.5MB request limit
 
 ### IBM Granite Speech 3.3-2b (ibm-granite/granite-speech-3.3-2b)

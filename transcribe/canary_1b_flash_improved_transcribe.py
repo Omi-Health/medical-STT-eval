@@ -24,6 +24,7 @@ from difflib import SequenceMatcher
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from transcribe.base_transcriber import BaseTranscriber, TranscriptionResult
+from transcribe.chunking_utils import merge_by_suffix_prefix_lcs
 
 # Try to import NeMo components
 try:
@@ -205,36 +206,13 @@ class CanaryFlashImprovedTranscriber(BaseTranscriber):
         Returns:
             Merged transcript text
         """
-        if not transcripts:
-            return ""
-        
-        if len(transcripts) == 1:
-            return transcripts[0][0]
-        
-        # Start with the first transcript
-        merged_text = transcripts[0][0]
-        
-        for i in range(1, len(transcripts)):
-            current_text = transcripts[i][0]
-            
-            if not current_text.strip():
-                continue
-            
-            # Find overlap using LCS
-            overlap_start, overlap_end, score = self._find_lcs_overlap(merged_text, current_text)
-            
-            if overlap_start > 0 and score > 0.3:  # Threshold for valid overlap
-                # Merge with overlap
-                words = merged_text.split()
-                merged_text = ' '.join(words[:overlap_start]) + ' ' + current_text
-            else:
-                # No significant overlap found, append with space
-                merged_text = merged_text + ' ' + current_text
-            
-            # Clean up extra spaces
-            merged_text = ' '.join(merged_text.split())
-        
-        return merged_text
+        return merge_by_suffix_prefix_lcs(
+            transcripts,
+            overlap_seconds=self.overlap,
+            words_per_second=20,
+            threshold=0.3,
+            min_overlap_words=2,
+        )
     
     def transcribe_file(self, audio_path: str) -> TranscriptionResult:
         """
