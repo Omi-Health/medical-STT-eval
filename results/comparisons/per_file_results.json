@@ -1,8 +1,7 @@
 {
-  "timestamp": "2026-04-08 10:12:12",
+  "timestamp": "2026-04-28 22:17:31",
   "models": [
     "elevenlabs-scribe_v2",
-    "voxtral-mini-transcribe-v1-api",
     "mms-1b-all",
     "assemblyai-universal-3-pro-medical",
     "kyutai-stt-pytorch-stt-2.6b-en",
@@ -53,11 +52,6 @@
           "wer": 0.1358655953250548,
           "reference_words": 1369,
           "hypothesis_words": 1387
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.14536157779401024,
-          "reference_words": 1369,
-          "hypothesis_words": 1301
         },
         "mms-1b-all": {
           "wer": 0.3754565376186998,
@@ -271,11 +265,6 @@
           "wer": 0.12305854241338113,
           "reference_words": 1674,
           "hypothesis_words": 1722
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.13082437275985664,
-          "reference_words": 1674,
-          "hypothesis_words": 1579
         },
         "mms-1b-all": {
           "wer": 0.4265232974910394,
@@ -492,11 +481,6 @@
           "reference_words": 1565,
           "hypothesis_words": 628
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.129073482428115,
-          "reference_words": 1565,
-          "hypothesis_words": 1499
-        },
         "mms-1b-all": {
           "wer": 0.40447284345047924,
           "reference_words": 1565,
@@ -711,11 +695,6 @@
           "wer": 0.11433756805807622,
           "reference_words": 1653,
           "hypothesis_words": 1718
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.17967332123411978,
-          "reference_words": 1653,
-          "hypothesis_words": 1510
         },
         "mms-1b-all": {
           "wer": 0.500302480338778,
@@ -932,11 +911,6 @@
           "reference_words": 1635,
           "hypothesis_words": 1677
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.13761467889908258,
-          "reference_words": 1635,
-          "hypothesis_words": 1540
-        },
         "mms-1b-all": {
           "wer": 0.41590214067278286,
           "reference_words": 1635,
@@ -1151,11 +1125,6 @@
           "wer": 0.10016330974414807,
           "reference_words": 1837,
           "hypothesis_words": 1861
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.14752313554708765,
-          "reference_words": 1837,
-          "hypothesis_words": 1676
         },
         "mms-1b-all": {
           "wer": 0.40772999455634185,
@@ -1372,11 +1341,6 @@
           "reference_words": 1163,
           "hypothesis_words": 1180
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.1117798796216681,
-          "reference_words": 1163,
-          "hypothesis_words": 1105
-        },
         "mms-1b-all": {
           "wer": 0.47893379191745483,
           "reference_words": 1163,
@@ -1591,11 +1555,6 @@
           "wer": 0.10282776349614396,
           "reference_words": 1556,
           "hypothesis_words": 1555
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.17223650385604114,
-          "reference_words": 1556,
-          "hypothesis_words": 1388
         },
         "mms-1b-all": {
           "wer": 0.4601542416452442,
@@ -1812,11 +1771,6 @@
           "reference_words": 1856,
           "hypothesis_words": 1918
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.17456896551724138,
-          "reference_words": 1856,
-          "hypothesis_words": 1672
-        },
         "mms-1b-all": {
           "wer": 0.49622844827586204,
           "reference_words": 1856,
@@ -2031,11 +1985,6 @@
           "wer": 0.0954623287671233,
           "reference_words": 2336,
           "hypothesis_words": 2392
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.14940068493150685,
-          "reference_words": 2336,
-          "hypothesis_words": 2143
         },
         "mms-1b-all": {
           "wer": 0.4079623287671233,
@@ -2252,11 +2201,6 @@
           "reference_words": 1155,
           "hypothesis_words": 1178
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.10043290043290043,
-          "reference_words": 1155,
-          "hypothesis_words": 1110
-        },
         "mms-1b-all": {
           "wer": 0.37575757575757573,
           "reference_words": 1155,
@@ -2471,11 +2415,6 @@
           "wer": 0.04917061611374408,
           "reference_words": 1688,
           "hypothesis_words": 1700
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.08175355450236967,
-          "reference_words": 1688,
-          "hypothesis_words": 1613
         },
         "mms-1b-all": {
           "wer": 0.3264218009478673,
@@ -2692,11 +2631,6 @@
           "reference_words": 1950,
           "hypothesis_words": 2005
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.14615384615384616,
-          "reference_words": 1950,
-          "hypothesis_words": 1797
-        },
         "mms-1b-all": {
           "wer": 0.4256410256410256,
           "reference_words": 1950,
@@ -2911,11 +2845,6 @@
           "wer": 0.1078740157480315,
           "reference_words": 1270,
           "hypothesis_words": 1325
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.11968503937007874,
-          "reference_words": 1270,
-          "hypothesis_words": 1236
         },
         "mms-1b-all": {
           "wer": 0.4259842519685039,
@@ -3132,11 +3061,6 @@
           "reference_words": 1170,
           "hypothesis_words": 1225
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.09914529914529914,
-          "reference_words": 1170,
-          "hypothesis_words": 1149
-        },
         "mms-1b-all": {
           "wer": 0.3145299145299145,
           "reference_words": 1170,
@@ -3351,11 +3275,6 @@
           "wer": 0.0924170616113744,
           "reference_words": 1688,
           "hypothesis_words": 1699
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.13092417061611375,
-          "reference_words": 1688,
-          "hypothesis_words": 1551
         },
         "mms-1b-all": {
           "wer": 0.44609004739336494,
@@ -3572,11 +3491,6 @@
           "reference_words": 1424,
           "hypothesis_words": 1436
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.14536516853932585,
-          "reference_words": 1424,
-          "hypothesis_words": 1350
-        },
         "mms-1b-all": {
           "wer": 0.4375,
           "reference_words": 1424,
@@ -3791,11 +3705,6 @@
           "wer": 0.07452054794520548,
           "reference_words": 1825,
           "hypothesis_words": 1860
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.11123287671232877,
-          "reference_words": 1825,
-          "hypothesis_words": 1723
         },
         "mms-1b-all": {
           "wer": 0.3594520547945205,
@@ -4012,11 +3921,6 @@
           "reference_words": 1917,
           "hypothesis_words": 1933
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.0714658320292123,
-          "reference_words": 1917,
-          "hypothesis_words": 1837
-        },
         "mms-1b-all": {
           "wer": 0.28482003129890454,
           "reference_words": 1917,
@@ -4231,11 +4135,6 @@
           "wer": 0.07997936016511868,
           "reference_words": 1938,
           "hypothesis_words": 1966
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.1042311661506708,
-          "reference_words": 1938,
-          "hypothesis_words": 1807
         },
         "mms-1b-all": {
           "wer": 0.33539731682146545,
@@ -4452,11 +4351,6 @@
           "reference_words": 1314,
           "hypothesis_words": 1353
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.12404870624048706,
-          "reference_words": 1314,
-          "hypothesis_words": 1222
-        },
         "mms-1b-all": {
           "wer": 0.3926940639269406,
           "reference_words": 1314,
@@ -4671,11 +4565,6 @@
           "wer": 0.08484848484848485,
           "reference_words": 1815,
           "hypothesis_words": 1857
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.09421487603305785,
-          "reference_words": 1815,
-          "hypothesis_words": 1750
         },
         "mms-1b-all": {
           "wer": 0.3696969696969697,
@@ -4892,11 +4781,6 @@
           "reference_words": 1015,
           "hypothesis_words": 1031
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.10246305418719212,
-          "reference_words": 1015,
-          "hypothesis_words": 965
-        },
         "mms-1b-all": {
           "wer": 0.44729064039408867,
           "reference_words": 1015,
@@ -5111,11 +4995,6 @@
           "wer": 0.0463428252372976,
           "reference_words": 1791,
           "hypothesis_words": 1787
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.08040201005025126,
-          "reference_words": 1791,
-          "hypothesis_words": 1698
         },
         "mms-1b-all": {
           "wer": 0.3221663874930207,
@@ -5332,11 +5211,6 @@
           "reference_words": 1278,
           "hypothesis_words": 1281
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.12832550860719874,
-          "reference_words": 1278,
-          "hypothesis_words": 1193
-        },
         "mms-1b-all": {
           "wer": 0.38184663536776214,
           "reference_words": 1278,
@@ -5551,11 +5425,6 @@
           "wer": 0.11315789473684211,
           "reference_words": 1140,
           "hypothesis_words": 1199
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.11491228070175438,
-          "reference_words": 1140,
-          "hypothesis_words": 1092
         },
         "mms-1b-all": {
           "wer": 0.3780701754385965,
@@ -5772,11 +5641,6 @@
           "reference_words": 1113,
           "hypothesis_words": 1134
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.12668463611859837,
-          "reference_words": 1113,
-          "hypothesis_words": 1084
-        },
         "mms-1b-all": {
           "wer": 0.42857142857142855,
           "reference_words": 1113,
@@ -5991,11 +5855,6 @@
           "wer": 0.08014247551202137,
           "reference_words": 1123,
           "hypothesis_words": 1140
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.0881567230632235,
-          "reference_words": 1123,
-          "hypothesis_words": 1085
         },
         "mms-1b-all": {
           "wer": 0.333926981300089,
@@ -6212,11 +6071,6 @@
           "reference_words": 597,
           "hypothesis_words": 628
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.09882747068676717,
-          "reference_words": 597,
-          "hypothesis_words": 586
-        },
         "mms-1b-all": {
           "wer": 0.4539363484087102,
           "reference_words": 597,
@@ -6431,11 +6285,6 @@
           "wer": 0.13389830508474576,
           "reference_words": 1180,
           "hypothesis_words": 1254
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.13305084745762713,
-          "reference_words": 1180,
-          "hypothesis_words": 1136
         },
         "mms-1b-all": {
           "wer": 0.4398305084745763,
@@ -6652,11 +6501,6 @@
           "reference_words": 919,
           "hypothesis_words": 953
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.1251360174102285,
-          "reference_words": 919,
-          "hypothesis_words": 857
-        },
         "mms-1b-all": {
           "wer": 0.470076169749728,
           "reference_words": 919,
@@ -6871,11 +6715,6 @@
           "wer": 0.07548054383497421,
           "reference_words": 2133,
           "hypothesis_words": 2169
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.08157524613220815,
-          "reference_words": 2133,
-          "hypothesis_words": 2066
         },
         "mms-1b-all": {
           "wer": 0.28363806844819506,
@@ -7092,11 +6931,6 @@
           "reference_words": 1356,
           "hypothesis_words": 1382
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.07300884955752213,
-          "reference_words": 1356,
-          "hypothesis_words": 1344
-        },
         "mms-1b-all": {
           "wer": 0.31194690265486724,
           "reference_words": 1356,
@@ -7311,11 +7145,6 @@
           "wer": 0.08241758241758242,
           "reference_words": 1274,
           "hypothesis_words": 1286
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.08869701726844584,
-          "reference_words": 1274,
-          "hypothesis_words": 1242
         },
         "mms-1b-all": {
           "wer": 0.3076923076923077,
@@ -7532,11 +7361,6 @@
           "reference_words": 1244,
           "hypothesis_words": 1263
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.07154340836012862,
-          "reference_words": 1244,
-          "hypothesis_words": 1222
-        },
         "mms-1b-all": {
           "wer": 0.32234726688102894,
           "reference_words": 1244,
@@ -7751,11 +7575,6 @@
           "wer": 0.03812316715542522,
           "reference_words": 1023,
           "hypothesis_words": 1030
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.05278592375366569,
-          "reference_words": 1023,
-          "hypothesis_words": 997
         },
         "mms-1b-all": {
           "wer": 0.23851417399804498,
@@ -7972,11 +7791,6 @@
           "reference_words": 987,
           "hypothesis_words": 1005
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.07801418439716312,
-          "reference_words": 987,
-          "hypothesis_words": 965
-        },
         "mms-1b-all": {
           "wer": 0.2978723404255319,
           "reference_words": 987,
@@ -8191,11 +8005,6 @@
           "wer": 0.10933503836317135,
           "reference_words": 1564,
           "hypothesis_words": 1575
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.1604859335038363,
-          "reference_words": 1564,
-          "hypothesis_words": 1426
         },
         "mms-1b-all": {
           "wer": 0.5230179028132992,
@@ -8412,11 +8221,6 @@
           "reference_words": 1650,
           "hypothesis_words": 1688
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.10121212121212121,
-          "reference_words": 1650,
-          "hypothesis_words": 1560
-        },
         "mms-1b-all": {
           "wer": 0.3927272727272727,
           "reference_words": 1650,
@@ -8631,11 +8435,6 @@
           "wer": 0.07965616045845272,
           "reference_words": 1745,
           "hypothesis_words": 1791
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.11633237822349571,
-          "reference_words": 1745,
-          "hypothesis_words": 1652
         },
         "mms-1b-all": {
           "wer": 0.41031518624641833,
@@ -8852,11 +8651,6 @@
           "reference_words": 1694,
           "hypothesis_words": 1716
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.11688311688311688,
-          "reference_words": 1694,
-          "hypothesis_words": 1586
-        },
         "mms-1b-all": {
           "wer": 0.3754427390791027,
           "reference_words": 1694,
@@ -9071,11 +8865,6 @@
           "wer": 0.07597173144876325,
           "reference_words": 1698,
           "hypothesis_words": 1706
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.11955241460541814,
-          "reference_words": 1698,
-          "hypothesis_words": 1584
         },
         "mms-1b-all": {
           "wer": 0.38810365135453473,
@@ -9292,11 +9081,6 @@
           "reference_words": 1669,
           "hypothesis_words": 1701
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.11563810665068903,
-          "reference_words": 1669,
-          "hypothesis_words": 1556
-        },
         "mms-1b-all": {
           "wer": 0.4313960455362493,
           "reference_words": 1669,
@@ -9511,11 +9295,6 @@
           "wer": 0.07004830917874397,
           "reference_words": 1242,
           "hypothesis_words": 1252
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.09581320450885668,
-          "reference_words": 1242,
-          "hypothesis_words": 1212
         },
         "mms-1b-all": {
           "wer": 0.40660225442834136,
@@ -9732,11 +9511,6 @@
           "reference_words": 1084,
           "hypothesis_words": 1089
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.06642066420664207,
-          "reference_words": 1084,
-          "hypothesis_words": 1061
-        },
         "mms-1b-all": {
           "wer": 0.32564575645756455,
           "reference_words": 1084,
@@ -9951,11 +9725,6 @@
           "wer": 0.06109324758842444,
           "reference_words": 2488,
           "hypothesis_words": 2495
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.09043408360128617,
-          "reference_words": 2488,
-          "hypothesis_words": 2341
         },
         "mms-1b-all": {
           "wer": 0.307475884244373,
@@ -10172,11 +9941,6 @@
           "reference_words": 1269,
           "hypothesis_words": 1327
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.16706067769897556,
-          "reference_words": 1269,
-          "hypothesis_words": 1231
-        },
         "mms-1b-all": {
           "wer": 0.4499605988967691,
           "reference_words": 1269,
@@ -10391,11 +10155,6 @@
           "wer": 0.10975609756097561,
           "reference_words": 902,
           "hypothesis_words": 931
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.11529933481152993,
-          "reference_words": 902,
-          "hypothesis_words": 879
         },
         "mms-1b-all": {
           "wer": 0.43458980044345896,
@@ -10612,11 +10371,6 @@
           "reference_words": 1531,
           "hypothesis_words": 1566
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.1286740692357936,
-          "reference_words": 1531,
-          "hypothesis_words": 1449
-        },
         "mms-1b-all": {
           "wer": 0.45329849771391245,
           "reference_words": 1531,
@@ -10831,11 +10585,6 @@
           "wer": 0.06310679611650485,
           "reference_words": 1236,
           "hypothesis_words": 1251
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.08656957928802589,
-          "reference_words": 1236,
-          "hypothesis_words": 1202
         },
         "mms-1b-all": {
           "wer": 0.37702265372168287,
@@ -11052,11 +10801,6 @@
           "reference_words": 1271,
           "hypothesis_words": 1303
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.07474429583005507,
-          "reference_words": 1271,
-          "hypothesis_words": 1243
-        },
         "mms-1b-all": {
           "wer": 0.3076317859952793,
           "reference_words": 1271,
@@ -11271,11 +11015,6 @@
           "wer": 0.11436950146627566,
           "reference_words": 1364,
           "hypothesis_words": 1430
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.12609970674486803,
-          "reference_words": 1364,
-          "hypothesis_words": 1320
         },
         "mms-1b-all": {
           "wer": 0.39589442815249265,
@@ -11492,11 +11231,6 @@
           "reference_words": 1542,
           "hypothesis_words": 1552
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.4656290531776913,
-          "reference_words": 1542,
-          "hypothesis_words": 977
-        },
         "mms-1b-all": {
           "wer": 0.3735408560311284,
           "reference_words": 1542,
@@ -11712,11 +11446,6 @@
           "reference_words": 2000,
           "hypothesis_words": 2000
         },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.072,
-          "reference_words": 2000,
-          "hypothesis_words": 1913
-        },
         "mms-1b-all": {
           "wer": 0.2895,
           "reference_words": 2000,
@@ -11931,11 +11660,6 @@
           "wer": 0.045627376425855515,
           "reference_words": 789,
           "hypothesis_words": 786
-        },
-        "voxtral-mini-transcribe-v1-api": {
-          "wer": 0.062103929024081114,
-          "reference_words": 789,
-          "hypothesis_words": 760
         },
         "mms-1b-all": {
           "wer": 0.35994930291508237,

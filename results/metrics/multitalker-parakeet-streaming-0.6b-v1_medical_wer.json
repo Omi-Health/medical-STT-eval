@@ -1,55 +1,56 @@
 {
   "model": "multitalker-parakeet-streaming-0.6b-v1",
+  "medical_canonicalization": "Canonical M-WER v2: reference typo fixes + reviewed low-risk morphology, with dangerous clinical/drug confusables kept penalized",
   "files": 55,
   "avg_wer": 0.60564,
-  "avg_m_wer": 0.558086,
-  "global_m_wer": 0.43345,
-  "global_m_cer": 0.7359,
-  "avg_medical_entity_recall": 0.8122,
-  "global_medical_token_recall": 0.5665,
-  "global_high_risk_m_wer": 0.55819,
-  "global_high_risk_ref_count": 464,
+  "avg_m_wer": 0.546299,
+  "global_m_wer": 0.423175,
+  "global_m_cer": 0.7734,
+  "avg_medical_entity_recall": 0.8314,
+  "global_medical_token_recall": 0.5768,
+  "global_high_risk_m_wer": 0.551502,
+  "global_high_risk_ref_count": 466,
   "global_per_category": {
     "drugs": {
-      "ref_count": 464,
-      "correct": 205,
-      "substitutions": 114,
+      "ref_count": 466,
+      "correct": 209,
+      "substitutions": 112,
       "deletions": 145,
-      "m_wer": 0.55819
+      "m_wer": 0.551502
     },
     "conditions": {
-      "ref_count": 379,
-      "correct": 201,
-      "substitutions": 32,
-      "deletions": 146,
-      "m_wer": 0.469657
+      "ref_count": 391,
+      "correct": 208,
+      "substitutions": 30,
+      "deletions": 153,
+      "m_wer": 0.468031
     },
     "symptoms": {
-      "ref_count": 1178,
-      "correct": 652,
-      "substitutions": 137,
-      "deletions": 389,
-      "m_wer": 0.44652
+      "ref_count": 1162,
+      "correct": 656,
+      "substitutions": 128,
+      "deletions": 378,
+      "m_wer": 0.435456
     },
     "anatomy": {
-      "ref_count": 614,
-      "correct": 406,
+      "ref_count": 616,
+      "correct": 409,
       "substitutions": 56,
-      "deletions": 152,
-      "m_wer": 0.338762
+      "deletions": 151,
+      "m_wer": 0.336039
     },
     "clinical": {
-      "ref_count": 492,
-      "correct": 311,
-      "substitutions": 43,
-      "deletions": 138,
-      "m_wer": 0.367886
+      "ref_count": 493,
+      "correct": 321,
+      "substitutions": 36,
+      "deletions": 136,
+      "m_wer": 0.348884
     }
   },
-  "total_medical_ref_words": 3133,
-  "total_medical_correct": 1775,
-  "total_medical_substitutions": 387,
-  "total_medical_deletions": 971,
+  "total_medical_ref_words": 3150,
+  "total_medical_correct": 1817,
+  "total_medical_substitutions": 366,
+  "total_medical_deletions": 967,
   "top_medical_errors": [
     {
       "ref": "ibuprofen",
@@ -67,7 +68,7 @@
       "count": 4
     },
     {
-      "ref": "rashes",
+      "ref": "rash",
       "hyp": "rushes",
       "count": 3
     },
@@ -77,18 +78,8 @@
       "count": 3
     },
     {
-      "ref": "test",
-      "hyp": "tests",
-      "count": 3
-    },
-    {
       "ref": "modulite",
       "hyp": "modulate",
-      "count": 3
-    },
-    {
-      "ref": "straightaway",
-      "hyp": "away",
       "count": 3
     },
     {
@@ -112,6 +103,11 @@
       "count": 2
     },
     {
+      "ref": "tummy",
+      "hyp": "just",
+      "count": 2
+    },
+    {
       "ref": "pain",
       "hyp": "yes",
       "count": 2
@@ -132,11 +128,6 @@
       "count": 2
     },
     {
-      "ref": "flem",
-      "hyp": "phlegm",
-      "count": 2
-    },
-    {
       "ref": "rash",
       "hyp": "rush",
       "count": 2
@@ -147,22 +138,32 @@
       "count": 2
     },
     {
-      "ref": "vomit",
-      "hyp": "vomits",
+      "ref": "symptom",
+      "hyp": "simpsons",
+      "count": 1
+    },
+    {
+      "ref": "itchy",
+      "hyp": "feversing",
+      "count": 1
+    },
+    {
+      "ref": "emollients",
+      "hyp": "amoleans",
       "count": 1
     }
   ],
   "per_file": [
     {
       "wer": 0.715121,
-      "m_wer": 0.641026,
-      "m_cer": 0.2523,
-      "medical_entity_recall": 0.931,
-      "medical_token_recall": 0.6282,
+      "m_wer": 0.628205,
+      "m_cer": 0.3766,
+      "medical_entity_recall": 0.92,
+      "medical_token_recall": 0.641,
       "total_ref_words": 1369,
       "total_medical_ref_words": 78,
-      "medical_correct": 49,
-      "medical_substitutions": 3,
+      "medical_correct": 50,
+      "medical_substitutions": 2,
       "medical_deletions": 26,
       "medical_insertions": 21,
       "spurious_medical_insertions": 21,
@@ -181,7 +182,7 @@
         },
         {
           "type": "deletion",
-          "reference": "stomach",
+          "reference": "tummy",
           "category": "anatomy",
           "file": "day1_consultation01"
         },
@@ -211,7 +212,7 @@
         },
         {
           "type": "deletion",
-          "reference": "stomach",
+          "reference": "tummy",
           "category": "anatomy",
           "file": "day1_consultation01"
         },
@@ -223,19 +224,19 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation01"
         },
         {
           "type": "deletion",
-          "reference": "vomited",
+          "reference": "vomit",
           "category": "symptoms",
           "file": "day1_consultation01"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation01"
         },
@@ -243,14 +244,6 @@
           "type": "deletion",
           "reference": "vomiting",
           "category": "symptoms",
-          "file": "day1_consultation01"
-        },
-        {
-          "type": "substitution",
-          "reference": "vomit",
-          "hypothesis": "vomits",
-          "category": "symptoms",
-          "cer": 0.2,
           "file": "day1_consultation01"
         },
         {
@@ -267,21 +260,21 @@
         },
         {
           "type": "deletion",
-          "reference": "fluids",
+          "reference": "fluid",
           "category": "clinical",
           "file": "day1_consultation01"
         },
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "simpsons",
           "category": "symptoms",
-          "cer": 0.375,
+          "cer": 0.5714,
           "file": "day1_consultation01"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation01"
         },
@@ -293,7 +286,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation01"
         },
@@ -323,7 +316,7 @@
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day1_consultation01"
         },
@@ -354,7 +347,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "stomach",
+          "hypothesis": "tummy",
           "file": "day1_consultation01"
         },
         {
@@ -379,7 +372,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "stomach",
+          "hypothesis": "tummy",
           "file": "day1_consultation01"
         },
         {
@@ -389,17 +382,17 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation01"
         },
         {
           "type": "insertion",
-          "hypothesis": "vomited",
+          "hypothesis": "vomit",
           "file": "day1_consultation01"
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation01"
         },
         {
@@ -414,7 +407,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "fluids",
+          "hypothesis": "fluid",
           "file": "day1_consultation01"
         },
         {
@@ -429,7 +422,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation01"
         },
         {
@@ -449,12 +442,12 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "medications",
+          "hypothesis": "medication",
           "file": "day1_consultation01"
         }
       ],
-      "unique_medical_terms_in_ref": 29,
-      "unique_medical_terms_found": 27,
+      "unique_medical_terms_in_ref": 25,
+      "unique_medical_terms_found": 23,
       "per_category": {
         "drugs": {
           "ref_count": 8,
@@ -472,10 +465,10 @@
         },
         "symptoms": {
           "ref_count": 39,
-          "correct": 23,
-          "substitutions": 2,
+          "correct": 24,
+          "substitutions": 1,
           "deletions": 14,
-          "m_wer": 0.410256
+          "m_wer": 0.384615
         },
         "anatomy": {
           "ref_count": 14,
@@ -498,15 +491,15 @@
     },
     {
       "wer": 0.86141,
-      "m_wer": 0.641304,
-      "m_cer": 0.4987,
-      "medical_entity_recall": 0.8438,
-      "medical_token_recall": 0.5978,
+      "m_wer": 0.634409,
+      "m_cer": 0.5822,
+      "medical_entity_recall": 0.8667,
+      "medical_token_recall": 0.6022,
       "total_ref_words": 1674,
-      "total_medical_ref_words": 92,
-      "medical_correct": 55,
-      "medical_substitutions": 7,
-      "medical_deletions": 30,
+      "total_medical_ref_words": 93,
+      "medical_correct": 56,
+      "medical_substitutions": 6,
+      "medical_deletions": 31,
       "medical_insertions": 22,
       "spurious_medical_insertions": 22,
       "medical_errors_detail": [
@@ -536,7 +529,7 @@
         },
         {
           "type": "deletion",
-          "reference": "itching",
+          "reference": "itchy",
           "category": "symptoms",
           "file": "day1_consultation02"
         },
@@ -554,19 +547,19 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation02"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation02"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation02"
         },
@@ -584,7 +577,7 @@
         },
         {
           "type": "deletion",
-          "reference": "itching",
+          "reference": "itchy",
           "category": "symptoms",
           "file": "day1_consultation02"
         },
@@ -626,8 +619,14 @@
         },
         {
           "type": "deletion",
-          "reference": "itching",
+          "reference": "itchy",
           "category": "symptoms",
+          "file": "day1_consultation02"
+        },
+        {
+          "type": "deletion",
+          "reference": "skin",
+          "category": "anatomy",
           "file": "day1_consultation02"
         },
         {
@@ -638,7 +637,7 @@
         },
         {
           "type": "deletion",
-          "reference": "fevers",
+          "reference": "fever",
           "category": "symptoms",
           "file": "day1_consultation02"
         },
@@ -675,16 +674,8 @@
           "file": "day1_consultation02"
         },
         {
-          "type": "substitution",
-          "reference": "medications",
-          "hypothesis": "medication",
-          "category": "drugs",
-          "cer": 0.0909,
-          "file": "day1_consultation02"
-        },
-        {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day1_consultation02"
         },
@@ -720,22 +711,22 @@
         },
         {
           "type": "deletion",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "category": "drugs",
           "file": "day1_consultation02"
         },
         {
           "type": "deletion",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "category": "drugs",
           "file": "day1_consultation02"
         },
         {
           "type": "substitution",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "hypothesis": "antisamines",
           "category": "drugs",
-          "cer": 0.2143,
+          "cer": 0.3077,
           "file": "day1_consultation02"
         },
         {
@@ -768,7 +759,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "itching",
+          "hypothesis": "itchy",
           "file": "day1_consultation02"
         },
         {
@@ -778,17 +769,17 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation02"
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation02"
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation02"
         },
         {
@@ -818,7 +809,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "itching",
+          "hypothesis": "itchy",
           "file": "day1_consultation02"
         },
         {
@@ -833,7 +824,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "itching",
+          "hypothesis": "itchy",
           "file": "day1_consultation02"
         },
         {
@@ -853,19 +844,19 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "allergies",
+          "hypothesis": "allergy",
           "file": "day1_consultation02"
         }
       ],
-      "unique_medical_terms_in_ref": 32,
-      "unique_medical_terms_found": 27,
+      "unique_medical_terms_in_ref": 30,
+      "unique_medical_terms_found": 26,
       "per_category": {
         "drugs": {
           "ref_count": 15,
-          "correct": 4,
-          "substitutions": 6,
+          "correct": 5,
+          "substitutions": 5,
           "deletions": 5,
-          "m_wer": 0.733333
+          "m_wer": 0.666667
         },
         "conditions": {
           "ref_count": 10,
@@ -882,11 +873,11 @@
           "m_wer": 0.361111
         },
         "anatomy": {
-          "ref_count": 20,
+          "ref_count": 21,
           "correct": 16,
           "substitutions": 0,
-          "deletions": 4,
-          "m_wer": 0.2
+          "deletions": 5,
+          "m_wer": 0.238095
         },
         "clinical": {
           "ref_count": 11,
@@ -896,20 +887,20 @@
           "m_wer": 0.272727
         }
       },
-      "high_risk_m_wer": 0.733333,
+      "high_risk_m_wer": 0.666667,
       "high_risk_ref_count": 15,
       "file": "day1_consultation02"
     },
     {
       "wer": 0.426198,
-      "m_wer": 0.371429,
-      "m_cer": 0.5767,
-      "medical_entity_recall": 0.8214,
-      "medical_token_recall": 0.6286,
+      "m_wer": 0.347222,
+      "m_cer": 0.4773,
+      "medical_entity_recall": 0.8462,
+      "medical_token_recall": 0.6528,
       "total_ref_words": 1565,
-      "total_medical_ref_words": 70,
-      "medical_correct": 44,
-      "medical_substitutions": 4,
+      "total_medical_ref_words": 72,
+      "medical_correct": 47,
+      "medical_substitutions": 3,
       "medical_deletions": 22,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
@@ -981,16 +972,8 @@
           "file": "day1_consultation03"
         },
         {
-          "type": "substitution",
-          "reference": "headache",
-          "hypothesis": "and",
-          "category": "symptoms",
-          "cer": 0.875,
-          "file": "day1_consultation03"
-        },
-        {
           "type": "deletion",
-          "reference": "vomited",
+          "reference": "vomit",
           "category": "symptoms",
           "file": "day1_consultation03"
         },
@@ -1020,13 +1003,13 @@
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day1_consultation03"
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day1_consultation03"
         },
@@ -1058,7 +1041,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation03"
         },
@@ -1079,8 +1062,8 @@
           "file": "day1_consultation03"
         }
       ],
-      "unique_medical_terms_in_ref": 28,
-      "unique_medical_terms_found": 23,
+      "unique_medical_terms_in_ref": 26,
+      "unique_medical_terms_found": 22,
       "per_category": {
         "drugs": {
           "ref_count": 8,
@@ -1098,10 +1081,10 @@
         },
         "symptoms": {
           "ref_count": 38,
-          "correct": 25,
-          "substitutions": 1,
+          "correct": 26,
+          "substitutions": 0,
           "deletions": 12,
-          "m_wer": 0.342105
+          "m_wer": 0.315789
         },
         "anatomy": {
           "ref_count": 10,
@@ -1124,15 +1107,15 @@
     },
     {
       "wer": 0.498488,
-      "m_wer": 0.318841,
-      "m_cer": 0.5101,
-      "medical_entity_recall": 0.8788,
-      "medical_token_recall": 0.6812,
+      "m_wer": 0.289855,
+      "m_cer": 0.7045,
+      "medical_entity_recall": 0.875,
+      "medical_token_recall": 0.7101,
       "total_ref_words": 1653,
       "total_medical_ref_words": 69,
-      "medical_correct": 47,
+      "medical_correct": 49,
       "medical_substitutions": 3,
-      "medical_deletions": 19,
+      "medical_deletions": 17,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
       "medical_errors_detail": [
@@ -1228,22 +1211,10 @@
         },
         {
           "type": "substitution",
-          "reference": "rashes",
+          "reference": "rash",
           "hypothesis": "rushes",
           "category": "symptoms",
-          "cer": 0.1667,
-          "file": "day1_consultation04"
-        },
-        {
-          "type": "deletion",
-          "reference": "joint",
-          "category": "anatomy",
-          "file": "day1_consultation04"
-        },
-        {
-          "type": "deletion",
-          "reference": "pain",
-          "category": "symptoms",
+          "cer": 0.75,
           "file": "day1_consultation04"
         },
         {
@@ -1275,8 +1246,8 @@
           "file": "day1_consultation04"
         }
       ],
-      "unique_medical_terms_in_ref": 33,
-      "unique_medical_terms_found": 29,
+      "unique_medical_terms_in_ref": 32,
+      "unique_medical_terms_found": 28,
       "per_category": {
         "drugs": {
           "ref_count": 5,
@@ -1294,17 +1265,17 @@
         },
         "symptoms": {
           "ref_count": 32,
-          "correct": 21,
+          "correct": 22,
           "substitutions": 1,
-          "deletions": 10,
-          "m_wer": 0.34375
+          "deletions": 9,
+          "m_wer": 0.3125
         },
         "anatomy": {
           "ref_count": 19,
-          "correct": 14,
+          "correct": 15,
           "substitutions": 0,
-          "deletions": 5,
-          "m_wer": 0.263158
+          "deletions": 4,
+          "m_wer": 0.210526
         },
         "clinical": {
           "ref_count": 7,
@@ -1321,8 +1292,8 @@
     {
       "wer": 0.796942,
       "m_wer": 0.62069,
-      "m_cer": 0.8532,
-      "medical_entity_recall": 0.8529,
+      "m_cer": 0.8582,
+      "medical_entity_recall": 0.871,
       "medical_token_recall": 0.6207,
       "total_ref_words": 1635,
       "total_medical_ref_words": 87,
@@ -1382,7 +1353,7 @@
         },
         {
           "type": "deletion",
-          "reference": "fluids",
+          "reference": "fluid",
           "category": "clinical",
           "file": "day1_consultation05"
         },
@@ -1456,7 +1427,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation05"
         },
@@ -1482,16 +1453,16 @@
         },
         {
           "type": "deletion",
-          "reference": "tests",
+          "reference": "test",
           "category": "clinical",
           "file": "day1_consultation05"
         },
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "themes",
           "category": "symptoms",
-          "cer": 0.875,
+          "cer": 1.0,
           "file": "day1_consultation05"
         },
         {
@@ -1509,7 +1480,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "antibiotics",
+          "hypothesis": "antibiotic",
           "file": "day1_consultation05"
         },
         {
@@ -1567,7 +1538,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "fluids",
+          "hypothesis": "fluid",
           "file": "day1_consultation05"
         },
         {
@@ -1595,10 +1566,10 @@
         },
         {
           "type": "substitution",
-          "reference": "antibiotics",
+          "reference": "antibiotic",
           "hypothesis": "not",
           "category": "drugs",
-          "cer": 0.7273,
+          "cer": 0.7,
           "file": "day1_consultation05"
         },
         {
@@ -1611,10 +1582,10 @@
         },
         {
           "type": "substitution",
-          "reference": "tablets",
+          "reference": "tablet",
           "hypothesis": "the",
           "category": "drugs",
-          "cer": 0.7143,
+          "cer": 0.6667,
           "file": "day1_consultation05"
         },
         {
@@ -1632,7 +1603,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation05"
         },
         {
@@ -1647,7 +1618,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "tests",
+          "hypothesis": "test",
           "file": "day1_consultation05"
         },
         {
@@ -1656,8 +1627,8 @@
           "file": "day1_consultation05"
         }
       ],
-      "unique_medical_terms_in_ref": 34,
-      "unique_medical_terms_found": 29,
+      "unique_medical_terms_in_ref": 31,
+      "unique_medical_terms_found": 27,
       "per_category": {
         "drugs": {
           "ref_count": 14,
@@ -1674,18 +1645,18 @@
           "m_wer": 0.25
         },
         "symptoms": {
-          "ref_count": 33,
-          "correct": 23,
+          "ref_count": 32,
+          "correct": 22,
           "substitutions": 2,
           "deletions": 8,
-          "m_wer": 0.30303
+          "m_wer": 0.3125
         },
         "anatomy": {
-          "ref_count": 23,
-          "correct": 17,
+          "ref_count": 24,
+          "correct": 18,
           "substitutions": 1,
           "deletions": 5,
-          "m_wer": 0.26087
+          "m_wer": 0.25
         },
         "clinical": {
           "ref_count": 13,
@@ -1701,15 +1672,15 @@
     },
     {
       "wer": 0.454001,
-      "m_wer": 0.354839,
-      "m_cer": 0.5433,
-      "medical_entity_recall": 0.8286,
-      "medical_token_recall": 0.6452,
+      "m_wer": 0.340659,
+      "m_cer": 0.6167,
+      "medical_entity_recall": 0.8065,
+      "medical_token_recall": 0.6593,
       "total_ref_words": 1837,
-      "total_medical_ref_words": 93,
+      "total_medical_ref_words": 91,
       "medical_correct": 60,
-      "medical_substitutions": 5,
-      "medical_deletions": 28,
+      "medical_substitutions": 4,
+      "medical_deletions": 27,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
       "medical_errors_detail": [
@@ -1763,7 +1734,7 @@
         },
         {
           "type": "deletion",
-          "reference": "coughing",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day1_consultation06"
         },
@@ -1805,13 +1776,7 @@
         },
         {
           "type": "deletion",
-          "reference": "heartbeat",
-          "category": "anatomy",
-          "file": "day1_consultation06"
-        },
-        {
-          "type": "deletion",
-          "reference": "drugs",
+          "reference": "drug",
           "category": "clinical",
           "file": "day1_consultation06"
         },
@@ -1847,7 +1812,7 @@
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day1_consultation06"
         },
@@ -1881,13 +1846,13 @@
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day1_consultation06"
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day1_consultation06"
         },
@@ -1895,14 +1860,6 @@
           "type": "deletion",
           "reference": "heart",
           "category": "anatomy",
-          "file": "day1_consultation06"
-        },
-        {
-          "type": "substitution",
-          "reference": "test",
-          "hypothesis": "tests",
-          "category": "clinical",
-          "cer": 0.25,
           "file": "day1_consultation06"
         },
         {
@@ -1922,8 +1879,8 @@
           "file": "day1_consultation06"
         }
       ],
-      "unique_medical_terms_in_ref": 35,
-      "unique_medical_terms_found": 29,
+      "unique_medical_terms_in_ref": 31,
+      "unique_medical_terms_found": 25,
       "per_category": {
         "drugs": {
           "ref_count": 10,
@@ -1940,25 +1897,25 @@
           "m_wer": 0.5
         },
         "symptoms": {
-          "ref_count": 27,
-          "correct": 19,
+          "ref_count": 25,
+          "correct": 17,
           "substitutions": 1,
           "deletions": 7,
-          "m_wer": 0.296296
+          "m_wer": 0.32
         },
         "anatomy": {
           "ref_count": 38,
-          "correct": 27,
+          "correct": 28,
           "substitutions": 0,
-          "deletions": 11,
-          "m_wer": 0.289474
+          "deletions": 10,
+          "m_wer": 0.263158
         },
         "clinical": {
           "ref_count": 16,
-          "correct": 10,
-          "substitutions": 2,
+          "correct": 11,
+          "substitutions": 1,
           "deletions": 4,
-          "m_wer": 0.375
+          "m_wer": 0.3125
         }
       },
       "high_risk_m_wer": 0.7,
@@ -1967,15 +1924,15 @@
     },
     {
       "wer": 0.395529,
-      "m_wer": 0.262295,
-      "m_cer": 0.6378,
-      "medical_entity_recall": 0.7742,
-      "medical_token_recall": 0.7705,
+      "m_wer": 0.229508,
+      "m_cer": 0.7067,
+      "medical_entity_recall": 0.8276,
+      "medical_token_recall": 0.8033,
       "total_ref_words": 1163,
       "total_medical_ref_words": 61,
-      "medical_correct": 47,
-      "medical_substitutions": 9,
-      "medical_deletions": 5,
+      "medical_correct": 49,
+      "medical_substitutions": 6,
+      "medical_deletions": 6,
       "medical_insertions": 2,
       "spurious_medical_insertions": 2,
       "medical_errors_detail": [
@@ -2024,14 +1981,6 @@
           "file": "day1_consultation08"
         },
         {
-          "type": "substitution",
-          "reference": "waterworks",
-          "hypothesis": "works",
-          "category": "clinical",
-          "cer": 0.5,
-          "file": "day1_consultation08"
-        },
-        {
           "type": "deletion",
           "reference": "medical",
           "category": "clinical",
@@ -2044,19 +1993,9 @@
           "file": "day1_consultation08"
         },
         {
-          "type": "substitution",
+          "type": "deletion",
           "reference": "hayfever",
-          "hypothesis": "hay",
           "category": "conditions",
-          "cer": 0.625,
-          "file": "day1_consultation08"
-        },
-        {
-          "type": "substitution",
-          "reference": "hayfever",
-          "hypothesis": "fever",
-          "category": "conditions",
-          "cer": 0.375,
           "file": "day1_consultation08"
         },
         {
@@ -2092,7 +2031,7 @@
           "file": "day1_consultation08"
         }
       ],
-      "unique_medical_terms_in_ref": 31,
+      "unique_medical_terms_in_ref": 29,
       "unique_medical_terms_found": 24,
       "per_category": {
         "drugs": {
@@ -2104,10 +2043,10 @@
         },
         "conditions": {
           "ref_count": 5,
-          "correct": 2,
-          "substitutions": 2,
-          "deletions": 1,
-          "m_wer": 0.6
+          "correct": 3,
+          "substitutions": 0,
+          "deletions": 2,
+          "m_wer": 0.4
         },
         "symptoms": {
           "ref_count": 22,
@@ -2125,10 +2064,10 @@
         },
         "clinical": {
           "ref_count": 8,
-          "correct": 6,
-          "substitutions": 1,
+          "correct": 7,
+          "substitutions": 0,
           "deletions": 1,
-          "m_wer": 0.25
+          "m_wer": 0.125
         }
       },
       "high_risk_m_wer": 0.454545,
@@ -2139,7 +2078,7 @@
       "wer": 0.480077,
       "m_wer": 0.267606,
       "m_cer": 0.7167,
-      "medical_entity_recall": 0.8387,
+      "medical_entity_recall": 0.8889,
       "medical_token_recall": 0.7324,
       "total_ref_words": 1556,
       "total_medical_ref_words": 71,
@@ -2270,8 +2209,8 @@
           "file": "day1_consultation09"
         }
       ],
-      "unique_medical_terms_in_ref": 31,
-      "unique_medical_terms_found": 26,
+      "unique_medical_terms_in_ref": 27,
+      "unique_medical_terms_found": 24,
       "per_category": {
         "drugs": {
           "ref_count": 6,
@@ -2315,15 +2254,15 @@
     },
     {
       "wer": 0.521552,
-      "m_wer": 0.346667,
-      "m_cer": 0.8252,
-      "medical_entity_recall": 0.8148,
-      "medical_token_recall": 0.6533,
+      "m_wer": 0.333333,
+      "m_cer": 0.8341,
+      "medical_entity_recall": 0.88,
+      "medical_token_recall": 0.6667,
       "total_ref_words": 1856,
       "total_medical_ref_words": 75,
-      "medical_correct": 49,
+      "medical_correct": 50,
       "medical_substitutions": 10,
-      "medical_deletions": 16,
+      "medical_deletions": 15,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
       "medical_errors_detail": [
@@ -2409,19 +2348,19 @@
         },
         {
           "type": "deletion",
-          "reference": "bowels",
+          "reference": "bowel",
           "category": "anatomy",
           "file": "day1_consultation10"
         },
         {
           "type": "deletion",
-          "reference": "bowels",
+          "reference": "bowel",
           "category": "anatomy",
           "file": "day1_consultation10"
         },
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "there",
           "category": "symptoms",
           "cer": 1.0,
@@ -2429,22 +2368,16 @@
         },
         {
           "type": "deletion",
-          "reference": "bowels",
+          "reference": "bowel",
           "category": "anatomy",
           "file": "day1_consultation10"
         },
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "temples",
           "category": "symptoms",
-          "cer": 0.625,
-          "file": "day1_consultation10"
-        },
-        {
-          "type": "deletion",
-          "reference": "allergy",
-          "category": "clinical",
+          "cer": 0.7143,
           "file": "day1_consultation10"
         },
         {
@@ -2504,7 +2437,7 @@
           "file": "day1_consultation10"
         }
       ],
-      "unique_medical_terms_in_ref": 27,
+      "unique_medical_terms_in_ref": 25,
       "unique_medical_terms_found": 22,
       "per_category": {
         "drugs": {
@@ -2537,10 +2470,10 @@
         },
         "clinical": {
           "ref_count": 4,
-          "correct": 3,
+          "correct": 4,
           "substitutions": 0,
-          "deletions": 1,
-          "m_wer": 0.25
+          "deletions": 0,
+          "m_wer": 0.0
         }
       },
       "high_risk_m_wer": 0.333333,
@@ -2550,7 +2483,7 @@
     {
       "wer": 0.809503,
       "m_wer": 1.12,
-      "m_cer": 0.957,
+      "m_cer": 0.9553,
       "medical_entity_recall": 1.0,
       "medical_token_recall": 0.2533,
       "total_ref_words": 2336,
@@ -2601,7 +2534,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation11"
         },
         {
@@ -2626,12 +2559,12 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation11"
         },
         {
           "type": "insertion",
-          "hypothesis": "fevers",
+          "hypothesis": "fever",
           "file": "day1_consultation11"
         },
         {
@@ -2646,7 +2579,7 @@
         },
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "medical",
           "category": "symptoms",
           "cer": 1.0,
@@ -2654,7 +2587,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "medications",
+          "hypothesis": "medication",
           "file": "day1_consultation11"
         },
         {
@@ -2685,7 +2618,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation11"
         },
         {
@@ -2695,7 +2628,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "fluids",
+          "hypothesis": "fluid",
           "file": "day1_consultation11"
         },
         {
@@ -2715,10 +2648,10 @@
         },
         {
           "type": "substitution",
-          "reference": "fluids",
+          "reference": "fluid",
           "hypothesis": "you",
           "category": "clinical",
-          "cer": 0.8333,
+          "cer": 0.8,
           "file": "day1_consultation11"
         },
         {
@@ -2728,7 +2661,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day1_consultation11"
         },
         {
@@ -2867,7 +2800,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation11"
         },
@@ -2909,13 +2842,13 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation11"
         },
         {
           "type": "deletion",
-          "reference": "fevers",
+          "reference": "fever",
           "category": "symptoms",
           "file": "day1_consultation11"
         },
@@ -2939,7 +2872,7 @@
         },
         {
           "type": "deletion",
-          "reference": "fluids",
+          "reference": "fluid",
           "category": "clinical",
           "file": "day1_consultation11"
         },
@@ -2951,19 +2884,19 @@
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day1_consultation11"
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day1_consultation11"
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day1_consultation11"
         },
@@ -2981,7 +2914,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation11"
         },
@@ -3005,7 +2938,7 @@
         },
         {
           "type": "deletion",
-          "reference": "fluids",
+          "reference": "fluid",
           "category": "clinical",
           "file": "day1_consultation11"
         },
@@ -3041,13 +2974,13 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation11"
         },
         {
           "type": "deletion",
-          "reference": "fluids",
+          "reference": "fluid",
           "category": "clinical",
           "file": "day1_consultation11"
         },
@@ -3076,8 +3009,8 @@
           "file": "day1_consultation11"
         }
       ],
-      "unique_medical_terms_in_ref": 30,
-      "unique_medical_terms_found": 30,
+      "unique_medical_terms_in_ref": 27,
+      "unique_medical_terms_found": 27,
       "per_category": {
         "drugs": {
           "ref_count": 6,
@@ -3121,14 +3054,14 @@
     },
     {
       "wer": 0.51342,
-      "m_wer": 0.411765,
-      "m_cer": 0.1534,
-      "medical_entity_recall": 0.7,
-      "medical_token_recall": 0.5882,
+      "m_wer": 0.392157,
+      "m_cer": 0.1818,
+      "medical_entity_recall": 0.7308,
+      "medical_token_recall": 0.6078,
       "total_ref_words": 1155,
       "total_medical_ref_words": 51,
-      "medical_correct": 30,
-      "medical_substitutions": 2,
+      "medical_correct": 31,
+      "medical_substitutions": 1,
       "medical_deletions": 19,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
@@ -3159,16 +3092,8 @@
         },
         {
           "type": "deletion",
-          "reference": "vomited",
+          "reference": "vomit",
           "category": "symptoms",
-          "file": "day1_consultation12"
-        },
-        {
-          "type": "substitution",
-          "reference": "symptoms",
-          "hypothesis": "symptom",
-          "category": "symptoms",
-          "cer": 0.125,
           "file": "day1_consultation12"
         },
         {
@@ -3197,7 +3122,7 @@
         },
         {
           "type": "deletion",
-          "reference": "inhalers",
+          "reference": "inhaler",
           "category": "drugs",
           "file": "day1_consultation12"
         },
@@ -3209,7 +3134,7 @@
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day1_consultation12"
         },
@@ -3264,8 +3189,8 @@
           "file": "day1_consultation12"
         }
       ],
-      "unique_medical_terms_in_ref": 30,
-      "unique_medical_terms_found": 21,
+      "unique_medical_terms_in_ref": 26,
+      "unique_medical_terms_found": 19,
       "per_category": {
         "drugs": {
           "ref_count": 8,
@@ -3283,10 +3208,10 @@
         },
         "symptoms": {
           "ref_count": 16,
-          "correct": 10,
-          "substitutions": 1,
+          "correct": 11,
+          "substitutions": 0,
           "deletions": 5,
-          "m_wer": 0.375
+          "m_wer": 0.3125
         },
         "anatomy": {
           "ref_count": 7,
@@ -3311,7 +3236,7 @@
       "wer": 0.971564,
       "m_wer": 0.969697,
       "m_cer": 0.0,
-      "medical_entity_recall": 0.0741,
+      "medical_entity_recall": 0.0833,
       "medical_token_recall": 0.0303,
       "total_ref_words": 1688,
       "total_medical_ref_words": 66,
@@ -3395,13 +3320,13 @@
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
@@ -3449,19 +3374,25 @@
         },
         {
           "type": "deletion",
+          "reference": "headache",
+          "category": "symptoms",
+          "file": "day1_consultation13"
+        },
+        {
+          "type": "deletion",
           "reference": "ibuprofen",
           "category": "drugs",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "fevers",
+          "reference": "fever",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "rashes",
+          "reference": "rash",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
@@ -3479,13 +3410,7 @@
         },
         {
           "type": "deletion",
-          "reference": "headache",
-          "category": "symptoms",
-          "file": "day1_consultation13"
-        },
-        {
-          "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day1_consultation13"
         },
@@ -3497,25 +3422,25 @@
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
@@ -3539,13 +3464,13 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
@@ -3569,7 +3494,7 @@
         },
         {
           "type": "deletion",
-          "reference": "tablets",
+          "reference": "tablet",
           "category": "drugs",
           "file": "day1_consultation13"
         },
@@ -3593,7 +3518,7 @@
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day1_consultation13"
         },
@@ -3617,7 +3542,7 @@
         },
         {
           "type": "deletion",
-          "reference": "tablets",
+          "reference": "tablet",
           "category": "drugs",
           "file": "day1_consultation13"
         },
@@ -3653,7 +3578,7 @@
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day1_consultation13"
         },
@@ -3671,42 +3596,42 @@
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day1_consultation13"
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day1_consultation13"
         }
       ],
-      "unique_medical_terms_in_ref": 27,
+      "unique_medical_terms_in_ref": 24,
       "unique_medical_terms_found": 2,
       "per_category": {
         "drugs": {
@@ -3751,17 +3676,17 @@
     },
     {
       "wer": 0.885128,
-      "m_wer": 0.914634,
-      "m_cer": 0.9132,
-      "medical_entity_recall": 0.8919,
+      "m_wer": 0.902439,
+      "m_cer": 0.934,
+      "medical_entity_recall": 0.9118,
       "medical_token_recall": 0.0976,
       "total_ref_words": 1950,
       "total_medical_ref_words": 82,
       "medical_correct": 8,
       "medical_substitutions": 72,
       "medical_deletions": 2,
-      "medical_insertions": 1,
-      "spurious_medical_insertions": 1,
+      "medical_insertions": 0,
+      "spurious_medical_insertions": 0,
       "medical_errors_detail": [
         {
           "type": "deletion",
@@ -3771,10 +3696,10 @@
         },
         {
           "type": "substitution",
-          "reference": "coughing",
+          "reference": "cough",
           "hypothesis": "have",
           "category": "symptoms",
-          "cer": 0.875,
+          "cer": 1.0,
           "file": "day1_consultation14"
         },
         {
@@ -3803,7 +3728,7 @@
         },
         {
           "type": "deletion",
-          "reference": "coughing",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day1_consultation14"
         },
@@ -3848,16 +3773,11 @@
           "file": "day1_consultation14"
         },
         {
-          "type": "insertion",
-          "hypothesis": "diarrhea",
-          "file": "day1_consultation14"
-        },
-        {
           "type": "substitution",
-          "reference": "coughing",
-          "hypothesis": "works",
+          "reference": "cough",
+          "hypothesis": "waterworks",
           "category": "symptoms",
-          "cer": 0.875,
+          "cer": 1.8,
           "file": "day1_consultation14"
         },
         {
@@ -3910,10 +3830,10 @@
         },
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "you",
           "category": "symptoms",
-          "cer": 0.75,
+          "cer": 0.7143,
           "file": "day1_consultation14"
         },
         {
@@ -3950,10 +3870,10 @@
         },
         {
           "type": "substitution",
-          "reference": "coughing",
+          "reference": "cough",
           "hypothesis": "and",
           "category": "symptoms",
-          "cer": 0.875,
+          "cer": 1.0,
           "file": "day1_consultation14"
         },
         {
@@ -3966,10 +3886,10 @@
         },
         {
           "type": "substitution",
-          "reference": "stomach",
+          "reference": "tummy",
           "hypothesis": "just",
           "category": "anatomy",
-          "cer": 1.0,
+          "cer": 0.8,
           "file": "day1_consultation14"
         },
         {
@@ -4030,7 +3950,7 @@
         },
         {
           "type": "substitution",
-          "reference": "fluids",
+          "reference": "fluid",
           "hypothesis": "try",
           "category": "clinical",
           "cer": 1.0,
@@ -4062,7 +3982,7 @@
         },
         {
           "type": "substitution",
-          "reference": "rashes",
+          "reference": "rash",
           "hypothesis": "bit",
           "category": "symptoms",
           "cer": 1.0,
@@ -4070,7 +3990,7 @@
         },
         {
           "type": "substitution",
-          "reference": "muscles",
+          "reference": "muscle",
           "hypothesis": "a",
           "category": "anatomy",
           "cer": 1.0,
@@ -4078,10 +3998,10 @@
         },
         {
           "type": "substitution",
-          "reference": "joints",
+          "reference": "joint",
           "hypothesis": "illness",
           "category": "anatomy",
-          "cer": 0.8333,
+          "cer": 1.2,
           "file": "day1_consultation14"
         },
         {
@@ -4134,18 +4054,18 @@
         },
         {
           "type": "substitution",
-          "reference": "medications",
+          "reference": "medication",
           "hypothesis": "and",
           "category": "drugs",
-          "cer": 0.8182,
+          "cer": 0.9,
           "file": "day1_consultation14"
         },
         {
           "type": "substitution",
           "reference": "metformin",
-          "hypothesis": "antibiotics",
+          "hypothesis": "antibiotic",
           "category": "drugs",
-          "cer": 1.0,
+          "cer": 0.8889,
           "file": "day1_consultation14"
         },
         {
@@ -4174,7 +4094,7 @@
         },
         {
           "type": "substitution",
-          "reference": "allergies",
+          "reference": "allergy",
           "hypothesis": "know",
           "category": "clinical",
           "cer": 1.0,
@@ -4182,15 +4102,15 @@
         },
         {
           "type": "substitution",
-          "reference": "medications",
+          "reference": "medication",
           "hypothesis": "it",
           "category": "drugs",
-          "cer": 0.8182,
+          "cer": 0.8,
           "file": "day1_consultation14"
         },
         {
           "type": "substitution",
-          "reference": "allergies",
+          "reference": "allergy",
           "hypothesis": "you",
           "category": "clinical",
           "cer": 1.0,
@@ -4278,7 +4198,7 @@
         },
         {
           "type": "substitution",
-          "reference": "fluids",
+          "reference": "fluid",
           "hypothesis": "been",
           "category": "clinical",
           "cer": 1.0,
@@ -4310,10 +4230,10 @@
         },
         {
           "type": "substitution",
-          "reference": "antibiotics",
+          "reference": "antibiotic",
           "hypothesis": "i",
           "category": "drugs",
-          "cer": 0.9091,
+          "cer": 0.9,
           "file": "day1_consultation14"
         },
         {
@@ -4334,10 +4254,10 @@
         },
         {
           "type": "substitution",
-          "reference": "coughing",
+          "reference": "cough",
           "hypothesis": "drink",
           "category": "symptoms",
-          "cer": 0.75,
+          "cer": 1.0,
           "file": "day1_consultation14"
         },
         {
@@ -4357,8 +4277,8 @@
           "file": "day1_consultation14"
         }
       ],
-      "unique_medical_terms_in_ref": 37,
-      "unique_medical_terms_found": 33,
+      "unique_medical_terms_in_ref": 34,
+      "unique_medical_terms_found": 31,
       "per_category": {
         "drugs": {
           "ref_count": 7,
@@ -4402,14 +4322,14 @@
     },
     {
       "wer": 0.691339,
-      "m_wer": 0.391304,
-      "m_cer": 0.4333,
-      "medical_entity_recall": 0.7692,
-      "medical_token_recall": 0.7391,
+      "m_wer": 0.369565,
+      "m_cer": 0.4111,
+      "medical_entity_recall": 0.84,
+      "medical_token_recall": 0.7609,
       "total_ref_words": 1270,
       "total_medical_ref_words": 46,
-      "medical_correct": 34,
-      "medical_substitutions": 4,
+      "medical_correct": 35,
+      "medical_substitutions": 3,
       "medical_deletions": 8,
       "medical_insertions": 6,
       "spurious_medical_insertions": 6,
@@ -4430,14 +4350,6 @@
           "type": "deletion",
           "reference": "itchy",
           "category": "symptoms",
-          "file": "day1_consultation15"
-        },
-        {
-          "type": "substitution",
-          "reference": "waterworks",
-          "hypothesis": "water",
-          "category": "clinical",
-          "cer": 0.5,
           "file": "day1_consultation15"
         },
         {
@@ -4521,12 +4433,12 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "medicines",
+          "hypothesis": "medicine",
           "file": "day1_consultation15"
         }
       ],
-      "unique_medical_terms_in_ref": 26,
-      "unique_medical_terms_found": 20,
+      "unique_medical_terms_in_ref": 25,
+      "unique_medical_terms_found": 21,
       "per_category": {
         "drugs": {
           "ref_count": 8,
@@ -4558,10 +4470,10 @@
         },
         "clinical": {
           "ref_count": 5,
-          "correct": 3,
-          "substitutions": 2,
+          "correct": 4,
+          "substitutions": 1,
           "deletions": 0,
-          "m_wer": 0.4
+          "m_wer": 0.2
         }
       },
       "high_risk_m_wer": 0.625,
@@ -4570,13 +4482,13 @@
     },
     {
       "wer": 0.468376,
-      "m_wer": 0.5,
-      "m_cer": 1.0,
-      "medical_entity_recall": 0.9231,
-      "medical_token_recall": 0.6875,
+      "m_wer": 0.533333,
+      "m_cer": 0.8,
+      "medical_entity_recall": 0.9167,
+      "medical_token_recall": 0.6667,
       "total_ref_words": 1170,
-      "total_medical_ref_words": 16,
-      "medical_correct": 11,
+      "total_medical_ref_words": 15,
+      "medical_correct": 10,
       "medical_substitutions": 1,
       "medical_deletions": 4,
       "medical_insertions": 3,
@@ -4609,9 +4521,9 @@
         {
           "type": "substitution",
           "reference": "heart",
-          "hypothesis": "heartbeats",
+          "hypothesis": "heartbeat",
           "category": "anatomy",
-          "cer": 1.0,
+          "cer": 0.8,
           "file": "day2_consultation01"
         },
         {
@@ -4630,8 +4542,8 @@
           "file": "day2_consultation01"
         }
       ],
-      "unique_medical_terms_in_ref": 13,
-      "unique_medical_terms_found": 12,
+      "unique_medical_terms_in_ref": 12,
+      "unique_medical_terms_found": 11,
       "per_category": {
         "drugs": {
           "ref_count": 1,
@@ -4648,11 +4560,11 @@
           "m_wer": 0.0
         },
         "symptoms": {
-          "ref_count": 12,
-          "correct": 8,
+          "ref_count": 11,
+          "correct": 7,
           "substitutions": 0,
           "deletions": 4,
-          "m_wer": 0.333333
+          "m_wer": 0.363636
         },
         "anatomy": {
           "ref_count": 2,
@@ -4675,14 +4587,14 @@
     },
     {
       "wer": 0.432464,
-      "m_wer": 0.27451,
-      "m_cer": 0.5211,
-      "medical_entity_recall": 0.8636,
-      "medical_token_recall": 0.7451,
+      "m_wer": 0.230769,
+      "m_cer": 0.7685,
+      "medical_entity_recall": 0.9048,
+      "medical_token_recall": 0.7885,
       "total_ref_words": 1688,
-      "total_medical_ref_words": 51,
-      "medical_correct": 38,
-      "medical_substitutions": 5,
+      "total_medical_ref_words": 52,
+      "medical_correct": 41,
+      "medical_substitutions": 3,
       "medical_deletions": 8,
       "medical_insertions": 1,
       "spurious_medical_insertions": 1,
@@ -4707,7 +4619,7 @@
         },
         {
           "type": "deletion",
-          "reference": "joints",
+          "reference": "joint",
           "category": "anatomy",
           "file": "day2_consultation02"
         },
@@ -4737,14 +4649,6 @@
         },
         {
           "type": "substitution",
-          "reference": "tests",
-          "hypothesis": "test",
-          "category": "clinical",
-          "cer": 0.2,
-          "file": "day2_consultation02"
-        },
-        {
-          "type": "substitution",
           "reference": "blood",
           "hypothesis": "that",
           "category": "anatomy",
@@ -4753,18 +4657,10 @@
         },
         {
           "type": "substitution",
-          "reference": "tests",
+          "reference": "test",
           "hypothesis": "takes",
           "category": "clinical",
-          "cer": 0.6,
-          "file": "day2_consultation02"
-        },
-        {
-          "type": "substitution",
-          "reference": "test",
-          "hypothesis": "tests",
-          "category": "clinical",
-          "cer": 0.25,
+          "cer": 0.75,
           "file": "day2_consultation02"
         },
         {
@@ -4781,7 +4677,7 @@
           "file": "day2_consultation02"
         }
       ],
-      "unique_medical_terms_in_ref": 22,
+      "unique_medical_terms_in_ref": 21,
       "unique_medical_terms_found": 19,
       "per_category": {
         "drugs": {
@@ -4814,10 +4710,10 @@
         },
         "clinical": {
           "ref_count": 15,
-          "correct": 9,
-          "substitutions": 3,
+          "correct": 11,
+          "substitutions": 1,
           "deletions": 3,
-          "m_wer": 0.4
+          "m_wer": 0.266667
         }
       },
       "high_risk_m_wer": 0.25,
@@ -4827,7 +4723,7 @@
     {
       "wer": 0.734551,
       "m_wer": 1.052632,
-      "m_cer": 0.9438,
+      "m_cer": 0.9516,
       "medical_entity_recall": 1.0,
       "medical_token_recall": 0.1053,
       "total_ref_words": 1424,
@@ -4846,10 +4742,10 @@
         },
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "no",
           "category": "symptoms",
-          "cer": 0.875,
+          "cer": 0.8571,
           "file": "day2_consultation03"
         },
         {
@@ -4902,7 +4798,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day2_consultation03"
         },
         {
@@ -4931,7 +4827,7 @@
         },
         {
           "type": "substitution",
-          "reference": "allergies",
+          "reference": "allergy",
           "hypothesis": "ok",
           "category": "clinical",
           "cer": 1.0,
@@ -4947,10 +4843,10 @@
         },
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "swallowing",
           "category": "symptoms",
-          "cer": 1.0,
+          "cer": 1.1429,
           "file": "day2_consultation03"
         },
         {
@@ -5033,15 +4929,15 @@
     },
     {
       "wer": 0.421918,
-      "m_wer": 0.382353,
-      "m_cer": 0.4944,
-      "medical_entity_recall": 0.9583,
-      "medical_token_recall": 0.7647,
+      "m_wer": 0.352941,
+      "m_cer": 0.3667,
+      "medical_entity_recall": 1.0,
+      "medical_token_recall": 0.7941,
       "total_ref_words": 1825,
       "total_medical_ref_words": 68,
-      "medical_correct": 52,
-      "medical_substitutions": 3,
-      "medical_deletions": 13,
+      "medical_correct": 54,
+      "medical_substitutions": 2,
+      "medical_deletions": 12,
       "medical_insertions": 10,
       "spurious_medical_insertions": 10,
       "medical_errors_detail": [
@@ -5098,14 +4994,6 @@
           "file": "day2_consultation04"
         },
         {
-          "type": "substitution",
-          "reference": "flem",
-          "hypothesis": "phlegm",
-          "category": null,
-          "cer": 0.75,
-          "file": "day2_consultation04"
-        },
-        {
           "type": "deletion",
           "reference": "lung",
           "category": "anatomy",
@@ -5119,7 +5007,7 @@
         },
         {
           "type": "deletion",
-          "reference": "coughing",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day2_consultation04"
         },
@@ -5138,12 +5026,6 @@
         {
           "type": "deletion",
           "reference": "cancer",
-          "category": "conditions",
-          "file": "day2_consultation04"
-        },
-        {
-          "type": "deletion",
-          "reference": "infection",
           "category": "conditions",
           "file": "day2_consultation04"
         },
@@ -5179,7 +5061,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "coughing",
+          "hypothesis": "cough",
           "file": "day2_consultation04"
         },
         {
@@ -5198,8 +5080,8 @@
           "file": "day2_consultation04"
         }
       ],
-      "unique_medical_terms_in_ref": 24,
-      "unique_medical_terms_found": 23,
+      "unique_medical_terms_in_ref": 21,
+      "unique_medical_terms_found": 21,
       "per_category": {
         "drugs": {
           "ref_count": 6,
@@ -5210,17 +5092,17 @@
         },
         "conditions": {
           "ref_count": 10,
-          "correct": 6,
+          "correct": 7,
           "substitutions": 0,
-          "deletions": 4,
-          "m_wer": 0.4
+          "deletions": 3,
+          "m_wer": 0.3
         },
         "symptoms": {
-          "ref_count": 15,
-          "correct": 11,
+          "ref_count": 16,
+          "correct": 12,
           "substitutions": 1,
           "deletions": 3,
-          "m_wer": 0.266667
+          "m_wer": 0.25
         },
         "anatomy": {
           "ref_count": 29,
@@ -5245,7 +5127,7 @@
       "wer": 0.353156,
       "m_wer": 0.411765,
       "m_cer": 0.8333,
-      "medical_entity_recall": 0.6842,
+      "medical_entity_recall": 0.6667,
       "medical_token_recall": 0.5882,
       "total_ref_words": 1917,
       "total_medical_ref_words": 34,
@@ -5265,13 +5147,13 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day2_consultation05"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day2_consultation05"
         },
@@ -5283,7 +5165,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day2_consultation05"
         },
@@ -5342,8 +5224,8 @@
           "file": "day2_consultation05"
         }
       ],
-      "unique_medical_terms_in_ref": 19,
-      "unique_medical_terms_found": 13,
+      "unique_medical_terms_in_ref": 18,
+      "unique_medical_terms_found": 12,
       "per_category": {
         "drugs": {
           "ref_count": 5,
@@ -5392,10 +5274,10 @@
       "medical_entity_recall": 0.0,
       "medical_token_recall": 0.0,
       "total_ref_words": 1938,
-      "total_medical_ref_words": 62,
+      "total_medical_ref_words": 64,
       "medical_correct": 0,
       "medical_substitutions": 0,
-      "medical_deletions": 62,
+      "medical_deletions": 64,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
       "medical_errors_detail": [
@@ -5479,6 +5361,12 @@
         },
         {
           "type": "deletion",
+          "reference": "straightaway",
+          "category": null,
+          "file": "day2_consultation06"
+        },
+        {
+          "type": "deletion",
           "reference": "breathing",
           "category": "clinical",
           "file": "day2_consultation06"
@@ -5533,7 +5421,7 @@
         },
         {
           "type": "deletion",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "category": "drugs",
           "file": "day2_consultation06"
         },
@@ -5545,7 +5433,7 @@
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day2_consultation06"
         },
@@ -5563,13 +5451,13 @@
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day2_consultation06"
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day2_consultation06"
         },
@@ -5659,7 +5547,13 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "straightaway",
+          "category": null,
+          "file": "day2_consultation06"
+        },
+        {
+          "type": "deletion",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day2_consultation06"
         },
@@ -5683,7 +5577,7 @@
         },
         {
           "type": "deletion",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "category": "drugs",
           "file": "day2_consultation06"
         },
@@ -5749,7 +5643,7 @@
         },
         {
           "type": "deletion",
-          "reference": "rashes",
+          "reference": "rash",
           "category": "symptoms",
           "file": "day2_consultation06"
         },
@@ -5767,12 +5661,12 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day2_consultation06"
         }
       ],
-      "unique_medical_terms_in_ref": 28,
+      "unique_medical_terms_in_ref": 26,
       "unique_medical_terms_found": 0,
       "per_category": {
         "drugs": {
@@ -5817,24 +5711,24 @@
     },
     {
       "wer": 0.69102,
-      "m_wer": 0.555556,
-      "m_cer": 0.9295,
+      "m_wer": 0.522727,
+      "m_cer": 0.9571,
       "medical_entity_recall": 1.0,
-      "medical_token_recall": 0.5556,
+      "medical_token_recall": 0.5682,
       "total_ref_words": 1314,
-      "total_medical_ref_words": 45,
+      "total_medical_ref_words": 44,
       "medical_correct": 25,
-      "medical_substitutions": 9,
+      "medical_substitutions": 8,
       "medical_deletions": 11,
-      "medical_insertions": 5,
-      "spurious_medical_insertions": 5,
+      "medical_insertions": 4,
+      "spurious_medical_insertions": 4,
       "medical_errors_detail": [
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "is",
           "category": "symptoms",
-          "cer": 0.875,
+          "cer": 1.0,
           "file": "day2_consultation07"
         },
         {
@@ -5897,15 +5791,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "allergies",
-          "file": "day2_consultation07"
-        },
-        {
-          "type": "substitution",
-          "reference": "palpitations",
-          "hypothesis": "an",
-          "category": "symptoms",
-          "cer": 0.8333,
+          "hypothesis": "allergy",
           "file": "day2_consultation07"
         },
         {
@@ -5914,11 +5800,6 @@
           "hypothesis": "you",
           "category": "anatomy",
           "cer": 1.0,
-          "file": "day2_consultation07"
-        },
-        {
-          "type": "insertion",
-          "hypothesis": "palpitations",
           "file": "day2_consultation07"
         },
         {
@@ -5970,7 +5851,7 @@
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day2_consultation07"
         },
@@ -5993,8 +5874,8 @@
           "file": "day2_consultation07"
         }
       ],
-      "unique_medical_terms_in_ref": 18,
-      "unique_medical_terms_found": 18,
+      "unique_medical_terms_in_ref": 16,
+      "unique_medical_terms_found": 16,
       "per_category": {
         "drugs": {
           "ref_count": 4,
@@ -6011,11 +5892,11 @@
           "m_wer": 0.2
         },
         "symptoms": {
-          "ref_count": 9,
+          "ref_count": 8,
           "correct": 4,
-          "substitutions": 5,
+          "substitutions": 4,
           "deletions": 0,
-          "m_wer": 0.555556
+          "m_wer": 0.5
         },
         "anatomy": {
           "ref_count": 19,
@@ -6038,14 +5919,14 @@
     },
     {
       "wer": 0.690358,
-      "m_wer": 0.608108,
-      "m_cer": 0.625,
-      "medical_entity_recall": 0.8056,
-      "medical_token_recall": 0.6216,
+      "m_wer": 0.594595,
+      "m_cer": 1.0,
+      "medical_entity_recall": 0.875,
+      "medical_token_recall": 0.6351,
       "total_ref_words": 1815,
       "total_medical_ref_words": 74,
-      "medical_correct": 46,
-      "medical_substitutions": 2,
+      "medical_correct": 47,
+      "medical_substitutions": 1,
       "medical_deletions": 26,
       "medical_insertions": 17,
       "spurious_medical_insertions": 17,
@@ -6064,7 +5945,7 @@
         },
         {
           "type": "deletion",
-          "reference": "muscles",
+          "reference": "muscle",
           "category": "anatomy",
           "file": "day2_consultation08"
         },
@@ -6106,7 +5987,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day2_consultation08"
         },
@@ -6124,31 +6005,31 @@
         },
         {
           "type": "deletion",
-          "reference": "muscles",
+          "reference": "muscle",
           "category": "anatomy",
           "file": "day2_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day2_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day2_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day2_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day2_consultation08"
         },
@@ -6160,7 +6041,7 @@
         },
         {
           "type": "substitution",
-          "reference": "rashes",
+          "reference": "rash",
           "hypothesis": "your",
           "category": "symptoms",
           "cer": 1.0,
@@ -6174,7 +6055,7 @@
         },
         {
           "type": "deletion",
-          "reference": "joints",
+          "reference": "joint",
           "category": "anatomy",
           "file": "day2_consultation08"
         },
@@ -6186,7 +6067,7 @@
         },
         {
           "type": "deletion",
-          "reference": "muscles",
+          "reference": "muscle",
           "category": "anatomy",
           "file": "day2_consultation08"
         },
@@ -6210,16 +6091,8 @@
         },
         {
           "type": "deletion",
-          "reference": "fever",
-          "category": "symptoms",
-          "file": "day2_consultation08"
-        },
-        {
-          "type": "substitution",
-          "reference": "test",
-          "hypothesis": "tests",
-          "category": "clinical",
-          "cer": 0.25,
+          "reference": "hayfever",
+          "category": "conditions",
           "file": "day2_consultation08"
         },
         {
@@ -6234,7 +6107,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "muscles",
+          "hypothesis": "muscle",
           "file": "day2_consultation08"
         },
         {
@@ -6259,12 +6132,12 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day2_consultation08"
         },
         {
           "type": "insertion",
-          "hypothesis": "symptoms",
+          "hypothesis": "symptom",
           "file": "day2_consultation08"
         },
         {
@@ -6279,27 +6152,27 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "muscles",
+          "hypothesis": "muscle",
           "file": "day2_consultation08"
         },
         {
           "type": "insertion",
-          "hypothesis": "headaches",
+          "hypothesis": "headache",
           "file": "day2_consultation08"
         },
         {
           "type": "insertion",
-          "hypothesis": "migraines",
+          "hypothesis": "migraine",
           "file": "day2_consultation08"
         },
         {
           "type": "insertion",
-          "hypothesis": "migraines",
+          "hypothesis": "migraine",
           "file": "day2_consultation08"
         },
         {
           "type": "insertion",
-          "hypothesis": "headaches",
+          "hypothesis": "headache",
           "file": "day2_consultation08"
         },
         {
@@ -6308,8 +6181,8 @@
           "file": "day2_consultation08"
         }
       ],
-      "unique_medical_terms_in_ref": 36,
-      "unique_medical_terms_found": 29,
+      "unique_medical_terms_in_ref": 32,
+      "unique_medical_terms_found": 28,
       "per_category": {
         "drugs": {
           "ref_count": 9,
@@ -6319,18 +6192,18 @@
           "m_wer": 0.333333
         },
         "conditions": {
-          "ref_count": 9,
-          "correct": 7,
+          "ref_count": 11,
+          "correct": 8,
           "substitutions": 0,
-          "deletions": 2,
-          "m_wer": 0.222222
+          "deletions": 3,
+          "m_wer": 0.272727
         },
         "symptoms": {
-          "ref_count": 32,
-          "correct": 17,
+          "ref_count": 30,
+          "correct": 16,
           "substitutions": 1,
-          "deletions": 14,
-          "m_wer": 0.46875
+          "deletions": 13,
+          "m_wer": 0.466667
         },
         "anatomy": {
           "ref_count": 16,
@@ -6341,10 +6214,10 @@
         },
         "clinical": {
           "ref_count": 8,
-          "correct": 5,
-          "substitutions": 1,
+          "correct": 6,
+          "substitutions": 0,
           "deletions": 2,
-          "m_wer": 0.375
+          "m_wer": 0.25
         }
       },
       "high_risk_m_wer": 0.333333,
@@ -6463,7 +6336,7 @@
       "wer": 0.710776,
       "m_wer": 0.516667,
       "m_cer": 0.3782,
-      "medical_entity_recall": 0.9565,
+      "medical_entity_recall": 0.9524,
       "medical_token_recall": 0.65,
       "total_ref_words": 1791,
       "total_medical_ref_words": 60,
@@ -6481,7 +6354,7 @@
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day2_consultation10"
         },
@@ -6623,7 +6496,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "headaches",
+          "hypothesis": "headache",
           "file": "day2_consultation10"
         },
         {
@@ -6662,8 +6535,8 @@
           "file": "day2_consultation10"
         }
       ],
-      "unique_medical_terms_in_ref": 23,
-      "unique_medical_terms_found": 22,
+      "unique_medical_terms_in_ref": 21,
+      "unique_medical_terms_found": 20,
       "per_category": {
         "drugs": {
           "ref_count": 14,
@@ -6707,14 +6580,14 @@
     },
     {
       "wer": 0.863067,
-      "m_wer": 0.97619,
-      "m_cer": 0.8758,
+      "m_wer": 0.978261,
+      "m_cer": 0.8749,
       "medical_entity_recall": 0.8235,
-      "medical_token_recall": 0.0238,
+      "medical_token_recall": 0.0217,
       "total_ref_words": 1278,
-      "total_medical_ref_words": 42,
+      "total_medical_ref_words": 46,
       "medical_correct": 1,
-      "medical_substitutions": 39,
+      "medical_substitutions": 43,
       "medical_deletions": 2,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
@@ -6802,7 +6675,7 @@
         {
           "type": "substitution",
           "reference": "chest",
-          "hypothesis": "sure",
+          "hypothesis": "make",
           "category": "anatomy",
           "cer": 1.0,
           "file": "day3_consultation01"
@@ -6855,10 +6728,10 @@
         },
         {
           "type": "substitution",
-          "reference": "inhalers",
+          "reference": "inhaler",
           "hypothesis": "and",
           "category": "drugs",
-          "cer": 0.875,
+          "cer": 0.8571,
           "file": "day3_consultation01"
         },
         {
@@ -6871,10 +6744,10 @@
         },
         {
           "type": "substitution",
-          "reference": "inhalers",
+          "reference": "inhaler",
           "hypothesis": "it",
           "category": "drugs",
-          "cer": 0.875,
+          "cer": 0.8571,
           "file": "day3_consultation01"
         },
         {
@@ -6885,18 +6758,18 @@
         },
         {
           "type": "substitution",
-          "reference": "inhalers",
+          "reference": "inhaler",
           "hypothesis": "laxic",
           "category": "drugs",
-          "cer": 0.875,
+          "cer": 0.8571,
           "file": "day3_consultation01"
         },
         {
           "type": "substitution",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "hypothesis": "my",
           "category": "drugs",
-          "cer": 0.9286,
+          "cer": 0.9231,
           "file": "day3_consultation01"
         },
         {
@@ -6925,10 +6798,10 @@
         },
         {
           "type": "substitution",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "hypothesis": "a",
           "category": "drugs",
-          "cer": 0.9286,
+          "cer": 0.9231,
           "file": "day3_consultation01"
         },
         {
@@ -6973,10 +6846,10 @@
         },
         {
           "type": "substitution",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "hypothesis": "little",
           "category": "drugs",
-          "cer": 0.7857,
+          "cer": 0.7692,
           "file": "day3_consultation01"
         },
         {
@@ -7006,41 +6879,73 @@
         {
           "type": "substitution",
           "reference": "anaphylactic",
-          "hypothesis": "do",
-          "category": "conditions",
-          "cer": 1.0,
-          "file": "day3_consultation01"
-        },
-        {
-          "type": "substitution",
-          "reference": "antihistamines",
-          "hypothesis": "i",
-          "category": "drugs",
-          "cer": 0.9286,
-          "file": "day3_consultation01"
-        },
-        {
-          "type": "substitution",
-          "reference": "antihistamines",
-          "hypothesis": "not",
-          "category": "drugs",
-          "cer": 0.8571,
-          "file": "day3_consultation01"
-        },
-        {
-          "type": "substitution",
-          "reference": "anaphylactic",
-          "hypothesis": "swelling",
+          "hypothesis": "get",
           "category": "conditions",
           "cer": 0.9167,
           "file": "day3_consultation01"
         },
         {
           "type": "substitution",
-          "reference": "antihistamines",
+          "reference": "straightaway",
+          "hypothesis": "am",
+          "category": null,
+          "cer": 0.9167,
+          "file": "day3_consultation01"
+        },
+        {
+          "type": "substitution",
+          "reference": "antihistamine",
+          "hypothesis": "i",
+          "category": "drugs",
+          "cer": 0.9231,
+          "file": "day3_consultation01"
+        },
+        {
+          "type": "substitution",
+          "reference": "antihistamine",
+          "hypothesis": "know",
+          "category": "drugs",
+          "cer": 0.9231,
+          "file": "day3_consultation01"
+        },
+        {
+          "type": "substitution",
+          "reference": "straightaway",
+          "hypothesis": "small",
+          "category": null,
+          "cer": 0.8333,
+          "file": "day3_consultation01"
+        },
+        {
+          "type": "substitution",
+          "reference": "anaphylactic",
+          "hypothesis": "getting",
+          "category": "conditions",
+          "cer": 0.9167,
+          "file": "day3_consultation01"
+        },
+        {
+          "type": "substitution",
+          "reference": "straightaway",
+          "hypothesis": "like",
+          "category": null,
+          "cer": 0.9167,
+          "file": "day3_consultation01"
+        },
+        {
+          "type": "substitution",
+          "reference": "straightaway",
+          "hypothesis": "intelligence",
+          "category": null,
+          "cer": 0.9167,
+          "file": "day3_consultation01"
+        },
+        {
+          "type": "substitution",
+          "reference": "antihistamine",
           "hypothesis": "alone",
           "category": "drugs",
-          "cer": 0.7857,
+          "cer": 0.7692,
           "file": "day3_consultation01"
         }
       ],
@@ -7091,7 +6996,7 @@
       "wer": 0.645614,
       "m_wer": 0.75,
       "m_cer": 0.2614,
-      "medical_entity_recall": 0.9474,
+      "medical_entity_recall": 0.9444,
       "medical_token_recall": 0.5833,
       "total_ref_words": 1140,
       "total_medical_ref_words": 48,
@@ -7145,7 +7050,7 @@
         },
         {
           "type": "deletion",
-          "reference": "muscles",
+          "reference": "muscle",
           "category": "anatomy",
           "file": "day3_consultation02"
         },
@@ -7257,7 +7162,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "muscles",
+          "hypothesis": "muscle",
           "file": "day3_consultation02"
         },
         {
@@ -7306,8 +7211,8 @@
           "file": "day3_consultation02"
         }
       ],
-      "unique_medical_terms_in_ref": 19,
-      "unique_medical_terms_found": 18,
+      "unique_medical_terms_in_ref": 18,
+      "unique_medical_terms_found": 17,
       "per_category": {
         "drugs": {
           "ref_count": 4,
@@ -7353,7 +7258,7 @@
       "wer": 0.395328,
       "m_wer": 0.438596,
       "m_cer": 0.3278,
-      "medical_entity_recall": 0.6667,
+      "medical_entity_recall": 0.6087,
       "medical_token_recall": 0.5789,
       "total_ref_words": 1113,
       "total_medical_ref_words": 57,
@@ -7383,7 +7288,7 @@
         },
         {
           "type": "deletion",
-          "reference": "coughing",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day3_consultation04"
         },
@@ -7401,13 +7306,13 @@
         },
         {
           "type": "deletion",
-          "reference": "coughing",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day3_consultation04"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day3_consultation04"
         },
@@ -7456,19 +7361,19 @@
         },
         {
           "type": "deletion",
-          "reference": "inhalers",
+          "reference": "inhaler",
           "category": "drugs",
           "file": "day3_consultation04"
         },
         {
           "type": "deletion",
-          "reference": "antibiotics",
+          "reference": "antibiotic",
           "category": "drugs",
           "file": "day3_consultation04"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day3_consultation04"
         },
@@ -7480,8 +7385,8 @@
         },
         {
           "type": "deletion",
-          "reference": "fever",
-          "category": "symptoms",
+          "reference": "hayfever",
+          "category": "conditions",
           "file": "day3_consultation04"
         },
         {
@@ -7525,8 +7430,8 @@
           "file": "day3_consultation04"
         }
       ],
-      "unique_medical_terms_in_ref": 24,
-      "unique_medical_terms_found": 16,
+      "unique_medical_terms_in_ref": 23,
+      "unique_medical_terms_found": 14,
       "per_category": {
         "drugs": {
           "ref_count": 22,
@@ -7536,18 +7441,18 @@
           "m_wer": 0.409091
         },
         "conditions": {
-          "ref_count": 11,
+          "ref_count": 12,
           "correct": 8,
           "substitutions": 0,
-          "deletions": 3,
-          "m_wer": 0.272727
+          "deletions": 4,
+          "m_wer": 0.333333
         },
         "symptoms": {
-          "ref_count": 12,
+          "ref_count": 11,
           "correct": 2,
           "substitutions": 2,
-          "deletions": 8,
-          "m_wer": 0.833333
+          "deletions": 7,
+          "m_wer": 0.818182
         },
         "anatomy": {
           "ref_count": 1,
@@ -7572,7 +7477,7 @@
       "wer": 0.437222,
       "m_wer": 0.222222,
       "m_cer": 0.5985,
-      "medical_entity_recall": 0.9444,
+      "medical_entity_recall": 0.9412,
       "medical_token_recall": 0.8148,
       "total_ref_words": 1123,
       "total_medical_ref_words": 27,
@@ -7617,13 +7522,13 @@
         },
         {
           "type": "deletion",
-          "reference": "tablets",
+          "reference": "tablet",
           "category": "drugs",
           "file": "day3_consultation05"
         }
       ],
-      "unique_medical_terms_in_ref": 18,
-      "unique_medical_terms_found": 17,
+      "unique_medical_terms_in_ref": 17,
+      "unique_medical_terms_found": 16,
       "per_category": {
         "drugs": {
           "ref_count": 6,
@@ -7667,13 +7572,13 @@
     },
     {
       "wer": 0.633166,
-      "m_wer": 0.5,
+      "m_wer": 0.458333,
       "m_cer": 0.25,
       "medical_entity_recall": 0.8667,
-      "medical_token_recall": 0.6818,
+      "medical_token_recall": 0.7083,
       "total_ref_words": 597,
-      "total_medical_ref_words": 22,
-      "medical_correct": 15,
+      "total_medical_ref_words": 24,
+      "medical_correct": 17,
       "medical_substitutions": 2,
       "medical_deletions": 5,
       "medical_insertions": 4,
@@ -7791,14 +7696,14 @@
     },
     {
       "wer": 0.55678,
-      "m_wer": 0.525424,
-      "m_cer": 0.5173,
-      "medical_entity_recall": 0.7586,
-      "medical_token_recall": 0.5932,
+      "m_wer": 0.508475,
+      "m_cer": 0.5737,
+      "medical_entity_recall": 0.84,
+      "medical_token_recall": 0.6102,
       "total_ref_words": 1180,
       "total_medical_ref_words": 59,
-      "medical_correct": 35,
-      "medical_substitutions": 9,
+      "medical_correct": 36,
+      "medical_substitutions": 8,
       "medical_deletions": 15,
       "medical_insertions": 7,
       "spurious_medical_insertions": 7,
@@ -7820,7 +7725,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "allergies",
+          "hypothesis": "allergy",
           "file": "day3_consultation07"
         },
         {
@@ -7830,12 +7735,12 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "migraines",
+          "hypothesis": "migraine",
           "file": "day3_consultation07"
         },
         {
           "type": "insertion",
-          "hypothesis": "migraines",
+          "hypothesis": "migraine",
           "file": "day3_consultation07"
         },
         {
@@ -7884,7 +7789,7 @@
         },
         {
           "type": "deletion",
-          "reference": "steroids",
+          "reference": "steroid",
           "category": "drugs",
           "file": "day3_consultation07"
         },
@@ -7896,15 +7801,15 @@
         },
         {
           "type": "substitution",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "hypothesis": "anti",
           "category": "drugs",
-          "cer": 0.7143,
+          "cer": 0.6923,
           "file": "day3_consultation07"
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day3_consultation07"
         },
@@ -7950,7 +7855,7 @@
         },
         {
           "type": "deletion",
-          "reference": "inhalers",
+          "reference": "inhaler",
           "category": "drugs",
           "file": "day3_consultation07"
         },
@@ -7970,18 +7875,10 @@
         },
         {
           "type": "substitution",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "hypothesis": "histamines",
           "category": "drugs",
-          "cer": 0.2857,
-          "file": "day3_consultation07"
-        },
-        {
-          "type": "substitution",
-          "reference": "steroid",
-          "hypothesis": "steroids",
-          "category": "drugs",
-          "cer": 0.1429,
+          "cer": 0.3846,
           "file": "day3_consultation07"
         },
         {
@@ -8001,15 +7898,15 @@
           "file": "day3_consultation07"
         }
       ],
-      "unique_medical_terms_in_ref": 29,
-      "unique_medical_terms_found": 22,
+      "unique_medical_terms_in_ref": 25,
+      "unique_medical_terms_found": 21,
       "per_category": {
         "drugs": {
           "ref_count": 16,
-          "correct": 9,
-          "substitutions": 5,
+          "correct": 10,
+          "substitutions": 4,
           "deletions": 2,
-          "m_wer": 0.4375
+          "m_wer": 0.375
         },
         "conditions": {
           "ref_count": 15,
@@ -8040,7 +7937,7 @@
           "m_wer": 0.222222
         }
       },
-      "high_risk_m_wer": 0.4375,
+      "high_risk_m_wer": 0.375,
       "high_risk_ref_count": 16,
       "file": "day3_consultation07"
     },
@@ -8048,7 +7945,7 @@
       "wer": 0.668118,
       "m_wer": 0.58,
       "m_cer": 0.6586,
-      "medical_entity_recall": 0.7778,
+      "medical_entity_recall": 0.7917,
       "medical_token_recall": 0.64,
       "total_ref_words": 919,
       "total_medical_ref_words": 50,
@@ -8060,19 +7957,19 @@
       "medical_errors_detail": [
         {
           "type": "deletion",
-          "reference": "coughing",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day3_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "coughing",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day3_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "muscles",
+          "reference": "muscle",
           "category": "anatomy",
           "file": "day3_consultation08"
         },
@@ -8108,8 +8005,8 @@
         },
         {
           "type": "deletion",
-          "reference": "pain",
-          "category": "symptoms",
+          "reference": "painkillers",
+          "category": "drugs",
           "file": "day3_consultation08"
         },
         {
@@ -8168,17 +8065,17 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "coughing",
+          "hypothesis": "cough",
           "file": "day3_consultation08"
         },
         {
           "type": "insertion",
-          "hypothesis": "coughing",
+          "hypothesis": "cough",
           "file": "day3_consultation08"
         },
         {
           "type": "insertion",
-          "hypothesis": "muscles",
+          "hypothesis": "muscle",
           "file": "day3_consultation08"
         },
         {
@@ -8230,15 +8127,15 @@
           "file": "day3_consultation08"
         }
       ],
-      "unique_medical_terms_in_ref": 27,
-      "unique_medical_terms_found": 21,
+      "unique_medical_terms_in_ref": 24,
+      "unique_medical_terms_found": 19,
       "per_category": {
         "drugs": {
-          "ref_count": 11,
+          "ref_count": 12,
           "correct": 6,
           "substitutions": 3,
-          "deletions": 2,
-          "m_wer": 0.454545
+          "deletions": 3,
+          "m_wer": 0.5
         },
         "conditions": {
           "ref_count": 4,
@@ -8248,11 +8145,11 @@
           "m_wer": 0.25
         },
         "symptoms": {
-          "ref_count": 16,
+          "ref_count": 15,
           "correct": 9,
           "substitutions": 0,
-          "deletions": 7,
-          "m_wer": 0.4375
+          "deletions": 6,
+          "m_wer": 0.4
         },
         "anatomy": {
           "ref_count": 11,
@@ -8269,8 +8166,8 @@
           "m_wer": 0.375
         }
       },
-      "high_risk_m_wer": 0.454545,
-      "high_risk_ref_count": 11,
+      "high_risk_m_wer": 0.5,
+      "high_risk_ref_count": 12,
       "file": "day3_consultation08"
     },
     {
@@ -8301,7 +8198,7 @@
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day3_consultation09"
         },
@@ -8359,19 +8256,19 @@
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day3_consultation09"
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day3_consultation09"
         },
         {
           "type": "insertion",
-          "hypothesis": "drugs",
+          "hypothesis": "drug",
           "file": "day3_consultation09"
         },
         {
@@ -8381,7 +8278,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "medications",
+          "hypothesis": "medication",
           "file": "day3_consultation09"
         },
         {
@@ -8421,17 +8318,17 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "headaches",
+          "hypothesis": "headache",
           "file": "day3_consultation09"
         },
         {
           "type": "insertion",
-          "hypothesis": "medications",
+          "hypothesis": "medication",
           "file": "day3_consultation09"
         },
         {
           "type": "deletion",
-          "reference": "drugs",
+          "reference": "drug",
           "category": "clinical",
           "file": "day3_consultation09"
         }
@@ -8668,15 +8565,15 @@
     },
     {
       "wer": 0.650706,
-      "m_wer": 0.66,
-      "m_cer": 0.4444,
-      "medical_entity_recall": 0.8824,
-      "medical_token_recall": 0.64,
+      "m_wer": 0.673077,
+      "m_cer": 0.5,
+      "medical_entity_recall": 0.8889,
+      "medical_token_recall": 0.6154,
       "total_ref_words": 1274,
-      "total_medical_ref_words": 50,
+      "total_medical_ref_words": 52,
       "medical_correct": 32,
       "medical_substitutions": 1,
-      "medical_deletions": 17,
+      "medical_deletions": 19,
       "medical_insertions": 15,
       "spurious_medical_insertions": 15,
       "medical_errors_detail": [
@@ -8730,10 +8627,10 @@
         },
         {
           "type": "substitution",
-          "reference": "medicines",
-          "hypothesis": "medications",
+          "reference": "medicine",
+          "hypothesis": "medication",
           "category": "drugs",
-          "cer": 0.4444,
+          "cer": 0.5,
           "file": "day4_consultation01"
         },
         {
@@ -8746,6 +8643,12 @@
           "type": "deletion",
           "reference": "breath",
           "category": "clinical",
+          "file": "day4_consultation01"
+        },
+        {
+          "type": "deletion",
+          "reference": "lightheaded",
+          "category": null,
           "file": "day4_consultation01"
         },
         {
@@ -8763,6 +8666,12 @@
         {
           "type": "deletion",
           "reference": "pain",
+          "category": "symptoms",
+          "file": "day4_consultation01"
+        },
+        {
+          "type": "deletion",
+          "reference": "swelling",
           "category": "symptoms",
           "file": "day4_consultation01"
         },
@@ -8866,8 +8775,8 @@
           "file": "day4_consultation01"
         }
       ],
-      "unique_medical_terms_in_ref": 17,
-      "unique_medical_terms_found": 15,
+      "unique_medical_terms_in_ref": 18,
+      "unique_medical_terms_found": 16,
       "per_category": {
         "drugs": {
           "ref_count": 3,
@@ -8884,11 +8793,11 @@
           "m_wer": 0.6
         },
         "symptoms": {
-          "ref_count": 13,
+          "ref_count": 14,
           "correct": 5,
           "substitutions": 0,
-          "deletions": 8,
-          "m_wer": 0.615385
+          "deletions": 9,
+          "m_wer": 0.642857
         },
         "anatomy": {
           "ref_count": 20,
@@ -8911,14 +8820,14 @@
     },
     {
       "wer": 0.670418,
-      "m_wer": 0.5,
-      "m_cer": 0.1111,
-      "medical_entity_recall": 0.8571,
-      "medical_token_recall": 0.6786,
+      "m_wer": 0.464286,
+      "m_cer": 0.0,
+      "medical_entity_recall": 0.8462,
+      "medical_token_recall": 0.7143,
       "total_ref_words": 1244,
       "total_medical_ref_words": 28,
-      "medical_correct": 19,
-      "medical_substitutions": 1,
+      "medical_correct": 20,
+      "medical_substitutions": 0,
       "medical_deletions": 8,
       "medical_insertions": 5,
       "spurious_medical_insertions": 5,
@@ -8933,14 +8842,6 @@
           "type": "deletion",
           "reference": "headache",
           "category": "symptoms",
-          "file": "day4_consultation02"
-        },
-        {
-          "type": "substitution",
-          "reference": "headaches",
-          "hypothesis": "headache",
-          "category": "symptoms",
-          "cer": 0.1111,
           "file": "day4_consultation02"
         },
         {
@@ -9005,8 +8906,8 @@
           "file": "day4_consultation02"
         }
       ],
-      "unique_medical_terms_in_ref": 14,
-      "unique_medical_terms_found": 12,
+      "unique_medical_terms_in_ref": 13,
+      "unique_medical_terms_found": 11,
       "per_category": {
         "drugs": {
           "ref_count": 5,
@@ -9024,10 +8925,10 @@
         },
         "symptoms": {
           "ref_count": 10,
-          "correct": 7,
-          "substitutions": 1,
+          "correct": 8,
+          "substitutions": 0,
           "deletions": 2,
-          "m_wer": 0.3
+          "m_wer": 0.2
         },
         "anatomy": {
           "ref_count": 4,
@@ -9052,7 +8953,7 @@
       "wer": 0.359726,
       "m_wer": 0.27027,
       "m_cer": 0.0,
-      "medical_entity_recall": 0.8125,
+      "medical_entity_recall": 0.8,
       "medical_token_recall": 0.7297,
       "total_ref_words": 1023,
       "total_medical_ref_words": 37,
@@ -9076,7 +8977,7 @@
         },
         {
           "type": "deletion",
-          "reference": "coughs",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day4_consultation03"
         },
@@ -9123,8 +9024,8 @@
           "file": "day4_consultation03"
         }
       ],
-      "unique_medical_terms_in_ref": 16,
-      "unique_medical_terms_found": 13,
+      "unique_medical_terms_in_ref": 15,
+      "unique_medical_terms_found": 12,
       "per_category": {
         "drugs": {
           "ref_count": 7,
@@ -9170,7 +9071,7 @@
       "wer": 0.438703,
       "m_wer": 0.333333,
       "m_cer": 1.0,
-      "medical_entity_recall": 0.8571,
+      "medical_entity_recall": 0.9474,
       "medical_token_recall": 0.6667,
       "total_ref_words": 987,
       "total_medical_ref_words": 42,
@@ -9226,8 +9127,8 @@
         },
         {
           "type": "deletion",
-          "reference": "fever",
-          "category": "symptoms",
+          "reference": "hayfever",
+          "category": "conditions",
           "file": "day4_consultation04"
         },
         {
@@ -9250,13 +9151,13 @@
         },
         {
           "type": "deletion",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "category": "drugs",
           "file": "day4_consultation04"
         },
         {
           "type": "deletion",
-          "reference": "steroids",
+          "reference": "steroid",
           "category": "drugs",
           "file": "day4_consultation04"
         },
@@ -9267,7 +9168,7 @@
           "file": "day4_consultation04"
         }
       ],
-      "unique_medical_terms_in_ref": 21,
+      "unique_medical_terms_in_ref": 19,
       "unique_medical_terms_found": 18,
       "per_category": {
         "drugs": {
@@ -9278,18 +9179,18 @@
           "m_wer": 0.428571
         },
         "conditions": {
-          "ref_count": 9,
-          "correct": 5,
-          "substitutions": 0,
-          "deletions": 4,
-          "m_wer": 0.444444
-        },
-        "symptoms": {
           "ref_count": 14,
           "correct": 9,
-          "substitutions": 1,
-          "deletions": 4,
+          "substitutions": 0,
+          "deletions": 5,
           "m_wer": 0.357143
+        },
+        "symptoms": {
+          "ref_count": 9,
+          "correct": 5,
+          "substitutions": 1,
+          "deletions": 3,
+          "m_wer": 0.444444
         },
         "anatomy": {
           "ref_count": 1,
@@ -9312,15 +9213,15 @@
     },
     {
       "wer": 0.636829,
-      "m_wer": 0.513514,
-      "m_cer": 0.7625,
-      "medical_entity_recall": 0.5926,
-      "medical_token_recall": 0.4865,
+      "m_wer": 0.486486,
+      "m_cer": 0.7,
+      "medical_entity_recall": 0.6667,
+      "medical_token_recall": 0.5135,
       "total_ref_words": 1564,
       "total_medical_ref_words": 74,
-      "medical_correct": 36,
-      "medical_substitutions": 4,
-      "medical_deletions": 34,
+      "medical_correct": 38,
+      "medical_substitutions": 3,
+      "medical_deletions": 33,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
       "medical_errors_detail": [
@@ -9400,7 +9301,7 @@
         },
         {
           "type": "deletion",
-          "reference": "stomach",
+          "reference": "tummy",
           "category": "anatomy",
           "file": "day4_consultation05"
         },
@@ -9436,41 +9337,27 @@
         },
         {
           "type": "deletion",
-          "reference": "stomach",
+          "reference": "tummy",
           "category": "anatomy",
           "file": "day4_consultation05"
         },
         {
           "type": "substitution",
           "reference": "tummy",
-          "hypothesis": "the",
-          "category": "anatomy",
-          "cer": 0.8,
-          "file": "day4_consultation05"
-        },
-        {
-          "type": "substitution",
-          "reference": "pain",
           "hypothesis": "tiny",
-          "category": "symptoms",
-          "cer": 0.75,
+          "category": "anatomy",
+          "cer": 0.6,
           "file": "day4_consultation05"
         },
         {
           "type": "deletion",
-          "reference": "vomited",
+          "reference": "vomit",
           "category": "symptoms",
           "file": "day4_consultation05"
         },
         {
           "type": "deletion",
           "reference": "nausea",
-          "category": "symptoms",
-          "file": "day4_consultation05"
-        },
-        {
-          "type": "deletion",
-          "reference": "vomited",
           "category": "symptoms",
           "file": "day4_consultation05"
         },
@@ -9561,7 +9448,7 @@
           "file": "day4_consultation05"
         }
       ],
-      "unique_medical_terms_in_ref": 27,
+      "unique_medical_terms_in_ref": 24,
       "unique_medical_terms_found": 16,
       "per_category": {
         "drugs": {
@@ -9580,10 +9467,10 @@
         },
         "symptoms": {
           "ref_count": 25,
-          "correct": 13,
-          "substitutions": 1,
-          "deletions": 11,
-          "m_wer": 0.48
+          "correct": 15,
+          "substitutions": 0,
+          "deletions": 10,
+          "m_wer": 0.4
         },
         "anatomy": {
           "ref_count": 23,
@@ -9607,8 +9494,8 @@
     {
       "wer": 0.560606,
       "m_wer": 0.5,
-      "m_cer": 0.8181,
-      "medical_entity_recall": 0.76,
+      "m_cer": 0.8367,
+      "medical_entity_recall": 0.7619,
       "medical_token_recall": 0.5405,
       "total_ref_words": 1650,
       "total_medical_ref_words": 74,
@@ -9700,7 +9587,7 @@
         },
         {
           "type": "substitution",
-          "reference": "paracetemol",
+          "reference": "paracetamol",
           "hypothesis": "aware",
           "category": "drugs",
           "cer": 0.7273,
@@ -9761,10 +9648,10 @@
         },
         {
           "type": "substitution",
-          "reference": "vomited",
+          "reference": "vomit",
           "hypothesis": "tried",
           "category": "symptoms",
-          "cer": 0.5714,
+          "cer": 1.0,
           "file": "day4_consultation06"
         },
         {
@@ -9790,7 +9677,7 @@
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day4_consultation06"
         },
@@ -9884,8 +9771,8 @@
           "file": "day4_consultation06"
         }
       ],
-      "unique_medical_terms_in_ref": 25,
-      "unique_medical_terms_found": 19,
+      "unique_medical_terms_in_ref": 21,
+      "unique_medical_terms_found": 16,
       "per_category": {
         "drugs": {
           "ref_count": 16,
@@ -9929,15 +9816,15 @@
     },
     {
       "wer": 0.791404,
-      "m_wer": 0.630435,
-      "m_cer": 0.5953,
-      "medical_entity_recall": 0.8966,
-      "medical_token_recall": 0.6304,
+      "m_wer": 0.608696,
+      "m_cer": 0.7412,
+      "medical_entity_recall": 0.92,
+      "medical_token_recall": 0.6522,
       "total_ref_words": 1745,
       "total_medical_ref_words": 92,
-      "medical_correct": 58,
-      "medical_substitutions": 6,
-      "medical_deletions": 28,
+      "medical_correct": 60,
+      "medical_substitutions": 5,
+      "medical_deletions": 27,
       "medical_insertions": 24,
       "spurious_medical_insertions": 24,
       "medical_errors_detail": [
@@ -9981,10 +9868,10 @@
         },
         {
           "type": "substitution",
-          "reference": "coughing",
+          "reference": "cough",
           "hypothesis": "quiffing",
           "category": "symptoms",
-          "cer": 0.625,
+          "cer": 1.6,
           "file": "day4_consultation07"
         },
         {
@@ -10069,20 +9956,6 @@
         },
         {
           "type": "deletion",
-          "reference": "coughing",
-          "category": "symptoms",
-          "file": "day4_consultation07"
-        },
-        {
-          "type": "substitution",
-          "reference": "flem",
-          "hypothesis": "phlegm",
-          "category": null,
-          "cer": 0.75,
-          "file": "day4_consultation07"
-        },
-        {
-          "type": "deletion",
           "reference": "medication",
           "category": "drugs",
           "file": "day4_consultation07"
@@ -10145,16 +10018,16 @@
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day4_consultation07"
         },
         {
           "type": "substitution",
-          "reference": "paracetemol",
+          "reference": "paracetamol",
           "hypothesis": "parasitamo",
           "category": "drugs",
-          "cer": 0.3636,
+          "cer": 0.2727,
           "file": "day4_consultation07"
         },
         {
@@ -10274,12 +10147,12 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "headaches",
+          "hypothesis": "headache",
           "file": "day4_consultation07"
         }
       ],
-      "unique_medical_terms_in_ref": 29,
-      "unique_medical_terms_found": 26,
+      "unique_medical_terms_in_ref": 25,
+      "unique_medical_terms_found": 23,
       "per_category": {
         "drugs": {
           "ref_count": 4,
@@ -10296,11 +10169,11 @@
           "m_wer": 0.5
         },
         "symptoms": {
-          "ref_count": 37,
-          "correct": 22,
+          "ref_count": 38,
+          "correct": 24,
           "substitutions": 2,
-          "deletions": 13,
-          "m_wer": 0.405405
+          "deletions": 12,
+          "m_wer": 0.368421
         },
         "anatomy": {
           "ref_count": 22,
@@ -10325,7 +10198,7 @@
       "wer": 0.686541,
       "m_wer": 0.806452,
       "m_cer": 0.0,
-      "medical_entity_recall": 0.3333,
+      "medical_entity_recall": 0.375,
       "medical_token_recall": 0.1935,
       "total_ref_words": 1694,
       "total_medical_ref_words": 31,
@@ -10343,7 +10216,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day4_consultation08"
         },
@@ -10385,19 +10258,19 @@
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day4_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "thyrocsin",
+          "reference": "thyroxine",
           "category": "drugs",
           "file": "day4_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "thyrocsin",
+          "reference": "thyroxine",
           "category": "drugs",
           "file": "day4_consultation08"
         },
@@ -10409,7 +10282,7 @@
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day4_consultation08"
         },
@@ -10421,13 +10294,13 @@
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day4_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day4_consultation08"
         },
@@ -10469,24 +10342,24 @@
         },
         {
           "type": "deletion",
-          "reference": "tests",
+          "reference": "test",
           "category": "clinical",
           "file": "day4_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "tests",
+          "reference": "test",
           "category": "clinical",
           "file": "day4_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day4_consultation08"
         }
       ],
-      "unique_medical_terms_in_ref": 18,
+      "unique_medical_terms_in_ref": 16,
       "unique_medical_terms_found": 6,
       "per_category": {
         "drugs": {
@@ -10531,14 +10404,14 @@
     },
     {
       "wer": 0.453475,
-      "m_wer": 0.487179,
-      "m_cer": 0.3767,
-      "medical_entity_recall": 0.7,
-      "medical_token_recall": 0.5214,
+      "m_wer": 0.470588,
+      "m_cer": 0.386,
+      "medical_entity_recall": 0.7941,
+      "medical_token_recall": 0.5378,
       "total_ref_words": 1698,
-      "total_medical_ref_words": 117,
-      "medical_correct": 61,
-      "medical_substitutions": 20,
+      "total_medical_ref_words": 119,
+      "medical_correct": 64,
+      "medical_substitutions": 19,
       "medical_deletions": 36,
       "medical_insertions": 1,
       "spurious_medical_insertions": 1,
@@ -10577,7 +10450,7 @@
         },
         {
           "type": "deletion",
-          "reference": "coughing",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day4_consultation09"
         },
@@ -10613,7 +10486,7 @@
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day4_consultation09"
         },
@@ -10715,7 +10588,7 @@
         },
         {
           "type": "deletion",
-          "reference": "drugs",
+          "reference": "drug",
           "category": "clinical",
           "file": "day4_consultation09"
         },
@@ -10751,7 +10624,7 @@
         },
         {
           "type": "deletion",
-          "reference": "inhalers",
+          "reference": "inhaler",
           "category": "drugs",
           "file": "day4_consultation09"
         },
@@ -10761,14 +10634,6 @@
           "hypothesis": "death",
           "category": "clinical",
           "cer": 0.3333,
-          "file": "day4_consultation09"
-        },
-        {
-          "type": "substitution",
-          "reference": "pains",
-          "hypothesis": "pain",
-          "category": "symptoms",
-          "cer": 0.2,
           "file": "day4_consultation09"
         },
         {
@@ -10814,7 +10679,7 @@
         },
         {
           "type": "deletion",
-          "reference": "inhalers",
+          "reference": "inhaler",
           "category": "drugs",
           "file": "day4_consultation09"
         },
@@ -10842,7 +10707,7 @@
         },
         {
           "type": "deletion",
-          "reference": "steroids",
+          "reference": "steroid",
           "category": "drugs",
           "file": "day4_consultation09"
         },
@@ -10925,8 +10790,8 @@
           "file": "day4_consultation09"
         }
       ],
-      "unique_medical_terms_in_ref": 40,
-      "unique_medical_terms_found": 28,
+      "unique_medical_terms_in_ref": 34,
+      "unique_medical_terms_found": 27,
       "per_category": {
         "drugs": {
           "ref_count": 41,
@@ -10944,10 +10809,10 @@
         },
         "symptoms": {
           "ref_count": 25,
-          "correct": 17,
-          "substitutions": 1,
+          "correct": 18,
+          "substitutions": 0,
           "deletions": 7,
-          "m_wer": 0.32
+          "m_wer": 0.28
         },
         "anatomy": {
           "ref_count": 12,
@@ -10957,11 +10822,11 @@
           "m_wer": 0.333333
         },
         "clinical": {
-          "ref_count": 25,
-          "correct": 16,
+          "ref_count": 26,
+          "correct": 17,
           "substitutions": 1,
           "deletions": 8,
-          "m_wer": 0.36
+          "m_wer": 0.346154
         }
       },
       "high_risk_m_wer": 0.682927,
@@ -10970,13 +10835,13 @@
     },
     {
       "wer": 0.698622,
-      "m_wer": 0.972222,
-      "m_cer": 0.8924,
+      "m_wer": 0.945946,
+      "m_cer": 0.8907,
       "medical_entity_recall": 0.9615,
-      "medical_token_recall": 0.2917,
+      "medical_token_recall": 0.3108,
       "total_ref_words": 1669,
-      "total_medical_ref_words": 72,
-      "medical_correct": 21,
+      "total_medical_ref_words": 74,
+      "medical_correct": 23,
       "medical_substitutions": 27,
       "medical_deletions": 24,
       "medical_insertions": 19,
@@ -11127,7 +10992,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "medications",
+          "hypothesis": "medication",
           "file": "day4_consultation10"
         },
         {
@@ -11166,7 +11031,7 @@
         },
         {
           "type": "substitution",
-          "reference": "symptoms",
+          "reference": "symptom",
           "hypothesis": "thank",
           "category": "symptoms",
           "cer": 1.0,
@@ -11312,7 +11177,7 @@
         },
         {
           "type": "substitution",
-          "reference": "allergies",
+          "reference": "allergy",
           "hypothesis": "so",
           "category": "clinical",
           "cer": 1.0,
@@ -11328,18 +11193,18 @@
         },
         {
           "type": "substitution",
-          "reference": "medications",
+          "reference": "medication",
           "hypothesis": "go",
           "category": "drugs",
-          "cer": 0.9091,
+          "cer": 0.9,
           "file": "day4_consultation10"
         },
         {
           "type": "substitution",
-          "reference": "medications",
+          "reference": "medication",
           "hypothesis": "constipation",
           "category": "drugs",
-          "cer": 0.6364,
+          "cer": 0.6,
           "file": "day4_consultation10"
         },
         {
@@ -11420,7 +11285,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "medications",
+          "hypothesis": "medication",
           "file": "day4_consultation10"
         },
         {
@@ -11483,13 +11348,13 @@
     },
     {
       "wer": 0.419485,
-      "m_wer": 0.313725,
+      "m_wer": 0.301887,
       "m_cer": 0.6364,
-      "medical_entity_recall": 0.8276,
-      "medical_token_recall": 0.6863,
+      "medical_entity_recall": 0.8571,
+      "medical_token_recall": 0.6981,
       "total_ref_words": 1242,
-      "total_medical_ref_words": 51,
-      "medical_correct": 35,
+      "total_medical_ref_words": 53,
+      "medical_correct": 37,
       "medical_substitutions": 2,
       "medical_deletions": 14,
       "medical_insertions": 0,
@@ -11515,7 +11380,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day5_consultation01"
         },
@@ -11551,7 +11416,7 @@
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day5_consultation01"
         },
@@ -11596,7 +11461,7 @@
           "file": "day5_consultation01"
         }
       ],
-      "unique_medical_terms_in_ref": 29,
+      "unique_medical_terms_in_ref": 28,
       "unique_medical_terms_found": 24,
       "per_category": {
         "drugs": {
@@ -11737,7 +11602,7 @@
         },
         {
           "type": "deletion",
-          "reference": "antibiotics",
+          "reference": "antibiotic",
           "category": "drugs",
           "file": "day5_consultation02"
         },
@@ -11810,7 +11675,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "antibiotics",
+          "hypothesis": "antibiotic",
           "file": "day5_consultation02"
         },
         {
@@ -11819,8 +11684,8 @@
           "file": "day5_consultation02"
         }
       ],
-      "unique_medical_terms_in_ref": 23,
-      "unique_medical_terms_found": 23,
+      "unique_medical_terms_in_ref": 21,
+      "unique_medical_terms_found": 21,
       "per_category": {
         "drugs": {
           "ref_count": 6,
@@ -11864,23 +11729,18 @@
     },
     {
       "wer": 0.763666,
-      "m_wer": 1.117647,
+      "m_wer": 1.090909,
       "m_cer": 1.1429,
       "medical_entity_recall": 1.0,
-      "medical_token_recall": 0.4118,
+      "medical_token_recall": 0.4242,
       "total_ref_words": 2488,
-      "total_medical_ref_words": 34,
+      "total_medical_ref_words": 33,
       "medical_correct": 14,
       "medical_substitutions": 1,
-      "medical_deletions": 19,
-      "medical_insertions": 18,
-      "spurious_medical_insertions": 18,
+      "medical_deletions": 18,
+      "medical_insertions": 17,
+      "spurious_medical_insertions": 17,
       "medical_errors_detail": [
-        {
-          "type": "insertion",
-          "hypothesis": "palpitations",
-          "file": "day5_consultation03"
-        },
         {
           "type": "insertion",
           "hypothesis": "chest",
@@ -11898,7 +11758,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "drugs",
+          "hypothesis": "drug",
           "file": "day5_consultation03"
         },
         {
@@ -11914,6 +11774,11 @@
         {
           "type": "insertion",
           "hypothesis": "therapy",
+          "file": "day5_consultation03"
+        },
+        {
+          "type": "insertion",
+          "hypothesis": "straightaway",
           "file": "day5_consultation03"
         },
         {
@@ -11933,11 +11798,6 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "palpitations",
-          "file": "day5_consultation03"
-        },
-        {
-          "type": "insertion",
           "hypothesis": "anxiety",
           "file": "day5_consultation03"
         },
@@ -11948,7 +11808,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "tests",
+          "hypothesis": "test",
           "file": "day5_consultation03"
         },
         {
@@ -11964,12 +11824,6 @@
         {
           "type": "insertion",
           "hypothesis": "test",
-          "file": "day5_consultation03"
-        },
-        {
-          "type": "deletion",
-          "reference": "palpitations",
-          "category": "symptoms",
           "file": "day5_consultation03"
         },
         {
@@ -11998,13 +11852,13 @@
         },
         {
           "type": "deletion",
-          "reference": "drugs",
+          "reference": "drug",
           "category": "clinical",
           "file": "day5_consultation03"
         },
         {
           "type": "deletion",
-          "reference": "drugs",
+          "reference": "drug",
           "category": "clinical",
           "file": "day5_consultation03"
         },
@@ -12030,6 +11884,12 @@
         },
         {
           "type": "deletion",
+          "reference": "straightaway",
+          "category": null,
+          "file": "day5_consultation03"
+        },
+        {
+          "type": "deletion",
           "reference": "anxiety",
           "category": "conditions",
           "file": "day5_consultation03"
@@ -12048,12 +11908,6 @@
         },
         {
           "type": "deletion",
-          "reference": "palpitations",
-          "category": "symptoms",
-          "file": "day5_consultation03"
-        },
-        {
-          "type": "deletion",
           "reference": "anxiety",
           "category": "conditions",
           "file": "day5_consultation03"
@@ -12066,13 +11920,13 @@
         },
         {
           "type": "deletion",
-          "reference": "tests",
+          "reference": "test",
           "category": "clinical",
           "file": "day5_consultation03"
         },
         {
           "type": "deletion",
-          "reference": "tests",
+          "reference": "test",
           "category": "clinical",
           "file": "day5_consultation03"
         },
@@ -12089,8 +11943,8 @@
           "file": "day5_consultation03"
         }
       ],
-      "unique_medical_terms_in_ref": 14,
-      "unique_medical_terms_found": 14,
+      "unique_medical_terms_in_ref": 13,
+      "unique_medical_terms_found": 13,
       "per_category": {
         "drugs": {
           "ref_count": 1,
@@ -12107,11 +11961,11 @@
           "m_wer": 0.5
         },
         "symptoms": {
-          "ref_count": 4,
+          "ref_count": 2,
           "correct": 1,
           "substitutions": 0,
-          "deletions": 3,
-          "m_wer": 0.75
+          "deletions": 1,
+          "m_wer": 0.5
         },
         "anatomy": {
           "ref_count": 12,
@@ -12134,13 +11988,13 @@
     },
     {
       "wer": 0.433412,
-      "m_wer": 0.38,
+      "m_wer": 0.372549,
       "m_cer": 0.625,
-      "medical_entity_recall": 0.7692,
-      "medical_token_recall": 0.62,
+      "medical_entity_recall": 0.7778,
+      "medical_token_recall": 0.6275,
       "total_ref_words": 1269,
-      "total_medical_ref_words": 50,
-      "medical_correct": 31,
+      "total_medical_ref_words": 51,
+      "medical_correct": 32,
       "medical_substitutions": 2,
       "medical_deletions": 17,
       "medical_insertions": 0,
@@ -12265,8 +12119,8 @@
           "file": "day5_consultation04"
         }
       ],
-      "unique_medical_terms_in_ref": 26,
-      "unique_medical_terms_found": 20,
+      "unique_medical_terms_in_ref": 27,
+      "unique_medical_terms_found": 21,
       "per_category": {
         "drugs": {
           "ref_count": 4,
@@ -12310,14 +12164,14 @@
     },
     {
       "wer": 0.687361,
-      "m_wer": 0.5,
-      "m_cer": 0.8333,
-      "medical_entity_recall": 0.9167,
-      "medical_token_recall": 0.7,
+      "m_wer": 0.48,
+      "m_cer": 1.0,
+      "medical_entity_recall": 0.9565,
+      "medical_token_recall": 0.72,
       "total_ref_words": 902,
       "total_medical_ref_words": 50,
-      "medical_correct": 35,
-      "medical_substitutions": 2,
+      "medical_correct": 36,
+      "medical_substitutions": 1,
       "medical_deletions": 13,
       "medical_insertions": 10,
       "spurious_medical_insertions": 10,
@@ -12409,14 +12263,6 @@
           "file": "day5_consultation05"
         },
         {
-          "type": "substitution",
-          "reference": "straightaway",
-          "hypothesis": "away",
-          "category": null,
-          "cer": 0.6667,
-          "file": "day5_consultation05"
-        },
-        {
           "type": "insertion",
           "hypothesis": "tummy",
           "file": "day5_consultation05"
@@ -12467,7 +12313,7 @@
           "file": "day5_consultation05"
         }
       ],
-      "unique_medical_terms_in_ref": 24,
+      "unique_medical_terms_in_ref": 23,
       "unique_medical_terms_found": 22,
       "per_category": {
         "drugs": {
@@ -12512,14 +12358,14 @@
     },
     {
       "wer": 0.48857,
-      "m_wer": 0.352941,
-      "m_cer": 0.7333,
-      "medical_entity_recall": 0.8148,
-      "medical_token_recall": 0.6471,
+      "m_wer": 0.333333,
+      "m_cer": 0.8,
+      "medical_entity_recall": 0.8846,
+      "medical_token_recall": 0.6667,
       "total_ref_words": 1531,
       "total_medical_ref_words": 51,
-      "medical_correct": 33,
-      "medical_substitutions": 2,
+      "medical_correct": 34,
+      "medical_substitutions": 1,
       "medical_deletions": 16,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
@@ -12552,13 +12398,13 @@
         },
         {
           "type": "deletion",
-          "reference": "bowels",
+          "reference": "bowel",
           "category": "anatomy",
           "file": "day5_consultation06"
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day5_consultation06"
         },
@@ -12576,7 +12422,7 @@
         },
         {
           "type": "deletion",
-          "reference": "pains",
+          "reference": "pain",
           "category": "symptoms",
           "file": "day5_consultation06"
         },
@@ -12588,7 +12434,7 @@
         },
         {
           "type": "deletion",
-          "reference": "pains",
+          "reference": "pain",
           "category": "symptoms",
           "file": "day5_consultation06"
         },
@@ -12627,18 +12473,10 @@
           "reference": "vomiting",
           "category": "symptoms",
           "file": "day5_consultation06"
-        },
-        {
-          "type": "substitution",
-          "reference": "straightaway",
-          "hypothesis": "away",
-          "category": null,
-          "cer": 0.6667,
-          "file": "day5_consultation06"
         }
       ],
-      "unique_medical_terms_in_ref": 27,
-      "unique_medical_terms_found": 22,
+      "unique_medical_terms_in_ref": 26,
+      "unique_medical_terms_found": 23,
       "per_category": {
         "drugs": {
           "ref_count": 3,
@@ -12682,13 +12520,13 @@
     },
     {
       "wer": 0.402104,
-      "m_wer": 0.329412,
-      "m_cer": 0.5414,
-      "medical_entity_recall": 0.6667,
-      "medical_token_recall": 0.6706,
+      "m_wer": 0.325581,
+      "m_cer": 0.6386,
+      "medical_entity_recall": 0.6111,
+      "medical_token_recall": 0.6744,
       "total_ref_words": 1236,
-      "total_medical_ref_words": 85,
-      "medical_correct": 57,
+      "total_medical_ref_words": 86,
+      "medical_correct": 58,
       "medical_substitutions": 6,
       "medical_deletions": 22,
       "medical_insertions": 0,
@@ -12708,7 +12546,7 @@
         },
         {
           "type": "deletion",
-          "reference": "coughing",
+          "reference": "cough",
           "category": "symptoms",
           "file": "day5_consultation07"
         },
@@ -12752,34 +12590,34 @@
         },
         {
           "type": "substitution",
-          "reference": "rashes",
+          "reference": "rash",
           "hypothesis": "rushes",
           "category": "symptoms",
-          "cer": 0.1667,
+          "cer": 0.75,
           "file": "day5_consultation07"
         },
         {
           "type": "deletion",
-          "reference": "rashes",
+          "reference": "rash",
           "category": "symptoms",
           "file": "day5_consultation07"
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day5_consultation07"
         },
         {
           "type": "deletion",
-          "reference": "muscles",
+          "reference": "aching",
+          "category": "symptoms",
+          "file": "day5_consultation07"
+        },
+        {
+          "type": "deletion",
+          "reference": "muscle",
           "category": "anatomy",
-          "file": "day5_consultation07"
-        },
-        {
-          "type": "deletion",
-          "reference": "breath",
-          "category": "clinical",
           "file": "day5_consultation07"
         },
         {
@@ -12790,7 +12628,7 @@
         },
         {
           "type": "deletion",
-          "reference": "drugs",
+          "reference": "drug",
           "category": "clinical",
           "file": "day5_consultation07"
         },
@@ -12834,8 +12672,8 @@
         },
         {
           "type": "deletion",
-          "reference": "fever",
-          "category": "symptoms",
+          "reference": "hayfever",
+          "category": "conditions",
           "file": "day5_consultation07"
         },
         {
@@ -12854,7 +12692,7 @@
         },
         {
           "type": "deletion",
-          "reference": "antibiotics",
+          "reference": "antibiotic",
           "category": "drugs",
           "file": "day5_consultation07"
         },
@@ -12876,7 +12714,7 @@
         }
       ],
       "unique_medical_terms_in_ref": 36,
-      "unique_medical_terms_found": 24,
+      "unique_medical_terms_found": 22,
       "per_category": {
         "drugs": {
           "ref_count": 7,
@@ -12886,11 +12724,11 @@
           "m_wer": 0.857143
         },
         "conditions": {
-          "ref_count": 14,
+          "ref_count": 15,
           "correct": 9,
           "substitutions": 0,
-          "deletions": 5,
-          "m_wer": 0.357143
+          "deletions": 6,
+          "m_wer": 0.4
         },
         "symptoms": {
           "ref_count": 29,
@@ -12908,10 +12746,10 @@
         },
         "clinical": {
           "ref_count": 14,
-          "correct": 11,
+          "correct": 12,
           "substitutions": 0,
-          "deletions": 3,
-          "m_wer": 0.214286
+          "deletions": 2,
+          "m_wer": 0.142857
         }
       },
       "high_risk_m_wer": 0.857143,
@@ -12920,14 +12758,14 @@
     },
     {
       "wer": 0.597168,
-      "m_wer": 0.560606,
-      "m_cer": 0.5179,
-      "medical_entity_recall": 0.8519,
-      "medical_token_recall": 0.6364,
+      "m_wer": 0.530303,
+      "m_cer": 0.5583,
+      "medical_entity_recall": 0.8846,
+      "medical_token_recall": 0.6667,
       "total_ref_words": 1271,
       "total_medical_ref_words": 66,
-      "medical_correct": 42,
-      "medical_substitutions": 7,
+      "medical_correct": 44,
+      "medical_substitutions": 5,
       "medical_deletions": 17,
       "medical_insertions": 13,
       "spurious_medical_insertions": 13,
@@ -12938,14 +12776,6 @@
           "hypothesis": "busy",
           "category": "symptoms",
           "cer": 0.8333,
-          "file": "day5_consultation08"
-        },
-        {
-          "type": "substitution",
-          "reference": "breath",
-          "hypothesis": "breaths",
-          "category": "clinical",
-          "cer": 0.1667,
           "file": "day5_consultation08"
         },
         {
@@ -12964,8 +12794,8 @@
         },
         {
           "type": "deletion",
-          "reference": "fever",
-          "category": "symptoms",
+          "reference": "hayfever",
+          "category": "conditions",
           "file": "day5_consultation08"
         },
         {
@@ -13056,13 +12886,13 @@
         },
         {
           "type": "deletion",
-          "reference": "fever",
-          "category": "symptoms",
+          "reference": "hayfever",
+          "category": "conditions",
           "file": "day5_consultation08"
         },
         {
           "type": "deletion",
-          "reference": "allergies",
+          "reference": "allergy",
           "category": "clinical",
           "file": "day5_consultation08"
         },
@@ -13083,21 +12913,13 @@
           "file": "day5_consultation08"
         },
         {
-          "type": "substitution",
-          "reference": "straightaway",
-          "hypothesis": "away",
-          "category": null,
-          "cer": 0.6667,
-          "file": "day5_consultation08"
-        },
-        {
           "type": "insertion",
           "hypothesis": "asthma",
           "file": "day5_consultation08"
         },
         {
           "type": "insertion",
-          "hypothesis": "fever",
+          "hypothesis": "hayfever",
           "file": "day5_consultation08"
         },
         {
@@ -13142,12 +12964,12 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "fever",
+          "hypothesis": "hayfever",
           "file": "day5_consultation08"
         },
         {
           "type": "insertion",
-          "hypothesis": "allergies",
+          "hypothesis": "allergy",
           "file": "day5_consultation08"
         },
         {
@@ -13156,7 +12978,7 @@
           "file": "day5_consultation08"
         }
       ],
-      "unique_medical_terms_in_ref": 27,
+      "unique_medical_terms_in_ref": 26,
       "unique_medical_terms_found": 23,
       "per_category": {
         "drugs": {
@@ -13167,18 +12989,18 @@
           "m_wer": 0.235294
         },
         "conditions": {
-          "ref_count": 12,
+          "ref_count": 14,
           "correct": 8,
           "substitutions": 0,
-          "deletions": 4,
-          "m_wer": 0.333333
+          "deletions": 6,
+          "m_wer": 0.428571
         },
         "symptoms": {
-          "ref_count": 19,
+          "ref_count": 17,
           "correct": 8,
           "substitutions": 5,
-          "deletions": 6,
-          "m_wer": 0.578947
+          "deletions": 4,
+          "m_wer": 0.529412
         },
         "anatomy": {
           "ref_count": 4,
@@ -13189,10 +13011,10 @@
         },
         "clinical": {
           "ref_count": 13,
-          "correct": 10,
-          "substitutions": 1,
+          "correct": 11,
+          "substitutions": 0,
           "deletions": 2,
-          "m_wer": 0.230769
+          "m_wer": 0.153846
         }
       },
       "high_risk_m_wer": 0.235294,
@@ -13201,15 +13023,15 @@
     },
     {
       "wer": 0.6239,
-      "m_wer": 0.213333,
+      "m_wer": 0.2,
       "m_cer": 0.0,
-      "medical_entity_recall": 0.8049,
-      "medical_token_recall": 0.7867,
+      "medical_entity_recall": 0.8333,
+      "medical_token_recall": 0.8,
       "total_ref_words": 1364,
       "total_medical_ref_words": 75,
-      "medical_correct": 59,
+      "medical_correct": 60,
       "medical_substitutions": 0,
-      "medical_deletions": 16,
+      "medical_deletions": 15,
       "medical_insertions": 0,
       "spurious_medical_insertions": 0,
       "medical_errors_detail": [
@@ -13221,7 +13043,7 @@
         },
         {
           "type": "deletion",
-          "reference": "symptoms",
+          "reference": "symptom",
           "category": "symptoms",
           "file": "day5_consultation09"
         },
@@ -13233,13 +13055,13 @@
         },
         {
           "type": "deletion",
-          "reference": "rashes",
+          "reference": "rash",
           "category": "symptoms",
           "file": "day5_consultation09"
         },
         {
           "type": "deletion",
-          "reference": "itching",
+          "reference": "itchy",
           "category": "symptoms",
           "file": "day5_consultation09"
         },
@@ -13281,19 +13103,13 @@
         },
         {
           "type": "deletion",
-          "reference": "fever",
-          "category": "symptoms",
+          "reference": "hayfever",
+          "category": "conditions",
           "file": "day5_consultation09"
         },
         {
           "type": "deletion",
-          "reference": "medication",
-          "category": "drugs",
-          "file": "day5_consultation09"
-        },
-        {
-          "type": "deletion",
-          "reference": "antihistamines",
+          "reference": "antihistamine",
           "category": "drugs",
           "file": "day5_consultation09"
         },
@@ -13310,29 +13126,29 @@
           "file": "day5_consultation09"
         }
       ],
-      "unique_medical_terms_in_ref": 41,
-      "unique_medical_terms_found": 33,
+      "unique_medical_terms_in_ref": 36,
+      "unique_medical_terms_found": 30,
       "per_category": {
         "drugs": {
           "ref_count": 5,
-          "correct": 3,
+          "correct": 4,
           "substitutions": 0,
-          "deletions": 2,
-          "m_wer": 0.4
+          "deletions": 1,
+          "m_wer": 0.2
         },
         "conditions": {
-          "ref_count": 9,
+          "ref_count": 10,
           "correct": 7,
           "substitutions": 0,
-          "deletions": 2,
-          "m_wer": 0.222222
+          "deletions": 3,
+          "m_wer": 0.3
         },
         "symptoms": {
-          "ref_count": 33,
+          "ref_count": 32,
           "correct": 23,
           "substitutions": 0,
-          "deletions": 10,
-          "m_wer": 0.30303
+          "deletions": 9,
+          "m_wer": 0.28125
         },
         "anatomy": {
           "ref_count": 19,
@@ -13349,7 +13165,7 @@
           "m_wer": 0.111111
         }
       },
-      "high_risk_m_wer": 0.4,
+      "high_risk_m_wer": 0.2,
       "high_risk_ref_count": 5,
       "file": "day5_consultation09"
     },
@@ -13357,7 +13173,7 @@
       "wer": 0.870947,
       "m_wer": 0.567164,
       "m_cer": 0.2323,
-      "medical_entity_recall": 0.8462,
+      "medical_entity_recall": 0.8636,
       "medical_token_recall": 0.6119,
       "total_ref_words": 1542,
       "total_medical_ref_words": 67,
@@ -13423,19 +13239,19 @@
         },
         {
           "type": "deletion",
-          "reference": "flem",
-          "category": null,
-          "file": "day5_consultation10"
-        },
-        {
-          "type": "deletion",
-          "reference": "coughing",
+          "reference": "phlegm",
           "category": "symptoms",
           "file": "day5_consultation10"
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "cough",
+          "category": "symptoms",
+          "file": "day5_consultation10"
+        },
+        {
+          "type": "deletion",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day5_consultation10"
         },
@@ -13453,7 +13269,7 @@
         },
         {
           "type": "deletion",
-          "reference": "headaches",
+          "reference": "headache",
           "category": "symptoms",
           "file": "day5_consultation10"
         },
@@ -13513,13 +13329,13 @@
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day5_consultation10"
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day5_consultation10"
         },
@@ -13541,7 +13357,7 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "headaches",
+          "hypothesis": "headache",
           "file": "day5_consultation10"
         },
         {
@@ -13581,17 +13397,17 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "migraines",
+          "hypothesis": "migraine",
           "file": "day5_consultation10"
         },
         {
           "type": "insertion",
-          "hypothesis": "migraines",
+          "hypothesis": "migraine",
           "file": "day5_consultation10"
         }
       ],
-      "unique_medical_terms_in_ref": 26,
-      "unique_medical_terms_found": 22,
+      "unique_medical_terms_in_ref": 22,
+      "unique_medical_terms_found": 19,
       "per_category": {
         "drugs": {
           "ref_count": 10,
@@ -13608,11 +13424,11 @@
           "m_wer": 0.5
         },
         "symptoms": {
-          "ref_count": 38,
+          "ref_count": 39,
           "correct": 24,
           "substitutions": 0,
-          "deletions": 14,
-          "m_wer": 0.368421
+          "deletions": 15,
+          "m_wer": 0.384615
         },
         "anatomy": {
           "ref_count": 5,
@@ -13637,7 +13453,7 @@
       "wer": 0.5255,
       "m_wer": 0.934783,
       "m_cer": 0.5238,
-      "medical_entity_recall": 0.8846,
+      "medical_entity_recall": 0.913,
       "medical_token_recall": 0.4565,
       "total_ref_words": 2000,
       "total_medical_ref_words": 46,
@@ -13691,7 +13507,7 @@
         },
         {
           "type": "deletion",
-          "reference": "pains",
+          "reference": "pain",
           "category": "symptoms",
           "file": "day5_consultation11"
         },
@@ -13733,7 +13549,7 @@
         },
         {
           "type": "deletion",
-          "reference": "joints",
+          "reference": "joint",
           "category": "anatomy",
           "file": "day5_consultation11"
         },
@@ -13745,7 +13561,7 @@
         },
         {
           "type": "deletion",
-          "reference": "medications",
+          "reference": "medication",
           "category": "drugs",
           "file": "day5_consultation11"
         },
@@ -13777,7 +13593,7 @@
         },
         {
           "type": "substitution",
-          "reference": "stomach",
+          "reference": "tummy",
           "hypothesis": "knee",
           "category": "anatomy",
           "cer": 1.0,
@@ -13853,17 +13669,17 @@
         },
         {
           "type": "insertion",
-          "hypothesis": "joints",
+          "hypothesis": "joint",
           "file": "day5_consultation11"
         },
         {
           "type": "insertion",
-          "hypothesis": "medications",
+          "hypothesis": "medication",
           "file": "day5_consultation11"
         },
         {
           "type": "insertion",
-          "hypothesis": "stomach",
+          "hypothesis": "tummy",
           "file": "day5_consultation11"
         },
         {
@@ -13902,8 +13718,8 @@
           "file": "day5_consultation11"
         }
       ],
-      "unique_medical_terms_in_ref": 26,
-      "unique_medical_terms_found": 23,
+      "unique_medical_terms_in_ref": 23,
+      "unique_medical_terms_found": 21,
       "per_category": {
         "drugs": {
           "ref_count": 11,
@@ -13947,15 +13763,15 @@
     },
     {
       "wer": 0.572877,
-      "m_wer": 0.380952,
-      "m_cer": 0.4773,
-      "medical_entity_recall": 0.8148,
-      "medical_token_recall": 0.6667,
+      "m_wer": 0.309524,
+      "m_cer": 0.6553,
+      "medical_entity_recall": 0.875,
+      "medical_token_recall": 0.7381,
       "total_ref_words": 789,
       "total_medical_ref_words": 42,
-      "medical_correct": 28,
-      "medical_substitutions": 9,
-      "medical_deletions": 5,
+      "medical_correct": 31,
+      "medical_substitutions": 7,
+      "medical_deletions": 4,
       "medical_insertions": 2,
       "spurious_medical_insertions": 2,
       "medical_errors_detail": [
@@ -13994,14 +13810,6 @@
           "file": "day5_consultation12"
         },
         {
-          "type": "substitution",
-          "reference": "fevers",
-          "hypothesis": "fever",
-          "category": "symptoms",
-          "cer": 0.1667,
-          "file": "day5_consultation12"
-        },
-        {
           "type": "deletion",
           "reference": "fever",
           "category": "symptoms",
@@ -14009,24 +13817,10 @@
         },
         {
           "type": "substitution",
-          "reference": "rashes",
+          "reference": "rash",
           "hypothesis": "rushes",
           "category": "symptoms",
-          "cer": 0.1667,
-          "file": "day5_consultation12"
-        },
-        {
-          "type": "substitution",
-          "reference": "headache",
-          "hypothesis": "headaches",
-          "category": "symptoms",
-          "cer": 0.125,
-          "file": "day5_consultation12"
-        },
-        {
-          "type": "deletion",
-          "reference": "pain",
-          "category": "symptoms",
+          "cer": 0.75,
           "file": "day5_consultation12"
         },
         {
@@ -14043,7 +13837,7 @@
         },
         {
           "type": "deletion",
-          "reference": "migraines",
+          "reference": "migraine",
           "category": "conditions",
           "file": "day5_consultation12"
         },
@@ -14072,15 +13866,15 @@
           "file": "day5_consultation12"
         }
       ],
-      "unique_medical_terms_in_ref": 27,
-      "unique_medical_terms_found": 22,
+      "unique_medical_terms_in_ref": 24,
+      "unique_medical_terms_found": 21,
       "per_category": {
         "drugs": {
-          "ref_count": 7,
-          "correct": 4,
+          "ref_count": 8,
+          "correct": 5,
           "substitutions": 2,
           "deletions": 1,
-          "m_wer": 0.428571
+          "m_wer": 0.375
         },
         "conditions": {
           "ref_count": 3,
@@ -14090,11 +13884,11 @@
           "m_wer": 0.666667
         },
         "symptoms": {
-          "ref_count": 24,
-          "correct": 15,
-          "substitutions": 7,
-          "deletions": 2,
-          "m_wer": 0.375
+          "ref_count": 23,
+          "correct": 17,
+          "substitutions": 5,
+          "deletions": 1,
+          "m_wer": 0.26087
         },
         "anatomy": {
           "ref_count": 2,
@@ -14111,8 +13905,8 @@
           "m_wer": 0.0
         }
       },
-      "high_risk_m_wer": 0.428571,
-      "high_risk_ref_count": 7,
+      "high_risk_m_wer": 0.375,
+      "high_risk_ref_count": 8,
       "file": "day5_consultation12"
     }
   ]

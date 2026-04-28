@@ -9,7 +9,8 @@ Extends the standard WER evaluation with medical-specific metrics:
 - High-risk M-WER: drug term errors separately
 - Medical entity recall: % of unique reference medical terms found in hypothesis
 
-Uses the same text normalization as the standard WER calculator.
+Uses the same text normalization as the standard WER calculator, plus a
+clinical canonicalization pass for medical scoring only.
 
 Usage:
     # As a library
@@ -37,10 +38,15 @@ from medical_terms_list import (
     get_term_category,
     is_high_risk,
 )
+from clinical_canonicalizer import canonicalize_medical_tokens
 from text_normalizer import EnglishTextNormalizer
 
 TEXT_NORMALIZER = EnglishTextNormalizer()
 EXCLUDED_FILES = {"day1_consultation07", "day3_consultation03"}
+MEDICAL_CANONICALIZATION = (
+    "Canonical M-WER v2: reference typo fixes + reviewed low-risk morphology, "
+    "with dangerous clinical/drug confusables kept penalized"
+)
 
 
 def _normalize(text: str) -> list[str]:
@@ -164,12 +170,17 @@ def calculate_medical_metrics(reference: str, hypothesis: str) -> Dict:
             "high_risk_ref_count": 0,
         }
 
-    # Align and compute operations
-    ops = _align_words(ref_words, hyp_words)
-
-    # Overall WER
-    total_errors = sum(1 for op, _, _ in ops if op != "correct")
+    # Overall WER remains based on the standard benchmark normalization. The
+    # clinical canonicalizer is only for medical-term scoring below.
+    wer_ops = _align_words(ref_words, hyp_words)
+    total_errors = sum(1 for op, _, _ in wer_ops if op != "correct")
     wer = total_errors / len(ref_words) if ref_words else 0.0
+
+    med_ref_words = canonicalize_medical_tokens(ref_words, side="reference")
+    med_hyp_words = canonicalize_medical_tokens(hyp_words, side="hypothesis")
+
+    # Align and compute medical operations on canonicalized medical tokens.
+    ops = _align_words(med_ref_words, med_hyp_words)
 
     # Counters
     medical_ref_count = 0
@@ -278,10 +289,10 @@ def calculate_medical_metrics(reference: str, hypothesis: str) -> Dict:
 
     # Binary entity recall (unchanged from original)
     ref_medical_unique = set()
-    for w in ref_words:
+    for w in med_ref_words:
         if _is_medical(w, medical_terms):
             ref_medical_unique.add(_norm_key(w))
-    hyp_normalized = set(_norm_key(w) for w in hyp_words)
+    hyp_normalized = set(_norm_key(w) for w in med_hyp_words)
     found = ref_medical_unique & hyp_normalized
     entity_recall = len(found) / len(ref_medical_unique) if ref_medical_unique else 1.0
 
@@ -429,6 +440,7 @@ def evaluate_model(
 
     return {
         "model": model_name,
+        "medical_canonicalization": MEDICAL_CANONICALIZATION,
         "files": n,
         "avg_wer": round(avg_wer, 6),
         "avg_m_wer": round(avg_m_wer, 6),
@@ -487,6 +499,7 @@ def main():
     print(f"Files: {results['files']}")
     print(f"{'='*60}")
     print(f"  WER (overall):              {results['avg_wer']*100:.2f}%")
+    print(f"  Medical canonicalization:   {results.get('medical_canonicalization', MEDICAL_CANONICALIZATION)}")
     print(f"  M-WER (medical terms):      {results['avg_m_wer']*100:.2f}%")
     print(f"  M-CER (char errors):        {results['global_m_cer']*100:.1f}%")
     print(f"  Medical entity recall:      {results['avg_medical_entity_recall']*100:.1f}%")
