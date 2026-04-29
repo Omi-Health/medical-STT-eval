@@ -19,8 +19,9 @@ medical-stt-benchmark/
 ├── data/
 │   ├── raw_audio/              # 57 WAV files (~13.9MB each, Git LFS)
 │   └── cleaned_transcripts/    # 57 reference transcripts (*_pure_text.txt)
-├── transcribe/                 # 24 model-specific scripts + base class
+├── transcribe/                 # Model-specific scripts + shared base/chunking helpers
 │   ├── base_transcriber.py     # Base class (loads .env automatically)
+│   ├── chunking_utils.py       # Shared chunk splitting and transcript merging
 │   └── *_transcribe.py         # One per model/API
 ├── evaluate/
 │   ├── text_normalizer.py     # Custom WER normalizer (replaces whisper dependency)
@@ -47,14 +48,14 @@ medical-stt-benchmark/
 4. **Validated**: Each audio file has corresponding reference transcript
 
 ### Problematic Files - IMPORTANT
-Two files cause issues for most models (13 out of 15 models failed to process them):
+Two files are excluded from the main comparable leaderboard because many early model runs failed or produced unstable outputs on them:
 - `day1_consultation07`
 - `day3_consultation03`
 
 **How these are handled**:
 - The `comparison_generator.py` explicitly excludes these files
 - Only 55 files are used for fair cross-model comparison
-- Only NVIDIA Canary models successfully processed these files
+- Some current models can process all 57 files; track that separately from the 55-file comparable leaderboard
 
 ## Evaluation Workflow
 
@@ -83,7 +84,7 @@ Long medical conversations (>30 seconds) caused major issues:
 ### The Solution Developed
 **Sophisticated chunking with overlap merging** - inspired by Groq's approach and centralized in `transcribe/chunking_utils.py`:
 
-1. **Intelligent chunking**: Split audio into overlapping segments (30-35 seconds)
+1. **Model-specific chunking**: Split audio into fixed overlapping segments sized for the model family (for example 8s for MedASR CTC, 30-35s for constrained generative models)
 2. **Overlap merging**: Use longest common sequence (LCS) algorithm to merge transcriptions
 3. **Audio processing**: Apply fade-in/fade-out to reduce artifacts
 4. **Model-specific tuning**: Adjust parameters based on each model's constraints
@@ -141,9 +142,9 @@ The improved chunking is particularly important for medical conversations where:
 **Cloud APIs** (Robust, handle long audio natively):
 - **OpenAI**: `openai_api_transcribe.py` (Whisper-1, GPT-4o variants)
 - **Groq**: `groq_whisper_transcribe.py` (Whisper Large V3/Turbo)
-- **ElevenLabs**: `elevenlabs_scribe_transcribe.py` (Scribe v1)
-- **Mistral**: `voxtral_mini_transcribe_v1_chat_transcribe.py` (Voxtral V1 via chat completions API)
-- **Google**: `gemini_transcribe.py` (Gemini 2.5 Flash/Pro)
+- **ElevenLabs**: `elevenlabs_scribe_transcribe.py` / `elevenlabs_scribe_v2_transcribe.py` (Scribe v1/v2)
+- **Mistral**: Voxtral Mini V1/V2 API paths
+- **Google**: `gemini_transcribe.py` (Gemini 2.5 and 3 Flash/Pro)
 
 **Local/Native Models** (Optimized for long audio):
 - **MLX Whisper**: `mlx_whisper_transcribe.py` (Apple Silicon optimized)
@@ -152,7 +153,7 @@ The improved chunking is particularly important for medical conversations where:
 - **Parakeet**: `parakeet_transcribe.py` (MLX research model)
 
 ### Key Insights
-- **Chunking**: Only needed for models with strict constraints (vLLM, resource-limited APIs)
+- **Chunking**: Only needed for models with strict constraints or empirically better decoder behavior (vLLM, resource-limited APIs, CTC short-chunk paths)
 - **Full Audio**: Preferred by robust cloud APIs and optimized local models
 - **Overlap Merging**: Critical for maintaining context in medical conversations
 - **Model-Specific**: Chunk size depends on each model's technical limitations
@@ -533,7 +534,7 @@ Several models exhibited similar hallucination behavior:
 1. Create `transcribe/your_model_transcribe.py`
 2. Inherit from `BaseTranscriber` in `transcribe/base_transcriber.py`
 3. Implement `transcribe_file()` returning `TranscriptionResult`
-4. For long audio constraints, copy chunking logic from `canary_qwen_improved_transcribe.py`
+4. For long audio constraints, reuse `transcribe/chunking_utils.py` and choose chunk/merge parameters by model family
 5. Test on sample files first, then full dataset
 6. Run evaluation workflow:
    ```bash

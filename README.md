@@ -7,7 +7,7 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 
 ## Leaderboard
 
-**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 42 comparable single-stream models | **Updated**: 2026-04-28
+**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 42 comparable single-stream models | **Updated**: 2026-04-29
 
 ### Ranked by Canonical Medical WER (M-WER)
 
@@ -68,7 +68,7 @@ Most cloud APIs and native long-form models are evaluated on full audio. Chunkin
 
 The shared helpers live in `transcribe/chunking_utils.py`:
 - **Post-hoc overlap + LCS merge**: Canary-Qwen, Canary Flash, Granite, and Azure Phi-4 use overlapping chunks and text-level LCS merging.
-- **CTC/HF chunking**: MMS uses HF pipeline chunking with character timestamps. MedASR now supports a stronger KenLM-backed short-chunk mode (`8s` chunks, `1s` overlap) while preserving the old HF `20s/2s` baseline via `--decode_mode hf_pipeline`.
+- **CTC/HF chunking**: MMS uses HF pipeline chunking with character timestamps. MedASR defaults to a stronger KenLM-backed short-chunk mode (`8s` chunks, `1s` overlap) while preserving the old HF `20s/2s` baseline via `--decode_mode hf_pipeline`.
 - **Simple concat**: Gemma 4 keeps non-overlapping 30s chunks because overlap/context merging tested worse for that model.
 - **No chunking**: Qwen3-ASR, cloud batch APIs, and native long-form paths keep full-audio decoding when the model supports it.
 
