@@ -7,7 +7,7 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 
 ## Leaderboard
 
-**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 42 comparable single-stream models | **Updated**: 2026-04-29
+**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 44 comparable single-stream models | **Updated**: 2026-11-07
 
 ### Ranked by Canonical Medical WER (M-WER)
 
@@ -20,41 +20,43 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 | 5 | Soniox stt-async-v4 | 9.18% | 2.06% | 5.4% | 46.2s | API |
 | 6 | ElevenLabs Scribe v2 | 9.72% | 2.54% | 2.8% | 43.5s | API |
 | 7 | AssemblyAI Universal-3 Pro (medical-v1) | 9.55% | 2.83% | 4.9% | 37.3s | API |
-| 8 | Qwen3 ASR 1.7B | 9.00% | 3.14% | 7.1% | 6.8s | A10 |
-| 9 | Deepgram Nova-3 Medical | 9.05% | 3.17% | 7.9% | 12.9s | API |
-| 10 | Microsoft MAI-Transcribe-1 | 11.52% | 3.33% | 8.8% | 21.8s | API |
-| 11 | ElevenLabs Scribe v1 | 10.87% | 3.59% | 6.0% | 36.3s | API |
-| 12 | Google Gemini 2.5 Flash | 9.45% | 3.65% | 8.2% | 20.2s | API |
-| 13 | OpenAI GPT-4o Mini (Dec 2025) | 11.18% | 3.68% | 8.8% | 40.4s | API |
-| 14 | Parakeet TDT 1.1B | 9.03% | 3.68% | 13.7% | 12.3s | T4 |
-| 15 | Voxtral Mini Transcribe V1 | 11.85% | 4.03% | 9.7% | 22.4s | API |
-| 16 | Voxtral Mini Transcribe V2 | 11.64% | 4.10% | 10.9% | 18.4s | API |
-| 17 | Voxtral Mini 4B Realtime | 11.89% | 4.10% | 10.3% | 133.9s | A10 |
-| 18 | Groq Whisper Large v3 Turbo | 12.14% | 4.32% | 12.2% | 8.0s | API |
-| 19 | Cohere Transcribe (Mar 2026) | 11.81% | 4.32% | 14.8% | 3.9s | A10 |
-| 20 | OpenAI Whisper-1 | 13.20% | 4.51% | 8.6% | 104.3s | API |
-| 21 | NVIDIA Canary 1B Flash | 12.03% | 4.51% | 14.2% | 23.4s | T4 |
-| 22 | Groq Whisper Large v3 | 11.93% | 4.60% | 11.8% | 8.6s | API |
-| 23 | Parakeet TDT 0.6B v2 | 10.75% | 4.60% | 15.7% | 5.4s | Apple Silicon |
-| 24 | MLX Whisper Large v3 Turbo | 11.65% | 4.70% | 12.2% | 12.9s | Apple Silicon |
-| 25 | WhisperKit Large v3 Turbo | 12.28% | 4.73% | 12.4% | 21.4s | Apple Silicon |
-| 26 | OpenAI GPT-4o Mini Transcribe | 13.60% | 4.86% | 9.7% | 23.2s | API |
-| 27 | Qwen3 ASR 0.6B | 9.83% | 4.95% | 13.7% | 5.1s | A10 |
-| 28 | Kyutai STT 2.6B | 11.20% | 5.21% | 14.0% | 148.4s | T4 |
-| 29 | GLM-ASR-Nano-2512 | 10.84% | 5.75% | 16.1% | 87.7s | T4 |
-| 30 | Parakeet TDT 0.6B v3 | 9.35% | 5.90% | 20.6% | 6.3s | Apple Silicon |
-| 31 | Nemotron Speech Streaming 0.6B | 11.06% | 7.05% | 21.0% | 11.7s | T4 |
-| 32 | OpenAI GPT-4o Transcribe | 14.84% | 7.87% | 13.5% | 27.9s | API |
-| 33 | Gemma 4 E4B-it^ | 15.69% | 7.90% | 12.4% | 185.4s | T4 |
-| 34 | NVIDIA Canary-Qwen 2.5B | 12.94% | 8.25% | 21.0% | 105.4s | T4 |
-| 35 | NVIDIA Canary 1B v2 | 14.32% | 9.40% | 18.0% | 9.2s | T4 |
-| 36 | IBM Granite Speech 3.3-2B | 16.55% | 11.02% | 22.1% | 109.7s | T4 |
-| 37 | Apple SpeechAnalyzer | 12.36% | 11.97% | 25.3% | 6.0s | Apple Silicon |
-| 38 | Gemma 4 E2B-it^ | 18.90% | 12.22% | 17.6% | 134.6s | T4 |
-| 39 | Azure Foundry Phi-4 | 31.13% | 14.19% | 16.1% | 212.8s | API |
-| 40 | Kyutai STT 1B (Multilingual) | 27.28% | 19.90% | 27.9% | 79.5s | T4 |
-| 41 | Google MedASR | 52.54% | 26.16% | 35.6% | 3.9s | Apple Silicon |
-| 42 | Facebook MMS-1B-all | 38.70% | 52.92% | 71.0% | 28.6s | T4 |
+| 8 | Lanson S2 + Correction | 9.04% | 3.05% | 5.6% | 5.9s | GH200 |
+| 9 | Qwen3 ASR 1.7B | 9.00% | 3.14% | 7.1% | 6.8s | A10 |
+| 10 | Deepgram Nova-3 Medical | 9.05% | 3.17% | 7.9% | 12.9s | API |
+| 11 | Microsoft MAI-Transcribe-1 | 11.52% | 3.33% | 8.8% | 21.8s | API |
+| 12 | Lanson S2 (raw) | 8.96% | 3.37% | 7.9% | 5.9s | GH200 |
+| 13 | ElevenLabs Scribe v1 | 10.87% | 3.59% | 6.0% | 36.3s | API |
+| 14 | Google Gemini 2.5 Flash | 9.45% | 3.65% | 8.2% | 20.2s | API |
+| 15 | OpenAI GPT-4o Mini (Dec 2025) | 11.18% | 3.68% | 8.8% | 40.4s | API |
+| 16 | Parakeet TDT 1.1B | 9.03% | 3.68% | 13.7% | 12.3s | T4 |
+| 17 | Voxtral Mini Transcribe V1 | 11.85% | 4.03% | 9.7% | 22.4s | API |
+| 18 | Voxtral Mini Transcribe V2 | 11.64% | 4.10% | 10.9% | 18.4s | API |
+| 19 | Voxtral Mini 4B Realtime | 11.89% | 4.10% | 10.3% | 133.9s | A10 |
+| 20 | Groq Whisper Large v3 Turbo | 12.14% | 4.32% | 12.2% | 8.0s | API |
+| 21 | Cohere Transcribe (Mar 2026) | 11.81% | 4.32% | 14.8% | 3.9s | A10 |
+| 22 | OpenAI Whisper-1 | 13.20% | 4.51% | 8.6% | 104.3s | API |
+| 23 | NVIDIA Canary 1B Flash | 12.03% | 4.51% | 14.2% | 23.4s | T4 |
+| 24 | Groq Whisper Large v3 | 11.93% | 4.60% | 11.8% | 8.6s | API |
+| 25 | Parakeet TDT 0.6B v2 | 10.75% | 4.60% | 15.7% | 5.4s | Apple Silicon |
+| 26 | MLX Whisper Large v3 Turbo | 11.65% | 4.70% | 12.2% | 12.9s | Apple Silicon |
+| 27 | WhisperKit Large v3 Turbo | 12.28% | 4.73% | 12.4% | 21.4s | Apple Silicon |
+| 28 | OpenAI GPT-4o Mini Transcribe | 13.60% | 4.86% | 9.7% | 23.2s | API |
+| 29 | Qwen3 ASR 0.6B | 9.83% | 4.95% | 13.7% | 5.1s | A10 |
+| 30 | Kyutai STT 2.6B | 11.20% | 5.21% | 14.0% | 148.4s | T4 |
+| 31 | GLM-ASR-Nano-2512 | 10.84% | 5.75% | 16.1% | 87.7s | T4 |
+| 32 | Parakeet TDT 0.6B v3 | 9.35% | 5.90% | 20.6% | 6.3s | Apple Silicon |
+| 33 | Nemotron Speech Streaming 0.6B | 11.06% | 7.05% | 21.0% | 11.7s | T4 |
+| 34 | OpenAI GPT-4o Transcribe | 14.84% | 7.87% | 13.5% | 27.9s | API |
+| 35 | Gemma 4 E4B-it^ | 15.69% | 7.90% | 12.4% | 185.4s | T4 |
+| 36 | NVIDIA Canary-Qwen 2.5B | 12.94% | 8.25% | 21.0% | 105.4s | T4 |
+| 37 | NVIDIA Canary 1B v2 | 14.32% | 9.40% | 18.0% | 9.2s | T4 |
+| 38 | IBM Granite Speech 3.3-2B | 16.55% | 11.02% | 22.1% | 109.7s | T4 |
+| 39 | Apple SpeechAnalyzer | 12.36% | 11.97% | 25.3% | 6.0s | Apple Silicon |
+| 40 | Gemma 4 E2B-it^ | 18.90% | 12.22% | 17.6% | 134.6s | T4 |
+| 41 | Azure Foundry Phi-4 | 31.13% | 14.19% | 16.1% | 212.8s | API |
+| 42 | Kyutai STT 1B (Multilingual) | 27.28% | 19.90% | 27.9% | 79.5s | T4 |
+| 43 | Google MedASR | 52.54% | 26.16% | 35.6% | 3.9s | Apple Silicon |
+| 44 | Facebook MMS-1B-all | 38.70% | 52.92% | 71.0% | 28.6s | T4 |
 
 *Ranked by Canonical M-WER v2. **Avg Speed** = wall-clock seconds per ~7.5 min file (lower is better; not normalized for hardware tier — H100 ≫ A10 ≫ T4). **Type**: API (cloud), T4/A10/H100 (NVIDIA GPU tier via NeMo/vLLM/transformers), Apple Silicon (MLX/Native on M-series). Additional metrics in `results/metrics/{model}_medical_wer.json`.*
 
