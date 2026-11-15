@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-28",
+  "updated": "2026-11-15",
   "dataset": {
     "name": "PriMock57",
     "files": 55,
@@ -104,6 +104,19 @@
     },
     {
       "rank": 8,
+      "name": "lanson-s2-v10",
+      "wer": 0.0904,
+      "accuracy": 0.9096,
+      "avg_speed_sec": null,
+      "best_wer": 0.0391,
+      "worst_wer": 0.1489,
+      "wer_std": 0.0229,
+      "files_evaluated": 55,
+      "m_wer": 0.0305,
+      "drug_m_wer": 0.0558
+    },
+    {
+      "rank": 9,
       "name": "qwen3-asr-1.7b",
       "wer": 0.09,
       "accuracy": 0.91,
@@ -116,7 +129,7 @@
       "drug_m_wer": 0.0708
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "deepgram-nova-3-medical",
       "wer": 0.0905,
       "accuracy": 0.9095,
@@ -129,7 +142,7 @@
       "drug_m_wer": 0.0794
     },
     {
-      "rank": 10,
+      "rank": 11,
       "name": "mai-transcribe-1",
       "wer": 0.1152,
       "accuracy": 0.8848,
@@ -142,7 +155,20 @@
       "drug_m_wer": 0.088
     },
     {
-      "rank": 11,
+      "rank": 12,
+      "name": "lanson-s2-fullaudio",
+      "wer": 0.0896,
+      "accuracy": 0.9104,
+      "avg_speed_sec": null,
+      "best_wer": 0.0381,
+      "worst_wer": 0.1497,
+      "wer_std": 0.0233,
+      "files_evaluated": 55,
+      "m_wer": 0.0337,
+      "drug_m_wer": 0.0794
+    },
+    {
+      "rank": 13,
       "name": "elevenlabs-scribe_v1",
       "wer": 0.1087,
       "accuracy": 0.8913,
@@ -155,7 +181,7 @@
       "drug_m_wer": 0.0601
     },
     {
-      "rank": 12,
+      "rank": 14,
       "name": "google-gemini-2.5-flash",
       "wer": 0.0945,
       "accuracy": 0.9055,
@@ -168,20 +194,7 @@
       "drug_m_wer": 0.0815
     },
     {
-      "rank": 13,
-      "name": "openai-gpt-4o-mini-transcribe-2025-12-15",
-      "wer": 0.1118,
-      "accuracy": 0.8882,
-      "avg_speed_sec": 40.4,
-      "best_wer": 0.0616,
-      "worst_wer": 0.2325,
-      "wer_std": 0.0324,
-      "files_evaluated": 55,
-      "m_wer": 0.0368,
-      "drug_m_wer": 0.088
-    },
-    {
-      "rank": 14,
+      "rank": 15,
       "name": "parakeet-tdt-1.1b",
       "wer": 0.0903,
       "accuracy": 0.9097,
@@ -194,7 +207,20 @@
       "drug_m_wer": 0.1373
     },
     {
-      "rank": 15,
+      "rank": 16,
+      "name": "openai-gpt-4o-mini-transcribe-2025-12-15",
+      "wer": 0.1118,
+      "accuracy": 0.8882,
+      "avg_speed_sec": 40.4,
+      "best_wer": 0.0616,
+      "worst_wer": 0.2325,
+      "wer_std": 0.0324,
+      "files_evaluated": 55,
+      "m_wer": 0.0368,
+      "drug_m_wer": 0.088
+    },
+    {
+      "rank": 17,
       "name": "voxtral-mini-transcribe-v1-chat",
       "wer": 0.1185,
       "accuracy": 0.8815,
@@ -207,7 +233,7 @@
       "drug_m_wer": 0.0966
     },
     {
-      "rank": 16,
+      "rank": 18,
       "name": "voxtral-mini-transcribe-v2",
       "wer": 0.1164,
       "accuracy": 0.8836,
@@ -220,7 +246,7 @@
       "drug_m_wer": 0.1094
     },
     {
-      "rank": 17,
+      "rank": 19,
       "name": "voxtral-mini-4b-realtime",
       "wer": 0.1189,
       "accuracy": 0.8811,
@@ -233,20 +259,7 @@
       "drug_m_wer": 0.103
     },
     {
-      "rank": 18,
-      "name": "groq-whisper-large-v3-turbo",
-      "wer": 0.1214,
-      "accuracy": 0.8786,
-      "avg_speed_sec": 8.0,
-      "best_wer": 0.0606,
-      "worst_wer": 0.194,
-      "wer_std": 0.0316,
-      "files_evaluated": 55,
-      "m_wer": 0.0432,
-      "drug_m_wer": 0.1223
-    },
-    {
-      "rank": 19,
+      "rank": 20,
       "name": "cohere-transcribe-03-2026",
       "wer": 0.1181,
       "accuracy": 0.8819,
@@ -259,20 +272,20 @@
       "drug_m_wer": 0.1481
     },
     {
-      "rank": 20,
-      "name": "openai-whisper-1",
-      "wer": 0.132,
-      "accuracy": 0.868,
-      "avg_speed_sec": 104.3,
-      "best_wer": 0.056,
-      "worst_wer": 1.0469,
-      "wer_std": 0.1292,
+      "rank": 21,
+      "name": "groq-whisper-large-v3-turbo",
+      "wer": 0.1214,
+      "accuracy": 0.8786,
+      "avg_speed_sec": 8.0,
+      "best_wer": 0.0606,
+      "worst_wer": 0.194,
+      "wer_std": 0.0316,
       "files_evaluated": 55,
-      "m_wer": 0.0451,
-      "drug_m_wer": 0.0858
+      "m_wer": 0.0432,
+      "drug_m_wer": 0.1223
     },
     {
-      "rank": 21,
+      "rank": 22,
       "name": "canary_1b_flash_lcs",
       "wer": 0.1203,
       "accuracy": 0.8797,
@@ -285,20 +298,20 @@
       "drug_m_wer": 0.1416
     },
     {
-      "rank": 22,
-      "name": "groq-whisper-large-v3",
-      "wer": 0.1193,
-      "accuracy": 0.8807,
-      "avg_speed_sec": 8.6,
-      "best_wer": 0.0635,
-      "worst_wer": 0.1886,
-      "wer_std": 0.031,
+      "rank": 23,
+      "name": "openai-whisper-1",
+      "wer": 0.132,
+      "accuracy": 0.868,
+      "avg_speed_sec": 104.3,
+      "best_wer": 0.056,
+      "worst_wer": 1.0469,
+      "wer_std": 0.1292,
       "files_evaluated": 55,
-      "m_wer": 0.046,
-      "drug_m_wer": 0.118
+      "m_wer": 0.0451,
+      "drug_m_wer": 0.0858
     },
     {
-      "rank": 23,
+      "rank": 24,
       "name": "parakeet-parakeet-tdt-0.6b-v2",
       "wer": 0.1075,
       "accuracy": 0.8925,
@@ -311,7 +324,20 @@
       "drug_m_wer": 0.1567
     },
     {
-      "rank": 24,
+      "rank": 25,
+      "name": "groq-whisper-large-v3",
+      "wer": 0.1193,
+      "accuracy": 0.8807,
+      "avg_speed_sec": 8.6,
+      "best_wer": 0.0635,
+      "worst_wer": 0.1886,
+      "wer_std": 0.031,
+      "files_evaluated": 55,
+      "m_wer": 0.046,
+      "drug_m_wer": 0.118
+    },
+    {
+      "rank": 26,
       "name": "mlx-community_whisper-large-v3-turbo",
       "wer": 0.1165,
       "accuracy": 0.8835,
@@ -324,7 +350,7 @@
       "drug_m_wer": 0.1223
     },
     {
-      "rank": 25,
+      "rank": 27,
       "name": "whisperkit-large-v3-v20240930_turbo",
       "wer": 0.1228,
       "accuracy": 0.8772,
@@ -337,7 +363,7 @@
       "drug_m_wer": 0.1245
     },
     {
-      "rank": 26,
+      "rank": 28,
       "name": "openai-gpt-4o-mini-transcribe",
       "wer": 0.136,
       "accuracy": 0.864,
@@ -350,7 +376,7 @@
       "drug_m_wer": 0.0966
     },
     {
-      "rank": 27,
+      "rank": 29,
       "name": "qwen3-asr-0.6b",
       "wer": 0.0983,
       "accuracy": 0.9017,
@@ -363,7 +389,7 @@
       "drug_m_wer": 0.1373
     },
     {
-      "rank": 28,
+      "rank": 30,
       "name": "kyutai-stt-pytorch-stt-2.6b-en",
       "wer": 0.112,
       "accuracy": 0.888,
@@ -376,7 +402,7 @@
       "drug_m_wer": 0.1395
     },
     {
-      "rank": 29,
+      "rank": 31,
       "name": "glm-asr-nano-2512",
       "wer": 0.1084,
       "accuracy": 0.8916,
@@ -389,7 +415,7 @@
       "drug_m_wer": 0.1609
     },
     {
-      "rank": 30,
+      "rank": 32,
       "name": "parakeet-parakeet-tdt-0.6b-v3",
       "wer": 0.0935,
       "accuracy": 0.9065,
@@ -402,7 +428,7 @@
       "drug_m_wer": 0.206
     },
     {
-      "rank": 31,
+      "rank": 33,
       "name": "nemotron-speech-streaming-0.6b",
       "wer": 0.1106,
       "accuracy": 0.8894,
@@ -415,7 +441,7 @@
       "drug_m_wer": 0.2103
     },
     {
-      "rank": 32,
+      "rank": 34,
       "name": "openai-gpt-4o-transcribe",
       "wer": 0.1484,
       "accuracy": 0.8516,
@@ -428,7 +454,7 @@
       "drug_m_wer": 0.1352
     },
     {
-      "rank": 33,
+      "rank": 35,
       "name": "gemma-4-e4b-it",
       "wer": 0.1569,
       "accuracy": 0.8431,
@@ -441,7 +467,7 @@
       "drug_m_wer": 0.1245
     },
     {
-      "rank": 34,
+      "rank": 36,
       "name": "nvidia_canary-qwen-2.5b",
       "wer": 0.1294,
       "accuracy": 0.8706,
@@ -454,7 +480,7 @@
       "drug_m_wer": 0.2103
     },
     {
-      "rank": 35,
+      "rank": 37,
       "name": "canary-1b-v2",
       "wer": 0.1432,
       "accuracy": 0.8568,
@@ -467,7 +493,7 @@
       "drug_m_wer": 0.1803
     },
     {
-      "rank": 36,
+      "rank": 38,
       "name": "granite-speech-3.3-2b",
       "wer": 0.1655,
       "accuracy": 0.8345,
@@ -480,7 +506,7 @@
       "drug_m_wer": 0.221
     },
     {
-      "rank": 37,
+      "rank": 39,
       "name": "apple-speechanalyzer",
       "wer": 0.1236,
       "accuracy": 0.8764,
@@ -493,7 +519,7 @@
       "drug_m_wer": 0.2532
     },
     {
-      "rank": 38,
+      "rank": 40,
       "name": "gemma-4-e2b-it",
       "wer": 0.189,
       "accuracy": 0.811,
@@ -506,7 +532,7 @@
       "drug_m_wer": 0.176
     },
     {
-      "rank": 39,
+      "rank": 41,
       "name": "azure-foundry-phi4",
       "wer": 0.3113,
       "accuracy": 0.6887,
@@ -519,7 +545,7 @@
       "drug_m_wer": 0.1609
     },
     {
-      "rank": 40,
+      "rank": 42,
       "name": "kyutai-stt-pytorch-stt-1b-en_fr",
       "wer": 0.2728,
       "accuracy": 0.7272,
@@ -532,7 +558,7 @@
       "drug_m_wer": 0.279
     },
     {
-      "rank": 41,
+      "rank": 43,
       "name": "google-medasr",
       "wer": 0.5254,
       "accuracy": 0.4746,
@@ -545,7 +571,7 @@
       "drug_m_wer": 0.3562
     },
     {
-      "rank": 42,
+      "rank": 44,
       "name": "mms-1b-all",
       "wer": 0.387,
       "accuracy": 0.613,

@@ -117,10 +117,12 @@ class ModelComparison:
                         'total_reference_words': metrics['word_statistics'].get('total_reference_words', 0),
                     })
 
-            # Speed
-            if 'speed_metrics' in metrics:
-                speed = metrics['speed_metrics']
-                summary['average_duration'] = speed.get('average_duration', 0)
+            # Speed is optional. Keep unavailable timings distinct from a real
+            # zero-second measurement so the leaderboard can render them as null.
+            speed = metrics.get('speed_metrics')
+            summary['average_duration'] = (
+                speed.get('average_duration') if speed else None
+            )
 
             # Medical WER
             if 'medical' in metrics:
@@ -134,9 +136,13 @@ class ModelComparison:
 
             comparison['summary'].append(summary)
 
-        # Sort by M-WER (primary), fall back to WER
+        # Sort by M-WER, then WER to break exact M-WER ties deterministically.
         comparison['summary'].sort(
-            key=lambda x: x.get('m_wer', x.get('average_wer', float('inf')))
+            key=lambda x: (
+                x.get('m_wer', x.get('average_wer', float('inf'))),
+                x.get('average_wer', float('inf')),
+                x.get('model_name', ''),
+            )
         )
 
         return comparison
@@ -213,7 +219,10 @@ class ModelComparison:
                 'name': model['model_name'],
                 'wer': round(model.get('average_wer', 0), 4),
                 'accuracy': round(model.get('word_accuracy', 0), 4),
-                'avg_speed_sec': round(model.get('average_duration', 0), 1),
+                'avg_speed_sec': (
+                    round(model['average_duration'], 1)
+                    if model.get('average_duration') is not None else None
+                ),
                 'best_wer': round(model.get('best_wer', 0), 4),
                 'worst_wer': round(model.get('worst_wer', 0), 4),
                 'wer_std': round(model.get('wer_std', 0), 4),
