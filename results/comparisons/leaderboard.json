@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-15",
   "dataset": {
     "name": "PriMock57",
     "files": 55,
@@ -107,7 +107,7 @@
       "name": "lanson-s2-v10",
       "wer": 0.0904,
       "accuracy": 0.9096,
-      "avg_speed_sec": 5.9,
+      "avg_speed_sec": null,
       "best_wer": 0.0391,
       "worst_wer": 0.1489,
       "wer_std": 0.0229,
@@ -159,7 +159,7 @@
       "name": "lanson-s2-fullaudio",
       "wer": 0.0896,
       "accuracy": 0.9104,
-      "avg_speed_sec": 5.9,
+      "avg_speed_sec": null,
       "best_wer": 0.0381,
       "worst_wer": 0.1497,
       "wer_std": 0.0233,
@@ -195,19 +195,6 @@
     },
     {
       "rank": 15,
-      "name": "openai-gpt-4o-mini-transcribe-2025-12-15",
-      "wer": 0.1118,
-      "accuracy": 0.8882,
-      "avg_speed_sec": 40.4,
-      "best_wer": 0.0616,
-      "worst_wer": 0.2325,
-      "wer_std": 0.0324,
-      "files_evaluated": 55,
-      "m_wer": 0.0368,
-      "drug_m_wer": 0.088
-    },
-    {
-      "rank": 16,
       "name": "parakeet-tdt-1.1b",
       "wer": 0.0903,
       "accuracy": 0.9097,
@@ -218,6 +205,19 @@
       "files_evaluated": 55,
       "m_wer": 0.0368,
       "drug_m_wer": 0.1373
+    },
+    {
+      "rank": 16,
+      "name": "openai-gpt-4o-mini-transcribe-2025-12-15",
+      "wer": 0.1118,
+      "accuracy": 0.8882,
+      "avg_speed_sec": 40.4,
+      "best_wer": 0.0616,
+      "worst_wer": 0.2325,
+      "wer_std": 0.0324,
+      "files_evaluated": 55,
+      "m_wer": 0.0368,
+      "drug_m_wer": 0.088
     },
     {
       "rank": 17,
@@ -260,19 +260,6 @@
     },
     {
       "rank": 20,
-      "name": "groq-whisper-large-v3-turbo",
-      "wer": 0.1214,
-      "accuracy": 0.8786,
-      "avg_speed_sec": 8.0,
-      "best_wer": 0.0606,
-      "worst_wer": 0.194,
-      "wer_std": 0.0316,
-      "files_evaluated": 55,
-      "m_wer": 0.0432,
-      "drug_m_wer": 0.1223
-    },
-    {
-      "rank": 21,
       "name": "cohere-transcribe-03-2026",
       "wer": 0.1181,
       "accuracy": 0.8819,
@@ -285,20 +272,20 @@
       "drug_m_wer": 0.1481
     },
     {
-      "rank": 22,
-      "name": "openai-whisper-1",
-      "wer": 0.132,
-      "accuracy": 0.868,
-      "avg_speed_sec": 104.3,
-      "best_wer": 0.056,
-      "worst_wer": 1.0469,
-      "wer_std": 0.1292,
+      "rank": 21,
+      "name": "groq-whisper-large-v3-turbo",
+      "wer": 0.1214,
+      "accuracy": 0.8786,
+      "avg_speed_sec": 8.0,
+      "best_wer": 0.0606,
+      "worst_wer": 0.194,
+      "wer_std": 0.0316,
       "files_evaluated": 55,
-      "m_wer": 0.0451,
-      "drug_m_wer": 0.0858
+      "m_wer": 0.0432,
+      "drug_m_wer": 0.1223
     },
     {
-      "rank": 23,
+      "rank": 22,
       "name": "canary_1b_flash_lcs",
       "wer": 0.1203,
       "accuracy": 0.8797,
@@ -311,20 +298,20 @@
       "drug_m_wer": 0.1416
     },
     {
-      "rank": 24,
-      "name": "groq-whisper-large-v3",
-      "wer": 0.1193,
-      "accuracy": 0.8807,
-      "avg_speed_sec": 8.6,
-      "best_wer": 0.0635,
-      "worst_wer": 0.1886,
-      "wer_std": 0.031,
+      "rank": 23,
+      "name": "openai-whisper-1",
+      "wer": 0.132,
+      "accuracy": 0.868,
+      "avg_speed_sec": 104.3,
+      "best_wer": 0.056,
+      "worst_wer": 1.0469,
+      "wer_std": 0.1292,
       "files_evaluated": 55,
-      "m_wer": 0.046,
-      "drug_m_wer": 0.118
+      "m_wer": 0.0451,
+      "drug_m_wer": 0.0858
     },
     {
-      "rank": 25,
+      "rank": 24,
       "name": "parakeet-parakeet-tdt-0.6b-v2",
       "wer": 0.1075,
       "accuracy": 0.8925,
@@ -335,6 +322,19 @@
       "files_evaluated": 55,
       "m_wer": 0.046,
       "drug_m_wer": 0.1567
+    },
+    {
+      "rank": 25,
+      "name": "groq-whisper-large-v3",
+      "wer": 0.1193,
+      "accuracy": 0.8807,
+      "avg_speed_sec": 8.6,
+      "best_wer": 0.0635,
+      "worst_wer": 0.1886,
+      "wer_std": 0.031,
+      "files_evaluated": 55,
+      "m_wer": 0.046,
+      "drug_m_wer": 0.118
     },
     {
       "rank": 26,

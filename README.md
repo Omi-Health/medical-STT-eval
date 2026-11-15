@@ -7,7 +7,7 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 
 ## Leaderboard
 
-**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 44 comparable single-stream models | **Updated**: 2026-11-07
+**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 44 comparable single-stream models | **Updated**: 2026-11-15
 
 ### Ranked by Canonical Medical WER (M-WER)
 
@@ -20,24 +20,24 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 | 5 | Soniox stt-async-v4 | 9.18% | 2.06% | 5.4% | 46.2s | API |
 | 6 | ElevenLabs Scribe v2 | 9.72% | 2.54% | 2.8% | 43.5s | API |
 | 7 | AssemblyAI Universal-3 Pro (medical-v1) | 9.55% | 2.83% | 4.9% | 37.3s | API |
-| 8 | Lanson S2 + Correction | 9.04% | 3.05% | 5.6% | 5.9s | GH200 |
+| 8 | Lanson S2 + Correction | 9.04% | 3.05% | 5.6% | N/A | GH200 |
 | 9 | Qwen3 ASR 1.7B | 9.00% | 3.14% | 7.1% | 6.8s | A10 |
 | 10 | Deepgram Nova-3 Medical | 9.05% | 3.17% | 7.9% | 12.9s | API |
 | 11 | Microsoft MAI-Transcribe-1 | 11.52% | 3.33% | 8.8% | 21.8s | API |
-| 12 | Lanson S2 (raw) | 8.96% | 3.37% | 7.9% | 5.9s | GH200 |
+| 12 | Lanson S2 (raw) | 8.96% | 3.37% | 7.9% | N/A | GH200 |
 | 13 | ElevenLabs Scribe v1 | 10.87% | 3.59% | 6.0% | 36.3s | API |
 | 14 | Google Gemini 2.5 Flash | 9.45% | 3.65% | 8.2% | 20.2s | API |
-| 15 | OpenAI GPT-4o Mini (Dec 2025) | 11.18% | 3.68% | 8.8% | 40.4s | API |
-| 16 | Parakeet TDT 1.1B | 9.03% | 3.68% | 13.7% | 12.3s | T4 |
+| 15 | Parakeet TDT 1.1B | 9.03% | 3.68% | 13.7% | 12.3s | T4 |
+| 16 | OpenAI GPT-4o Mini (Dec 2025) | 11.18% | 3.68% | 8.8% | 40.4s | API |
 | 17 | Voxtral Mini Transcribe V1 | 11.85% | 4.03% | 9.7% | 22.4s | API |
 | 18 | Voxtral Mini Transcribe V2 | 11.64% | 4.10% | 10.9% | 18.4s | API |
 | 19 | Voxtral Mini 4B Realtime | 11.89% | 4.10% | 10.3% | 133.9s | A10 |
 | 20 | Groq Whisper Large v3 Turbo | 12.14% | 4.32% | 12.2% | 8.0s | API |
 | 21 | Cohere Transcribe (Mar 2026) | 11.81% | 4.32% | 14.8% | 3.9s | A10 |
-| 22 | OpenAI Whisper-1 | 13.20% | 4.51% | 8.6% | 104.3s | API |
-| 23 | NVIDIA Canary 1B Flash | 12.03% | 4.51% | 14.2% | 23.4s | T4 |
-| 24 | Groq Whisper Large v3 | 11.93% | 4.60% | 11.8% | 8.6s | API |
-| 25 | Parakeet TDT 0.6B v2 | 10.75% | 4.60% | 15.7% | 5.4s | Apple Silicon |
+| 22 | NVIDIA Canary 1B Flash | 12.03% | 4.51% | 14.2% | 23.4s | T4 |
+| 23 | OpenAI Whisper-1 | 13.20% | 4.51% | 8.6% | 104.3s | API |
+| 24 | Parakeet TDT 0.6B v2 | 10.75% | 4.60% | 15.7% | 5.4s | Apple Silicon |
+| 25 | Groq Whisper Large v3 | 11.93% | 4.60% | 11.8% | 8.6s | API |
 | 26 | MLX Whisper Large v3 Turbo | 11.65% | 4.70% | 12.2% | 12.9s | Apple Silicon |
 | 27 | WhisperKit Large v3 Turbo | 12.28% | 4.73% | 12.4% | 21.4s | Apple Silicon |
 | 28 | OpenAI GPT-4o Mini Transcribe | 13.60% | 4.86% | 9.7% | 23.2s | API |
@@ -58,7 +58,7 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 | 43 | Google MedASR | 52.54% | 26.16% | 35.6% | 3.9s | Apple Silicon |
 | 44 | Facebook MMS-1B-all | 38.70% | 52.92% | 71.0% | 28.6s | T4 |
 
-*Ranked by Canonical M-WER v2. **Avg Speed** = wall-clock seconds per ~7.5 min file (lower is better; not normalized for hardware tier — H100 ≫ A10 ≫ T4). **Type**: API (cloud), T4/A10/H100 (NVIDIA GPU tier via NeMo/vLLM/transformers), Apple Silicon (MLX/Native on M-series). Additional metrics in `results/metrics/{model}_medical_wer.json`.*
+*Ranked by Canonical M-WER v2, with WER as the deterministic tie-breaker. **Avg Speed** = measured per-file wall-clock seconds for a ~7.5 min file (lower is better; not normalized for hardware tier — H100 ≫ A10 ≫ T4); N/A means no valid per-file timing was retained. Concurrent batch throughput is not comparable to per-file latency. **Type**: API (cloud), T4/A10/H100/GH200 (NVIDIA GPU tier via NeMo/vLLM/transformers), Apple Silicon (MLX/Native on M-series). Additional metrics in `results/metrics/{model}_medical_wer.json`.*
 
 **\***Google Gemini 3 Pro Preview completed 54/55 comparable files.
 
