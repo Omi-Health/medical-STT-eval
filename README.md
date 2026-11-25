@@ -7,7 +7,7 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 
 ## Leaderboard
 
-**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 42 comparable single-stream models | **Updated**: 2026-04-29
+**Dataset**: PriMock57 (55 files, ~80,500 words) | **Models**: 43 comparable single-stream models | **Updated**: 2026-11-25
 
 ### Ranked by Canonical Medical WER (M-WER)
 
@@ -20,41 +20,42 @@ Built by [Omi Health](https://omi.health) · [All research](https://omi.health/r
 | 5 | Soniox stt-async-v4 | 9.18% | 2.06% | 5.4% | 46.2s | API |
 | 6 | ElevenLabs Scribe v2 | 9.72% | 2.54% | 2.8% | 43.5s | API |
 | 7 | AssemblyAI Universal-3 Pro (medical-v1) | 9.55% | 2.83% | 4.9% | 37.3s | API |
-| 8 | Qwen3 ASR 1.7B | 9.00% | 3.14% | 7.1% | 6.8s | A10 |
-| 9 | Deepgram Nova-3 Medical | 9.05% | 3.17% | 7.9% | 12.9s | API |
-| 10 | Microsoft MAI-Transcribe-1 | 11.52% | 3.33% | 8.8% | 21.8s | API |
-| 11 | ElevenLabs Scribe v1 | 10.87% | 3.59% | 6.0% | 36.3s | API |
-| 12 | Google Gemini 2.5 Flash | 9.45% | 3.65% | 8.2% | 20.2s | API |
-| 13 | OpenAI GPT-4o Mini (Dec 2025) | 11.18% | 3.68% | 8.8% | 40.4s | API |
-| 14 | Parakeet TDT 1.1B | 9.03% | 3.68% | 13.7% | 12.3s | T4 |
-| 15 | Voxtral Mini Transcribe V1 | 11.85% | 4.03% | 9.7% | 22.4s | API |
-| 16 | Voxtral Mini Transcribe V2 | 11.64% | 4.10% | 10.9% | 18.4s | API |
-| 17 | Voxtral Mini 4B Realtime | 11.89% | 4.10% | 10.3% | 133.9s | A10 |
-| 18 | Groq Whisper Large v3 Turbo | 12.14% | 4.32% | 12.2% | 8.0s | API |
-| 19 | Cohere Transcribe (Mar 2026) | 11.81% | 4.32% | 14.8% | 3.9s | A10 |
-| 20 | OpenAI Whisper-1 | 13.20% | 4.51% | 8.6% | 104.3s | API |
-| 21 | NVIDIA Canary 1B Flash | 12.03% | 4.51% | 14.2% | 23.4s | T4 |
-| 22 | Groq Whisper Large v3 | 11.93% | 4.60% | 11.8% | 8.6s | API |
-| 23 | Parakeet TDT 0.6B v2 | 10.75% | 4.60% | 15.7% | 5.4s | Apple Silicon |
-| 24 | MLX Whisper Large v3 Turbo | 11.65% | 4.70% | 12.2% | 12.9s | Apple Silicon |
-| 25 | WhisperKit Large v3 Turbo | 12.28% | 4.73% | 12.4% | 21.4s | Apple Silicon |
-| 26 | OpenAI GPT-4o Mini Transcribe | 13.60% | 4.86% | 9.7% | 23.2s | API |
-| 27 | Qwen3 ASR 0.6B | 9.83% | 4.95% | 13.7% | 5.1s | A10 |
-| 28 | Kyutai STT 2.6B | 11.20% | 5.21% | 14.0% | 148.4s | T4 |
-| 29 | GLM-ASR-Nano-2512 | 10.84% | 5.75% | 16.1% | 87.7s | T4 |
-| 30 | Parakeet TDT 0.6B v3 | 9.35% | 5.90% | 20.6% | 6.3s | Apple Silicon |
-| 31 | Nemotron Speech Streaming 0.6B | 11.06% | 7.05% | 21.0% | 11.7s | T4 |
-| 32 | OpenAI GPT-4o Transcribe | 14.84% | 7.87% | 13.5% | 27.9s | API |
-| 33 | Gemma 4 E4B-it^ | 15.69% | 7.90% | 12.4% | 185.4s | T4 |
-| 34 | NVIDIA Canary-Qwen 2.5B | 12.94% | 8.25% | 21.0% | 105.4s | T4 |
-| 35 | NVIDIA Canary 1B v2 | 14.32% | 9.40% | 18.0% | 9.2s | T4 |
-| 36 | IBM Granite Speech 3.3-2B | 16.55% | 11.02% | 22.1% | 109.7s | T4 |
-| 37 | Apple SpeechAnalyzer | 12.36% | 11.97% | 25.3% | 6.0s | Apple Silicon |
-| 38 | Gemma 4 E2B-it^ | 18.90% | 12.22% | 17.6% | 134.6s | T4 |
-| 39 | Azure Foundry Phi-4 | 31.13% | 14.19% | 16.1% | 212.8s | API |
-| 40 | Kyutai STT 1B (Multilingual) | 27.28% | 19.90% | 27.9% | 79.5s | T4 |
-| 41 | Google MedASR | 52.54% | 26.16% | 35.6% | 3.9s | Apple Silicon |
-| 42 | Facebook MMS-1B-all | 38.70% | 52.92% | 71.0% | 28.6s | T4 |
+| 8 | Oruk Fourier 2B | 8.57% | 3.02% | 8.2% | 8.7s | L40S |
+| 9 | Qwen3 ASR 1.7B | 9.00% | 3.14% | 7.1% | 6.8s | A10 |
+| 10 | Deepgram Nova-3 Medical | 9.05% | 3.17% | 7.9% | 12.9s | API |
+| 11 | Microsoft MAI-Transcribe-1 | 11.52% | 3.33% | 8.8% | 21.8s | API |
+| 12 | ElevenLabs Scribe v1 | 10.87% | 3.59% | 6.0% | 36.3s | API |
+| 13 | Google Gemini 2.5 Flash | 9.45% | 3.65% | 8.2% | 20.2s | API |
+| 14 | OpenAI GPT-4o Mini (Dec 2025) | 11.18% | 3.68% | 8.8% | 40.4s | API |
+| 15 | Parakeet TDT 1.1B | 9.03% | 3.68% | 13.7% | 12.3s | T4 |
+| 16 | Voxtral Mini Transcribe V1 | 11.85% | 4.03% | 9.7% | 22.4s | API |
+| 17 | Voxtral Mini Transcribe V2 | 11.64% | 4.10% | 10.9% | 18.4s | API |
+| 18 | Voxtral Mini 4B Realtime | 11.89% | 4.10% | 10.3% | 133.9s | A10 |
+| 19 | Groq Whisper Large v3 Turbo | 12.14% | 4.32% | 12.2% | 8.0s | API |
+| 20 | Cohere Transcribe (Mar 2026) | 11.81% | 4.32% | 14.8% | 3.9s | A10 |
+| 21 | OpenAI Whisper-1 | 13.20% | 4.51% | 8.6% | 104.3s | API |
+| 22 | NVIDIA Canary 1B Flash | 12.03% | 4.51% | 14.2% | 23.4s | T4 |
+| 23 | Groq Whisper Large v3 | 11.93% | 4.60% | 11.8% | 8.6s | API |
+| 24 | Parakeet TDT 0.6B v2 | 10.75% | 4.60% | 15.7% | 5.4s | Apple Silicon |
+| 25 | MLX Whisper Large v3 Turbo | 11.65% | 4.70% | 12.2% | 12.9s | Apple Silicon |
+| 26 | WhisperKit Large v3 Turbo | 12.28% | 4.73% | 12.4% | 21.4s | Apple Silicon |
+| 27 | OpenAI GPT-4o Mini Transcribe | 13.60% | 4.86% | 9.7% | 23.2s | API |
+| 28 | Qwen3 ASR 0.6B | 9.83% | 4.95% | 13.7% | 5.1s | A10 |
+| 29 | Kyutai STT 2.6B | 11.20% | 5.21% | 14.0% | 148.4s | T4 |
+| 30 | GLM-ASR-Nano-2512 | 10.84% | 5.75% | 16.1% | 87.7s | T4 |
+| 31 | Parakeet TDT 0.6B v3 | 9.35% | 5.90% | 20.6% | 6.3s | Apple Silicon |
+| 32 | Nemotron Speech Streaming 0.6B | 11.06% | 7.05% | 21.0% | 11.7s | T4 |
+| 33 | OpenAI GPT-4o Transcribe | 14.84% | 7.87% | 13.5% | 27.9s | API |
+| 34 | Gemma 4 E4B-it^ | 15.69% | 7.90% | 12.4% | 185.4s | T4 |
+| 35 | NVIDIA Canary-Qwen 2.5B | 12.94% | 8.25% | 21.0% | 105.4s | T4 |
+| 36 | NVIDIA Canary 1B v2 | 14.32% | 9.40% | 18.0% | 9.2s | T4 |
+| 37 | IBM Granite Speech 3.3-2B | 16.55% | 11.02% | 22.1% | 109.7s | T4 |
+| 38 | Apple SpeechAnalyzer | 12.36% | 11.97% | 25.3% | 6.0s | Apple Silicon |
+| 39 | Gemma 4 E2B-it^ | 18.90% | 12.22% | 17.6% | 134.6s | T4 |
+| 40 | Azure Foundry Phi-4 | 31.13% | 14.19% | 16.1% | 212.8s | API |
+| 41 | Kyutai STT 1B (Multilingual) | 27.28% | 19.90% | 27.9% | 79.5s | T4 |
+| 42 | Google MedASR | 52.54% | 26.16% | 35.6% | 3.9s | Apple Silicon |
+| 43 | Facebook MMS-1B-all | 38.70% | 52.92% | 71.0% | 28.6s | T4 |
 
 *Ranked by Canonical M-WER v2. **Avg Speed** = wall-clock seconds per ~7.5 min file (lower is better; not normalized for hardware tier — H100 ≫ A10 ≫ T4). **Type**: API (cloud), T4/A10/H100 (NVIDIA GPU tier via NeMo/vLLM/transformers), Apple Silicon (MLX/Native on M-series). Additional metrics in `results/metrics/{model}_medical_wer.json`.*
 
@@ -70,6 +71,7 @@ The shared helpers live in `transcribe/chunking_utils.py`:
 - **Post-hoc overlap + LCS merge**: Canary-Qwen, Canary Flash, Granite, and Azure Phi-4 use overlapping chunks and text-level LCS merging.
 - **CTC/HF chunking**: MMS uses HF pipeline chunking with character timestamps. MedASR defaults to a stronger KenLM-backed short-chunk mode (`8s` chunks, `1s` overlap) while preserving the old HF `20s/2s` baseline via `--decode_mode hf_pipeline`.
 - **Simple concat**: Gemma 4 keeps non-overlapping 30s chunks because overlap/context merging tested worse for that model.
+- **Energy-pause chunking**: Oruk Fourier 2B (`transcribe/oruk_fourier_transcribe.py`) deterministically splits >28s consultations at minimum-RMS 200ms pauses in `[20s, 28s]` (hard max 30s) and decodes with the checkpoint's published `generation_config.json` (`num_beams=3`).
 - **No chunking**: Qwen3-ASR, cloud batch APIs, and native long-form paths keep full-audio decoding when the model supports it.
 
 MedASR chunk/overlap experiments can be run with:

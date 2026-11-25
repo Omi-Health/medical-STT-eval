@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-28 23:42:47",
+  "timestamp": "2026-11-25 04:29:37",
   "models": [
     "elevenlabs-scribe_v2",
     "mms-1b-all",
@@ -31,6 +31,7 @@
     "google-gemini-3-flash-preview",
     "parakeet-tdt-1.1b",
     "kyutai-stt-pytorch-stt-1b-en_fr",
+    "oruk-fourier-2b",
     "mai-transcribe-1",
     "google-medasr",
     "glm-asr-nano-2512",
@@ -195,6 +196,11 @@
           "wer": 0.1672753834915997,
           "reference_words": 1369,
           "hypothesis_words": 1293
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.12490869247626005,
+          "reference_words": 1369,
+          "hypothesis_words": 1323
         },
         "mai-transcribe-1": {
           "wer": 0.15120525931336742,
@@ -411,6 +417,11 @@
           "reference_words": 1674,
           "hypothesis_words": 1595
         },
+        "oruk-fourier-2b": {
+          "wer": 0.10752688172043011,
+          "reference_words": 1674,
+          "hypothesis_words": 1632
+        },
         "mai-transcribe-1": {
           "wer": 0.14217443249701314,
           "reference_words": 1674,
@@ -625,6 +636,11 @@
           "wer": 0.1744408945686901,
           "reference_words": 1565,
           "hypothesis_words": 1443
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.10670926517571885,
+          "reference_words": 1565,
+          "hypothesis_words": 1550
         },
         "mai-transcribe-1": {
           "wer": 0.13099041533546327,
@@ -841,6 +857,11 @@
           "reference_words": 1653,
           "hypothesis_words": 746
         },
+        "oruk-fourier-2b": {
+          "wer": 0.1161524500907441,
+          "reference_words": 1653,
+          "hypothesis_words": 1624
+        },
         "mai-transcribe-1": {
           "wer": 0.16878402903811252,
           "reference_words": 1653,
@@ -1055,6 +1076,11 @@
           "wer": 0.12844036697247707,
           "reference_words": 1635,
           "hypothesis_words": 1593
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.09969418960244648,
+          "reference_words": 1635,
+          "hypothesis_words": 1596
         },
         "mai-transcribe-1": {
           "wer": 0.1290519877675841,
@@ -1271,6 +1297,11 @@
           "reference_words": 1837,
           "hypothesis_words": 1664
         },
+        "oruk-fourier-2b": {
+          "wer": 0.10996189439303211,
+          "reference_words": 1837,
+          "hypothesis_words": 1758
+        },
         "mai-transcribe-1": {
           "wer": 0.150789330430049,
           "reference_words": 1837,
@@ -1485,6 +1516,11 @@
           "wer": 0.13327601031814273,
           "reference_words": 1163,
           "hypothesis_words": 1116
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.09716251074806535,
+          "reference_words": 1163,
+          "hypothesis_words": 1128
         },
         "mai-transcribe-1": {
           "wer": 0.11092003439380911,
@@ -1701,6 +1737,11 @@
           "reference_words": 1556,
           "hypothesis_words": 782
         },
+        "oruk-fourier-2b": {
+          "wer": 0.11118251928020566,
+          "reference_words": 1556,
+          "hypothesis_words": 1467
+        },
         "mai-transcribe-1": {
           "wer": 0.14331619537275064,
           "reference_words": 1556,
@@ -1915,6 +1956,11 @@
           "wer": 0.4245689655172414,
           "reference_words": 1856,
           "hypothesis_words": 1215
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.12823275862068967,
+          "reference_words": 1856,
+          "hypothesis_words": 1770
         },
         "mai-transcribe-1": {
           "wer": 0.1783405172413793,
@@ -2131,6 +2177,11 @@
           "reference_words": 2336,
           "hypothesis_words": 1300
         },
+        "oruk-fourier-2b": {
+          "wer": 0.08690068493150685,
+          "reference_words": 2336,
+          "hypothesis_words": 2277
+        },
         "mai-transcribe-1": {
           "wer": 0.1541095890410959,
           "reference_words": 2336,
@@ -2345,6 +2396,11 @@
           "wer": 0.13333333333333333,
           "reference_words": 1155,
           "hypothesis_words": 1074
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.09350649350649351,
+          "reference_words": 1155,
+          "hypothesis_words": 1135
         },
         "mai-transcribe-1": {
           "wer": 0.11255411255411256,
@@ -2561,6 +2617,11 @@
           "reference_words": 1688,
           "hypothesis_words": 1597
         },
+        "oruk-fourier-2b": {
+          "wer": 0.06575829383886256,
+          "reference_words": 1688,
+          "hypothesis_words": 1636
+        },
         "mai-transcribe-1": {
           "wer": 0.0835308056872038,
           "reference_words": 1688,
@@ -2775,6 +2836,11 @@
           "wer": 2.2164102564102564,
           "reference_words": 1950,
           "hypothesis_words": 4797
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.09641025641025641,
+          "reference_words": 1950,
+          "hypothesis_words": 1895
         },
         "mai-transcribe-1": {
           "wer": 0.12871794871794873,
@@ -2991,6 +3057,11 @@
           "reference_words": 1270,
           "hypothesis_words": 1218
         },
+        "oruk-fourier-2b": {
+          "wer": 0.1062992125984252,
+          "reference_words": 1270,
+          "hypothesis_words": 1255
+        },
         "mai-transcribe-1": {
           "wer": 0.1346456692913386,
           "reference_words": 1270,
@@ -3205,6 +3276,11 @@
           "wer": 0.3547008547008547,
           "reference_words": 1170,
           "hypothesis_words": 823
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.08888888888888889,
+          "reference_words": 1170,
+          "hypothesis_words": 1157
         },
         "mai-transcribe-1": {
           "wer": 0.1076923076923077,
@@ -3421,6 +3497,11 @@
           "reference_words": 1688,
           "hypothesis_words": 1345
         },
+        "oruk-fourier-2b": {
+          "wer": 0.10130331753554503,
+          "reference_words": 1688,
+          "hypothesis_words": 1634
+        },
         "mai-transcribe-1": {
           "wer": 0.13033175355450238,
           "reference_words": 1688,
@@ -3635,6 +3716,11 @@
           "wer": 0.45575842696629215,
           "reference_words": 1424,
           "hypothesis_words": 894
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.11165730337078651,
+          "reference_words": 1424,
+          "hypothesis_words": 1390
         },
         "mai-transcribe-1": {
           "wer": 0.14817415730337077,
@@ -3851,6 +3937,11 @@
           "reference_words": 1825,
           "hypothesis_words": 1274
         },
+        "oruk-fourier-2b": {
+          "wer": 0.06794520547945206,
+          "reference_words": 1825,
+          "hypothesis_words": 1767
+        },
         "mai-transcribe-1": {
           "wer": 0.11287671232876713,
           "reference_words": 1825,
@@ -4065,6 +4156,11 @@
           "wer": 0.3302034428794992,
           "reference_words": 1917,
           "hypothesis_words": 1398
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.056859676577986434,
+          "reference_words": 1917,
+          "hypothesis_words": 1860
         },
         "mai-transcribe-1": {
           "wer": 0.0782472613458529,
@@ -4281,6 +4377,11 @@
           "reference_words": 1938,
           "hypothesis_words": 1709
         },
+        "oruk-fourier-2b": {
+          "wer": 0.0696594427244582,
+          "reference_words": 1938,
+          "hypothesis_words": 1875
+        },
         "mai-transcribe-1": {
           "wer": 0.1130030959752322,
           "reference_words": 1938,
@@ -4495,6 +4596,11 @@
           "wer": 0.3135464231354642,
           "reference_words": 1314,
           "hypothesis_words": 973
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.09665144596651445,
+          "reference_words": 1314,
+          "hypothesis_words": 1254
         },
         "mai-transcribe-1": {
           "wer": 0.1354642313546423,
@@ -4711,6 +4817,11 @@
           "reference_words": 1815,
           "hypothesis_words": 1439
         },
+        "oruk-fourier-2b": {
+          "wer": 0.07272727272727272,
+          "reference_words": 1815,
+          "hypothesis_words": 1780
+        },
         "mai-transcribe-1": {
           "wer": 0.0881542699724518,
           "reference_words": 1815,
@@ -4925,6 +5036,11 @@
           "wer": 0.12610837438423644,
           "reference_words": 1015,
           "hypothesis_words": 947
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.08177339901477833,
+          "reference_words": 1015,
+          "hypothesis_words": 985
         },
         "mai-transcribe-1": {
           "wer": 0.10344827586206896,
@@ -5141,6 +5257,11 @@
           "reference_words": 1791,
           "hypothesis_words": 1631
         },
+        "oruk-fourier-2b": {
+          "wer": 0.06476828587381352,
+          "reference_words": 1791,
+          "hypothesis_words": 1727
+        },
         "mai-transcribe-1": {
           "wer": 0.08207705192629816,
           "reference_words": 1791,
@@ -5355,6 +5476,11 @@
           "wer": 0.1596244131455399,
           "reference_words": 1278,
           "hypothesis_words": 1149
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.0892018779342723,
+          "reference_words": 1278,
+          "hypothesis_words": 1217
         },
         "mai-transcribe-1": {
           "wer": 0.13771517996870108,
@@ -5571,6 +5697,11 @@
           "reference_words": 1140,
           "hypothesis_words": 1100
         },
+        "oruk-fourier-2b": {
+          "wer": 0.08333333333333333,
+          "reference_words": 1140,
+          "hypothesis_words": 1142
+        },
         "mai-transcribe-1": {
           "wer": 0.12017543859649123,
           "reference_words": 1140,
@@ -5785,6 +5916,11 @@
           "wer": 0.2866127583108715,
           "reference_words": 1113,
           "hypothesis_words": 903
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.1078167115902965,
+          "reference_words": 1113,
+          "hypothesis_words": 1091
         },
         "mai-transcribe-1": {
           "wer": 0.1275831087151842,
@@ -6001,6 +6137,11 @@
           "reference_words": 1123,
           "hypothesis_words": 1100
         },
+        "oruk-fourier-2b": {
+          "wer": 0.06678539626001781,
+          "reference_words": 1123,
+          "hypothesis_words": 1119
+        },
         "mai-transcribe-1": {
           "wer": 0.0917186108637578,
           "reference_words": 1123,
@@ -6215,6 +6356,11 @@
           "wer": 0.11557788944723618,
           "reference_words": 597,
           "hypothesis_words": 583
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.08375209380234507,
+          "reference_words": 597,
+          "hypothesis_words": 611
         },
         "mai-transcribe-1": {
           "wer": 0.11390284757118928,
@@ -6431,6 +6577,11 @@
           "reference_words": 1180,
           "hypothesis_words": 1137
         },
+        "oruk-fourier-2b": {
+          "wer": 0.10338983050847457,
+          "reference_words": 1180,
+          "hypothesis_words": 1171
+        },
         "mai-transcribe-1": {
           "wer": 0.14491525423728813,
           "reference_words": 1180,
@@ -6645,6 +6796,11 @@
           "wer": 0.13601741022850924,
           "reference_words": 919,
           "hypothesis_words": 878
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.10228509249183895,
+          "reference_words": 919,
+          "hypothesis_words": 904
         },
         "mai-transcribe-1": {
           "wer": 0.12731229597388466,
@@ -6861,6 +7017,11 @@
           "reference_words": 2133,
           "hypothesis_words": 1936
         },
+        "oruk-fourier-2b": {
+          "wer": 0.0637599624941397,
+          "reference_words": 2133,
+          "hypothesis_words": 2109
+        },
         "mai-transcribe-1": {
           "wer": 0.10736052508204406,
           "reference_words": 2133,
@@ -7075,6 +7236,11 @@
           "wer": 0.13274336283185842,
           "reference_words": 1356,
           "hypothesis_words": 1246
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.05604719764011799,
+          "reference_words": 1356,
+          "hypothesis_words": 1337
         },
         "mai-transcribe-1": {
           "wer": 0.08259587020648967,
@@ -7291,6 +7457,11 @@
           "reference_words": 1274,
           "hypothesis_words": 1066
         },
+        "oruk-fourier-2b": {
+          "wer": 0.0847723704866562,
+          "reference_words": 1274,
+          "hypothesis_words": 1244
+        },
         "mai-transcribe-1": {
           "wer": 0.09183673469387756,
           "reference_words": 1274,
@@ -7505,6 +7676,11 @@
           "wer": 0.13745980707395497,
           "reference_words": 1244,
           "hypothesis_words": 1157
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.06189710610932476,
+          "reference_words": 1244,
+          "hypothesis_words": 1229
         },
         "mai-transcribe-1": {
           "wer": 0.06993569131832797,
@@ -7721,6 +7897,11 @@
           "reference_words": 1023,
           "hypothesis_words": 932
         },
+        "oruk-fourier-2b": {
+          "wer": 0.03714565004887586,
+          "reference_words": 1023,
+          "hypothesis_words": 1007
+        },
         "mai-transcribe-1": {
           "wer": 0.0635386119257087,
           "reference_words": 1023,
@@ -7935,6 +8116,11 @@
           "wer": 0.06788247213779129,
           "reference_words": 987,
           "hypothesis_words": 979
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.05673758865248227,
+          "reference_words": 987,
+          "hypothesis_words": 971
         },
         "mai-transcribe-1": {
           "wer": 0.09625126646403243,
@@ -8151,6 +8337,11 @@
           "reference_words": 1564,
           "hypothesis_words": 1411
         },
+        "oruk-fourier-2b": {
+          "wer": 0.11381074168797954,
+          "reference_words": 1564,
+          "hypothesis_words": 1496
+        },
         "mai-transcribe-1": {
           "wer": 0.16432225063938619,
           "reference_words": 1564,
@@ -8365,6 +8556,11 @@
           "wer": 0.1987878787878788,
           "reference_words": 1650,
           "hypothesis_words": 1393
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.07636363636363637,
+          "reference_words": 1650,
+          "hypothesis_words": 1614
         },
         "mai-transcribe-1": {
           "wer": 0.10909090909090909,
@@ -8581,6 +8777,11 @@
           "reference_words": 1745,
           "hypothesis_words": 1415
         },
+        "oruk-fourier-2b": {
+          "wer": 0.08882521489971347,
+          "reference_words": 1745,
+          "hypothesis_words": 1708
+        },
         "mai-transcribe-1": {
           "wer": 0.13008595988538682,
           "reference_words": 1745,
@@ -8795,6 +8996,11 @@
           "wer": 0.3105076741440378,
           "reference_words": 1694,
           "hypothesis_words": 1252
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.09149940968122787,
+          "reference_words": 1694,
+          "hypothesis_words": 1627
         },
         "mai-transcribe-1": {
           "wer": 0.1192443919716647,
@@ -9011,6 +9217,11 @@
           "reference_words": 1698,
           "hypothesis_words": 1602
         },
+        "oruk-fourier-2b": {
+          "wer": 0.08303886925795052,
+          "reference_words": 1698,
+          "hypothesis_words": 1645
+        },
         "mai-transcribe-1": {
           "wer": 0.11425206124852769,
           "reference_words": 1698,
@@ -9225,6 +9436,11 @@
           "wer": 0.21390053924505692,
           "reference_words": 1669,
           "hypothesis_words": 1397
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.0701018573996405,
+          "reference_words": 1669,
+          "hypothesis_words": 1627
         },
         "mai-transcribe-1": {
           "wer": 0.10904733373277412,
@@ -9441,6 +9657,11 @@
           "reference_words": 1242,
           "hypothesis_words": 1023
         },
+        "oruk-fourier-2b": {
+          "wer": 0.07971014492753623,
+          "reference_words": 1242,
+          "hypothesis_words": 1216
+        },
         "mai-transcribe-1": {
           "wer": 0.09742351046698873,
           "reference_words": 1242,
@@ -9655,6 +9876,11 @@
           "wer": 0.26752767527675275,
           "reference_words": 1084,
           "hypothesis_words": 835
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.0470479704797048,
+          "reference_words": 1084,
+          "hypothesis_words": 1063
         },
         "mai-transcribe-1": {
           "wer": 0.07195571955719557,
@@ -9871,6 +10097,11 @@
           "reference_words": 2488,
           "hypothesis_words": 2080
         },
+        "oruk-fourier-2b": {
+          "wer": 0.06832797427652733,
+          "reference_words": 2488,
+          "hypothesis_words": 2432
+        },
         "mai-transcribe-1": {
           "wer": 0.09525723472668811,
           "reference_words": 2488,
@@ -10085,6 +10316,11 @@
           "wer": 0.30811662726556344,
           "reference_words": 1269,
           "hypothesis_words": 1052
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.152876280535855,
+          "reference_words": 1269,
+          "hypothesis_words": 1246
         },
         "mai-transcribe-1": {
           "wer": 0.17100078802206461,
@@ -10301,6 +10537,11 @@
           "reference_words": 902,
           "hypothesis_words": 838
         },
+        "oruk-fourier-2b": {
+          "wer": 0.10975609756097561,
+          "reference_words": 902,
+          "hypothesis_words": 905
+        },
         "mai-transcribe-1": {
           "wer": 0.11751662971175167,
           "reference_words": 902,
@@ -10515,6 +10756,11 @@
           "wer": 0.2847811887655127,
           "reference_words": 1531,
           "hypothesis_words": 1197
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.07772697583278902,
+          "reference_words": 1531,
+          "hypothesis_words": 1516
         },
         "mai-transcribe-1": {
           "wer": 0.116263879817113,
@@ -10731,6 +10977,11 @@
           "reference_words": 1236,
           "hypothesis_words": 1038
         },
+        "oruk-fourier-2b": {
+          "wer": 0.06310679611650485,
+          "reference_words": 1236,
+          "hypothesis_words": 1221
+        },
         "mai-transcribe-1": {
           "wer": 0.07928802588996764,
           "reference_words": 1236,
@@ -10945,6 +11196,11 @@
           "wer": 0.13375295043273014,
           "reference_words": 1271,
           "hypothesis_words": 1183
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.05192761605035405,
+          "reference_words": 1271,
+          "hypothesis_words": 1276
         },
         "mai-transcribe-1": {
           "wer": 0.06845003933910307,
@@ -11161,6 +11417,11 @@
           "reference_words": 1364,
           "hypothesis_words": 952
         },
+        "oruk-fourier-2b": {
+          "wer": 0.10043988269794721,
+          "reference_words": 1364,
+          "hypothesis_words": 1354
+        },
         "mai-transcribe-1": {
           "wer": 0.11143695014662756,
           "reference_words": 1364,
@@ -11375,6 +11636,11 @@
           "wer": 0.182230869001297,
           "reference_words": 1542,
           "hypothesis_words": 1386
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.07003891050583658,
+          "reference_words": 1542,
+          "hypothesis_words": 1509
         },
         "mai-transcribe-1": {
           "wer": 0.09922178988326848,
@@ -11591,6 +11857,11 @@
           "reference_words": 2000,
           "hypothesis_words": 620
         },
+        "oruk-fourier-2b": {
+          "wer": 0.052,
+          "reference_words": 2000,
+          "hypothesis_words": 1949
+        },
         "mai-transcribe-1": {
           "wer": 0.101,
           "reference_words": 2000,
@@ -11805,6 +12076,11 @@
           "wer": 0.24334600760456274,
           "reference_words": 789,
           "hypothesis_words": 632
+        },
+        "oruk-fourier-2b": {
+          "wer": 0.057034220532319393,
+          "reference_words": 789,
+          "hypothesis_words": 767
         },
         "mai-transcribe-1": {
           "wer": 0.06717363751584284,
